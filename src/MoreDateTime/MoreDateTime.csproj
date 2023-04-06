@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Hefaistos68</Authors>
+    <Company>ExcerWise Lda.</Company>
+    <Description>A package to simplify dealing with .NET DateTime, DateOnly and TimeOnly objects</Description>
+    <Copyright>© 2023 - ExcerWise Lda. / Hefaistos68</Copyright>
+    <PackageProjectUrl>https://github.com/Hefaistos68/MoreDateTime</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Hefaistos68/MoreDateTime</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>A changelog is available at https://github.com/Hefaistos68/MoreDateTime/blob/master/CHANGELOG.md</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageTags>datetime dateonly timeonly dateoperations timeoperations workdays holidays</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="3.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Nager.Date" Version="1.40.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="MoreDateTime.Tests" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md" />
+	</ItemGroup>
+</Project>
