@@ -28,13 +28,13 @@ jobs:
       run: |
         sed -i 's/Get your own license key to run unit tests with Nager.Date/${{secrets.LICENSE_KEY}}/g' MoreDateTime.Tests/AssemblyInitialize.cs
     - name: Restore dependencies
-      working-directory: ./src
+      working-directory: .
       run: dotnet restore
     - name: Build
-      working-directory: ./src
+      working-directory: .
       run: dotnet build --configuration Release --no-restore
     - name: Test
-      working-directory: ./src
+      working-directory: .
       run: |
         dotnet test --configuration Release --no-restore --no-build --verbosity normal
     - name: Build project and generate NuGet package
