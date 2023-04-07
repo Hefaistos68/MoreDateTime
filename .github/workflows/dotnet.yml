@@ -26,7 +26,7 @@ jobs:
       if: github.event_name != 'pull_request'
       working-directory: ./tests
       run: |
-        sed -i 's/Get your own license key to run unit tests with Nager.Date/${{secrets.LICENSE_KEY}}/g' MoreDateTime.Tests/AssemblyInitialize.cs
+        sed -i 's/Get your own license key to run unit tests with Nager.Date/${{secrets.LICENSE_KEY}}/g' MoreDateTime.Test/AssemblyInitialize.cs
     - name: Restore dependencies
       working-directory: .
       run: dotnet restore
