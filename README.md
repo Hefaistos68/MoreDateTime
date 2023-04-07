@@ -3,6 +3,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/hefaistos68/moredatetime.svg)](https://github.com/hefaistos68/MoreDateTime)
 
 # :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime)
+_(full documentation coming soon)_
 
 This library is built from the ground up to be a simple, easy to use, and intuitive date and time library for .NET, that simplifies common tasks and provides a consistent API for working with dates and times, throughout the DateTime, DateOnly and TimeOnly .NET objects. It adds many operations that one expects to find in a date and time library, but are missing from the .NET standard library.
 
@@ -60,6 +61,11 @@ You got your own `IDateTimeProvider` through which you can inject your own date 
 
 Just install the NuGet package and you are ready to go! It's mostly built upon common sense when using Date and Time objects in .NET.
 
+### Dependencies
+
+For Holiday calculations we use the [Nager.Date](https://github.com/nager/nager.date) library, but you need to bring your own license key. Optionally you can use your own provider through the `IHolidayProvider` interface. 
+
+Call `DateTimeExtensions.SetHolidayProvider()` to set your own provider. If you do not set a provider, the `NagerHolidayProvider` will be used, but you need to provide a valid license key.
 
 ### Examples
 
@@ -79,7 +85,7 @@ PM> install-package MoreDateTime
 ### Do something simple with a date
 ```cs
 
- --> code sample here
+ --> code sample here, coming asap
 ```
 
 </details>
