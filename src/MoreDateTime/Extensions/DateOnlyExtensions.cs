@@ -109,12 +109,28 @@ namespace MoreDateTime.Extensions
 		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="timeSpan"/></returns>
 		public static DateOnly Add(this DateOnly me, TimeSpan timeSpan)
 		{
-			if(timeSpan.TotalDays < 1)
+			if(Math.Abs(timeSpan.TotalDays) < 1)
 			{
 				return me;
 			}
 
 			return (me.ToDateTime().Add(timeSpan)).ToDateOnly();
+		}
+
+		/// <summary>
+		/// Adds a number of ticks to a DateOnly object. If the number of ticks is less than a whole day, the same value is returned
+		/// </summary>
+		/// <param name="me">The DateOnly object</param>
+		/// <param name="ticks">The number of ticks to add</param>
+		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="timeSpan"/></returns>
+		public static DateOnly AddTicks(this DateOnly me, long ticks)
+		{
+			if(ticks < TicksPerDay)
+			{
+				return me;
+			}
+
+			return (me.ToDateTime().AddTicks(ticks)).ToDateOnly();
 		}
 
 		/// <summary>
@@ -173,15 +189,119 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Returns the distance as a TimeSpan between two DateOnly objects.
+		/// Returns a new DateOnly that subtracts the value of the specified TimeSpan from the value of this instance
 		/// </summary>
-		/// <param name="me">The startDate object</param>
-		/// <param name="other">The endDate object</param>
+		/// <param name="me">The DateOnly object to subtract the value from</param>
+		/// <param name="timeSpan">A positive time interval</param>
+		/// <returns>An object whose value is the sum of the date and time represented by this instance minus the time interval represented by value</returns>
+		public static DateOnly Sub(this DateOnly me, TimeSpan timeSpan)
+		{
+			return me.Add(-timeSpan);
+		}
+
+		/// <summary>
+		/// Returns the distance as a TimeSpan between two DateOnly objects. The result is always positive
+		/// </summary>
+		/// <param name="startDate">The startDate object</param>
+		/// <param name="endDate">The endDate object</param>
 		/// <returns>A TimeSpan which expresses the difference between the two dates</returns>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public static TimeSpan Distance(this DateOnly me, DateOnly other)
+		public static TimeSpan Distance(this DateOnly startDate, DateOnly endDate)
 		{
-			return me.ToDateTime() - other.ToDateTime();
+			return (startDate > endDate) ? (startDate.ToDateTime() - endDate.ToDateTime()) : (endDate.ToDateTime() - startDate.ToDateTime());
 		}
+
+		/// <summary>
+		/// Splits the given range of DateOnly into the given number of parts.
+		/// </summary>
+		/// <param name="startDate">The start date</param>
+		/// <param name="endDate">The end date</param>
+		/// <param name="parts">The number of parts to split into</param>
+		/// <returns>A list of DateOnlyRanges</returns>
+		public static List<DateOnlyRange> Split(this DateOnly startDate, DateOnly endDate, int parts)
+		{
+			if (parts < 1)
+			{
+				throw new ArgumentOutOfRangeException(nameof(parts), "The number of parts must be greater than 0");
+			}
+
+			var result = new List<DateOnlyRange>();
+			var distance = startDate.Distance(endDate);
+			var partDistance = distance.Ticks / parts;
+			var part = startDate;
+
+			for (int i = 0; i < parts; i++)
+			{
+				var nextPart = part.AddTicks(partDistance);
+				result.Add(new DateOnlyRange(part, nextPart));
+				part = nextPart;
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// Splits the given range of DateOnly into the given number of parts.
+		/// </summary>
+		/// <param name="startDate">The start date</param>
+		/// <param name="distance">The timespan to split</param>
+		/// <param name="parts">The number of parts to split into</param>
+		/// <returns>A list of DateOnlyRanges</returns>
+		public static List<DateOnlyRange> Split(this DateOnly startDate, TimeSpan distance, int parts)
+		{
+			if (parts < 1)
+			{
+				throw new ArgumentOutOfRangeException(nameof(parts), "The number of parts must be greater than 0");
+			}
+
+			if (distance.Ticks < parts)
+			{
+				throw new ArgumentOutOfRangeException(nameof(distance), "The ticks in distance must be greater than the number of parts");
+			}
+
+			var result = new List<DateOnlyRange>();
+			var partDistance = distance.Ticks / parts;
+			var part = startDate;
+
+			for (int i = 0; i < parts; i++)
+			{
+				var nextPart = part.AddTicks(partDistance);
+				result.Add(new DateOnlyRange(part, nextPart));
+				part = nextPart;
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// Splits the given range of DateOnly into the given number of parts.
+		/// </summary>
+		/// <param name="dates">The start and end date</param>
+		/// <param name="parts">The number of parts to split into</param>
+		/// <returns>A list of DateOnlyRanges</returns>
+		public static List<DateOnlyRange> Split(this DateOnlyRange dates, int parts)
+		{
+			if (dates is null)
+			{
+				throw new ArgumentNullException(nameof(dates));
+			}
+
+			if (parts < 1)
+			{
+				throw new ArgumentOutOfRangeException(nameof(parts), "The number of parts must be greater than 0");
+			}
+
+			var result = new List<DateOnlyRange>();
+			var distance = dates.Distance();
+			var partDistance = distance.Ticks / parts;
+			var part = dates.Start;
+
+			for (int i = 0; i < parts; i++)
+			{
+				var nextPart = part.AddTicks(partDistance);
+				result.Add(new DateOnlyRange(part, nextPart));
+				part = nextPart;
+			}
+			return result;
+		}
+
 	}
 }

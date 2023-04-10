@@ -114,6 +114,18 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Count the number of Trimesters between startDate and endDate
+		/// </summary>
+		/// <param name="startDate">The start date</param>
+		/// <param name="endDate">The end date</param>
+		/// <param name="cultureInfo">The culture info for workdays and holidays, can be null to use current</param>
+		/// <returns>The number of Semesters between startDate and endDate as a double with fractions</returns>
+		public static double NumberOfTrimestersUntil(this DateTime startDate, DateTime endDate, CultureInfo? cultureInfo = null)
+		{
+			return NumberOf_Until(startDate, endDate, TimeUnit.Trimesters, cultureInfo);
+		}
+
+		/// <summary>
 		/// Count the number of Weekends between startDate and endDate
 		/// </summary>
 		/// <param name="startDate">The start date</param>
@@ -182,17 +194,17 @@ namespace MoreDateTime.Extensions
 					return ((double)(endDate.Year - startDate.Year)) / 10.0d;
 
 				case TimeUnit.Years:
-					double fractionOfYear = nom / 12.0;
+					double fractionOfYear = nom / 12.0d;
 
 					return fractionOfYear;
 
 				case TimeUnit.Semesters:
-					double fractionOfSemester = nom / 6.0;
+					double fractionOfSemester = nom / 6.0d;
 
 					return fractionOfSemester;
 
 				case TimeUnit.Trimesters:
-					double fractionOfTrimester = nom / 4.0;
+					double fractionOfTrimester = nom / 3.0d;
 
 					return fractionOfTrimester;
 
