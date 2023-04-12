@@ -7,7 +7,6 @@ namespace MoreDateTime.Tests
 	/// <summary>
 	/// The assembly initialization for tests
 	/// </summary>
-	[TestClass]
 	internal class AssemblyInitialize
 	{
 		/// <summary>
@@ -17,7 +16,7 @@ namespace MoreDateTime.Tests
 		[AssemblyInitialize]
 		public static void MyTestInitialize(TestContext testContext)
 		{
-			DateSystem.LicenseKey = "Get your own license key to run unit tests with Nager.Date";
+			DateSystem.LicenseKey = "Thank you for supporting open source projects";
 		}
 	}
 }

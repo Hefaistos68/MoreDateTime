@@ -8,8 +8,7 @@ updates:
     schedule:
       interval: "daily"
     reviewers:
-      - "tinohager"
-      - "samtrion"
+      - "hefaistos68"
     commit-message:
       prefix: chore
       prefix-development: chore(dev)

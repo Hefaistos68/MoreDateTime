@@ -177,6 +177,22 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the NumberOfSemestersUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NumberOfTrimestersUntil()
+		{
+			// Arrange
+
+			// Act
+			var result = _startDate.NumberOfTrimestersUntil(_endDate, _cultureInfo);
+
+			// Assert
+			result.ShouldBe(4.0d);
+		}
+
+
+		/// <summary>
 		/// Checks that the NumberOfWeekendsUntil method functions correctly.
 		/// </summary>
 		[TestMethod]
@@ -213,12 +229,12 @@ namespace MoreDateTime.Tests.Extensions
 		public void CanCall_NumberOfWorkdaysUntil()
 		{
 			// Arrange
-
+			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 			// Act
 			var result = _startDate.NumberOfWorkdaysUntil(_endDate, _cultureInfo);
 
 			// Assert
-			result.ShouldBe(261.0d);
+			result.ShouldBe(259.0d);
 		}
 
 		/// <summary>

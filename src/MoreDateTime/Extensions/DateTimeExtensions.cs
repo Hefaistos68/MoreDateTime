@@ -130,6 +130,20 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Returns the Week of the Year of this <see cref="DateTime"/> object
+		/// </summary>
+		/// <param name="me">The DateTime object</param>
+		/// <param name="cultureInfo">The <see cref="CultureInfo"/> for the calendar, if null (or not provided) the current culture is used</param>
+		/// <returns>An integer </returns>
+		public static int WeekOfYear(this DateTime me, CultureInfo? cultureInfo = null)
+		{
+			cultureInfo = cultureInfo ?? CultureInfo.CurrentCulture;
+
+			return cultureInfo.Calendar.GetWeekOfYear(me, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek);
+		}
+
+
+		/// <summary>
 		/// The default date range distance in minutes
 		/// </summary>
 		private const int defaultDateRangeDistance = 10;
@@ -180,10 +194,23 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Adds weeks to a DateTime object
+		/// </summary>
+		/// <param name="me">The DateTime object</param>
+		/// <param name="value">The number of weeks to add</param>
+		/// <returns>A DateTime object whose value is the sum of the date and time represented by this instance and the number of weeks</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static DateTime AddWeeks(this DateTime me, double value)
+		{
+			return me.Add(TimeSpan.FromDays(DaysInWeek * value));
+		}
+
+		/// <summary>
 		/// Returns a DateTime object representing the first year of the current year
 		/// </summary>
 		/// <param name="dateTime">The DateTime value of which the first year is requested</param>
 		/// <returns>A DateTime object with year 1, time members set to 0 (00:00:00)</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateTime StartOfMonth(this DateTime dateTime)
 		{
 			return dateTime.TruncateToMonth();
@@ -194,6 +221,7 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="dateTime">The DateTime value of which the first year is requested</param>
 		/// <returns>A DateTime object with the last year of the year, time members set to 0 (00:00:00)</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateTime EndOfMonth(this DateTime dateTime)
 		{
 			return dateTime.AddMonths(1).TruncateToMonth().AddDays(-1);
@@ -211,15 +239,15 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Returns the distance as a TimeSpan between two DateTime objects.
+		/// Returns the distance as a TimeSpan between two DateTime objects. The result is always a positive value.
 		/// </summary>
-		/// <param name="me">The startDate object</param>
-		/// <param name="other">The endDate object</param>
+		/// <param name="startDate">The startDate object</param>
+		/// <param name="endDate">The endDate object</param>
 		/// <returns>A TimeSpan which expresses the difference between the two dates</returns>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public static TimeSpan Distance(this DateTime me, DateTime other)
+		public static TimeSpan Distance(this DateTime startDate, DateTime endDate)
 		{
-			return me - other;
+			return (startDate > endDate) ? (startDate - endDate) : (endDate - startDate);
 		}
 
 		/// <summary>
@@ -231,6 +259,98 @@ namespace MoreDateTime.Extensions
 		public static DateTime Sub(this DateTime me, TimeSpan timeSpan)
 		{
 			return me.Add(-timeSpan);
+		}
+
+		/// <summary>
+		/// Splits the given range of DateTime into the given number of parts.
+		/// </summary>
+		/// <param name="startDate">The start date</param>
+		/// <param name="endDate">The end date</param>
+		/// <param name="parts">The number of parts to split into</param>
+		/// <returns>A list of DateTimeRanges</returns>
+		public static List<DateTimeRange> Split(this DateTime startDate, DateTime endDate, int parts) 
+		{
+			if (parts < 1)
+			{
+				throw new ArgumentOutOfRangeException(nameof(parts), "The number of parts must be greater than 0");
+			}
+
+			var result = new List<DateTimeRange>();
+			var distance = startDate.Distance(endDate);
+			var partDistance = distance.Ticks / parts;
+			var part = startDate;
+			
+			for (int i = 0; i < parts; i++)
+			{
+				var nextPart = part.AddTicks(partDistance);
+				result.Add(new DateTimeRange(part, nextPart));
+				part = nextPart;
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// Splits the given range of DateTime into the given number of parts.
+		/// </summary>
+		/// <param name="startDate">The start date</param>
+		/// <param name="distance">The timespan to split</param>
+		/// <param name="parts">The number of parts to split into</param>
+		/// <returns>A list of DateTimeRanges</returns>
+		public static List<DateTimeRange> Split(this DateTime startDate, TimeSpan distance, int parts) 
+		{
+			if (parts < 1)
+			{
+				throw new ArgumentOutOfRangeException(nameof(parts), "The number of parts must be greater than 0");
+			}
+
+			if(distance.Ticks < parts)
+			{
+				throw new ArgumentOutOfRangeException(nameof(distance), "The ticks in distance must be greater than the number of parts");
+			}
+
+			var result = new List<DateTimeRange>();
+			var partDistance = distance.Ticks / parts;
+			var part = startDate;
+			
+			for (int i = 0; i < parts; i++)
+			{
+				var nextPart = part.AddTicks(partDistance);
+				result.Add(new DateTimeRange(part, nextPart));
+				part = nextPart;
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// Splits the given range of DateTime into the given number of parts.
+		/// </summary>
+		/// <param name="dates">The start and end date</param>
+		/// <param name="parts">The number of parts to split into</param>
+		/// <returns>A list of DateTimeRanges</returns>
+		public static List<DateTimeRange> Split(this DateTimeRange dates, int parts) 
+		{
+			if (dates is null)
+			{
+				throw new ArgumentNullException(nameof(dates));
+			}
+
+			if(parts < 1)
+			{
+				throw new ArgumentOutOfRangeException(nameof(parts), "The number of parts must be greater than 0");
+			}
+
+			var result = new List<DateTimeRange>();
+			var distance = dates.Distance();
+			var partDistance = distance.Ticks / parts;
+			var part = dates.Start;
+			
+			for (int i = 0; i < parts; i++)
+			{
+				var nextPart = part.AddTicks(partDistance);
+				result.Add(new DateTimeRange(part, nextPart));
+				part = nextPart;
+			}
+			return result;
 		}
 	}
 }

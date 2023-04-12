@@ -26,6 +26,16 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Gets the DateTime value of the next full second (10:15:20.350 to 10:15:21.000)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static TimeOnly NextFullSecond(this TimeOnly dt)
+		{
+			return dt.AddSeconds(1).TruncateToSecond();
+		}
+
+		/// <summary>
 		/// Gets the TimeOnly value of the next day
 		/// </summary>
 		/// <param name="dt">The TimeOnly object</param>
@@ -36,6 +46,16 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Gets the DateTime value of the next full minute (10:15:20 to 10:16:00)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static TimeOnly NextFullMinute(this TimeOnly dt)
+		{
+			return dt.AddMinutes(1).TruncateToMinute();
+		}
+
+		/// <summary>
 		/// Gets the TimeOnly value of the next day
 		/// </summary>
 		/// <param name="dt">The TimeOnly object</param>
@@ -43,6 +63,16 @@ namespace MoreDateTime.Extensions
 		public static TimeOnly NextHour(this TimeOnly dt)
 		{
 			return dt.AddHours(1);
+		}
+
+		/// <summary>
+		/// Gets the DateTime value of the next full hour (10:15 to 11:00, 10:45 to 11:00, etc)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static TimeOnly NextFullHour(this TimeOnly dt)
+		{
+			return dt.AddHours(1).TruncateToHour();
 		}
 
 		/// <summary>

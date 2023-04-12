@@ -19,7 +19,8 @@ namespace MoreDateTime.Extensions
 		/// <returns>The Truncated dateTime object</returns>
 		public static DateTime TruncateTo(this DateTime dt, DateTruncate TruncateTo, CultureInfo? cultureInfo = null)
 		{
-			// #TODO: check if its better to instead set members of dt to 0 and return dt
+			cultureInfo ??= CultureInfo.CurrentCulture;
+
 			return TruncateTo switch
 			{
 				DateTruncate.Year => new DateTime(dt.Year, 1, 1),
@@ -33,10 +34,8 @@ namespace MoreDateTime.Extensions
 
 			static DateTime CalcDayOfWeek(DateTime dt, CultureInfo? cultureInfo)
 			{
-				cultureInfo ??= CultureInfo.CurrentCulture;
-
 				dt = dt.TruncateToDay();
-				while (dt.DayOfWeek != cultureInfo.DateTimeFormat.FirstDayOfWeek)
+				while (dt.DayOfWeek != cultureInfo!.DateTimeFormat.FirstDayOfWeek)
 				{
 					dt = dt.PreviousDay();
 				}

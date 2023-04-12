@@ -59,13 +59,24 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateOnly value of the next weekend following this date
+		/// Gets the DateOnly value of the next weekend following this date. If the given date is already a weekend, the next weekend is returned.
 		/// </summary>
 		/// <param name="dt">The DateOnly object</param>
 		/// <returns>A DateOnly object</returns>
 		public static DateOnly NextWeekend(this DateOnly dt)
 		{
-			throw new NotImplementedException();
+			// if its already a weekend, skip it
+			while (dt.IsWeekend())
+			{
+				dt = dt.NextDay();
+			}
+
+			while (!dt.IsWeekend())
+			{
+				dt = dt.NextDay();
+			}
+
+			return dt;
 		}
 
 		/// <summary>
@@ -170,13 +181,23 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateOnly value of the weekend before this date
+		/// Gets the DateOnly value of the weekend before this date. If the given date is already a weekend, the previous weekend is returned.
 		/// </summary>
 		/// <param name="dt">The DateOnly object</param>
 		/// <returns>A DateOnly object whose value is the week before the given, the weekday and time is not changed</returns>
 		public static DateOnly PreviousWeekend(this DateOnly dt)
 		{
-			throw new NotImplementedException();
+			while (dt.IsWeekend())
+			{
+				dt = dt.PreviousDay();
+			}
+
+			while (!dt.IsWeekend())
+			{
+				dt = dt.PreviousDay();
+			}
+
+			return dt;
 		}
 
 		/// <summary>

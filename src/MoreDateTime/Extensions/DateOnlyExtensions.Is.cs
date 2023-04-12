@@ -13,13 +13,47 @@ namespace MoreDateTime.Extensions
 	public static partial class DateOnlyExtensions
 	{
 		/// <summary>
-		/// Checks if the given value is between the given startDate and endDate values
+		/// Checks if the given value is between the given startDate and endDate values, excluding the start and end value
 		/// </summary>
 		/// <param name="me">The DateOnly to compare</param>
 		/// <param name="startDate">The startDate date</param>
 		/// <param name="endDate">The endDate date</param>
 		/// <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
 		public static bool IsBetween(this DateOnly me, DateOnly startDate, DateOnly endDate)
+		{
+			if (endDate < startDate)
+			{
+				throw new ArgumentException("End must be greater than startDate");
+			}
+
+			return (me > startDate) && (me < endDate);
+		}
+
+		/// <summary>
+		/// Checks if the given value is within the given startDate and endDate values, including startDate and endDate
+		/// </summary>
+		/// <param name="me">The DateTime to compare</param>
+		/// <param name="startDate">The startDate date</param>
+		/// <param name="endDate">The endDate date</param>
+		/// <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
+		public static bool IsWithin(this DateOnly me, DateTime startDate, DateTime endDate)
+		{
+			if (endDate < startDate)
+			{
+				throw new ArgumentException("End must be greater than startDate");
+			}
+
+			return (me >= startDate.ToDateOnly()) && (me <= endDate.ToDateOnly());
+		}
+
+		/// <summary>
+		/// Checks if the given value is within the given startDate and endDate values, including startDate and endDate
+		/// </summary>
+		/// <param name="me">The DateTime to compare</param>
+		/// <param name="startDate">The startDate date</param>
+		/// <param name="endDate">The endDate date</param>
+		/// <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
+		public static bool IsWithin(this DateOnly me, DateOnly startDate, DateOnly endDate)
 		{
 			if (endDate < startDate)
 			{

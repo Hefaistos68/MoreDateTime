@@ -35,6 +35,29 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the EnumerateDaysUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateDaysUntil_Backwards()
+		{
+			// Arrange
+			var @from = _startDate;
+			var to = _startDate.AddDays(10);
+
+			// Act
+			var result = to.EnumerateDaysUntil(from);
+
+			// Assert
+			result.Count().ShouldBe(10 + 1);
+			var prev = result.First();
+			foreach (var d in result.Skip(1))
+			{
+				d.ShouldBe(prev.PreviousDay());
+				prev = d;
+			}
+		}
+
+		/// <summary>
 		/// Checks that the EnumerateHolidaysUntil method functions correctly.
 		/// </summary>
 		[TestMethod]
@@ -49,6 +72,20 @@ namespace MoreDateTime.Tests.Extensions
 			result.Count().ShouldBe((int)_holidaysInStartDateToEndDateDefault);
 		}
 
+		/// <summary>
+		/// Checks that the EnumerateHolidaysUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateHolidaysUntil_Backwards()
+		{
+			// Arrange
+			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
+			// Act
+			var result = _endDate.EnumerateHolidaysUntil(_startDate, _cultureInfo);
+
+			// Assert
+			result.Count().ShouldBe((int)_holidaysInStartDateToEndDateDefault);
+		}
 		/// <summary>
 		/// Checks that the ToDateRanges method functions correctly.
 		/// </summary>
@@ -183,6 +220,31 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the ToDateRanges method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateInStepsUntil_WithEvaluator_Backwards()
+		{
+			// Arrange
+			var distance = new TimeSpan(DateTimeExtensions.TicksPerDay);
+
+			// Act
+			var result = _startDate.AddDays(10).EnumerateInStepsUntil(_startDate, -distance, SkipMonday);
+
+			// Assert
+			result.Count().ShouldBe(9);
+
+			foreach (var d in result)
+			{
+				d.DayOfWeek.ShouldNotBe(DayOfWeek.Monday);
+			}
+
+			bool SkipMonday(DateTime arg)
+			{
+				return arg.DayOfWeek != DayOfWeek.Monday;
+			}
+		}
+		/// <summary>
 		/// Checks that the EnumerateInStepsUntil method functions correctly.
 		/// </summary>
 		[TestMethod]
@@ -272,6 +334,31 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the EnumerateMonthsUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateMonthsUntil_Backwards()
+		{
+			// Arrange
+			var @from = _startDate;
+			var to = _startDate.AddMonths(10);
+
+			// Act
+			var result = to.EnumerateMonthsUntil(from);
+
+			// Assert
+			result.Count().ShouldBe(10 + 1);
+
+			var prev = result.First();
+
+			foreach (var d in result.Skip(1))
+			{
+				d.ShouldBe(prev.PreviousMonth());
+				prev = d;
+			}
+		}
+
+		/// <summary>
 		/// Checks that the EnumerateWorkdaysUntil method functions correctly.
 		/// </summary>
 		[TestMethod]
@@ -292,6 +379,81 @@ namespace MoreDateTime.Tests.Extensions
 			foreach (var d in result.Skip(1))
 			{
 				d.ShouldBe(prev.NextWorkday());
+				prev = d;
+			}
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateWorkdaysUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateWorkdaysUntil_Backwards()
+		{
+			// Arrange
+			var @from = _startDate;
+			var to = _startDate.AddDays(7);
+
+			// Act
+			var result = to.EnumerateWorkdaysUntil(from, _cultureInfo);
+
+			// Assert
+			result.Count().ShouldBe(5 + 1);
+
+			var prev = result.First();
+
+			foreach (var d in result.Skip(1))
+			{
+				d.ShouldBe(prev.PreviousWorkday());
+				prev = d;
+			}
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateWeekendsUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateWeekendsUntil()
+		{
+			// Arrange
+			var @from = _startDate;
+			var to = _startDate.AddWeeks(5);
+
+			// Act
+			var result = from.EnumerateWeekendsUntil(to);
+
+			// Assert
+			result.Count().ShouldBe(5);
+
+			var prev = result.First();
+
+			foreach (var d in result.Skip(1))
+			{
+				d.ShouldBe(prev.NextWeekend());
+				prev = d;
+			}
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateWeekendsUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateWeekendsUntil_Backwards()
+		{
+			// Arrange
+			var @from = _startDate;
+			var to = _startDate.AddWeeks(5);
+
+			// Act
+			var result = to.EnumerateWeekendsUntil(from);
+
+			// Assert
+			result.Count().ShouldBe(5);
+
+			var prev = result.First();
+
+			foreach (var d in result.Skip(1))
+			{
+				d.ShouldBe(prev.PreviousWeekend());
 				prev = d;
 			}
 		}
@@ -322,6 +484,31 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the EnumerateYearsUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateYearsUntil_Backwards()
+		{
+			// Arrange
+			var @from = _startDate;
+			var to = _startDate.AddYears(10);
+
+			// Act
+			var result = to.EnumerateYearsUntil(from);
+
+			// Assert
+			result.Count().ShouldBe(10 + 1);
+
+			var prev = result.First();
+
+			foreach (var d in result.Skip(1))
+			{
+				d.ShouldBe(prev.PreviousYear());
+				prev = d;
+			}
+		}
+
+		/// <summary>
 		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
 		/// </summary>
 		[TestMethod]
@@ -337,6 +524,54 @@ namespace MoreDateTime.Tests.Extensions
 		public void CannotCall_EnumerateInStepsUntil_WithFromAndToAndDistanceAndEvaluator_WithNullEvaluator()
 		{
 			Should.Throw<ArgumentNullException>(() => _startDate.EnumerateInStepsUntil(_endDate, TimeSpan.FromDays(2), default(Func<DateTime, bool>)!).Count());
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithDistanceGreaterThanDifferenceAndEvaluator()
+		{
+			Should.Throw<ArgumentException>(() => _startDate.EnumerateInStepsUntil(_startDate.AddDays(1), TimeSpan.FromDays(10), (x) => true).Count());
+			;
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithNegativeDistanceForward()
+		{
+			Should.Throw<ArgumentException>(() => _startDate.EnumerateInStepsUntil(_startDate.AddDays(10), TimeSpan.FromDays(-1)).Count());
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithPositiveDistanceAndEvaluatorBackward()
+		{
+			Should.Throw<ArgumentException>(() => _startDate.AddDays(10).EnumerateInStepsUntil(_startDate, TimeSpan.FromDays(1), (x) => true).Count());
+			;
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithNegativeDistanceAndEvaluatorForward()
+		{
+			Should.Throw<ArgumentException>(() => _startDate.EnumerateInStepsUntil(_startDate.AddDays(10), TimeSpan.FromDays(-1), (x) => true).Count());
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithPositiveDistanceBackward()
+		{
+			Should.Throw<ArgumentException>(() => _startDate.AddDays(10).EnumerateInStepsUntil(_startDate, TimeSpan.FromDays(1)).Count());
+			;
 		}
 	}
 }

@@ -5,6 +5,7 @@ namespace MoreDateTime.Tests.Extensions
 
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+	using MoreDateTime;
 	using MoreDateTime.Extensions;
 	using MoreDateTime.Interfaces;
 
@@ -19,9 +20,14 @@ namespace MoreDateTime.Tests.Extensions
 	{
 		// setup some test data taken from real calendar
 		private readonly DateTime _startDate = new DateTime(2020, 05, 15); // Friday
+		private readonly DateTime _startDateTime = new DateTime(2020, 05, 15, 2, 3, 4); // Friday
 
 		private readonly DateTime _midDate = new DateTime(2021, 02, 20);   // Saturday
 		private readonly DateTime _endDate = new DateTime(2021, 05, 14);   // Friday
+
+		private readonly DateOnly _startDateOnly = new DateOnly(2020, 05, 15); // Friday
+		private readonly DateOnly _midDateOnly = new DateOnly(2021, 02, 20);   // Saturday
+		private readonly DateOnly _endDateOnly = new DateOnly(2021, 05, 14);   // Friday
 
 		private readonly DateTime _startDateFirstDay = new DateTime(2020, 05, 01);  // Friday
 		private readonly DateTime _startDateLastDay = new DateTime(2020, 05, 31);       // Sunday
@@ -59,9 +65,8 @@ namespace MoreDateTime.Tests.Extensions
 		[TestInitialize()]
 		public void SetupOnce()
 		{
-			DateSystem.LicenseKey = "LostTimeIsNeverFoundAgain";
+			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 		}
-
 
 		/// <summary>
 		/// Checks that the AsUtcDate method functions correctly.
@@ -196,6 +201,147 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			knownHoliday.IsPublicHoliday().ShouldBeFalse();
 
+		}
+
+		/// <summary>
+		/// Checks that the Distance method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_Distance()
+		{
+			// Arrange
+
+			// Act
+			var result = _startDate.Distance(_endDate);
+
+			// Assert
+			result.ShouldBe(_endDate - _startDate);
+		}
+
+		/// <summary>
+		/// Checks that the Sub method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_Sub()
+		{
+			// Arrange
+
+			// Act
+			var resultSeconds = _startDate.Sub(TimeSpan.FromSeconds(5));
+			var resultMinutes = _startDate.Sub(TimeSpan.FromMinutes(5));
+			var resultHours = _startDate.Sub(TimeSpan.FromHours(5));
+			var resultDays = _startDate.Sub(TimeSpan.FromDays(5));
+
+			// Assert
+			resultSeconds.ShouldBe(_startDate.AddSeconds(-5));
+			resultMinutes.ShouldBe(_startDate.AddMinutes(-5));
+			resultHours.ShouldBe(_startDate.AddHours(-5));
+			resultDays.ShouldBe(_startDate.AddDays(-5));
+		}
+
+		/// <summary>
+		/// Checks that the Split method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_SplitWithStartDateAndEndDateAndParts()
+		{
+			// Arrange
+			var parts = 5;
+
+			// Act
+			var result = _startDate.Split(_endDate, parts);
+
+			// Assert
+			result.Count().ShouldBe(parts);
+
+			// verify that all parts are the same size
+            var partSize = _startDate.Distance(_endDate) / parts;
+			foreach (var part in result)
+			{
+				part.Distance().ShouldBe(partSize);
+			}
+		}
+
+		/// <summary>
+		/// Checks that the Split method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_SplitWithStartDateAndDistanceAndParts()
+		{
+			// Arrange
+			var parts = 5;
+			var distance = (_endDate-_startDate);
+
+			// Act
+			var result = _startDate.Split(distance, parts);
+
+			// Assert
+			result.Count().ShouldBe(parts);
+
+			// verify that all parts are the same size
+			var partSize = _startDate.Distance(_endDate) / parts;
+			foreach (var part in result)
+			{
+				part.Distance().ShouldBe(partSize);
+			}
+		}
+
+		/// <summary>
+		/// Checks that the Split method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_SplitWithDatesAndParts()
+		{
+			// Arrange
+			var dates = new DateTimeRange(_startDate, _endDate);
+			var parts = 5;
+
+			// Act
+			var result = dates.Split(parts);
+
+			// Assert
+			// verify that all parts are the same size
+			var partSize = _startDate.Distance(_endDate) / parts;
+			foreach (var part in result)
+			{
+				part.Distance().ShouldBe(partSize);
+			}
+		}
+
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithDatesAndParts_WithNullDates()
+		{
+			Should.Throw<ArgumentNullException>(() => default(DateTimeRange)!.Split(5));
+		}
+
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithDatesAndParts_WithZeroParts()
+		{
+			Should.Throw<ArgumentOutOfRangeException>(() => new DateTimeRange(_startDate, _endDate).Split(0));
+		}
+
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithStartDateAndEndDateAndParts_WithZeroParts()
+		{
+			Should.Throw<ArgumentOutOfRangeException>(() => _startDate.Split(_endDate, 0));
+		}
+
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithStartDateAndDistanceAndParts_WithZeroParts()
+		{
+			Should.Throw<ArgumentOutOfRangeException>(() => _startDate.Split(TimeSpan.FromMinutes(10), 0));
 		}
 	}
 }

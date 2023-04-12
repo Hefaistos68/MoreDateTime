@@ -1,6 +1,7 @@
 namespace MoreDateTime.Tests.Extensions
 {
 	using System;
+	using System.Globalization;
 
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -343,6 +344,100 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Assert
 			result.Year.ShouldBe(2019);
+		}
+		/// <summary>
+		/// Checks that the NextFullSecond method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullSecond()
+		{
+			// Arrange
+
+			// Act
+			var result = _startDateTime.AddMilliseconds(200).NextFullSecond();
+
+			// Assert
+			result.ShouldBe(_startDateTime.NextSecond());
+		}
+
+		/// <summary>
+		/// Checks that the NextFullMinute method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullMinute()
+		{
+			// Arrange
+
+			// Act
+			var result = _startDate.NextFullMinute();
+
+			// Assert
+			result.ShouldBe(_startDate.AddMinutes(1).TruncateToMinute());
+		}
+
+		/// <summary>
+		/// Checks that the NextFullHour method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullHour()
+		{
+			// Arrange
+			var result = _startDate.NextFullHour();
+
+			// Assert
+			result.ShouldBe(_startDate.AddHours(1).TruncateToHour());
+		}
+
+		/// <summary>
+		/// Checks that the NextFullDay method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullDay()
+		{
+			// Arrange
+			var result = _startDate.NextFullDay();
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(1).TruncateToDay());
+		}
+
+		/// <summary>
+		/// Checks that the NextWeekend method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextWeekend()
+		{
+			// Arrange
+			var result = _startDate.NextWeekend();
+
+			// Assert
+			result.ShouldBe(new DateTime(2020, 5, 16));
+		}
+
+		/// <summary>
+		/// Checks that the PreviousWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_PreviousWeek()
+		{
+			// Arrange
+			var result = _startDate.PreviousWeek();
+
+			// Assert
+			result.ShouldBe(new DateTime(2020, 5, 15-7));
+		}
+
+		/// <summary>
+		/// Checks that the PreviousWeekend method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_PreviousWeekend()
+		{
+			// Arrange
+			var result = _startDate.PreviousWeekend();
+
+			// Assert
+			result.ShouldBe(new DateTime(2020, 5, 10));	 // sunday
 		}
 	}
 }

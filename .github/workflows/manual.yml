@@ -1,0 +1,33 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET 6.0
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Change LicenseKey
+      working-directory: ./tests
+      run: |
+        sed -i 's/Thank you for supporting open source projects/${{secrets.LICENSE_KEY}}/g' MoreDateTime.Test/AssemblyInitialize.cs
+    - name: Restore dependencies
+      working-directory: .
+      run: dotnet restore
+    - name: Build
+      working-directory: .
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      working-directory: .
+      run: |
+        dotnet test --configuration Release --no-restore --no-build --verbosity normal
