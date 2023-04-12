@@ -39,8 +39,8 @@
 			// Act
 
 			// Assert
-			Assert.AreEqual(dateTimeRange.StartTime, _startDate);
-			Assert.AreEqual(dateTimeRange.EndTime, _endDate);
+			Assert.AreEqual(dateTimeRange.Start, _startDate);
+			Assert.AreEqual(dateTimeRange.End, _endDate);
 		}
 	}
 }

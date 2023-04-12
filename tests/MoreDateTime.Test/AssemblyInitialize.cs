@@ -7,7 +7,6 @@ namespace MoreDateTime.Tests
 	/// <summary>
 	/// The assembly initialization for tests
 	/// </summary>
-	[TestClass]
 	internal class AssemblyInitialize
 	{
 		/// <summary>

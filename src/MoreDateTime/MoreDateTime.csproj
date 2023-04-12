@@ -17,6 +17,7 @@
     <NeutralLanguage>en</NeutralLanguage>
     <PackageTags>datetime dateonly timeonly dateoperations timeoperations workdays holidays</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

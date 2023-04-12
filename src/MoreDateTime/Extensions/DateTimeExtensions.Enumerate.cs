@@ -27,11 +27,21 @@ namespace MoreDateTime.Extensions
 
 			if(startDate < endDate)
 			{
+				if (distance.Ticks < 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be positive when going forwards");
+				}
+
 				for (var step = startDate.Date; step.Date <= endDate.Date; step = step.Add(distance))
 					yield return step;
 			}
 			else
 			{
+				if (distance.Ticks > 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be negative when going backwards");
+				}
+
 				for (var step = startDate.Date; step.Date >= endDate.Date; step = step.Add(distance))
 					yield return step;
 			}
@@ -59,6 +69,11 @@ namespace MoreDateTime.Extensions
 
 			if (startDate < endDate)
 			{
+				if (distance.Ticks < 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be positive when going forwards");
+				}
+
 				for (var step = startDate.Date; step.Date <= endDate.Date; step = step.Add(distance))
 				{
 					if (evaluator.Invoke(step))
@@ -67,6 +82,11 @@ namespace MoreDateTime.Extensions
 			}
 			else
 			{
+				if (distance.Ticks > 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be negative when going backwards");
+				}
+
 				for (var step = startDate.Date; step.Date >= endDate.Date; step = step.Add(distance))
 				{
 					if (evaluator.Invoke(step))

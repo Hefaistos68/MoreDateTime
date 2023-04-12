@@ -54,7 +54,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if time is between 12:00:00.000 and 18:00:00.000</returns>
 		public static bool IsAfternoon(this TimeOnly to)
 		{
-			return to.Hour.IsBetween(12, 18);
+			return to.Hour.IsWithin(12, 18);
 		}
 
 		/// <summary>
@@ -64,7 +64,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if time is between 18:00:00.000 and 06:00:00.000</returns>
 		public static bool IsNight(this TimeOnly to)
 		{
-			return to.Hour.IsBetween(18, 23) || to.Hour.IsBetween(0, 6);
+			return to.Hour.IsWithin(18, 23) || to.Hour.IsWithin(0, 6);
 		}
 
 		/// <summary>
@@ -74,11 +74,13 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if time is 00:00:00.000</returns>
 		public static bool IsMorning(this TimeOnly to)
 		{
-			return to.Hour.IsBetween(6, 12);
+			return to.Hour.IsWithin(6, 12);
 		}
 
+		/* There is an BCL implementation of this, although I do not agree with it.
+			
 		/// <summary>
-		/// Checks if the given value is between the given startTime and endTime values
+		/// Checks if the given value is between the given startTime and endTime values, not including start or end time
 		/// </summary>
 		/// <param name="me">The TimeOnly to compare</param>
 		/// <param name="startTime">The start time</param>
@@ -91,7 +93,59 @@ namespace MoreDateTime.Extensions
 				throw new ArgumentException("endTime must be greater than startTime");
 			}
 
+			return (me > startTime) && (me < endTime);
+		}
+		*/
+
+		/// <summary>
+		/// Checks if the given value is between the given startTime and endTime values, not including start or end time
+		/// </summary>
+		/// <param name="me">The TimeOnly to compare</param>
+		/// <param name="startTime">The start time</param>
+		/// <param name="endTime">The end time</param>
+		/// <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
+		public static bool IsBetween(this DateTime me, TimeOnly startTime, TimeOnly endTime)
+		{
+			if (endTime < startTime)
+			{
+				throw new ArgumentException("endTime must be greater than startTime");
+			}
+
+			return (me.ToTimeOnly() > startTime) && (me.ToTimeOnly() < endTime);
+		}
+
+		/// <summary>
+		/// Checks if the given value is between the given startTime and endTime values, including start or end time
+		/// </summary>
+		/// <param name="me">The TimeOnly to compare</param>
+		/// <param name="startTime">The start time</param>
+		/// <param name="endTime">The end time</param>
+		/// <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
+		public static bool IsWithin(this TimeOnly me, TimeOnly startTime, TimeOnly endTime)
+		{
+			if (endTime < startTime)
+			{
+				throw new ArgumentException("endTime must be greater than startTime");
+			}
+
 			return (me >= startTime) && (me <= endTime);
+		}
+
+		/// <summary>
+		/// Checks if the given value is between the given startTime and endTime values, including start or end time
+		/// </summary>
+		/// <param name="me">The TimeOnly to compare</param>
+		/// <param name="startTime">The start time</param>
+		/// <param name="endTime">The end time</param>
+		/// <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
+		public static bool IsWithin(this DateTime me, TimeOnly startTime, TimeOnly endTime)
+		{
+			if (endTime < startTime)
+			{
+				throw new ArgumentException("endTime must be greater than startTime");
+			}
+
+			return (me.ToTimeOnly() >= startTime) && (me.ToTimeOnly() <= endTime);
 		}
 	}
 }

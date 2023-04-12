@@ -19,12 +19,9 @@ namespace MoreDateTime.Extensions
 		{
 			return TruncateTo switch
 			{
-				DateTruncate.Year => new TimeOnly(0, 0, 0),
-				DateTruncate.Month => new TimeOnly(0, 0, 0),
-				DateTruncate.Week => new TimeOnly(0, 0, 0),
-				DateTruncate.Day => new TimeOnly(0, 0, 0),
 				DateTruncate.Hour => new TimeOnly(dt.Hour, 0, 0),
 				DateTruncate.Minute => new TimeOnly(dt.Hour, dt.Minute, 0),
+				DateTruncate.Second => new TimeOnly(dt.Hour, dt.Minute, dt.Second),
 				_ => new TimeOnly(dt.Hour, dt.Minute, dt.Second)
 			};
 		}

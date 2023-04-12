@@ -20,16 +20,15 @@ namespace MoreDateTime.Extensions
 				throw new ArgumentException($"{nameof(distance)} is greater than the difference between the two times");
 			}
 
-			if (startTime < endTime)
+			if (distance.Ticks == 0)
 			{
-				for (var step = startTime; step <= endTime; step = step.Add(distance))
-					yield return step;
+				throw new ArgumentException($"{nameof(distance)} must not be zero");
 			}
-			else
-			{
-				for (var step = startTime; step >= endTime; step = step.Add(distance))
-					yield return step;
-			}
+
+			// unlike the DateTime and DateOnly, the TimeOnly is roundrobin, so there is no real start or end
+			// The direction is determined by the distance, negative means backwards (24h to 0), positive means forwards (0 to 24h)
+			for (var moment = startTime.Ticks; distance.IsNegative() ? moment >= endTime.Ticks : moment <= endTime.Ticks; moment += distance.Ticks)
+				yield return new TimeOnly(moment);
 		}
 
 		/// <summary>
@@ -38,7 +37,7 @@ namespace MoreDateTime.Extensions
 		/// <param name="startTime">The starting TimeOnly object</param>
 		/// <param name="endTime">The ending TimeOnly object</param>
 		/// <param name="distance">The distance expressed as TimeSpan</param>
-		/// <param name="evaluator">An evaluation function called for each step before returning it. If the evaluator returns false, the value is skipped</param>
+		/// <param name="evaluator">An evaluation function called for each moment before returning it. If the evaluator returns false, the value is skipped</param>
 		/// <returns>An IEnumerable of type TimeOnly</returns>
 		public static IEnumerable<TimeOnly> EnumerateInStepsUntil(this TimeOnly startTime, TimeOnly endTime, TimeSpan distance, Func<TimeOnly, bool> evaluator)
 		{
@@ -52,23 +51,17 @@ namespace MoreDateTime.Extensions
 				throw new ArgumentException($"{nameof(distance)} is greater than the difference between the two times");
 			}
 
-			if (startTime < endTime)
+			if (distance.Ticks == 0)
 			{
-				for (var step = startTime; step <= endTime; step = step.Add(distance))
-				{
-					if (evaluator.Invoke(step))
-						yield return step;
-				}
-			}
-			else
-			{
-				for (var step = startTime; step >= endTime; step = step.Add(distance))
-				{
-					if (evaluator.Invoke(step))
-						yield return step;
-				}
+				throw new ArgumentException($"{nameof(distance)} must not be zero");
 			}
 
+			for (var moment = startTime.Ticks; distance.IsNegative() ? moment >= endTime.Ticks : moment <= endTime.Ticks; moment += distance.Ticks)
+			{
+				var m = new TimeOnly(moment);
+				if (evaluator.Invoke(m))
+					yield return m;
+			}
 		}
 
 		/// <summary>

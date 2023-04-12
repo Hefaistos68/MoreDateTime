@@ -1,21 +1,19 @@
-﻿using System;
-
-namespace MoreDateTime.Interfaces
+﻿namespace MoreDateTime.Interfaces
 {
 	/// <summary>
 	/// A Date/Time range provider, with an start and an end date
 	/// </summary>
-	public interface IDateTimeRange
+	public interface ITimeOnlyRange
 	{
 		/// <summary>
-		/// Gets or sets the start date
+		/// Gets or sets the start time
 		/// </summary>
-		DateTime Start { get; set; }
+		TimeOnly Start { get; set; }
 		
 		/// <summary>
-		/// Gets or sets the end date
+		/// Gets or sets the end time
 		/// </summary>
-		DateTime End { get; set; }
+		TimeOnly End { get; set; }
 
 		/// <summary>
 		/// Gets the distance between the <see cref="Start"/> and the <see cref="End"/>
