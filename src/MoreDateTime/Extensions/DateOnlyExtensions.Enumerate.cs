@@ -34,12 +34,22 @@ namespace MoreDateTime.Extensions
 
 			if (startDate < endDate)
 			{
+				if (distance.Ticks < 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be positive when going forwards");
+				}
+
 				endDate2 = endDate2.Add(_enumerationGap);
 				for (var step = startDate2.Date; step < endDate2; step = step.Add(distance))
 					yield return step.ToDateOnly();
 			}
 			else
 			{
+				if (distance.Ticks > 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be negative when going backwards");
+				}
+
 				endDate2 = endDate2.Sub(_enumerationGap);
 				for (var step = startDate2.Date; step >= endDate2; step = step.Add(distance))
 					yield return step.ToDateOnly();
@@ -71,6 +81,12 @@ namespace MoreDateTime.Extensions
 
 			if (startDate < endDate)
 			{
+				// make sure distance is negative if we are going forwards
+				if (distance.Ticks < 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be positive when going forwards");
+				}
+
 				for (var step = startDate2.Date; step.Date <= endDate2.Date; step = step.Add(distance))
 				{
 					var dateOnly = step.ToDateOnly();
@@ -80,6 +96,12 @@ namespace MoreDateTime.Extensions
 			}
 			else
 			{
+				// make sure distance is negative if we are going backwards
+				if (distance.Ticks > 0)
+				{
+					throw new ArgumentOutOfRangeException(nameof(distance), "Distance must be negative when going backwards");
+				}
+
 				for (var step = startDate2.Date; step.Date >= endDate2.Date; step = step.Add(distance))
 				{
 					var dateOnly = step.ToDateOnly();
@@ -100,7 +122,7 @@ namespace MoreDateTime.Extensions
 		{
 			if (to <= from)
 			{
-				for (var day = from; day >= to; day = day.NextDay())
+				for (var day = from; day >= to; day = day.PreviousDay())
 					yield return day;
 			}
 			else
@@ -132,7 +154,7 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Advances to the closest weekend and enumerates the weekends until the end date
+		/// Advances to the closest weekend and enumerates the weekends until the end date. The weekend date is always a saturday when going forward and a sunday when going backwards.
 		/// </summary>
 		/// <param name="from">The starting DateOnly value</param>
 		/// <param name="to">The ending DateOnly value</param>

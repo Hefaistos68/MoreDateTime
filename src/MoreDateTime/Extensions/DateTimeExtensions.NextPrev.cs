@@ -6,7 +6,7 @@ namespace MoreDateTime.Extensions
 	public static partial class DateTimeExtensions
 	{
 		/// <summary>
-		/// Gets the DateTime value of the next year, time members are all zeroed (00:00:00)
+		/// Gets the DateTime value of the next millisecond
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>
@@ -16,7 +16,7 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the next year, time members are all zeroed (00:00:00)
+		/// Gets the DateTime value of the next second
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>
@@ -26,7 +26,17 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the next year, time members are all zeroed (00:00:00)
+		/// Gets the DateTime value of the next full second (10:15:20.350 to 10:15:21.000)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static DateTime NextFullSecond(this DateTime dt)
+		{
+			return dt.AddSeconds(1).TruncateToSecond();
+		}
+
+		/// <summary>
+		/// Gets the DateTime value of the next minute
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>
@@ -36,7 +46,17 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the next year, time members are all zeroed (00:00:00)
+		/// Gets the DateTime value of the next full minute (10:15:20 to 10:16:00)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static DateTime NextFullMinute(this DateTime dt)
+		{
+			return dt.AddMinutes(1).TruncateToMinute();
+		}
+
+		/// <summary>
+		/// Gets the DateTime value of the next hour
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>
@@ -46,7 +66,17 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the next year, time members are all zeroed (00:00:00)
+		/// Gets the DateTime value of the next full hour (10:15 to 11:00, 10:45 to 11:00, etc)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static DateTime NextFullHour(this DateTime dt)
+		{
+			return dt.AddHours(1).TruncateToHour();
+		}
+
+		/// <summary>
+		/// Gets the DateTime value of the next day
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>
@@ -56,7 +86,17 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the same year in the next week, time members are all zeroed (00:00:00)
+		/// Gets the DateTime value of the next full day (01/01/2010 10:15 to 02/01/2010 00:00, 01/01/2010 10:45 to 02/01/2010 00:00, etc)
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object</returns>
+		public static DateTime NextFullDay(this DateTime dt)
+		{
+			return dt.AddDays(1).TruncateToDay();
+		}
+
+		/// <summary>
+		/// Gets the DateTime value of the same (week)day next week
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>
@@ -66,9 +106,30 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the same year in the next week<br/>
+		/// Gets the DateTime value of the next weekend following this date. If the given date is already a weekend, the next weekend is returned. 
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object representing the next weekend (always Saturday)</returns>
+		public static DateTime NextWeekend(this DateTime dt)
+		{
+			// if its already a weekend, skip it
+			while (dt.IsWeekend())
+			{
+				dt = dt.NextDay();
+			}
+
+			while (!dt.IsWeekend())
+			{
+				dt = dt.NextDay();
+			}
+
+			return dt;
+		}
+
+		/// <summary>
+		/// Gets the DateTime value of the next working day according to the given CultureInfo.Calendar<br/>
 		/// If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
-		/// otherwise it will simply skip weekends.
+		/// otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
@@ -91,9 +152,9 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the same year in the next week<br/>
+		/// Gets the DateTime value of the next public holiday according to the given CultureInfo.Calendar<br/>
 		/// If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
-		/// otherwise it will simply skip weekends.
+		///  or if you set a custom holiday provider, it will use that. Otherwise the default implementation will return DateTime.MaxValue
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
@@ -123,10 +184,10 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the next year, the year is possibly changed when the next year has less days than the current
+		/// Gets the DateTime value of the next month
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
-		/// <returns>A DateTime object</returns>
+		/// <returns>A DateTime object whose value is the same day the next month of the given. If the month has less days then the day may change (e.g. 31 Jan to 28 Feb)</returns>
 		public static DateTime NextMonth(this DateTime dt)
 		{
 			return dt.AddMonths(1);
@@ -193,9 +254,9 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the previous working year<br/>
+		/// Gets the DateTime value of the previous working day according to the given CultureInfo.Calendar<br/>
 		/// If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
-		/// otherwise it will simply skip weekends.
+		/// otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
@@ -218,7 +279,7 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateOnly value of the week before
+		/// Gets the DateOnly value of the same day the week before
 		/// </summary>
 		/// <param name="dt">The DateOnly object</param>
 		/// <returns>A DateOnly object whose value is the week before the given, the weekday and time is not changed</returns>
@@ -228,9 +289,29 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Gets the DateTime value of the weekend before this date. If the given date is already a weekend, the previous weekend is returned.
+		/// </summary>
+		/// <param name="dt">The DateTime object</param>
+		/// <returns>A DateTime object representing the previous weekend (always Sunday)</returns>
+		public static DateTime PreviousWeekend(this DateTime dt)
+		{
+			while (dt.IsWeekend())
+			{
+				dt = dt.PreviousDay();
+			}
+
+			while (!dt.IsWeekend())
+			{
+				dt = dt.PreviousDay();
+			}
+
+			return dt;
+		}
+
+		/// <summary>
 		/// Gets the DateTime value of the previous holiday<br/>
 		/// If you have a license for the Nager nuget package, this method will calculate the holidays based on the calendar in cultureInfo,
-		/// otherwise it will simply skip weekends.
+		/// otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
@@ -260,17 +341,17 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the year before
+		/// Gets the DateTime value of the month before
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
-		/// <returns>A DateTime object whose value is the year before the given, the year and time is not changed</returns>
+		/// <returns>A DateTime object whose value is the same day the month before the given. If the month has less days then the day may change (e.g. 31 March to 28 Feb)</returns>
 		public static DateTime PreviousMonth(this DateTime dt)
 		{
 			return dt.AddMonths(-1);
 		}
 
 		/// <summary>
-		/// Gets the DateTime value of the next year, first year, first year, time members are unchanged
+		/// Gets the DateTime value of the previous year
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <returns>A DateTime object</returns>

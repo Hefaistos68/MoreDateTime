@@ -20,9 +20,14 @@ namespace MoreDateTime.Tests.Extensions
 	{
 		// setup some test data taken from real calendar
 		private readonly DateTime _startDate = new DateTime(2020, 05, 15); // Friday
+		private readonly DateTime _startDateTime = new DateTime(2020, 05, 15, 2, 3, 4); // Friday
 
 		private readonly DateTime _midDate = new DateTime(2021, 02, 20);   // Saturday
 		private readonly DateTime _endDate = new DateTime(2021, 05, 14);   // Friday
+
+		private readonly DateOnly _startDateOnly = new DateOnly(2020, 05, 15); // Friday
+		private readonly DateOnly _midDateOnly = new DateOnly(2021, 02, 20);   // Saturday
+		private readonly DateOnly _endDateOnly = new DateOnly(2021, 05, 14);   // Friday
 
 		private readonly DateTime _startDateFirstDay = new DateTime(2020, 05, 01);  // Friday
 		private readonly DateTime _startDateLastDay = new DateTime(2020, 05, 31);       // Sunday
@@ -310,7 +315,7 @@ namespace MoreDateTime.Tests.Extensions
 		[TestMethod]
 		public void CannotCall_SplitWithDatesAndParts_WithNullDates()
 		{
-			Should.Throw<ArgumentNullException>(() => default(DateTimeRange).Split(5));
+			Should.Throw<ArgumentNullException>(() => default(DateTimeRange)!.Split(5));
 		}
 
 		/// <summary>

@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-using static MoreDateTime.Extensions.DateTimeExtensions;
+﻿using System.Runtime.CompilerServices;
 
 namespace MoreDateTime.Extensions
 {
@@ -9,6 +7,17 @@ namespace MoreDateTime.Extensions
 	/// </summary>
 	public static partial class TimeSpanExtensions
 	{
+		/// <summary>
+		/// The rounding unit for rounding TimeSpans
+		/// </summary>
+		public enum RoundingUnit
+		{
+			Day,
+			Hour,
+			Minute,
+			Second
+		}
+
 		/// <summary>
 		/// Precision specification for the {DateTime.}TruncateTo method
 		/// </summary>
@@ -31,6 +40,86 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Returns if the value is negative
+		/// </summary>
+		/// <param name="ts">The TimeSpan to test</param>
+		/// <returns>A bool.</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static bool IsNegative(this TimeSpan ts)
+		{
+			return ts.Ticks < 0;
+		}
+
+		/// <summary>
+		/// Returns if the value is positive
+		/// </summary>
+		/// <param name="ts">The TimeSpan to test</param>
+		/// <returns>A bool.</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static bool IsPositive(this TimeSpan ts)
+		{
+			return ts.Ticks >= 0;   // should 0 be positive? Ignore?
+		}
+
+		/// <summary>
+		/// Rounds the TimeSpan mathematically to the next unit of the given precision.
+		/// </summary>
+		/// <param name="ts">The TimeSpan</param>
+		/// <param name="TruncateTo">The truncatation enum</param>
+		/// <returns>A TimeSpan.</returns>
+		public static TimeSpan RoundTo(this TimeSpan timeSpan, RoundingUnit roundingUnit)
+		{
+			return roundingUnit switch
+			{
+				RoundingUnit.Day => TimeSpan.FromDays(Math.Round(timeSpan.TotalDays)),
+				RoundingUnit.Hour => TimeSpan.FromHours(Math.Round(timeSpan.TotalHours)),
+				RoundingUnit.Minute => TimeSpan.FromMinutes(Math.Round(timeSpan.TotalMinutes)),
+				RoundingUnit.Second => TimeSpan.FromSeconds(Math.Round(timeSpan.TotalSeconds)),
+				_ => throw new ArgumentException("Invalid rounding unit specified.")
+			};
+		}
+
+		/// <summary>
+		/// Rounds the TimeSpan mathematically to the day
+		/// </summary>
+		/// <param name="ts">The TimeSpan</param>
+		/// <returns>A TimeSpan.</returns>
+		public static TimeSpan RoundToDay(this TimeSpan timeSpan)
+		{
+			return RoundTo(timeSpan, RoundingUnit.Day);
+		}
+
+		/// <summary>
+		/// Rounds the TimeSpan mathematically to the Hour
+		/// </summary>
+		/// <param name="ts">The TimeSpan</param>
+		/// <returns>A TimeSpan.</returns>
+		public static TimeSpan RoundToHour(this TimeSpan timeSpan)
+		{
+			return RoundTo(timeSpan, RoundingUnit.Hour);
+		}
+
+		/// <summary>
+		/// Rounds the TimeSpan mathematically to the Minute
+		/// </summary>
+		/// <param name="ts">The TimeSpan</param>
+		/// <returns>A TimeSpan.</returns>
+		public static TimeSpan RoundToMinute(this TimeSpan timeSpan)
+		{
+			return RoundTo(timeSpan, RoundingUnit.Minute);
+		}
+
+		/// <summary>
+		/// Rounds the TimeSpan mathematically to the Second
+		/// </summary>
+		/// <param name="ts">The TimeSpan</param>
+		/// <returns>A TimeSpan.</returns>
+		public static TimeSpan RoundToSecond(this TimeSpan timeSpan)
+		{
+			return RoundTo(timeSpan, RoundingUnit.Second);
+		}
+
+		/// <summary>
 		/// Truncates the precision of a TimeSpan object to the given precision
 		/// </summary>
 		/// <param name="dt">The TimeSpan object</param>
@@ -40,11 +129,10 @@ namespace MoreDateTime.Extensions
 		{
 			return TruncateTo switch
 			{
-				TimeSpanTruncate.Weeks => new TimeSpan(0, 0, 0),
 				TimeSpanTruncate.Days => new TimeSpan(dt.Days, 0, 0, 0),
-				TimeSpanTruncate.Hours => new TimeSpan(dt.Hours, 0, 0),
-				TimeSpanTruncate.Minutes => new TimeSpan(dt.Hours, dt.Minutes, 0),
-				_ => new TimeSpan(dt.Hours, dt.Minutes, dt.Seconds)
+				TimeSpanTruncate.Hours => new TimeSpan(dt.Days, dt.Hours, 0, 0),
+				TimeSpanTruncate.Minutes => new TimeSpan(dt.Days, dt.Hours, dt.Minutes, 0),
+				_ => new TimeSpan(dt.Days, dt.Hours, dt.Minutes, dt.Seconds)
 			};
 		}
 
@@ -86,25 +174,6 @@ namespace MoreDateTime.Extensions
 		public static TimeSpan TruncateToSecond(this TimeSpan dt)
 		{
 			return dt.TruncateTo(TimeSpanTruncate.Seconds);
-		}
-
-		/// <summary>
-		/// Rounds the TimeSpan mathematically to the next unit of the given precision.
-		/// </summary>
-		/// <param name="ts">The TimeSpan</param>
-		/// <param name="TruncateTo">The truncatation enum</param>
-		/// <returns>A TimeSpan.</returns>
-		public static TimeSpan RoundTo(this TimeSpan ts, TimeSpanTruncate TruncateTo)
-		{
-			return TruncateTo switch
-			{
-				TimeSpanTruncate.Weeks => new TimeSpan((int)(ts.Days/DaysInWeek), 0, 0, 0),
-				TimeSpanTruncate.Days => new TimeSpan(ts.Days, 0, 0, 0),
-				TimeSpanTruncate.Hours => new TimeSpan(ts.Hours, 0, 0),
-				TimeSpanTruncate.Minutes => new TimeSpan(ts.Hours, ts.Minutes, 0),
-				TimeSpanTruncate.Seconds => new TimeSpan(ts.Hours, ts.Minutes, ts.Seconds),
-				_ => new TimeSpan(ts.Hours, ts.Minutes, ts.Seconds)
-			};
 		}
 	}
 }

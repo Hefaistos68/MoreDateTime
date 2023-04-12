@@ -7,8 +7,9 @@ namespace MoreDateTime.Tests.Extensions
 
 	using MoreDateTime.Extensions;
 
-	using Shouldly;
 	using Nager.Date;
+
+	using Shouldly;
 
 	/// <summary>
 	/// Unit tests for the type <see cref="DateOnlyExtensions"/>.
@@ -237,7 +238,7 @@ namespace MoreDateTime.Tests.Extensions
 		[TestMethod]
 		public void CannotCall_SplitWithDatesAndParts_WithNullDates()
 		{
-			Should.Throw<ArgumentNullException>(() => default(DateTimeRange).Split(5));
+			Should.Throw<ArgumentNullException>(() => default(DateOnlyRange)!.Split(5));
 		}
 
 		/// <summary>
@@ -246,7 +247,7 @@ namespace MoreDateTime.Tests.Extensions
 		[TestMethod]
 		public void CannotCall_SplitWithDatesAndParts_WithZeroParts()
 		{
-			Should.Throw<ArgumentOutOfRangeException>(() => new DateTimeRange(_startDate, _endDate).Split(0));
+			Should.Throw<ArgumentOutOfRangeException>(() => new DateOnlyRange(_startDate, _endDate).Split(0));
 		}
 
 		/// <summary>
@@ -267,5 +268,62 @@ namespace MoreDateTime.Tests.Extensions
 			Should.Throw<ArgumentOutOfRangeException>(() => _startDate.Split(TimeSpan.FromMinutes(10), 0));
 		}
 
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithStartDateAndDistanceAndParts_WithDistanceLessThanParts()
+		{
+			Should.Throw<ArgumentOutOfRangeException>(() => _startDate.Split(TimeSpan.FromTicks(5), 6));
+		}
+
+		/// <summary>
+		/// Checks that the AddTicks method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_AddTicks()
+		{
+			// Arrange
+			var ticks = TimeSpan.FromDays(5).Ticks;
+
+			// Act
+			var result1 = _startDate.AddTicks(5);
+			var result2 = _startDate.AddTicks(ticks);
+
+			// Assert
+			result1.ShouldBe(_startDate);
+			result2.ShouldBe(_startDate.AddDays(5));
+		}
+		/// <summary>
+		/// Checks that the AddWeeks method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_AddWeeks()
+		{
+			// Arrange
+
+			// Act
+			var result = _startDate.AddWeeks(2);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(14));
+		}
+		/// <summary>
+		/// Checks that the AddMilliseconds method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_AddMilliseconds()
+		{
+			// Arrange
+			var value = DateTimeExtensions.MillisPerDay * 5;
+
+			// Act
+			var result1 = _startDate.AddMilliseconds(500);
+			var result2 = _startDate.AddMilliseconds(value);
+
+			// Assert
+			result1.ShouldBe(_startDate);
+			result2.ShouldBe(_startDate.AddDays(5));
+		}
 	}
 }

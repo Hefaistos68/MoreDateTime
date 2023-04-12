@@ -45,6 +45,23 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the IsEqualDownToDay method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsEqualDownToDay()
+		{
+			// Arrange
+			var dt = _startDate;
+			var other = _startDate.AddHours(5);
+
+			// Act
+			var result = dt.IsEqualDownToDay(other);
+
+			// Assert
+			result.ShouldBeTrue();
+		}
+
+		/// <summary>
 		/// Checks that the IsEqualDownToWeek method functions correctly.
 		/// </summary>
 		[TestMethod]

@@ -14,7 +14,9 @@ namespace MoreDateTime.Tests.Extensions
 	[TestClass]
 	public partial class TimeOnlyExtensionsTests
 	{
+		private static readonly TimeOnly _zeroTime = new TimeOnly(0, 0, 0, 0);
 		private static readonly TimeOnly _startTime = new TimeOnly(1, 2, 3, 4);
+		private static readonly TimeOnly _midTime = new TimeOnly(5, 6, 7, 8);
 		private static readonly TimeOnly _endTime = new TimeOnly(10, 11, 12, 987);
 
 		private readonly int _hoursInStartTimeToEndTime = 10;
@@ -192,6 +194,15 @@ namespace MoreDateTime.Tests.Extensions
 		public void CannotCall_SplitWithstartTimeAndDistanceAndParts_WithZeroParts()
 		{
 			Should.Throw<ArgumentOutOfRangeException>(() => _startTime.Split(TimeSpan.FromMinutes(10), 0));
+		}
+
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithstartTimeAndDistanceAndParts_WithDistanceLessThanParts()
+		{
+			Should.Throw<ArgumentOutOfRangeException>(() => _startTime.Split(TimeSpan.FromTicks(5), 6));
 		}
 
 	}

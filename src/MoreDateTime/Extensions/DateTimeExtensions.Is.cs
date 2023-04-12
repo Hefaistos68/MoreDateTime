@@ -37,7 +37,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if time is between 12:00:00.000 and 18:00:00.000</returns>
 		public static bool IsAfternoon(this DateTime dt)
 		{
-			return dt.Hour.IsBetween(12, 18);
+			return dt.Hour.IsWithin(12, 18);
 		}
 
 		/// <summary>
@@ -47,7 +47,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if time is between 18:00:00.000 and 06:00:00.000</returns>
 		public static bool IsNight(this DateTime dt)
 		{
-			return dt.Hour.IsBetween(18, 23) || dt.Hour.IsBetween(0, 6);
+			return dt.Hour.IsWithin(18, 23) || dt.Hour.IsWithin(0, 6);
 		}
 
 		/// <summary>
@@ -57,11 +57,11 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if time is 00:00:00.000</returns>
 		public static bool IsMorning(this DateTime dt)
 		{
-			return dt.Hour.IsBetween(6, 12);
+			return dt.Hour.IsWithin(6, 12);
 		}
 
 		/// <summary>
-		/// Checks if the given value is between the given start and end values
+		/// Checks if the given value is between the given start and end values, excluding start and end
 		/// </summary>
 		/// <param name="me">The integer to compare</param>
 		/// <param name="start">The start</param>
@@ -74,11 +74,28 @@ namespace MoreDateTime.Extensions
 				throw new ArgumentException("End must be greater than startDate");
 			}
 
+			return (me > start) && (me < end);
+		}
+
+		/// <summary>
+		/// Checks if the given value is withn the given start and end values, inluding start and end
+		/// </summary>
+		/// <param name="me">The integer to compare</param>
+		/// <param name="start">The start</param>
+		/// <param name="end">The end</param>
+		/// <returns>True if the value is greater or equal start and less than or equal end</returns>
+		public static bool IsWithin(this int me, int start, int end)
+		{
+			if (end < start)
+			{
+				throw new ArgumentException("End must be greater than startDate");
+			}
+
 			return (me >= start) && (me <= end);
 		}
 
 		/// <summary>
-		/// Checks if the given value is between the given startDate and endDate values
+		/// Checks if the given value is between the given startDate and endDate values, excluding startDate and endDate
 		/// </summary>
 		/// <param name="me">The DateTime to compare</param>
 		/// <param name="startDate">The startDate date</param>
@@ -91,7 +108,41 @@ namespace MoreDateTime.Extensions
 				throw new ArgumentException("End must be greater than startDate");
 			}
 
+			return (me > startDate) && (me < endDate);
+		}
+
+		/// <summary>
+		/// Checks if the given value is between the given startDate and endDate values, including startDate and endDate
+		/// </summary>
+		/// <param name="me">The DateTime to compare</param>
+		/// <param name="startDate">The startDate date</param>
+		/// <param name="endDate">The endDate date</param>
+		/// <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
+		public static bool IsWithin(this DateTime me, DateTime startDate, DateTime endDate)
+		{
+			if (endDate < startDate)
+			{
+				throw new ArgumentException("End must be greater than startDate");
+			}
+
 			return (me >= startDate) && (me <= endDate);
+		}
+
+		/// <summary>
+		/// Checks if the given value is between the given startDate and endDate values, including startDate and endDate
+		/// </summary>
+		/// <param name="me">The DateTime to compare</param>
+		/// <param name="startDate">The startDate date</param>
+		/// <param name="endDate">The endDate date</param>
+		/// <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
+		public static bool IsWithin(this DateTime me, DateOnly startDate, DateOnly endDate)
+		{
+			if (endDate < startDate)
+			{
+				throw new ArgumentException("End must be greater than startDate");
+			}
+
+			return (me.ToDateOnly() >= startDate) && (me.ToDateOnly() <= endDate);
 		}
 
 		/// <summary>

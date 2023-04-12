@@ -58,6 +58,22 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateInStepsUntil_WithDistance3HourBackwards()
+		{
+			// Arrange
+			var distance = TimeSpan.FromHours(-3);
+
+			// Act
+			var result = _endTime.EnumerateInStepsUntil(_startTime, distance);
+
+			// Assert
+			result.Count().ShouldBe(4); // 1h, 4h, 7h, 10h are the steps
+		}
+
+		/// <summary>
 		/// Checks that the ToDateRanges method functions correctly.
 		/// </summary>
 		[TestMethod]
@@ -68,6 +84,32 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _startTime.EnumerateInStepsUntil(_endTime, distance, Skipper);
+
+			// Assert
+			result.Count().ShouldBe(_hoursInStartTimeToEndTime - 1);
+
+			foreach (var d in result)
+			{
+				d.Hour.ShouldNotBe(5);
+			}
+
+			bool Skipper(TimeOnly arg)
+			{
+				return arg.Hour != 5;
+			}
+		}
+
+		/// <summary>
+		/// Checks that the ToDateRanges method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateInStepsUntil_WithEvaluatorBackwards()
+		{
+			// Arrange
+			var distance = TimeSpan.FromHours(-1);
+
+			// Act
+			var result = _endTime.EnumerateInStepsUntil(_startTime, distance, Skipper);
 
 			// Assert
 			result.Count().ShouldBe(_hoursInStartTimeToEndTime - 1);
@@ -185,9 +227,37 @@ namespace MoreDateTime.Tests.Extensions
 		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
 		/// </summary>
 		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithDistanceZero()
+		{
+			Should.Throw<ArgumentException>(() => _startTime.EnumerateInStepsUntil(_startTime.AddSeconds(1), TimeSpan.FromSeconds(0)).Count());
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithEvaluatorAndDistanceZero()
+		{
+			Should.Throw<ArgumentException>(() => _startTime.EnumerateInStepsUntil(_startTime.AddSeconds(1), TimeSpan.FromSeconds(0), (x) => true).Count());
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
 		public void CannotCall_EnumerateInStepsUntil_WithFromAndToAndDistanceAndEvaluator_WithNullEvaluator()
 		{
-			Should.Throw<ArgumentNullException>(() => _startTime.EnumerateInStepsUntil(_endTime, TimeSpan.FromDays(2), default(Func<TimeOnly, bool>)!).Count());
+			Should.Throw<ArgumentNullException>(() => _startTime.EnumerateInStepsUntil(_endTime, TimeSpan.FromMinutes(2), default(Func<TimeOnly, bool>)!).Count());
+		}
+
+		/// <summary>
+		/// Checks that the EnumerateInStepsUntil method throws when the evaluator parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_EnumerateInStepsUntil_WithDistanceGreaterThanDifferenceAndEvaluator()
+		{
+			Should.Throw<ArgumentException>(() => _startTime.EnumerateInStepsUntil(_startTime.AddMinutes(1), TimeSpan.FromMinutes(10), (x) => true).Count());
+			;
 		}
 	}
 }

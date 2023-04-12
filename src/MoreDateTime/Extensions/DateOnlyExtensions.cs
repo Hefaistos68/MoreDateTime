@@ -17,7 +17,7 @@ namespace MoreDateTime.Extensions
 	/// </summary>
 	public static partial class DateOnlyExtensions
 	{
-		public static int DaysInWeek = 7;
+		public const int DaysInWeek = 7;
 
 		/// <summary>
 		/// Returns the Week of the Year of this <see cref="DateOnly"/> object
@@ -88,6 +88,17 @@ namespace MoreDateTime.Extensions
 		public static DateOnly ToDateOnly(this DateTime me)
 		{
 			return new DateOnly(me.Year, me.Month, me.Day);
+		}
+
+		/// <summary>
+		/// Returns the <see cref="DateTime"/> as <see cref="TimeOnly"/>, stripping the date component
+		/// </summary>
+		/// <param name="me">The <see cref="DateTime"/> object</param>
+		/// <returns>A <see cref="TimeOnly"/> object representing the Time part of the given DateTime object</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static TimeOnly ToTimeOnly(this DateTime me)
+		{
+			return new TimeOnly(me.Hour, me.Minute, me.Second, me.Millisecond);
 		}
 
 		/// <summary>

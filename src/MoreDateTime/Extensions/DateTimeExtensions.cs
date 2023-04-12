@@ -130,6 +130,20 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Returns the Week of the Year of this <see cref="DateTime"/> object
+		/// </summary>
+		/// <param name="me">The DateTime object</param>
+		/// <param name="cultureInfo">The <see cref="CultureInfo"/> for the calendar, if null (or not provided) the current culture is used</param>
+		/// <returns>An integer </returns>
+		public static int WeekOfYear(this DateTime me, CultureInfo? cultureInfo = null)
+		{
+			cultureInfo = cultureInfo ?? CultureInfo.CurrentCulture;
+
+			return cultureInfo.Calendar.GetWeekOfYear(me, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek);
+		}
+
+
+		/// <summary>
 		/// The default date range distance in minutes
 		/// </summary>
 		private const int defaultDateRangeDistance = 10;
@@ -180,10 +194,23 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Adds weeks to a DateTime object
+		/// </summary>
+		/// <param name="me">The DateTime object</param>
+		/// <param name="value">The number of weeks to add</param>
+		/// <returns>A DateTime object whose value is the sum of the date and time represented by this instance and the number of weeks</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static DateTime AddWeeks(this DateTime me, double value)
+		{
+			return me.Add(TimeSpan.FromDays(DaysInWeek * value));
+		}
+
+		/// <summary>
 		/// Returns a DateTime object representing the first year of the current year
 		/// </summary>
 		/// <param name="dateTime">The DateTime value of which the first year is requested</param>
 		/// <returns>A DateTime object with year 1, time members set to 0 (00:00:00)</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateTime StartOfMonth(this DateTime dateTime)
 		{
 			return dateTime.TruncateToMonth();
@@ -194,6 +221,7 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="dateTime">The DateTime value of which the first year is requested</param>
 		/// <returns>A DateTime object with the last year of the year, time members set to 0 (00:00:00)</returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateTime EndOfMonth(this DateTime dateTime)
 		{
 			return dateTime.AddMonths(1).TruncateToMonth().AddDays(-1);

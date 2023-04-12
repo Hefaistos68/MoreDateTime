@@ -59,7 +59,41 @@ namespace MoreDateTime.Tests.Extensions
 			me.IsBetween(-5, 60000).ShouldBeTrue();
 			Should.Throw(() => me.IsBetween(1000, 6), typeof(ArgumentException));
 			me.IsBetween(10, 60).ShouldBeFalse();
-			me.IsBetween(5, 6).ShouldBeTrue();
+			me.IsBetween(5, 6).ShouldBeFalse();
+		}
+
+		/// <summary>
+		/// Checks that the IsWithin method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin()
+		{
+			// Arrange
+
+			// Act / Assert
+			_midDate.IsWithin(_startDate, _endDate).ShouldBeTrue();
+			_startDate.IsWithin(_midDate, _endDate).ShouldBeFalse();
+			Should.Throw(() => _midDate.IsWithin(_endDate, _startDate), typeof(ArgumentException));
+			_endDate.IsWithin(_startDate, _midDate).ShouldBeFalse();
+			DateTime.Today.IsWithin(_startDate, _endDate).ShouldBeFalse();
+			DateTime.Today.IsWithin(_startDate, DateTime.MaxValue).ShouldBeTrue();
+		}
+
+		/// <summary>
+		/// Checks that the IsWithin method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin_DateOnly()
+		{
+			// Arrange
+
+			// Act / Assert
+			_midDate.IsWithin(_startDateOnly, _endDateOnly).ShouldBeTrue();
+			_startDate.IsWithin(_midDateOnly, _endDateOnly).ShouldBeFalse();
+			Should.Throw(() => _midDate.IsWithin(_endDateOnly, _startDateOnly), typeof(ArgumentException));
+			_endDate.IsWithin(_startDateOnly, _midDateOnly).ShouldBeFalse();
+			DateTime.Today.IsWithin(_startDateOnly, _endDateOnly).ShouldBeFalse();
+			DateTime.Today.IsWithin(_startDateOnly, DateOnly.MaxValue).ShouldBeTrue();
 		}
 
 		/// <summary>

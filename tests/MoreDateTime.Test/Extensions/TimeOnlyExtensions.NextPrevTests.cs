@@ -139,5 +139,49 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.Hour.ShouldBe(0);
 		}
+
+		/// <summary>
+		/// Checks that the NextFullSecond method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullSecond()
+		{
+			// Arrange
+
+			// Act
+			var result = _startTime.AddMilliseconds(200).NextFullSecond();
+
+			// Assert
+			result.ShouldBe(_startTime.NextSecond().TruncateToSecond());
+		}
+
+		/// <summary>
+		/// Checks that the NextFullMinute method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullMinute()
+		{
+			// Arrange
+
+			// Act
+			var result = _startTime.NextFullMinute();
+
+			// Assert
+			result.ShouldBe(_startTime.AddMinutes(1).TruncateToMinute());
+		}
+
+		/// <summary>
+		/// Checks that the NextFullHour method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextFullHour()
+		{
+			// Arrange
+			var result = _startTime.NextFullHour();
+
+			// Assert
+			result.ShouldBe(_startTime.AddHours(1).TruncateToHour());
+		}
+
 	}
 }
