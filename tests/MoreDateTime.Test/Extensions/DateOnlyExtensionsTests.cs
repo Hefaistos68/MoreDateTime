@@ -52,13 +52,15 @@ namespace MoreDateTime.Tests.Extensions
 		private readonly TimeZoneInfo _timeZoneTest = TimeZoneInfo.CreateCustomTimeZone("UnitTest", new TimeSpan(1, 0, 0), "UnitTest", "UnitTest");
 		private readonly CultureInfo _cultureInfo = new CultureInfo("PT-PT");
 
+
 		/// <summary>
 		/// Initialize the test
 		/// </summary>
 		[TestInitialize()]
 		public void SetupOnce()
 		{
-			DateSystem.LicenseKey = "LostTimeIsNeverFoundAgain";
+			DateSystem.LicenseKey = "Thank you for supporting open source projects";
+			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 		}
 		/// <summary>
 		/// Checks that the StartOfMonth method functions correctly.
