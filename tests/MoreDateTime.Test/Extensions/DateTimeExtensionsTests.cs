@@ -65,9 +65,8 @@ namespace MoreDateTime.Tests.Extensions
 		[TestInitialize()]
 		public void SetupOnce()
 		{
-			DateSystem.LicenseKey = "LostTimeIsNeverFoundAgain";
+			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 		}
-
 
 		/// <summary>
 		/// Checks that the AsUtcDate method functions correctly.

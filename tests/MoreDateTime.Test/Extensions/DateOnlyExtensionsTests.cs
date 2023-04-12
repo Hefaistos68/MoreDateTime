@@ -59,7 +59,6 @@ namespace MoreDateTime.Tests.Extensions
 		[TestInitialize()]
 		public void SetupOnce()
 		{
-			DateSystem.LicenseKey = "Get your own license key to run unit tests with Nager.Date";
 			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 		}
 		/// <summary>
