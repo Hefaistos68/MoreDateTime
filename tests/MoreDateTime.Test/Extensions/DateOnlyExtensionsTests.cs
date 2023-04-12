@@ -59,7 +59,8 @@ namespace MoreDateTime.Tests.Extensions
 		[TestInitialize()]
 		public void SetupOnce()
 		{
-			DateSystem.LicenseKey = "LostTimeIsNeverFoundAgain";
+			DateSystem.LicenseKey = "Get your own license key to run unit tests with Nager.Date";
+			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 		}
 		/// <summary>
 		/// Checks that the StartOfMonth method functions correctly.
