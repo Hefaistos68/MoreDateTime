@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Date<wbr />Only<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">Is<wbr />Same<wbr />Week</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">Is<wbr />Same<wbr />Week(<wbr />Date<wbr />Only, Date<wbr />Only, Culture<wbr />Info)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek_1.htm">Is<wbr />Same<wbr />Week(<wbr />Date<wbr />Only, Date<wbr />Time, Culture<wbr />Info)</a>
+    </li>
+  </tocItems>
+</toc>

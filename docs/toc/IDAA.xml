@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="T_MoreDateTime_DateOnlyRange" class="has-submenu" href="T_MoreDateTime_DateOnlyRange.htm">
+        <span data-tocFile="../toc/IDAAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Date<wbr />Only<wbr />Range</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_DateTimeProvider" class="has-submenu" href="T_MoreDateTime_DateTimeProvider.htm">
+        <span data-tocFile="../toc/IDBAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Date<wbr />Time<wbr />Provider</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_DateTimeRange" class="has-submenu" href="T_MoreDateTime_DateTimeRange.htm">
+        <span data-tocFile="../toc/IDCAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Date<wbr />Time<wbr />Range</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_DefaultHolidayProvider" class="has-submenu" href="T_MoreDateTime_DefaultHolidayProvider.htm">
+        <span data-tocFile="../toc/IDDAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Default<wbr />Holiday<wbr />Provider</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_NullHolidayProvider" class="has-submenu" href="T_MoreDateTime_NullHolidayProvider.htm">
+        <span data-tocFile="../toc/IDEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Null<wbr />Holiday<wbr />Provider</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_TimeOnlyRange" class="has-submenu" href="T_MoreDateTime_TimeOnlyRange.htm">
+        <span data-tocFile="../toc/IDFAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Time<wbr />Only<wbr />Range</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

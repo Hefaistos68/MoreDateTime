@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeProvider.htm">Date<wbr />Time<wbr />Provider</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_DateTimeProvider.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_Current" href="P_MoreDateTime_DateTimeProvider_Current.htm">Current</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_Now" href="P_MoreDateTime_DateTimeProvider_Now.htm">Now</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_Today" href="P_MoreDateTime_DateTimeProvider_Today.htm">Today</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_UtcNow" href="P_MoreDateTime_DateTimeProvider_UtcNow.htm">Utc<wbr />Now</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_UtcToday" href="P_MoreDateTime_DateTimeProvider_UtcToday.htm">Utc<wbr />Today</a>
+    </li>
+  </tocItems>
+</toc>

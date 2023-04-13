@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDate<wbr />Only<wbr />Range</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="Properties_T_MoreDateTime_Interfaces_IDateOnlyRange" class="has-submenu" href="Properties_T_MoreDateTime_Interfaces_IDateOnlyRange.htm">
+        <span data-tocFile="../toc/IDAACA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Properties</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Methods_T_MoreDateTime_Interfaces_IDateOnlyRange" class="has-submenu" href="Methods_T_MoreDateTime_Interfaces_IDateOnlyRange.htm">
+        <span data-tocFile="../toc/IDBACA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

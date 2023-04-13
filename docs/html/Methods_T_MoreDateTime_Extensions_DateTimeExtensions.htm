@@ -1,0 +1,827 @@
+﻿<!DOCTYPE html >
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/bulma.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/presentationStyle.css" />
+    <link rel="stylesheet" href="../css/vs.min.css" />
+    <script src="../scripts/jquery-3.5.1.min.js"></script>
+    <script src="../scripts/clipboard.min.js"></script>
+    <script src="../scripts/highlight.min.js"></script>
+    <script src="../scripts/presentationStyle.js"></script>
+    <title>DateTimeExtensions Methods</title>
+    <meta name="Title" content="Methods" />
+    <meta name="Help.Id" content="Methods.T:MoreDateTime.Extensions.DateTimeExtensions" />
+    <meta name="Help.ContentType" content="Reference" />
+    <meta name="container" content="MoreDateTime.Extensions" />
+    <meta name="guid" content="Methods_T_MoreDateTime_Extensions_DateTimeExtensions" />
+    <meta name="tocFile" content="../toc/IDBBA.xml" />
+  </head>
+  <body>
+    <div class="fixedLayout">
+      <div id="Header" class="fixedHeader">
+        <div class="pageHeader level mb-0 py-2 px-4">
+          <div id="TitleContainer" class="level-left">
+            <div id="DocumentationTitle" class="level-item">Documentation for the MoreDateTime library</div>
+          </div>
+          <div id="LangFilterSearchContainer" class="level-right">
+            <div class="level-item">
+              <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span id="CurrentLanguage"></span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" role="menu">
+                  <div id="LanguageSelections" class="dropdown-content">
+                    <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="level-item">
+              <form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;">
+                <div class="field">
+                  <div class="control has-icons-left">
+                    <input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-search"></i>
+                    </span>
+                    <button id="SearchButton" type="submit" class="is-hidden"></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixedContent">
+        <div id="HeaderPrelimContainer" class="level my-1 px-2">
+          <div id="PreliminaryContainer" class="level-left">
+            <div class="level-item">
+              <span class="tag is-warning is-medium">This is preliminary documentation and is subject to change.</span>
+            </div>
+          </div>
+        </div>
+        <nav class="breadcrumb my-1 px-2 border-bottom" role="navigation">
+          <ul id="TopicBreadcrumbs" />
+        </nav>
+        <div class="columns pl-5 pr-5 fixedContent">
+          <div id="ShowHideTOCColumn" class="column is-hidden-tablet">
+            <a id="ShowHideTOC">Show/Hide TOC</a>
+          </div>
+          <div id="TOCColumn" class="column is-hidden-mobile">
+            <nav class="toc">
+              <ul id="TableOfContents" class="toc-menu" />
+            </nav>
+          </div>
+          <div id="TopicContent" class="column content is-7">
+            <h1>Date<wbr />Time<wbr />Extensions Methods</h1>
+            <h2 class="quickLinkHeader">
+              <span class="icon toggleSection" tabindex="0">
+                <i class="fa fa-angle-down"></i>
+              </span>Methods</h2>
+            <div id="IDADASection">
+              <table id="MethodList" class="table is-hoverable">
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_AddWeeks.htm">AddWeeks</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcDate.htm">AsUtcDate</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcTime.htm">AsUtcTime</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Distance.htm">Distance</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfMonth.htm">EndOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateDaysUntil.htm">EnumerateDaysUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateHolidaysUntil.htm">EnumerateHolidaysUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil.htm">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil_1.htm">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan, Func<span id="LSTEF23272A_0" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>DateTime, Boolean<span id="LSTEF23272A_1" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateMonthsUntil.htm">EnumerateMonthsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWeekendsUntil.htm">EnumerateWeekendsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWorkdaysUntil.htm">EnumerateWorkdaysUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateYearsUntil.htm">EnumerateYearsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstFridayOfMonth.htm">FirstFridayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstMondayOfMonth.htm">FirstMondayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSaturdayOfMonth.htm">FirstSaturdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSundayOfMonth.htm">FirstSundayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstThursdayOfMonth.htm">FirstThursdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstTuesdayOfMonth.htm">FirstTuesdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWednesdayOfMonth.htm">FirstWednesdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWeekdayOfMonth.htm">FirstWeekdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsAfternoon.htm">IsAfternoon</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween.htm">IsBetween(DateTime, DateTime, DateTime)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween_1.htm">IsBetween(Int32, Int32, Int32)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqual.htm">IsEqual</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToDay.htm">IsEqualDownToDay</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToHour.htm">IsEqualDownToHour</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMinute.htm">IsEqualDownToMinute</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMonth.htm">IsEqualDownToMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToSecond.htm">IsEqualDownToSecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToWeek.htm">IsEqualDownToWeek</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToYear.htm">IsEqualDownToYear</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidday.htm">IsMidday</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidnight.htm">IsMidnight</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMorning.htm">IsMorning</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsNight.htm">IsNight</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsPublicHoliday.htm">IsPublicHoliday</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameDay.htm">IsSameDay</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameHour.htm">IsSameHour</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMinute.htm">IsSameMinute</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMonth.htm">IsSameMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameSecond.htm">IsSameSecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameWeek.htm">IsSameWeek</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameYear.htm">IsSameYear</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWeekend.htm">IsWeekend</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin.htm">IsWithin(DateTime, DateOnly, DateOnly)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_1.htm">IsWithin(DateTime, DateTime, DateTime)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_2.htm">IsWithin(Int32, Int32, Int32)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastFridayOfMonth.htm">LastFridayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastMondayOfMonth.htm">LastMondayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSaturdayOfMonth.htm">LastSaturdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSundayOfMonth.htm">LastSundayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastThursdayOfMonth.htm">LastThursdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastTuesdayOfMonth.htm">LastTuesdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWednesdayOfMonth.htm">LastWednesdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWeekdayOfMonth.htm">LastWeekdayOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextDay.htm">NextDay</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullDay.htm">NextFullDay</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullHour.htm">NextFullHour</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullMinute.htm">NextFullMinute</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullSecond.htm">NextFullSecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHoliday.htm">NextHoliday</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHour.htm">NextHour</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMillisecond.htm">NextMillisecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMinute.htm">NextMinute</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMonth.htm">NextMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextSecond.htm">NextSecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeek.htm">NextWeek</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeekend.htm">NextWeekend</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWorkday.htm">NextWorkday</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextYear.htm">NextYear</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDaysUntil.htm">NumberOfDaysUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDecadesUntil.htm">NumberOfDecadesUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHolidaysUntil.htm">NumberOfHolidaysUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHoursUntil.htm">NumberOfHoursUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMillisecondsUntil.htm">NumberOfMillisecondsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMinutesUntil.htm">NumberOfMinutesUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMonthsUntil.htm">NumberOfMonthsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSecondsUntil.htm">NumberOfSecondsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSemestersUntil.htm">NumberOfSemestersUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfTrimestersUntil.htm">NumberOfTrimestersUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeekendsUntil.htm">NumberOfWeekendsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeeksUntil.htm">NumberOfWeeksUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWorkdaysUntil.htm">NumberOfWorkdaysUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfYearsUntil.htm">NumberOfYearsUntil</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousDay.htm">PreviousDay</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHoliday.htm">PreviousHoliday</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHour.htm">PreviousHour</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMillisecond.htm">PreviousMillisecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMinute.htm">PreviousMinute</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMonth.htm">PreviousMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousSecond.htm">PreviousSecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeek.htm">PreviousWeek</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeekend.htm">PreviousWeekend</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWorkday.htm">PreviousWorkday</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousYear.htm">PreviousYear</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_SetHolidayProvider.htm">SetHolidayProvider</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split.htm">Split(DateTimeRange, Int32)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_1.htm">Split(DateTime, DateTime, Int32)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_2.htm">Split(DateTime, TimeSpan, Int32)</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfMonth.htm">StartOfMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Sub.htm">Sub</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_ToSqlString.htm">ToSqlString</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateTo.htm">TruncateTo</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToDay.htm">TruncateToDay</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToHour.htm">TruncateToHour</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMinute.htm">TruncateToMinute</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMonth.htm">TruncateToMonth</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToSecond.htm">TruncateToSecond</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToWeek.htm">TruncateToWeek</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToYear.htm">TruncateToYear</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Weeknumber.htm">Weeknumber</a>
+                  </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_WeekOfYear.htm">WeekOfYear</a>
+                  </td>
+                  <td> </td>
+                </tr>
+              </table>
+            </div>
+            <h2 class="quickLinkHeader">
+              <span class="icon toggleSection" tabindex="0">
+                <i class="fa fa-angle-down"></i>
+              </span>See Also</h2>
+            <div id="seeAlsoSection">
+              <h4>Reference</h4>
+              <div>
+                <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">DateTimeExtensions Class</a>
+              </div>
+              <div>
+                <a href="N_MoreDateTime_Extensions.htm">MoreDateTime.Extensions Namespace</a>
+              </div>
+            </div>
+          </div>
+          <div id="InThisArticleColumn" class="column is-hidden-mobile">
+            <nav class="menu sticky is-hidden">
+              <p class="menu-label">
+                <strong>In This Article</strong>
+              </p>
+              <ul id="InThisArticleMenu" class="menu-list">
+                <li>
+                  <a class="quickLink">Methods</a>
+                </li>
+                <li>
+                  <a class="quickLink">See Also</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <footer id="PageFooter" class="footer border-top py-3 fixedFooter">
+        <div class="columns">
+          <div class="column">
+            <p>(c) Hefaistos68 / ExcerWise Lda.</p> 
+				</div>
+          <div class="column"> 
+				</div>
+        </div>
+      </footer>
+    </div>
+    <script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+});</script>
+  </body>
+</html>

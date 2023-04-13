@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeRange.htm">Date<wbr />Time<wbr />Range</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_DateTimeRange.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_DateTimeRange_End" href="P_MoreDateTime_DateTimeRange_End.htm">End</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeRange_Start" href="P_MoreDateTime_DateTimeRange_Start.htm">Start</a>
+    </li>
+  </tocItems>
+</toc>
