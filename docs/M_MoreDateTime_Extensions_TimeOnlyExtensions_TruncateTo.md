@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -20,7 +20,7 @@ public static TimeOnly TruncateTo(
 
 
 #### Parameters
-<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.timeonly" target="_blank" rel="noopener noreferrer">TimeOnly</a></dt><dd>\[Missing &lt;param name="dt"/&gt; documentation for "M:MoreDateTime.Extensions.TimeOnlyExtensions.TruncateTo(System.TimeOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)"\]</dd><dt>  <a href="T_MoreDateTime_Extensions_DateTimeExtensions_DateTruncate.md">DateTimeExtensions.DateTruncate</a></dt><dd>\[Missing &lt;param name="TruncateTo"/&gt; documentation for "M:MoreDateTime.Extensions.TimeOnlyExtensions.TruncateTo(System.TimeOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)"\]</dd></dl>
+<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.timeonly" target="_blank" rel="noopener noreferrer">TimeOnly</a></dt><dd>\[Missing &lt;param name="dt"/&gt; documentation for "M:MoreDateTime.Extensions.TimeOnlyExtensions.TruncateTo(System.TimeOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)"\]</dd><dt>  <a href="T_MoreDateTime_Extensions_DateTimeExtensions_DateTruncate">DateTimeExtensions.DateTruncate</a></dt><dd>\[Missing &lt;param name="TruncateTo"/&gt; documentation for "M:MoreDateTime.Extensions.TimeOnlyExtensions.TruncateTo(System.TimeOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)"\]</dd></dl>
 
 #### Return Value
 <a href="https://learn.microsoft.com/dotnet/api/system.timeonly" target="_blank" rel="noopener noreferrer">TimeOnly</a>  
@@ -37,5 +37,5 @@ Extension Methods (C# Programming Guide)</a>.
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_TimeOnlyExtensions.md">TimeOnlyExtensions Class</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_TimeOnlyExtensions">TimeOnlyExtensions Class</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

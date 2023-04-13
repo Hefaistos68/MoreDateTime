@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces</a>  
+**Namespace:** <a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -30,5 +30,5 @@ int NumberOfKnownHolidays(
 
 
 #### Reference
-<a href="T_MoreDateTime_Interfaces_IHolidayProvider.md">IHolidayProvider Interface</a>  
-<a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces Namespace</a>  
+<a href="T_MoreDateTime_Interfaces_IHolidayProvider">IHolidayProvider Interface</a>  
+<a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces Namespace</a>  

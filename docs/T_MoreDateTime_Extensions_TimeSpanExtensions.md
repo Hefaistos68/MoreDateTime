@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -22,40 +22,40 @@ public static class TimeSpanExtensions
 ## Methods
 <table>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsNegative.md">IsNegative</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsNegative">IsNegative</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsPositive.md">IsPositive</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsPositive">IsPositive</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundTo.md">RoundTo</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundTo">RoundTo</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToDay.md">RoundToDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToDay">RoundToDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToHour.md">RoundToHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToHour">RoundToHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToMinute.md">RoundToMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToMinute">RoundToMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToSecond.md">RoundToSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToSecond">RoundToSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateTo.md">TruncateTo</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateTo">TruncateTo</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToDay.md">TruncateToDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToDay">TruncateToDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToHour.md">TruncateToHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToHour">TruncateToHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToMinute.md">TruncateToMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToMinute">TruncateToMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToSecond.md">TruncateToSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToSecond">TruncateToSecond</a></td>
 <td> </td></tr>
 </table>
 
@@ -63,4 +63,4 @@ public static class TimeSpanExtensions
 
 
 #### Reference
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

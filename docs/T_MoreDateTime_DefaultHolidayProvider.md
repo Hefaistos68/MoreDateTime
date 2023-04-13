@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -15,7 +15,7 @@ public class DefaultHolidayProvider : IHolidayProvider
 ```
 
 <table><tr><td><strong>Inheritance</strong></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  →  DefaultHolidayProvider</td></tr>
-<tr><td><strong>Implements</strong></td><td><a href="T_MoreDateTime_Interfaces_IHolidayProvider.md">IHolidayProvider</a></td></tr>
+<tr><td><strong>Implements</strong></td><td><a href="T_MoreDateTime_Interfaces_IHolidayProvider">IHolidayProvider</a></td></tr>
 </table>
 
 
@@ -23,7 +23,7 @@ public class DefaultHolidayProvider : IHolidayProvider
 ## Constructors
 <table>
 <tr>
-<td><a href="M_MoreDateTime_DefaultHolidayProvider__ctor.md">DefaultHolidayProvider</a></td>
+<td><a href="M_MoreDateTime_DefaultHolidayProvider__ctor">DefaultHolidayProvider</a></td>
 <td>Initializes a new instance of the DefaultHolidayProvider class</td></tr>
 </table>
 
@@ -42,16 +42,16 @@ public class DefaultHolidayProvider : IHolidayProvider
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td>
 <td>Gets the <a href="https://learn.microsoft.com/dotnet/api/system.type" target="_blank" rel="noopener noreferrer">Type</a> of the current instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DefaultHolidayProvider_IsPublicHoliday.md">IsPublicHoliday(DateOnly, CultureInfo)</a></td>
+<td><a href="M_MoreDateTime_DefaultHolidayProvider_IsPublicHoliday">IsPublicHoliday(DateOnly, CultureInfo)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DefaultHolidayProvider_IsPublicHoliday_1.md">IsPublicHoliday(DateTime, CultureInfo)</a></td>
+<td><a href="M_MoreDateTime_DefaultHolidayProvider_IsPublicHoliday_1">IsPublicHoliday(DateTime, CultureInfo)</a></td>
 <td> </td></tr>
 <tr>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone" target="_blank" rel="noopener noreferrer">MemberwiseClone</a></td>
 <td>Creates a shallow copy of the current <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DefaultHolidayProvider_NumberOfKnownHolidays.md">NumberOfKnownHolidays</a></td>
+<td><a href="M_MoreDateTime_DefaultHolidayProvider_NumberOfKnownHolidays">NumberOfKnownHolidays</a></td>
 <td> </td></tr>
 <tr>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td>
@@ -62,4 +62,4 @@ public class DefaultHolidayProvider : IHolidayProvider
 
 
 #### Reference
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

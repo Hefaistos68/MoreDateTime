@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -21,12 +21,12 @@ public TimeSpan Distance()
 \[Missing &lt;returns&gt; documentation for "M:MoreDateTime.DateOnlyRange.Distance"\]
 
 #### Implements
-<a href="M_MoreDateTime_Interfaces_IDateOnlyRange_Distance.md">IDateOnlyRange.Distance()</a>  
+<a href="M_MoreDateTime_Interfaces_IDateOnlyRange_Distance">IDateOnlyRange.Distance()</a>  
 
 
 ## See Also
 
 
 #### Reference
-<a href="T_MoreDateTime_DateOnlyRange.md">DateOnlyRange Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateOnlyRange">DateOnlyRange Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

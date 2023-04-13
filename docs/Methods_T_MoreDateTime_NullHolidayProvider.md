@@ -18,10 +18,10 @@
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td>
 <td>Gets the <a href="https://learn.microsoft.com/dotnet/api/system.type" target="_blank" rel="noopener noreferrer">Type</a> of the current instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr>
 <tr>
-<td><a href="M_MoreDateTime_NullHolidayProvider_IsPublicHoliday.md">IsPublicHoliday(DateOnly, CultureInfo)</a></td>
+<td><a href="M_MoreDateTime_NullHolidayProvider_IsPublicHoliday">IsPublicHoliday(DateOnly, CultureInfo)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_NullHolidayProvider_IsPublicHoliday_1.md">IsPublicHoliday(DateTime, CultureInfo)</a></td>
+<td><a href="M_MoreDateTime_NullHolidayProvider_IsPublicHoliday_1">IsPublicHoliday(DateTime, CultureInfo)</a></td>
 <td> </td></tr>
 <tr>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone" target="_blank" rel="noopener noreferrer">MemberwiseClone</a></td>
@@ -35,5 +35,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_NullHolidayProvider.md">NullHolidayProvider Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_NullHolidayProvider">NullHolidayProvider Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

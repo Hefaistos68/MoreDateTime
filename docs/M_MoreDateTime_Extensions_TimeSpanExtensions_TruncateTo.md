@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -20,7 +20,7 @@ public static TimeSpan TruncateTo(
 
 
 #### Parameters
-<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a></dt><dd>\[Missing &lt;param name="dt"/&gt; documentation for "M:MoreDateTime.Extensions.TimeSpanExtensions.TruncateTo(System.TimeSpan,MoreDateTime.Extensions.TimeSpanExtensions.TimeSpanTruncate)"\]</dd><dt>  <a href="T_MoreDateTime_Extensions_TimeSpanExtensions_TimeSpanTruncate.md">TimeSpanExtensions.TimeSpanTruncate</a></dt><dd>\[Missing &lt;param name="TruncateTo"/&gt; documentation for "M:MoreDateTime.Extensions.TimeSpanExtensions.TruncateTo(System.TimeSpan,MoreDateTime.Extensions.TimeSpanExtensions.TimeSpanTruncate)"\]</dd></dl>
+<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a></dt><dd>\[Missing &lt;param name="dt"/&gt; documentation for "M:MoreDateTime.Extensions.TimeSpanExtensions.TruncateTo(System.TimeSpan,MoreDateTime.Extensions.TimeSpanExtensions.TimeSpanTruncate)"\]</dd><dt>  <a href="T_MoreDateTime_Extensions_TimeSpanExtensions_TimeSpanTruncate">TimeSpanExtensions.TimeSpanTruncate</a></dt><dd>\[Missing &lt;param name="TruncateTo"/&gt; documentation for "M:MoreDateTime.Extensions.TimeSpanExtensions.TruncateTo(System.TimeSpan,MoreDateTime.Extensions.TimeSpanExtensions.TimeSpanTruncate)"\]</dd></dl>
 
 #### Return Value
 <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a>  
@@ -37,5 +37,5 @@ Extension Methods (C# Programming Guide)</a>.
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_TimeSpanExtensions.md">TimeSpanExtensions Class</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_TimeSpanExtensions">TimeSpanExtensions Class</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

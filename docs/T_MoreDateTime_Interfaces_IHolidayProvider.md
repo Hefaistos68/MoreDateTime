@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces</a>  
+**Namespace:** <a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -19,13 +19,13 @@ public interface IHolidayProvider
 ## Methods
 <table>
 <tr>
-<td><a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday.md">IsPublicHoliday(DateOnly, CultureInfo)</a></td>
+<td><a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday">IsPublicHoliday(DateOnly, CultureInfo)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday_1.md">IsPublicHoliday(DateTime, CultureInfo)</a></td>
+<td><a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday_1">IsPublicHoliday(DateTime, CultureInfo)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays.md">NumberOfKnownHolidays</a></td>
+<td><a href="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays">NumberOfKnownHolidays</a></td>
 <td> </td></tr>
 </table>
 
@@ -33,4 +33,4 @@ public interface IHolidayProvider
 
 
 #### Reference
-<a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces Namespace</a>  
+<a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces Namespace</a>  

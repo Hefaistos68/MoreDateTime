@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces</a>  
+**Namespace:** <a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -23,5 +23,5 @@ TimeOnly Start { get; set; }
 
 
 #### Reference
-<a href="T_MoreDateTime_Interfaces_ITimeOnlyRange.md">ITimeOnlyRange Interface</a>  
-<a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces Namespace</a>  
+<a href="T_MoreDateTime_Interfaces_ITimeOnlyRange">ITimeOnlyRange Interface</a>  
+<a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces Namespace</a>  

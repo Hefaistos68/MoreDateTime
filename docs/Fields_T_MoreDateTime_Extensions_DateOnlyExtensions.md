@@ -6,7 +6,7 @@
 ## Fields
 <table>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateOnlyExtensions_DaysInWeek.md">DaysInWeek</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateOnlyExtensions_DaysInWeek">DaysInWeek</a></td>
 <td> </td></tr>
 </table>
 
@@ -14,5 +14,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_DateOnlyExtensions.md">DateOnlyExtensions Class</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_DateOnlyExtensions">DateOnlyExtensions Class</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

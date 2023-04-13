@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -26,5 +26,5 @@ public static void SetMockDateTime(
 
 
 #### Reference
-<a href="T_MoreDateTime_DateTimeProvider.md">DateTimeProvider Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateTimeProvider">DateTimeProvider Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

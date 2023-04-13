@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -27,13 +27,13 @@ public bool IsPublicHoliday(
 \[Missing &lt;returns&gt; documentation for "M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)"\]
 
 #### Implements
-<a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday.md">IHolidayProvider.IsPublicHoliday(DateOnly, CultureInfo)</a>  
+<a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday">IHolidayProvider.IsPublicHoliday(DateOnly, CultureInfo)</a>  
 
 
 ## See Also
 
 
 #### Reference
-<a href="T_MoreDateTime_NullHolidayProvider.md">NullHolidayProvider Class</a>  
-<a href="Overload_MoreDateTime_NullHolidayProvider_IsPublicHoliday.md">IsPublicHoliday Overload</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_NullHolidayProvider">NullHolidayProvider Class</a>  
+<a href="Overload_MoreDateTime_NullHolidayProvider_IsPublicHoliday">IsPublicHoliday Overload</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  
