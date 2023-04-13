@@ -61,14 +61,21 @@ namespace MoreDateTime.Tests.Extensions
 		[TestMethod]
 		public void CanCall_NumberOfHolidaysUntil_WithNagerDateHolidayProvider()
 		{
-			// Arrange
-			DateTimeExtensions.SetHolidayProvider(new NagerHolidayProvider());
-
-			// Act
-			var result = _startDate.NumberOfHolidaysUntil(_endDate, _cultureInfo);
-
-			// Assert
-			result.ShouldBe(_holidaysInStartDateToEndDateNagerDate);
+			try
+			{
+				// Arrange
+				DateTimeExtensions.SetHolidayProvider(new NagerHolidayProvider());
+	
+				// Act
+				var result = _startDate.NumberOfHolidaysUntil(_endDate, _cultureInfo);
+	
+				// Assert
+				result.ShouldBe(_holidaysInStartDateToEndDateNagerDate);
+			}
+			catch (Nager.Date.NoLicenseKeyException)
+			{
+				// this test will only be executed with a Nager.Date license key				
+			}
 		}
 
 		/// <summary>
