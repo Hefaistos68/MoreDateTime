@@ -1,8 +1,8 @@
 ![Build status](https://github.com/Hefaistos68/MoreDateTime/actions/workflows/dotnet.yml/badge.svg)
 [![NuGet Version](http://img.shields.io/nuget/v/MoreDateTime.svg?style=flat)](https://www.nuget.org/packages/MoreDateTime/) 
 
-# :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime)
-_(full documentation coming soon)_
+# :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime) / [Docs](https://hefaistos68.github.io/MoreDateTime/)
+
 
 This library is built from the ground up to be a simple, easy to use, and intuitive date and time library for .NET, that simplifies common tasks and provides a consistent API for working with dates and times, throughout the DateTime, DateOnly and TimeOnly .NET objects. It adds many operations that one expects to find in a date and time library, but are missing from the .NET standard library.
 
