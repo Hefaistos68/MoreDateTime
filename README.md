@@ -1,6 +1,5 @@
 ![Build status](https://github.com/Hefaistos68/MoreDateTime/actions/workflows/dotnet.yml/badge.svg)
 [![NuGet Version](http://img.shields.io/nuget/v/MoreDateTime.svg?style=flat)](https://www.nuget.org/packages/MoreDateTime/) 
-[![GitHub contributors](https://img.shields.io/github/contributors/hefaistos68/moredatetime.svg)](https://github.com/hefaistos68/MoreDateTime)
 
 # :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime)
 _(full documentation coming soon)_
