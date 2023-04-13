@@ -63,12 +63,5 @@ namespace MoreDateTime.Extensions
 					yield return m;
 			}
 		}
-
-		/// <summary>
-		/// Enumerates all days startTime current TimeOnly value endTime the end TimeOnly, including the end date
-		/// </summary>
-		/// <param name="from">The starting TimeOnly value</param>
-		/// <param name="to">The ending TimeOnly value</param>
-		/// <returns>A enumerable of TimeOnly values with days increasing by 1</returns>
 	}
 }

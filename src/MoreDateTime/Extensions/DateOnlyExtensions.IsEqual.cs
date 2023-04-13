@@ -19,6 +19,7 @@ namespace MoreDateTime.Extensions
 		/// <param name="dt">The first DateOnly argument</param>
 		/// <param name="other">The DateOnly argument to compare with</param>
 		/// <param name="truncateTo">The precision to truncate to</param>
+		/// <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
 		/// <returns>A bool.</returns>
 		public static bool IsEqual(this DateOnly dt, DateOnly other, DateTruncate truncateTo, CultureInfo? cultureInfo = null)
 		{

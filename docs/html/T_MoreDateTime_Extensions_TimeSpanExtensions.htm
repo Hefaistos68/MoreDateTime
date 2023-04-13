@@ -18,6 +18,7 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime.Extensions" />
     <meta name="guid" content="T_MoreDateTime_Extensions_TimeSpanExtensions" />
+    <meta name="Description" content="The extension methods for working with objects." />
     <meta name="tocFile" content="../toc/IDBA.xml" />
   </head>
   <body>
@@ -41,6 +42,7 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
                   </div>
                 </div>
               </div>
@@ -83,12 +85,15 @@
           </div>
           <div id="TopicContent" class="column content is-7">
             <h1>Time<wbr />Span<wbr />Extensions Class</h1>
+            <div class="summary">
+            The extension methods for working with <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a> objects.
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime_Extensions.htm">MoreDateTime.Extensions</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="identifier">TimeSpanExtensions</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">TimeSpanExtensions</span></dd></dl></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime_Extensions.htm">MoreDateTime.Extensions</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="identifier">TimeSpanExtensions</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">TimeSpanExtensions</span></dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -99,73 +104,97 @@
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsNegative.htm">IsNegative</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns if the value is negative
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsPositive.htm">IsPositive</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns if the value is positive
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundTo.htm">RoundTo</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Rounds the TimeSpan mathematically to the next unit of the given precision.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToDay.htm">RoundToDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Rounds the TimeSpan mathematically to the day
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToHour.htm">RoundToHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Rounds the TimeSpan mathematically to the Hour
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToMinute.htm">RoundToMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Rounds the TimeSpan mathematically to the Minute
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToSecond.htm">RoundToSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Rounds the TimeSpan mathematically to the Second
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateTo.htm">TruncateTo</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a TimeSpan object to the given precision
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToDay.htm">TruncateToDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToHour.htm">TruncateToHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a TimeSpan object to the hour
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToMinute.htm">TruncateToMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a TimeSpan object to the minute
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToSecond.htm">TruncateToSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a TimeSpan object to the second
+            </td>
                 </tr>
               </table>
             </div>

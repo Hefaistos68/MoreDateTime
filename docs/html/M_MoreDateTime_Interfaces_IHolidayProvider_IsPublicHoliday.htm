@@ -18,6 +18,7 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime.Interfaces" />
     <meta name="guid" content="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday" />
+    <meta name="Description" content="Checks whether the given date is a public holiday for the given Calendar in CultureInfo" />
     <meta name="tocFile" content="../toc/IDAADCA.xml" />
   </head>
   <body>
@@ -41,6 +42,7 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
                   </div>
                 </div>
               </div>
@@ -83,15 +85,18 @@
           </div>
           <div id="TopicContent" class="column content is-7">
             <h1>IHoliday<wbr />Provider<span id="LSTC8944A70_0" data-languageSpecificText="cpp=::|nu=."></span>Is<wbr />Public<wbr />Holiday(Date<wbr />Only, Culture<wbr />Info) Method</h1>
+            <div class="summary">
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="identifier">bool</span> <span class="identifier">IsPublicHoliday</span>(
-	<span class="identifier">DateOnly</span> <span class="parameter">date</span>,
-	<span class="identifier">CultureInfo</span> <span class="parameter">cultureInfo</span>
-)</code></pre></div></div><h4 class="quickLinkHeader">Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">date</span>  <a href="https://learn.microsoft.com/dotnet/api/system.dateonly" target="_blank" rel="noopener noreferrer">DateOnly</a></dt><dd> </dd><dt class="has-text-weight-normal"><span class="parameter">cultureInfo</span>  <a href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo" target="_blank" rel="noopener noreferrer">CultureInfo</a></dt><dd> </dd></dl><h4 class="quickLinkHeader">Return Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">Boolean</a></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">bool</a> <span class="identifier">IsPublicHoliday</span>(
+	<a href="https://learn.microsoft.com/dotnet/api/system.dateonly" target="_blank" rel="noopener noreferrer">DateOnly</a> <span class="parameter">date</span>,
+	<a href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo" target="_blank" rel="noopener noreferrer">CultureInfo</a> <span class="parameter">cultureInfo</span>
+)</code></pre></div></div><h4 class="quickLinkHeader">Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">date</span>  <a href="https://learn.microsoft.com/dotnet/api/system.dateonly" target="_blank" rel="noopener noreferrer">DateOnly</a></dt><dd>The date</dd><dt class="has-text-weight-normal"><span class="parameter">cultureInfo</span>  <a href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo" target="_blank" rel="noopener noreferrer">CultureInfo</a></dt><dd>The culture info.</dd></dl><h4 class="quickLinkHeader">Return Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">Boolean</a><br />A bool.</div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>

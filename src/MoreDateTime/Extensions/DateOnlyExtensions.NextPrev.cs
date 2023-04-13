@@ -83,6 +83,7 @@ namespace MoreDateTime.Extensions
 		/// Gets the DateOnly value of the same day in the next week
 		/// </summary>
 		/// <param name="dt">The DateOnly object</param>
+		/// <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
 		/// <returns>A DateOnly object</returns>
 		public static DateOnly NextWorkday(this DateOnly dt, CultureInfo? cultureInfo = null)
 		{
@@ -139,6 +140,7 @@ namespace MoreDateTime.Extensions
 		/// Gets the DateOnly value of the previous working day
 		/// </summary>
 		/// <param name="dt">The DateOnly object</param>
+		/// <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
 		/// <returns>A DateOnly object</returns>
 		public static DateOnly PreviousWorkday(this DateOnly dt, CultureInfo? cultureInfo = null)
 		{

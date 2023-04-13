@@ -18,6 +18,7 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime.Interfaces" />
     <meta name="guid" content="T_MoreDateTime_Interfaces_IHolidayProvider" />
+    <meta name="Description" content="An interface to provide access to holiday information" />
     <meta name="tocFile" content="../toc/IDCA.xml" />
   </head>
   <body>
@@ -41,6 +42,7 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
                   </div>
                 </div>
               </div>
@@ -83,12 +85,15 @@
           </div>
           <div id="TopicContent" class="column content is-7">
             <h1>IHoliday<wbr />Provider Interface</h1>
+            <div class="summary">
+            An interface to provide access to holiday information
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">IHolidayProvider</span></code></pre></div></div></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">IHolidayProvider</span></code></pre></div></div></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -99,19 +104,25 @@
                   <td>
                     <a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday.htm">IsPublicHoliday(DateOnly, CultureInfo)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday_1.htm">IsPublicHoliday(DateTime, CultureInfo)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays.htm">NumberOfKnownHolidays</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the number of known holidays
+            </td>
                 </tr>
               </table>
             </div>

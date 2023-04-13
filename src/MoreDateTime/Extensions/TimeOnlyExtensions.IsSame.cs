@@ -48,11 +48,5 @@ namespace MoreDateTime.Extensions
 		{
 			return dt.Second == other.Second;
 		}
-
-		/// <summary>
-		/// Adds the given number of milliseconds to the given TimeOnly object
-		/// </summary>
-		/// <param name="dt">The TimeOnly object</param>
-		/// <returns>An <see cref="TimeOnly"/> whose value is the sum of the time represented by this instance and the time interval represented by value</returns>
 	}
 }

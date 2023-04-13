@@ -17,6 +17,7 @@ namespace MoreDateTime.Extensions
 	/// </summary>
 	public static partial class DateOnlyExtensions
 	{
+		/// <summary>You'd never guess it, its the number of days in a week</summary>
 		public const int DaysInWeek = 7;
 
 		/// <summary>
@@ -60,7 +61,7 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Returns a DateTime object representing the first day of the current month
 		/// </summary>
-		/// <param name="dateTime">The DateTime value of which the first day is requested</param>
+		/// <param name="me">The DateTime value of which the first day is requested</param>
 		/// <returns>A DateTime object with day 1, time members set to 0 (00:00:00)</returns>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateOnly StartOfMonth(this DateOnly me)
@@ -71,7 +72,7 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Returns a DateTime object representing the first day of the current month
 		/// </summary>
-		/// <param name="dateTime">The DateTime value of which the first day is requested</param>
+		/// <param name="me">The DateTime value of which the first day is requested</param>
 		/// <returns>A DateTime object with the last day of the month, time members set to 0 (00:00:00)</returns>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateOnly EndOfMonth(this DateOnly me)
@@ -133,7 +134,7 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="me">The DateOnly object</param>
 		/// <param name="ticks">The number of ticks to add</param>
-		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="timeSpan"/></returns>
+		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="ticks"/></returns>
 		public static DateOnly AddTicks(this DateOnly me, long ticks)
 		{
 			if(ticks < TicksPerDay)
@@ -171,7 +172,7 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="me">The DateOnly object</param>
 		/// <param name="value">The number of minutes to add</param>
-		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="timeSpan"/></returns>
+		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="value"/></returns>
 		public static DateOnly AddMinutes(this DateOnly me, double value)
 		{
 			return me.Add(TimeSpan.FromMinutes(value));
@@ -181,8 +182,8 @@ namespace MoreDateTime.Extensions
 		/// Adds minutes to a DateOnly object. If the values is less than a 86_400 seconds (a whole day), the same value is returned
 		/// </summary>
 		/// <param name="me">The DateOnly object</param>
-		/// <param name="timeSpan">The time span to add</param>
-		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="timeSpan"/></returns>
+		/// <param name="value">The time span to add</param>
+		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="value"/></returns>
 		public static DateOnly AddSeconds(this DateOnly me, double value)
 		{
 			return me.Add(TimeSpan.FromSeconds(value));
@@ -192,8 +193,8 @@ namespace MoreDateTime.Extensions
 		/// Adds minutes to a DateOnly object. If the values is less than a 86_400_000 seconds (a whole day), the same value is returned
 		/// </summary>
 		/// <param name="me">The DateOnly object</param>
-		/// <param name="timeSpan">The time span to add</param>
-		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="timeSpan"/></returns>
+		/// <param name="value">The time span to add</param>
+		/// <returns>A DateOnly object whose value is the sum of the date and time represented by this instance and the time interval represented by <paramref name="value"/></returns>
 		public static DateOnly AddMilliseconds(this DateOnly me, double value)
 		{
 			return me.Add(TimeSpan.FromMilliseconds(value));

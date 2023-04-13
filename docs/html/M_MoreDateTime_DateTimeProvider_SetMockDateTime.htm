@@ -18,6 +18,7 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime" />
     <meta name="guid" content="M_MoreDateTime_DateTimeProvider_SetMockDateTime" />
+    <meta name="Description" content="Sets the mock date time. This substitutes delivering the current date time from the system. Use for testing and verification." />
     <meta name="tocFile" content="../toc/IDCBAA.xml" />
   </head>
   <body>
@@ -41,6 +42,7 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
                   </div>
                 </div>
               </div>
@@ -83,15 +85,18 @@
           </div>
           <div id="TopicContent" class="column content is-7">
             <h1>Date<wbr />Time<wbr />Provider<span id="LST9388DDD5_0" data-languageSpecificText="cpp=::|nu=."></span>Set<wbr />Mock<wbr />Date<wbr />Time Method</h1>
+            <div class="summary">
+            Sets the mock date time. This substitutes delivering the current date time from the system. Use for testing and verification.
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="identifier">SetMockDateTime</span>(
-	<span class="identifier">DateTime</span>? <span class="parameter">dtNow</span>,
-	<span class="identifier">DateTime</span>? <span class="parameter">dtUtc</span> = <span class="keyword">null</span>
-)</code></pre></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">dtNow</span>  <a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" target="_blank" rel="noopener noreferrer">Nullable</a><span id="LST9388DDD5_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a><span id="LST9388DDD5_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd> </dd><dt class="has-text-weight-normal"><span class="parameter">dtUtc</span>  <a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" target="_blank" rel="noopener noreferrer">Nullable</a><span id="LST9388DDD5_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a><span id="LST9388DDD5_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>  (Optional)</dt><dd> </dd></dl></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="identifier">SetMockDateTime</span>(
+	<a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a>? <span class="parameter">dtNow</span>,
+	<a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a>? <span class="parameter">dtUtc</span> = <span class="keyword">null</span>
+)</code></pre></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">dtNow</span>  <a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" target="_blank" rel="noopener noreferrer">Nullable</a><span id="LST9388DDD5_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a><span id="LST9388DDD5_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>The fixed DateTime for the Now property</dd><dt class="has-text-weight-normal"><span class="parameter">dtUtc</span>  <a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" target="_blank" rel="noopener noreferrer">Nullable</a><span id="LST9388DDD5_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a><span id="LST9388DDD5_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>  (Optional)</dt><dd>The fixed DateTime for the UtcNow property, leave null to use dtNow value</dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>

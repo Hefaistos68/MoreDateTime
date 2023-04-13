@@ -18,6 +18,7 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime.Extensions" />
     <meta name="guid" content="T_MoreDateTime_Extensions_DateTimeExtensions" />
+    <meta name="Description" content="DateTime related extension methods" />
     <meta name="tocFile" content="../toc/IDBA.xml" />
   </head>
   <body>
@@ -41,6 +42,7 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
                   </div>
                 </div>
               </div>
@@ -83,12 +85,15 @@
           </div>
           <div id="TopicContent" class="column content is-7">
             <h1>Date<wbr />Time<wbr />Extensions Class</h1>
+            <div class="summary">
+            DateTime related extension methods
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime_Extensions.htm">MoreDateTime.Extensions</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="identifier">DateTimeExtensions</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateTimeExtensions</span></dd></dl></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime_Extensions.htm">MoreDateTime.Extensions</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="identifier">DateTimeExtensions</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateTimeExtensions</span></dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -99,679 +104,914 @@
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_AddWeeks.htm">AddWeeks</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Adds weeks to a DateTime object
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcDate.htm">AsUtcDate</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the DateTime object as UTC DateTime with all time members set to 0 (00:00:00)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcTime.htm">AsUtcTime</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the DateTime object as UTC DateTime 
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Distance.htm">Distance</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the distance as a TimeSpan between two DateTime objects. The result is always a positive value.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfMonth.htm">EndOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns a DateTime object representing the first year of the current year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateDaysUntil.htm">EnumerateDaysUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates all days startDate current DateTime value endDate the end DateTime, including the end date
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateHolidaysUntil.htm">EnumerateHolidaysUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates all holidays startDate current DateTime value endDate the end DateTime, including the end date
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil.htm">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates starting with the startDate date, until the endDate date in steps of distance<br />
+            When the distance is negative, the start date must be greater than the end date, and the enumeration goes backwards
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil_1.htm">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan, Func<span id="LSTE2AA6274_0" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>DateTime, Boolean<span id="LSTE2AA6274_1" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates starting with startDate until endDate in steps of distance
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateMonthsUntil.htm">EnumerateMonthsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates all months startDate current DateTime value endDate the end DateTime, including the end date
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWeekendsUntil.htm">EnumerateWeekendsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Advances to the closest weekend and enumerates the weekends until the end date
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWorkdaysUntil.htm">EnumerateWorkdaysUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates all working days startDate current DateTime value endDate the end DateTime, including the end date
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateYearsUntil.htm">EnumerateYearsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Enumerates all years startDate current DateTime value endDate the end DateTime, including the end date
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstFridayOfMonth.htm">FirstFridayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first Friday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstMondayOfMonth.htm">FirstMondayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first monday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSaturdayOfMonth.htm">FirstSaturdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first Saturday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSundayOfMonth.htm">FirstSundayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first Sunday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstThursdayOfMonth.htm">FirstThursdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first Thursday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstTuesdayOfMonth.htm">FirstTuesdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first Tuesday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWednesdayOfMonth.htm">FirstWednesdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first Wednesday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWeekdayOfMonth.htm">FirstWeekdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the first given weekday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsAfternoon.htm">IsAfternoon</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Tests if the time in the given DateTime object is considered afternoon (12:00:00.000 - 18:00:00.000)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween.htm">IsBetween(DateTime, DateTime, DateTime)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given value is between the given startDate and endDate values, excluding startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween_1.htm">IsBetween(Int32, Int32, Int32)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given value is between the given start and end values, excluding start and end
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqual.htm">IsEqual</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the given precision
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToDay.htm">IsEqualDownToDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the year (hours, minutes, seconds and milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToHour.htm">IsEqualDownToHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the hour (minutes, seconds and milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMinute.htm">IsEqualDownToMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the minute (seconds and milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMonth.htm">IsEqualDownToMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the year (days, hours, minutes, seconds and milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToSecond.htm">IsEqualDownToSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the second (milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToWeek.htm">IsEqualDownToWeek</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the week (hours, minutes, seconds and milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToYear.htm">IsEqualDownToYear</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Compares two dates for equality down to the year (months, days, hours, minutes, seconds and milliseconds are ignored)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidday.htm">IsMidday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Tests if the time in the given DateTime object is midday (12h)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidnight.htm">IsMidnight</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Tests if the time in the given DateTime object is midnight (0h)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMorning.htm">IsMorning</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Tests if the time in the given DateTime object is midday (12:00:00.000)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsNight.htm">IsNight</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Tests if the time in the given DateTime object is between 18:00:00 and 06:00:00
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsPublicHoliday.htm">IsPublicHoliday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given date falls on a Saturday or Sunday
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameDay.htm">IsSameDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameHour.htm">IsSameHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same hour
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMinute.htm">IsSameMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same minute
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMonth.htm">IsSameMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameSecond.htm">IsSameSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same second
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameWeek.htm">IsSameWeek</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same week
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameYear.htm">IsSameYear</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Verifies if the two dates are at the same year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWeekend.htm">IsWeekend</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given date falls on a Saturday or Sunday
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin.htm">IsWithin(DateTime, DateOnly, DateOnly)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given value is between the given startDate and endDate values, including startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_1.htm">IsWithin(DateTime, DateTime, DateTime)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given value is between the given startDate and endDate values, including startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_2.htm">IsWithin(Int32, Int32, Int32)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Checks if the given value is withn the given start and end values, inluding start and end
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastFridayOfMonth.htm">LastFridayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Friday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastMondayOfMonth.htm">LastMondayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Monday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSaturdayOfMonth.htm">LastSaturdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Saturday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSundayOfMonth.htm">LastSundayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Sunday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastThursdayOfMonth.htm">LastThursdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Thursday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastTuesdayOfMonth.htm">LastTuesdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Tuesday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWednesdayOfMonth.htm">LastWednesdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last Wednesday of the month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWeekdayOfMonth.htm">LastWeekdayOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the last given weekday of the year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextDay.htm">NextDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next day
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullDay.htm">NextFullDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next full day (01/01/2010 10:15 to 02/01/2010 00:00, 01/01/2010 10:45 to 02/01/2010 00:00, etc)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullHour.htm">NextFullHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next full hour (10:15 to 11:00, 10:45 to 11:00, etc)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullMinute.htm">NextFullMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next full minute (10:15:20 to 10:16:00)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullSecond.htm">NextFullSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next full second (10:15:20.350 to 10:15:21.000)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHoliday.htm">NextHoliday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next public holiday according to the given CultureInfo.Calendar<br />
+            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
+             or if you set a custom holiday provider, it will use that. Otherwise the default implementation will return DateTime.MaxValue
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHour.htm">NextHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next hour
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMillisecond.htm">NextMillisecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next millisecond
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMinute.htm">NextMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next minute
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMonth.htm">NextMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next month
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextSecond.htm">NextSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next second
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeek.htm">NextWeek</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the same (week)day next week
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeekend.htm">NextWeekend</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next weekend following this date. If the given date is already a weekend, the next weekend is returned. 
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWorkday.htm">NextWorkday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next working day according to the given CultureInfo.Calendar<br />
+            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
+            otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextYear.htm">NextYear</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the next year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDaysUntil.htm">NumberOfDaysUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Days between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDecadesUntil.htm">NumberOfDecadesUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Decades between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHolidaysUntil.htm">NumberOfHolidaysUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Holidays between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHoursUntil.htm">NumberOfHoursUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Hours between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMillisecondsUntil.htm">NumberOfMillisecondsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Milliseconds between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMinutesUntil.htm">NumberOfMinutesUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Minutes between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMonthsUntil.htm">NumberOfMonthsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Months between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSecondsUntil.htm">NumberOfSecondsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Seconds between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSemestersUntil.htm">NumberOfSemestersUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Semesters between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfTrimestersUntil.htm">NumberOfTrimestersUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Trimesters between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeekendsUntil.htm">NumberOfWeekendsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Weekends between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeeksUntil.htm">NumberOfWeeksUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Weeks between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWorkdaysUntil.htm">NumberOfWorkdaysUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of Workdays between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfYearsUntil.htm">NumberOfYearsUntil</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Count the number of years between startDate and endDate
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousDay.htm">PreviousDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the year before
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHoliday.htm">PreviousHoliday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous holiday<br />
+            If you have a license for the Nager nuget package, this method will calculate the holidays based on the calendar in cultureInfo,
+            otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHour.htm">PreviousHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous hour
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMillisecond.htm">PreviousMillisecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous millisecond
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMinute.htm">PreviousMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous minute
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMonth.htm">PreviousMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the month before
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousSecond.htm">PreviousSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous second
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeek.htm">PreviousWeek</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateOnly value of the same day the week before
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeekend.htm">PreviousWeekend</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the weekend before this date. If the given date is already a weekend, the previous weekend is returned.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWorkday.htm">PreviousWorkday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous working day according to the given CultureInfo.Calendar<br />
+            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
+            otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousYear.htm">PreviousYear</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the DateTime value of the previous year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_SetHolidayProvider.htm">SetHolidayProvider</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Sets the holiday provider, when not set the default provider is used
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split.htm">Split(DateTimeRange, Int32)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Splits the given range of DateTime into the given number of parts.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_1.htm">Split(DateTime, DateTime, Int32)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Splits the given range of DateTime into the given number of parts.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_2.htm">Split(DateTime, TimeSpan, Int32)</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Splits the given range of DateTime into the given number of parts.
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfMonth.htm">StartOfMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns a DateTime object representing the first year of the current year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Sub.htm">Sub</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns a new DateTime that subtracts the value of the specified TimeSpan from the value of this instance
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_ToSqlString.htm">ToSqlString</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Converts a DateTime value to an SQL appropriate format (yyyy-MM-ddThh:mm:ss.ffffff+00:00), independent of the current locale
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateTo.htm">TruncateTo</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the given precision
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToDay.htm">TruncateToDay</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the year
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToHour.htm">TruncateToHour</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the hour
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMinute.htm">TruncateToMinute</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the minute
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMonth.htm">TruncateToMonth</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the year, year 1
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToSecond.htm">TruncateToSecond</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the second
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToWeek.htm">TruncateToWeek</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the week of the object, year is first year of week
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToYear.htm">TruncateToYear</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Truncates the precision of a DateTime object to the year, year 1, year 1
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Weeknumber.htm">Weeknumber</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Tests if the time in the given DateTime object is midday (12:00:00.000)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_WeekOfYear.htm">WeekOfYear</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Returns the Week of the Year of this <a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> object
+            </td>
                 </tr>
               </table>
             </div>

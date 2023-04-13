@@ -18,6 +18,7 @@ namespace MoreDateTime.Extensions
 		/// Adds the given number of milliseconds to the given TimeOnly object
 		/// </summary>
 		/// <param name="dt">The TimeOnly object</param>
+		/// <param name="milliseconds">The number of milliseconds to add</param>
 		/// <returns>An <see cref="TimeOnly"/> whose value is the sum of the time represented by this instance and the time interval represented by value</returns>
 		public static TimeOnly AddMilliseconds(this TimeOnly dt, int milliseconds)
 		{
@@ -39,6 +40,7 @@ namespace MoreDateTime.Extensions
 		/// Adds the given number of seconds to the given TimeOnly object
 		/// </summary>
 		/// <param name="dt">The TimeOnly object</param>
+		/// <param name="seconds">The number of seconds to add</param>
 		/// <returns>An <see cref="TimeOnly"/> whose value is the sum of the time represented by this instance and the time interval represented by value</returns>
 		public static TimeOnly AddSeconds(this TimeOnly dt, int seconds)
 		{

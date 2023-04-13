@@ -18,6 +18,7 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime" />
     <meta name="guid" content="T_MoreDateTime_DateOnlyRange" />
+    <meta name="Description" content="Implements the interface and provides a time range through its and members" />
     <meta name="tocFile" content="../toc/IDAA.xml" />
   </head>
   <body>
@@ -41,6 +42,7 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
                   </div>
                 </div>
               </div>
@@ -83,12 +85,15 @@
           </div>
           <div id="TopicContent" class="column content is-7">
             <h1>Date<wbr />Only<wbr />Range Class</h1>
+            <div class="summary">
+            Implements the <a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a> interface and provides a time range through its <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a> members
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">DateOnlyRange</span> : <span class="identifier">IDateOnlyRange</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateOnlyRange</span></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a></dd></dl></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">DateOnlyRange</span> : <a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateOnlyRange</span></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a></dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -99,7 +104,9 @@
                   <td>
                     <a href="M_MoreDateTime_DateOnlyRange__ctor.htm">DateOnlyRange</a>
                   </td>
-                  <td>Initializes a new instance of the <span class="selflink">DateOnlyRange</span> class</td>
+                  <td>
+            Initializes a new instance of the <span class="selflink">DateOnlyRange</span> class.
+            </td>
                 </tr>
               </table>
             </div>
@@ -148,7 +155,8 @@
                     <a href="M_MoreDateTime_Extensions_DateOnlyExtensions_Split.htm">Split</a>
                   </td>
                   <td>
-                    <br />(Defined by <a href="T_MoreDateTime_Extensions_DateOnlyExtensions.htm">DateOnlyExtensions</a>)</td>
+            Splits the given range of DateOnly into the given number of parts.
+            <br />(Defined by <a href="T_MoreDateTime_Extensions_DateOnlyExtensions.htm">DateOnlyExtensions</a>)</td>
                 </tr>
               </table>
             </div>

@@ -18,6 +18,8 @@
     <PackageTags>datetime dateonly timeonly dateoperations timeoperations workdays holidays</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>1.1.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>.\docs</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

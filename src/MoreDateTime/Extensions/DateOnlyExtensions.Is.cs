@@ -77,6 +77,7 @@ namespace MoreDateTime.Extensions
 		/// Checks if the given date falls on a Saturday or Sunday
 		/// </summary>
 		/// <param name="me">The DateOnly object to check</param>
+		/// <param name="cultureInfo">The CultureInfo for which the holidays will be considered. If null, the current culture is used.</param>
 		/// <returns>True if the given date is Saturday or Sunday</returns>
 		public static bool IsPublicHoliday(this DateOnly me, CultureInfo? cultureInfo = null)
 		{
