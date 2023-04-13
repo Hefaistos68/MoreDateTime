@@ -1,12 +1,12 @@
 # DateTimeRange(DateOnly, DateOnly) Constructor
 
 
-Initializes a new instance of the <a href="T_MoreDateTime_DateTimeRange.md">DateTimeRange</a> class
+Initializes a new instance of the <a href="T_MoreDateTime_DateTimeRange">DateTimeRange</a> class
 
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -26,6 +26,6 @@ public DateTimeRange(
 
 
 #### Reference
-<a href="T_MoreDateTime_DateTimeRange.md">DateTimeRange Class</a>  
-<a href="Overload_MoreDateTime_DateTimeRange__ctor.md">DateTimeRange Overload</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateTimeRange">DateTimeRange Class</a>  
+<a href="Overload_MoreDateTime_DateTimeRange__ctor">DateTimeRange Overload</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

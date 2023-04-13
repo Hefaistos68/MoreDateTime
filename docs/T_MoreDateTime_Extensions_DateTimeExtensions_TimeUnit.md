@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -80,4 +80,4 @@ public enum TimeUnit
 
 
 #### Reference
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

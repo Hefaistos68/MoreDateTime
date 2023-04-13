@@ -6,7 +6,7 @@
 ## Methods
 <table>
 <tr>
-<td><a href="M_MoreDateTime_Interfaces_IDateTimeRange_Distance.md">Distance</a></td>
+<td><a href="M_MoreDateTime_Interfaces_IDateTimeRange_Distance">Distance</a></td>
 <td> </td></tr>
 </table>
 
@@ -14,5 +14,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_Interfaces_IDateTimeRange.md">IDateTimeRange Interface</a>  
-<a href="N_MoreDateTime_Interfaces.md">MoreDateTime.Interfaces Namespace</a>  
+<a href="T_MoreDateTime_Interfaces_IDateTimeRange">IDateTimeRange Interface</a>  
+<a href="N_MoreDateTime_Interfaces">MoreDateTime.Interfaces Namespace</a>  

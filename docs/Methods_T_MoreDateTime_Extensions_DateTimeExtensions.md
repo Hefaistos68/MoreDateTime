@@ -6,343 +6,343 @@
 ## Methods
 <table>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_AddWeeks.md">AddWeeks</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_AddWeeks">AddWeeks</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcDate.md">AsUtcDate</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcDate">AsUtcDate</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcTime.md">AsUtcTime</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcTime">AsUtcTime</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Distance.md">Distance</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Distance">Distance</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfMonth.md">EndOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfMonth">EndOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateDaysUntil.md">EnumerateDaysUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateDaysUntil">EnumerateDaysUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateHolidaysUntil.md">EnumerateHolidaysUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateHolidaysUntil">EnumerateHolidaysUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil.md">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil_1.md">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan, Func(DateTime, Boolean))</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil_1">EnumerateInStepsUntil(DateTime, DateTime, TimeSpan, Func(DateTime, Boolean))</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateMonthsUntil.md">EnumerateMonthsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateMonthsUntil">EnumerateMonthsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWeekendsUntil.md">EnumerateWeekendsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWeekendsUntil">EnumerateWeekendsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWorkdaysUntil.md">EnumerateWorkdaysUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateWorkdaysUntil">EnumerateWorkdaysUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateYearsUntil.md">EnumerateYearsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateYearsUntil">EnumerateYearsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstFridayOfMonth.md">FirstFridayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstFridayOfMonth">FirstFridayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstMondayOfMonth.md">FirstMondayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstMondayOfMonth">FirstMondayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSaturdayOfMonth.md">FirstSaturdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSaturdayOfMonth">FirstSaturdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSundayOfMonth.md">FirstSundayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstSundayOfMonth">FirstSundayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstThursdayOfMonth.md">FirstThursdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstThursdayOfMonth">FirstThursdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstTuesdayOfMonth.md">FirstTuesdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstTuesdayOfMonth">FirstTuesdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWednesdayOfMonth.md">FirstWednesdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWednesdayOfMonth">FirstWednesdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWeekdayOfMonth.md">FirstWeekdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWeekdayOfMonth">FirstWeekdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsAfternoon.md">IsAfternoon</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsAfternoon">IsAfternoon</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween.md">IsBetween(DateTime, DateTime, DateTime)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween">IsBetween(DateTime, DateTime, DateTime)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween_1.md">IsBetween(Int32, Int32, Int32)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsBetween_1">IsBetween(Int32, Int32, Int32)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqual.md">IsEqual</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqual">IsEqual</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToDay.md">IsEqualDownToDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToDay">IsEqualDownToDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToHour.md">IsEqualDownToHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToHour">IsEqualDownToHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMinute.md">IsEqualDownToMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMinute">IsEqualDownToMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMonth.md">IsEqualDownToMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToMonth">IsEqualDownToMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToSecond.md">IsEqualDownToSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToSecond">IsEqualDownToSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToWeek.md">IsEqualDownToWeek</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToWeek">IsEqualDownToWeek</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToYear.md">IsEqualDownToYear</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsEqualDownToYear">IsEqualDownToYear</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidday.md">IsMidday</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidday">IsMidday</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidnight.md">IsMidnight</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMidnight">IsMidnight</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMorning.md">IsMorning</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsMorning">IsMorning</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsNight.md">IsNight</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsNight">IsNight</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsPublicHoliday.md">IsPublicHoliday</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsPublicHoliday">IsPublicHoliday</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameDay.md">IsSameDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameDay">IsSameDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameHour.md">IsSameHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameHour">IsSameHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMinute.md">IsSameMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMinute">IsSameMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMonth.md">IsSameMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameMonth">IsSameMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameSecond.md">IsSameSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameSecond">IsSameSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameWeek.md">IsSameWeek</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameWeek">IsSameWeek</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameYear.md">IsSameYear</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsSameYear">IsSameYear</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWeekend.md">IsWeekend</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWeekend">IsWeekend</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin.md">IsWithin(DateTime, DateOnly, DateOnly)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin">IsWithin(DateTime, DateOnly, DateOnly)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_1.md">IsWithin(DateTime, DateTime, DateTime)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_1">IsWithin(DateTime, DateTime, DateTime)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_2.md">IsWithin(Int32, Int32, Int32)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_2">IsWithin(Int32, Int32, Int32)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastFridayOfMonth.md">LastFridayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastFridayOfMonth">LastFridayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastMondayOfMonth.md">LastMondayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastMondayOfMonth">LastMondayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSaturdayOfMonth.md">LastSaturdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSaturdayOfMonth">LastSaturdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSundayOfMonth.md">LastSundayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastSundayOfMonth">LastSundayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastThursdayOfMonth.md">LastThursdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastThursdayOfMonth">LastThursdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastTuesdayOfMonth.md">LastTuesdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastTuesdayOfMonth">LastTuesdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWednesdayOfMonth.md">LastWednesdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWednesdayOfMonth">LastWednesdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWeekdayOfMonth.md">LastWeekdayOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_LastWeekdayOfMonth">LastWeekdayOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextDay.md">NextDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextDay">NextDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullDay.md">NextFullDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullDay">NextFullDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullHour.md">NextFullHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullHour">NextFullHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullMinute.md">NextFullMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullMinute">NextFullMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullSecond.md">NextFullSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextFullSecond">NextFullSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHoliday.md">NextHoliday</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHoliday">NextHoliday</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHour.md">NextHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextHour">NextHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMillisecond.md">NextMillisecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMillisecond">NextMillisecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMinute.md">NextMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMinute">NextMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMonth.md">NextMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextMonth">NextMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextSecond.md">NextSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextSecond">NextSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeek.md">NextWeek</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeek">NextWeek</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeekend.md">NextWeekend</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWeekend">NextWeekend</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWorkday.md">NextWorkday</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextWorkday">NextWorkday</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextYear.md">NextYear</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NextYear">NextYear</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDaysUntil.md">NumberOfDaysUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDaysUntil">NumberOfDaysUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDecadesUntil.md">NumberOfDecadesUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfDecadesUntil">NumberOfDecadesUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHolidaysUntil.md">NumberOfHolidaysUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHolidaysUntil">NumberOfHolidaysUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHoursUntil.md">NumberOfHoursUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfHoursUntil">NumberOfHoursUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMillisecondsUntil.md">NumberOfMillisecondsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMillisecondsUntil">NumberOfMillisecondsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMinutesUntil.md">NumberOfMinutesUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMinutesUntil">NumberOfMinutesUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMonthsUntil.md">NumberOfMonthsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfMonthsUntil">NumberOfMonthsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSecondsUntil.md">NumberOfSecondsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSecondsUntil">NumberOfSecondsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSemestersUntil.md">NumberOfSemestersUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfSemestersUntil">NumberOfSemestersUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfTrimestersUntil.md">NumberOfTrimestersUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfTrimestersUntil">NumberOfTrimestersUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeekendsUntil.md">NumberOfWeekendsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeekendsUntil">NumberOfWeekendsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeeksUntil.md">NumberOfWeeksUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWeeksUntil">NumberOfWeeksUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWorkdaysUntil.md">NumberOfWorkdaysUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfWorkdaysUntil">NumberOfWorkdaysUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfYearsUntil.md">NumberOfYearsUntil</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_NumberOfYearsUntil">NumberOfYearsUntil</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousDay.md">PreviousDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousDay">PreviousDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHoliday.md">PreviousHoliday</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHoliday">PreviousHoliday</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHour.md">PreviousHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousHour">PreviousHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMillisecond.md">PreviousMillisecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMillisecond">PreviousMillisecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMinute.md">PreviousMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMinute">PreviousMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMonth.md">PreviousMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousMonth">PreviousMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousSecond.md">PreviousSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousSecond">PreviousSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeek.md">PreviousWeek</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeek">PreviousWeek</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeekend.md">PreviousWeekend</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWeekend">PreviousWeekend</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWorkday.md">PreviousWorkday</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousWorkday">PreviousWorkday</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousYear.md">PreviousYear</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_PreviousYear">PreviousYear</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_SetHolidayProvider.md">SetHolidayProvider</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_SetHolidayProvider">SetHolidayProvider</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split.md">Split(DateTimeRange, Int32)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split">Split(DateTimeRange, Int32)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_1.md">Split(DateTime, DateTime, Int32)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_1">Split(DateTime, DateTime, Int32)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_2.md">Split(DateTime, TimeSpan, Int32)</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_2">Split(DateTime, TimeSpan, Int32)</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfMonth.md">StartOfMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfMonth">StartOfMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Sub.md">Sub</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Sub">Sub</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_ToSqlString.md">ToSqlString</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_ToSqlString">ToSqlString</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateTo.md">TruncateTo</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateTo">TruncateTo</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToDay.md">TruncateToDay</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToDay">TruncateToDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToHour.md">TruncateToHour</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToHour">TruncateToHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMinute.md">TruncateToMinute</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMinute">TruncateToMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMonth.md">TruncateToMonth</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToMonth">TruncateToMonth</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToSecond.md">TruncateToSecond</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToSecond">TruncateToSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToWeek.md">TruncateToWeek</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToWeek">TruncateToWeek</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToYear.md">TruncateToYear</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_TruncateToYear">TruncateToYear</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Weeknumber.md">Weeknumber</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Weeknumber">Weeknumber</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_WeekOfYear.md">WeekOfYear</a></td>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_WeekOfYear">WeekOfYear</a></td>
 <td> </td></tr>
 </table>
 
@@ -350,5 +350,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_DateTimeExtensions.md">DateTimeExtensions Class</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_DateTimeExtensions">DateTimeExtensions Class</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

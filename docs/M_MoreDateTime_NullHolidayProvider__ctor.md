@@ -1,12 +1,12 @@
 # NullHolidayProvider Constructor
 
 
-Initializes a new instance of the <a href="T_MoreDateTime_NullHolidayProvider.md">NullHolidayProvider</a> class
+Initializes a new instance of the <a href="T_MoreDateTime_NullHolidayProvider">NullHolidayProvider</a> class
 
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -20,5 +20,5 @@ public NullHolidayProvider()
 
 
 #### Reference
-<a href="T_MoreDateTime_NullHolidayProvider.md">NullHolidayProvider Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_NullHolidayProvider">NullHolidayProvider Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

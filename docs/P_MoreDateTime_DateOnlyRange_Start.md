@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -20,12 +20,12 @@ public DateOnly Start { get; set; }
 <a href="https://learn.microsoft.com/dotnet/api/system.dateonly" target="_blank" rel="noopener noreferrer">DateOnly</a>
 
 #### Implements
-<a href="P_MoreDateTime_Interfaces_IDateOnlyRange_Start.md">IDateOnlyRange.Start</a>  
+<a href="P_MoreDateTime_Interfaces_IDateOnlyRange_Start">IDateOnlyRange.Start</a>  
 
 
 ## See Also
 
 
 #### Reference
-<a href="T_MoreDateTime_DateOnlyRange.md">DateOnlyRange Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateOnlyRange">DateOnlyRange Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

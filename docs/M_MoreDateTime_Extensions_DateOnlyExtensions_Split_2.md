@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -24,7 +24,7 @@ public static List<DateOnlyRange> Split(
 <dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.dateonly" target="_blank" rel="noopener noreferrer">DateOnly</a></dt><dd>\[Missing &lt;param name="startDate"/&gt; documentation for "M:MoreDateTime.Extensions.DateOnlyExtensions.Split(System.DateOnly,System.TimeSpan,System.Int32)"\]</dd><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a></dt><dd>\[Missing &lt;param name="distance"/&gt; documentation for "M:MoreDateTime.Extensions.DateOnlyExtensions.Split(System.DateOnly,System.TimeSpan,System.Int32)"\]</dd><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>\[Missing &lt;param name="parts"/&gt; documentation for "M:MoreDateTime.Extensions.DateOnlyExtensions.Split(System.DateOnly,System.TimeSpan,System.Int32)"\]</dd></dl>
 
 #### Return Value
-<a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" target="_blank" rel="noopener noreferrer">List</a>(<a href="T_MoreDateTime_DateOnlyRange.md">DateOnlyRange</a>)  
+<a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" target="_blank" rel="noopener noreferrer">List</a>(<a href="T_MoreDateTime_DateOnlyRange">DateOnlyRange</a>)  
 \[Missing &lt;returns&gt; documentation for "M:MoreDateTime.Extensions.DateOnlyExtensions.Split(System.DateOnly,System.TimeSpan,System.Int32)"\]
 
 #### Usage Note
@@ -38,6 +38,6 @@ Extension Methods (C# Programming Guide)</a>.
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_DateOnlyExtensions.md">DateOnlyExtensions Class</a>  
-<a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_Split.md">Split Overload</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_DateOnlyExtensions">DateOnlyExtensions Class</a>  
+<a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_Split">Split Overload</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

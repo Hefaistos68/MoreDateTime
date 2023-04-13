@@ -6,31 +6,31 @@
 ## Fields
 <table>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerDay.md">MillisPerDay</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerDay">MillisPerDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerHour.md">MillisPerHour</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerHour">MillisPerHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerMinute.md">MillisPerMinute</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerMinute">MillisPerMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerSecond.md">MillisPerSecond</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerSecond">MillisPerSecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerDay.md">TicksPerDay</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerDay">TicksPerDay</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerHour.md">TicksPerHour</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerHour">TicksPerHour</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMillisecond.md">TicksPerMillisecond</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMillisecond">TicksPerMillisecond</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMinute.md">TicksPerMinute</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMinute">TicksPerMinute</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerSecond.md">TicksPerSecond</a></td>
+<td><a href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerSecond">TicksPerSecond</a></td>
 <td> </td></tr>
 </table>
 
@@ -38,5 +38,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_DateTimeExtensions.md">DateTimeExtensions Class</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_DateTimeExtensions">DateTimeExtensions Class</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

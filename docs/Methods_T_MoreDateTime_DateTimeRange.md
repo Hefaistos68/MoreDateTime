@@ -6,7 +6,7 @@
 ## Methods
 <table>
 <tr>
-<td><a href="M_MoreDateTime_DateTimeRange_Distance.md">Distance</a></td>
+<td><a href="M_MoreDateTime_DateTimeRange_Distance">Distance</a></td>
 <td> </td></tr>
 <tr>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">Equals</a></td>
@@ -31,13 +31,13 @@
 ## Extension Methods
 <table>
 <tr>
-<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split.md">Split</a></td>
-<td><br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions.md">DateTimeExtensions</a>)</td></tr>
+<td><a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split">Split</a></td>
+<td><br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions">DateTimeExtensions</a>)</td></tr>
 </table>
 
 ## See Also
 
 
 #### Reference
-<a href="T_MoreDateTime_DateTimeRange.md">DateTimeRange Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateTimeRange">DateTimeRange Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

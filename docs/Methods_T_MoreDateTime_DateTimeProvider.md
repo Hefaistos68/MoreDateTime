@@ -21,10 +21,10 @@
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone" target="_blank" rel="noopener noreferrer">MemberwiseClone</a></td>
 <td>Creates a shallow copy of the current <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DateTimeProvider_SetMockDateTime.md">SetMockDateTime</a></td>
+<td><a href="M_MoreDateTime_DateTimeProvider_SetMockDateTime">SetMockDateTime</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DateTimeProvider_SetUtcHandling.md">SetUtcHandling</a></td>
+<td><a href="M_MoreDateTime_DateTimeProvider_SetUtcHandling">SetUtcHandling</a></td>
 <td> </td></tr>
 <tr>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td>
@@ -35,5 +35,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_DateTimeProvider.md">DateTimeProvider Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateTimeProvider">DateTimeProvider Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

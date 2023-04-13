@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -27,12 +27,12 @@ public int NumberOfKnownHolidays(
 \[Missing &lt;returns&gt; documentation for "M:MoreDateTime.DefaultHolidayProvider.NumberOfKnownHolidays(System.Int32,System.Globalization.CultureInfo)"\]
 
 #### Implements
-<a href="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays.md">IHolidayProvider.NumberOfKnownHolidays(Int32, CultureInfo)</a>  
+<a href="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays">IHolidayProvider.NumberOfKnownHolidays(Int32, CultureInfo)</a>  
 
 
 ## See Also
 
 
 #### Reference
-<a href="T_MoreDateTime_DefaultHolidayProvider.md">DefaultHolidayProvider Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DefaultHolidayProvider">DefaultHolidayProvider Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

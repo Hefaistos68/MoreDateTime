@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime.md">MoreDateTime</a>  
+**Namespace:** <a href="N_MoreDateTime">MoreDateTime</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -15,7 +15,7 @@ public class DateTimeProvider : IDateTimeProvider
 ```
 
 <table><tr><td><strong>Inheritance</strong></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  →  DateTimeProvider</td></tr>
-<tr><td><strong>Implements</strong></td><td><a href="T_MoreDateTime_Interfaces_IDateTimeProvider.md">IDateTimeProvider</a></td></tr>
+<tr><td><strong>Implements</strong></td><td><a href="T_MoreDateTime_Interfaces_IDateTimeProvider">IDateTimeProvider</a></td></tr>
 </table>
 
 
@@ -23,26 +23,26 @@ public class DateTimeProvider : IDateTimeProvider
 ## Constructors
 <table>
 <tr>
-<td><a href="M_MoreDateTime_DateTimeProvider__ctor.md">DateTimeProvider</a></td>
+<td><a href="M_MoreDateTime_DateTimeProvider__ctor">DateTimeProvider</a></td>
 <td>Initializes a new instance of the DateTimeProvider class</td></tr>
 </table>
 
 ## Properties
 <table>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeProvider_Current.md">Current</a></td>
+<td><a href="P_MoreDateTime_DateTimeProvider_Current">Current</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeProvider_Now.md">Now</a></td>
+<td><a href="P_MoreDateTime_DateTimeProvider_Now">Now</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeProvider_Today.md">Today</a></td>
+<td><a href="P_MoreDateTime_DateTimeProvider_Today">Today</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeProvider_UtcNow.md">UtcNow</a></td>
+<td><a href="P_MoreDateTime_DateTimeProvider_UtcNow">UtcNow</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeProvider_UtcToday.md">UtcToday</a></td>
+<td><a href="P_MoreDateTime_DateTimeProvider_UtcToday">UtcToday</a></td>
 <td> </td></tr>
 </table>
 
@@ -64,10 +64,10 @@ public class DateTimeProvider : IDateTimeProvider
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone" target="_blank" rel="noopener noreferrer">MemberwiseClone</a></td>
 <td>Creates a shallow copy of the current <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DateTimeProvider_SetMockDateTime.md">SetMockDateTime</a></td>
+<td><a href="M_MoreDateTime_DateTimeProvider_SetMockDateTime">SetMockDateTime</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="M_MoreDateTime_DateTimeProvider_SetUtcHandling.md">SetUtcHandling</a></td>
+<td><a href="M_MoreDateTime_DateTimeProvider_SetUtcHandling">SetUtcHandling</a></td>
 <td> </td></tr>
 <tr>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td>
@@ -78,4 +78,4 @@ public class DateTimeProvider : IDateTimeProvider
 
 
 #### Reference
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

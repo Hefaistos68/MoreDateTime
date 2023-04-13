@@ -6,10 +6,10 @@
 ## Properties
 <table>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeRange_End.md">End</a></td>
+<td><a href="P_MoreDateTime_DateTimeRange_End">End</a></td>
 <td> </td></tr>
 <tr>
-<td><a href="P_MoreDateTime_DateTimeRange_Start.md">Start</a></td>
+<td><a href="P_MoreDateTime_DateTimeRange_Start">Start</a></td>
 <td> </td></tr>
 </table>
 
@@ -17,5 +17,5 @@
 
 
 #### Reference
-<a href="T_MoreDateTime_DateTimeRange.md">DateTimeRange Class</a>  
-<a href="N_MoreDateTime.md">MoreDateTime Namespace</a>  
+<a href="T_MoreDateTime_DateTimeRange">DateTimeRange Class</a>  
+<a href="N_MoreDateTime">MoreDateTime Namespace</a>  

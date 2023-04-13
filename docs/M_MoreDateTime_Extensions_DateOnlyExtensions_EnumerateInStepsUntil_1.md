@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -39,6 +39,6 @@ Extension Methods (C# Programming Guide)</a>.
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_DateOnlyExtensions.md">DateOnlyExtensions Class</a>  
-<a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateInStepsUntil.md">EnumerateInStepsUntil Overload</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_DateOnlyExtensions">DateOnlyExtensions Class</a>  
+<a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateInStepsUntil">EnumerateInStepsUntil Overload</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  

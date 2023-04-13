@@ -6,7 +6,7 @@
 
 
 ## Definition
-**Namespace:** <a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions</a>  
+**Namespace:** <a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions</a>  
 **Assembly:** MoreDateTime (in MoreDateTime.dll) Version: 1.1.0
 
 **C#**
@@ -23,5 +23,5 @@ public const int DaysInWeek = 7
 
 
 #### Reference
-<a href="T_MoreDateTime_Extensions_DateOnlyExtensions.md">DateOnlyExtensions Class</a>  
-<a href="N_MoreDateTime_Extensions.md">MoreDateTime.Extensions Namespace</a>  
+<a href="T_MoreDateTime_Extensions_DateOnlyExtensions">DateOnlyExtensions Class</a>  
+<a href="N_MoreDateTime_Extensions">MoreDateTime.Extensions Namespace</a>  
