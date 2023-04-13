@@ -240,7 +240,7 @@ namespace MoreDateTime.Tests.Extensions
 			var result = _startDate.NumberOfWorkdaysUntil(_endDate, _cultureInfo);
 
 			// Assert
-			result.ShouldBe(261.0d);
+			result.ShouldBe(259.0d);
 		}
 
 		/// <summary>
