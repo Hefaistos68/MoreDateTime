@@ -16,17 +16,17 @@ namespace MoreDateTime.Extensions
 	public static partial class DateTimeExtensions
 	{
 		// Number of 100ns ticks per time unit
-		public const long TicksPerMillisecond = 10000;
-		public const long TicksPerSecond = TicksPerMillisecond * 1000;
-		public const long TicksPerMinute = TicksPerSecond * 60;
-		public const long TicksPerHour = TicksPerMinute * 60;
-		public const long TicksPerDay = TicksPerHour * 24;
+		internal const long TicksPerMillisecond = 10000;
+		internal const long TicksPerSecond = TicksPerMillisecond * 1000;
+		internal const long TicksPerMinute = TicksPerSecond * 60;
+		internal const long TicksPerHour = TicksPerMinute * 60;
+		internal const long TicksPerDay = TicksPerHour * 24;
 
 		// Number of milliseconds per time unit
-		public const int MillisPerSecond = 1000;
-		public const int MillisPerMinute = MillisPerSecond * 60;
-		public const int MillisPerHour = MillisPerMinute * 60;
-		public const int MillisPerDay = MillisPerHour * 24;
+		internal const int MillisPerSecond = 1000;
+		internal const int MillisPerMinute = MillisPerSecond * 60;
+		internal const int MillisPerHour = MillisPerMinute * 60;
+		internal const int MillisPerDay = MillisPerHour * 24;
 
 		#region Public Enums
 

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_TimeSpanExtensions.htm">Time<wbr />Span<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_Extensions_TimeSpanExtensions.htm">Methods</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_IsNegative" href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsNegative.htm">Is<wbr />Negative</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_IsPositive" href="M_MoreDateTime_Extensions_TimeSpanExtensions_IsPositive.htm">Is<wbr />Positive</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundTo" href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundTo.htm">Round<wbr />To</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToDay" href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToDay.htm">Round<wbr />To<wbr />Day</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToHour" href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToHour.htm">Round<wbr />To<wbr />Hour</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToMinute" href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToMinute.htm">Round<wbr />To<wbr />Minute</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToSecond" href="M_MoreDateTime_Extensions_TimeSpanExtensions_RoundToSecond.htm">Round<wbr />To<wbr />Second</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateTo" href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateTo.htm">Truncate<wbr />To</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToDay" href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToDay.htm">Truncate<wbr />To<wbr />Day</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToHour" href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToHour.htm">Truncate<wbr />To<wbr />Hour</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToMinute" href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToMinute.htm">Truncate<wbr />To<wbr />Minute</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToSecond" href="M_MoreDateTime_Extensions_TimeSpanExtensions_TruncateToSecond.htm">Truncate<wbr />To<wbr />Second</a>
+    </li>
+  </tocItems>
+</toc>

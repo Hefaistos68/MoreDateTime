@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Namespaces</name>
+  </assembly>
+  <members>
+    <member name="N:MoreDateTime">
+      <summary>Contains all provider interfaces, the date and time range classes and minor helpers</summary>
+    </member>
+    <member name="N:MoreDateTime.Extensions">
+      <summary>All extension methods are in this namespace, namely the DateTimeExtensions, DateOnlyExtensions, TimeOnlyExtensions and the TimeSpanExtensions</summary>
+    </member>
+    <member name="N:MoreDateTime.Interfaces">
+      <summary>Contains the interfaces for ranges and providers</summary>
+    </member>
+    <member name="G:MoreDateTime">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>G:MoreDateTime</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">Date<wbr />Time<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Fields_T_MoreDateTime_Extensions_DateTimeExtensions.htm">Fields</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerDay" href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerDay.htm">Millis<wbr />Per<wbr />Day</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerHour" href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerHour.htm">Millis<wbr />Per<wbr />Hour</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerMinute" href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerMinute.htm">Millis<wbr />Per<wbr />Minute</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerSecond" href="F_MoreDateTime_Extensions_DateTimeExtensions_MillisPerSecond.htm">Millis<wbr />Per<wbr />Second</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerDay" href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerDay.htm">Ticks<wbr />Per<wbr />Day</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerHour" href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerHour.htm">Ticks<wbr />Per<wbr />Hour</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMillisecond" href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMillisecond.htm">Ticks<wbr />Per<wbr />Millisecond</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMinute" href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerMinute.htm">Ticks<wbr />Per<wbr />Minute</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerSecond" href="F_MoreDateTime_Extensions_DateTimeExtensions_TicksPerSecond.htm">Ticks<wbr />Per<wbr />Second</a>
+    </li>
+  </tocItems>
+</toc>

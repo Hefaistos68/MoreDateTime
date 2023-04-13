@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Date<wbr />Only<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Methods</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Add" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Add.htm">Add</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddHours" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddHours.htm">Add<wbr />Hours</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddMilliseconds" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddMilliseconds.htm">Add<wbr />Milliseconds</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddMinutes" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddMinutes.htm">Add<wbr />Minutes</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddSeconds" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddSeconds.htm">Add<wbr />Seconds</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddTicks" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddTicks.htm">Add<wbr />Ticks</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddWeeks" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddWeeks.htm">Add<wbr />Weeks</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Distance" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Distance.htm">Distance</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EndOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EndOfMonth.htm">End<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateDaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateDaysUntil.htm">Enumerate<wbr />Days<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateHolidaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateHolidaysUntil.htm">Enumerate<wbr />Holidays<wbr />Until</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateInStepsUntil" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateInStepsUntil.htm">
+        <span data-tocFile="../toc/IDLAABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Enumerate<wbr />In<wbr />Steps<wbr />Until</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateMonthsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateMonthsUntil.htm">Enumerate<wbr />Months<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateWeekendsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateWeekendsUntil.htm">Enumerate<wbr />Weekends<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateWorkdaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateWorkdaysUntil.htm">Enumerate<wbr />Workdays<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateYearsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateYearsUntil.htm">Enumerate<wbr />Years<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstFridayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstFridayOfMonth.htm">First<wbr />Friday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstMondayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstMondayOfMonth.htm">First<wbr />Monday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstSaturdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstSaturdayOfMonth.htm">First<wbr />Saturday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstSundayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstSundayOfMonth.htm">First<wbr />Sunday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstThursdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstThursdayOfMonth.htm">First<wbr />Thursday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstTuesdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstTuesdayOfMonth.htm">First<wbr />Tuesday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstWednesdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstWednesdayOfMonth.htm">First<wbr />Wednesday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstWeekdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstWeekdayOfMonth.htm">First<wbr />Weekday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsBetween" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsBetween.htm">Is<wbr />Between</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqual" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqual.htm">Is<wbr />Equal</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToDay" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToDay.htm">Is<wbr />Equal<wbr />Down<wbr />To<wbr />Day</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToMonth.htm">Is<wbr />Equal<wbr />Down<wbr />To<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToWeek.htm">Is<wbr />Equal<wbr />Down<wbr />To<wbr />Week</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsEqualDownToYear.htm">Is<wbr />Equal<wbr />Down<wbr />To<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsPublicHoliday" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsPublicHoliday.htm">Is<wbr />Public<wbr />Holiday</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay.htm">
+        <span data-tocFile="../toc/ID6AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Same<wbr />Day</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameMonth" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameMonth.htm">
+        <span data-tocFile="../toc/ID0AB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Same<wbr />Month</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">
+        <span data-tocFile="../toc/ID0BB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Same<wbr />Week</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeekday" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeekday.htm">
+        <span data-tocFile="../toc/ID0CB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Same<wbr />Weekday</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear.htm">
+        <span data-tocFile="../toc/ID0DB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Same<wbr />Year</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsWeekend" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsWeekend.htm">Is<wbr />Weekend</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin.htm">
+        <span data-tocFile="../toc/ID0FB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Within</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastFridayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastFridayOfMonth.htm">Last<wbr />Friday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastMondayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastMondayOfMonth.htm">Last<wbr />Monday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastSaturdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastSaturdayOfMonth.htm">Last<wbr />Saturday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastSundayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastSundayOfMonth.htm">Last<wbr />Sunday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastThursdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastThursdayOfMonth.htm">Last<wbr />Thursday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastTuesdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastTuesdayOfMonth.htm">Last<wbr />Tuesday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastWednesdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastWednesdayOfMonth.htm">Last<wbr />Wednesday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_LastWeekdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_LastWeekdayOfMonth.htm">Last<wbr />Weekday<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextDay" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextDay.htm">Next<wbr />Day</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextHoliday" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextHoliday.htm">Next<wbr />Holiday</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextMonth.htm">Next<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextWeek.htm">Next<wbr />Week</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextWeekend" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextWeekend.htm">Next<wbr />Weekend</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextWorkday" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextWorkday.htm">Next<wbr />Workday</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NextYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NextYear.htm">Next<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfDaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfDaysUntil.htm">Number<wbr />Of<wbr />Days<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfDecadesUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfDecadesUntil.htm">Number<wbr />Of<wbr />Decades<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfHolidaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfHolidaysUntil.htm">Number<wbr />Of<wbr />Holidays<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfHoursUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfHoursUntil.htm">Number<wbr />Of<wbr />Hours<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfMillisecondsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfMillisecondsUntil.htm">Number<wbr />Of<wbr />Milliseconds<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfMinutesUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfMinutesUntil.htm">Number<wbr />Of<wbr />Minutes<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfMonthsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfMonthsUntil.htm">Number<wbr />Of<wbr />Months<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfSecondsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfSecondsUntil.htm">Number<wbr />Of<wbr />Seconds<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfSemestersUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfSemestersUntil.htm">Number<wbr />Of<wbr />Semesters<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfTrimestersUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfTrimestersUntil.htm">Number<wbr />Of<wbr />Trimesters<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfWeekendsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfWeekendsUntil.htm">Number<wbr />Of<wbr />Weekends<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfWeeksUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfWeeksUntil.htm">Number<wbr />Of<wbr />Weeks<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfWorkdaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfWorkdaysUntil.htm">Number<wbr />Of<wbr />Workdays<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfYearsUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_NumberOfYearsUntil.htm">Number<wbr />Of<wbr />Years<wbr />Until</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousDay" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousDay.htm">Previous<wbr />Day</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousHoliday" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousHoliday.htm">Previous<wbr />Holiday</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousMonth.htm">Previous<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousWeek.htm">Previous<wbr />Week</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousWeekend" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousWeekend.htm">Previous<wbr />Weekend</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousWorkday" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousWorkday.htm">Previous<wbr />Workday</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_PreviousYear.htm">Previous<wbr />Year</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_Split" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_Split.htm">
+        <span data-tocFile="../toc/ID0KC0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Split</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_StartOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_StartOfMonth.htm">Start<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Sub" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Sub.htm">Sub</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_ToDateOnly" href="M_MoreDateTime_Extensions_DateOnlyExtensions_ToDateOnly.htm">To<wbr />Date<wbr />Only</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_ToDateTime" href="M_MoreDateTime_Extensions_DateOnlyExtensions_ToDateTime.htm">To<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_ToSqlString" href="M_MoreDateTime_Extensions_DateOnlyExtensions_ToSqlString.htm">To<wbr />Sql<wbr />String</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_ToTimeOnly" href="M_MoreDateTime_Extensions_DateOnlyExtensions_ToTimeOnly.htm">To<wbr />Time<wbr />Only</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateTo" href="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateTo.htm">Truncate<wbr />To</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToMonth.htm">Truncate<wbr />To<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToWeek.htm">Truncate<wbr />To<wbr />Week</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToYear.htm">Truncate<wbr />To<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Weeknumber" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Weeknumber.htm">Weeknumber</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_WeekOfYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_WeekOfYear.htm">Week<wbr />Of<wbr />Year</a>
+    </li>
+  </tocItems>
+</toc>

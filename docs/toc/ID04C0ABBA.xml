@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">Date<wbr />Time<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_Extensions_DateTimeExtensions.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_Extensions_DateTimeExtensions_Split.htm">Split</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Split" href="M_MoreDateTime_Extensions_DateTimeExtensions_Split.htm">Split(<wbr />Date<wbr />Time<wbr />Range, Int<wbr />32)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Split_1" href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_1.htm">Split(<wbr />Date<wbr />Time, Date<wbr />Time, Int<wbr />32)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Split_2" href="M_MoreDateTime_Extensions_DateTimeExtensions_Split_2.htm">Split(<wbr />Date<wbr />Time, Time<wbr />Span, Int<wbr />32)</a>
+    </li>
+  </tocItems>
+</toc>

@@ -39,6 +39,7 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="dt">The first DateOnly argument</param>
 		/// <param name="other">The DateOnly argument to compare with</param>
+		/// <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
 		/// <returns>True if the dates are on the same week</returns>
 		public static bool IsSameWeek(this DateOnly dt, DateOnly other, CultureInfo? cultureInfo = null)
 		{
@@ -93,6 +94,7 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="dt">The first DateOnly argument</param>
 		/// <param name="other">The DateOnly argument to compare with</param>
+		/// <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
 		/// <returns>True if the dates are on the same week</returns>
 		public static bool IsSameWeek(this DateOnly dt, DateTime other, CultureInfo? cultureInfo = null)
 		{

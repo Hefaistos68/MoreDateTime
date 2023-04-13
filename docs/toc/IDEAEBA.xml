@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_TimeOnlyExtensions.htm">Time<wbr />Only<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_Extensions_TimeOnlyExtensions.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil.htm">Enumerate<wbr />In<wbr />Steps<wbr />Until</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil.htm">Enumerate<wbr />In<wbr />Steps<wbr />Until(<wbr />Time<wbr />Only, Time<wbr />Only, Time<wbr />Span)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil_1" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil_1.htm">Enumerate<wbr />In<wbr />Steps<wbr />Until(<wbr />Time<wbr />Only, Time<wbr />Only, Time<wbr />Span, Func&lt;Time<wbr />Only, Boolean&gt;)</a>
+    </li>
+  </tocItems>
+</toc>

@@ -12,9 +12,13 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		public enum RoundingUnit
 		{
+			/// <summary>Round to days</summary>
 			Day,
+			/// <summary>Round to hour</summary>
 			Hour,
+			/// <summary>Round to minute</summary>
 			Minute,
+			/// <summary>Round to second</summary>
 			Second
 		}
 
@@ -64,8 +68,8 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Rounds the TimeSpan mathematically to the next unit of the given precision.
 		/// </summary>
-		/// <param name="ts">The TimeSpan</param>
-		/// <param name="TruncateTo">The truncatation enum</param>
+		/// <param name="timeSpan">The TimeSpan</param>
+		/// <param name="roundingUnit">The truncatation enum</param>
 		/// <returns>A TimeSpan.</returns>
 		public static TimeSpan RoundTo(this TimeSpan timeSpan, RoundingUnit roundingUnit)
 		{
@@ -82,7 +86,7 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Rounds the TimeSpan mathematically to the day
 		/// </summary>
-		/// <param name="ts">The TimeSpan</param>
+		/// <param name="timeSpan">The TimeSpan</param>
 		/// <returns>A TimeSpan.</returns>
 		public static TimeSpan RoundToDay(this TimeSpan timeSpan)
 		{
@@ -92,7 +96,7 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Rounds the TimeSpan mathematically to the Hour
 		/// </summary>
-		/// <param name="ts">The TimeSpan</param>
+		/// <param name="timeSpan">The TimeSpan</param>
 		/// <returns>A TimeSpan.</returns>
 		public static TimeSpan RoundToHour(this TimeSpan timeSpan)
 		{
@@ -102,7 +106,7 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Rounds the TimeSpan mathematically to the Minute
 		/// </summary>
-		/// <param name="ts">The TimeSpan</param>
+		/// <param name="timeSpan">The TimeSpan</param>
 		/// <returns>A TimeSpan.</returns>
 		public static TimeSpan RoundToMinute(this TimeSpan timeSpan)
 		{
@@ -112,7 +116,7 @@ namespace MoreDateTime.Extensions
 		/// <summary>
 		/// Rounds the TimeSpan mathematically to the Second
 		/// </summary>
-		/// <param name="ts">The TimeSpan</param>
+		/// <param name="timeSpan">The TimeSpan</param>
 		/// <returns>A TimeSpan.</returns>
 		public static TimeSpan RoundToSecond(this TimeSpan timeSpan)
 		{
