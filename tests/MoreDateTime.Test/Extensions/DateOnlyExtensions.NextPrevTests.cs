@@ -1,6 +1,7 @@
 namespace MoreDateTime.Tests.Extensions
 {
 	using System;
+	using System.Globalization;
 
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -215,5 +216,70 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.Year.ShouldBe(2019);
 		}
+
+		/// <summary>
+		/// Checks that the EndOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EndOfWeek_Europe()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("de-DE");
+
+			// Act
+			var result = _startDate.EndOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(2));  // Sunday
+		}
+
+		/// <summary>
+		/// Checks that the StartOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_StartOfWeek_Europe()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("de-DE");
+
+			// Act
+			var result = _startDate.StartOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(-4)); // Monday
+		}
+
+		/// <summary>
+		/// Checks that the EndOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EndOfWeek_US()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("en-US");
+
+			// Act
+			var result = _startDate.EndOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(1));  // saturday
+		}
+
+		/// <summary>
+		/// Checks that the StartOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_StartOfWeek_US()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("en-US");
+
+			// Act
+			var result = _startDate.StartOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(-5)); // sunday
+		}
+
 	}
 }

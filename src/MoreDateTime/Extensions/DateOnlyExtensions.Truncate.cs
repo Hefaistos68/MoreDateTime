@@ -18,9 +18,12 @@ namespace MoreDateTime.Extensions
 		/// </summary>
 		/// <param name="dt">The DateTime object</param>
 		/// <param name="TruncateTo">The precision to truncate to</param>
+		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null to use current culture</param>
 		/// <returns>The Truncated dateTime object</returns>
-		public static DateOnly TruncateTo(this DateOnly dt, DateTruncate TruncateTo)
+		public static DateOnly TruncateTo(this DateOnly dt, DateTruncate TruncateTo, CultureInfo? cultureInfo = null)
 		{
+			cultureInfo ??= CultureInfo.CurrentCulture;
+
 			return TruncateTo switch
 			{
 				DateTruncate.Year => new DateOnly(dt.Year, 1, 1),
@@ -29,9 +32,9 @@ namespace MoreDateTime.Extensions
 				_ => new DateOnly(dt.Year, dt.Month, dt.Day)
 			};
 
-			static DateOnly CalcDayOfWeek(DateOnly dt)
+			DateOnly CalcDayOfWeek(DateOnly dt)
 			{
-				while (dt.DayOfWeek != CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek)
+				while (dt.DayOfWeek != cultureInfo.DateTimeFormat.FirstDayOfWeek)
 				{
 					dt = dt.AddDays(-1);
 				}
@@ -58,7 +61,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>The Truncated DateOnly object</returns>
 		public static DateOnly TruncateToWeek(this DateOnly dt, CultureInfo? cultureInfo = null)
 		{
-			return dt.TruncateTo(DateTruncate.Week);
+			return dt.TruncateTo(DateTruncate.Week, cultureInfo);
 		}
 
 		/// <summary>

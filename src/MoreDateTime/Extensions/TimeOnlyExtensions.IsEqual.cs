@@ -23,14 +23,10 @@ namespace MoreDateTime.Extensions
 
 			return truncateTo switch
 			{
-				DateTruncate.Year => true,
-				DateTruncate.Month => true,
-				DateTruncate.Week => true,
-				DateTruncate.Day => true,
 				DateTruncate.Hour => dt.Hour == other.Hour,
 				DateTruncate.Minute => dt.Hour == other.Hour && dt.Minute == other.Minute,
 				DateTruncate.Second => dt.Hour == other.Hour && dt.Minute == other.Minute && dt.Second == other.Second,
-				_ => false,
+				_ => true,
 			};
 		}
 

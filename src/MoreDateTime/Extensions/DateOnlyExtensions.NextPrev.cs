@@ -243,5 +243,6 @@ namespace MoreDateTime.Extensions
 
 			return nextWorkingDay;
 		}
+
 	}
 }

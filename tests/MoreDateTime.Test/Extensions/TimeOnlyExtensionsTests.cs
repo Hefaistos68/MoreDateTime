@@ -19,6 +19,8 @@ namespace MoreDateTime.Tests.Extensions
 		private static readonly TimeOnly _midTime = new TimeOnly(5, 6, 7, 8);
 		private static readonly TimeOnly _endTime = new TimeOnly(10, 11, 12, 987);
 
+		private readonly DateTime _startDateTime = new DateTime(2020, 05, 15, 2, 3, 4); // Friday
+
 		private readonly int _hoursInStartTimeToEndTime = 10;
 		private readonly int _minutesInStartTimeToEndTime = 10 * 60;		// not right
 		private readonly int _secondsInStartTimeToEndTime = 10 * 60 * 60;	// not right

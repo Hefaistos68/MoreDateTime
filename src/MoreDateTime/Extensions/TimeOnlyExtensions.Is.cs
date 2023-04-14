@@ -106,12 +106,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
 		public static bool IsBetween(this DateTime me, TimeOnly startTime, TimeOnly endTime)
 		{
-			if (endTime < startTime)
-			{
-				throw new ArgumentException("endTime must be greater than startTime");
-			}
-
-			return (me.ToTimeOnly() > startTime) && (me.ToTimeOnly() < endTime);
+			return me.ToTimeOnly().IsBetween(startTime, endTime);
 		}
 
 		/// <summary>
@@ -124,11 +119,9 @@ namespace MoreDateTime.Extensions
 		public static bool IsWithin(this TimeOnly me, TimeOnly startTime, TimeOnly endTime)
 		{
 			if (endTime < startTime)
-			{
-				throw new ArgumentException("endTime must be greater than startTime");
-			}
-
-			return (me >= startTime) && (me <= endTime);
+				return (me <= startTime) || (me >= endTime);
+			else
+				return (me >= startTime) && (me <= endTime);
 		}
 
 		/// <summary>
@@ -140,12 +133,7 @@ namespace MoreDateTime.Extensions
 		/// <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
 		public static bool IsWithin(this DateTime me, TimeOnly startTime, TimeOnly endTime)
 		{
-			if (endTime < startTime)
-			{
-				throw new ArgumentException("endTime must be greater than startTime");
-			}
-
-			return (me.ToTimeOnly() >= startTime) && (me.ToTimeOnly() <= endTime);
+			return IsWithin(me.ToTimeOnly(), startTime, endTime);
 		}
 	}
 }

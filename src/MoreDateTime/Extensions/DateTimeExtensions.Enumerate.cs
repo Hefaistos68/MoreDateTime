@@ -176,7 +176,7 @@ namespace MoreDateTime.Extensions
 			{
 				for (var day = from.Date.PreviousHoliday(cultureInfo); day.Date >= to.Date; day = day.PreviousHoliday(cultureInfo))
 				{
-					if (day == DateTime.MaxValue)
+					if (day == DateTime.MinValue)
 						break;
 
 					yield return day;

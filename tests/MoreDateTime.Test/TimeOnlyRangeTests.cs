@@ -11,23 +11,23 @@ namespace MoreDateTime.Tests
 	using Shouldly;
 
 	/// <summary>
-	/// The date time range tests.
+	/// Unit tests for the type <see cref="TimeOnlyRange"/>.
 	/// </summary>
 	[TestClass]
-	public class DateTimeRangeTests
+	public class TimeOnlyRangeTests
 	{
-		private readonly DateTime _startDate = new DateTime(2000, 05, 15, 6, 12, 30);
-		private readonly DateTime _endDate = new DateTime(2001, 02, 20, 9, 30, 59);
-
-		private DateTimeRange _testClass = null!;
+		private TimeOnlyRange _testClass = null!;
+		private static readonly TimeOnly _startTime = new TimeOnly(1, 2, 3, 4);
+		private static readonly TimeOnly _midTime = new TimeOnly(5, 6, 7, 8);
+		private static readonly TimeOnly _endTime = new TimeOnly(10, 11, 12, 987);
 
 		/// <summary>
 		/// Creates the date time range.
 		/// </summary>
-		/// <returns>A DateTimeRange.</returns>
-		private DateTimeRange CreateDateTimeRange()
+		/// <returns>A TimeOnlyRange.</returns>
+		private TimeOnlyRange CreateDateTimeRange()
 		{
-			return new DateTimeRange(_startDate, _endDate);
+			return new TimeOnlyRange(_startTime, _endTime);
 		}
 
 		/// <summary>
@@ -43,51 +43,34 @@ namespace MoreDateTime.Tests
 		/// Checks that instance construction works.
 		/// </summary>
 		[TestMethod]
-		public void CanConstruct_FromTwoDateTime()
+		public void CanConstruct_FromTwoTimeOnly()
 		{
 			// Act
-			var instance = new DateTimeRange(this._startDate, this._endDate);
+			var instance = new TimeOnlyRange(_startTime, _endTime);
 
 			// Assert
 			instance.ShouldNotBeNull();
-			instance.Start.ShouldBe(_startDate);
-			instance.End.ShouldBe(_endDate);
-
+			instance.Start.ShouldBe(_startTime);
+			instance.End.ShouldBe(_endTime);
 		}
 
 		/// <summary>
 		/// Checks that instance construction works.
 		/// </summary>
 		[TestMethod]
-		public void CanConstruct_FromTwoDateOnly()
-		{
-			// Act
-			var instance = new DateTimeRange(this._startDate.ToDateOnly(), this._endDate.ToDateOnly());
-
-			// Assert
-			instance.ShouldNotBeNull();
-			instance.Start.ShouldBe(_startDate.Date);
-			instance.End.ShouldBe(_endDate.Date);
-		}
-
-		/// <summary>
-		/// Checks that instance construction works.
-		/// </summary>
-		[TestMethod]
-		public void CanConstruct_FromDateTimeRange()
+		public void CanConstruct_FromTimeOnlyRange()
 		{
 			// Arrange
-			var instance = new DateTimeRange(this._startDate, this._endDate);
+			var instance = new TimeOnlyRange(_startTime, _endTime);
 
 			// Act
-			var instance2 = new DateTimeRange(instance);
+			var instance2 = new TimeOnlyRange(instance);
 
 			// Assert
 			instance2.ShouldNotBeNull();
 			instance2.ShouldBeEquivalentTo(instance);
-			instance2.Start.ShouldBe(_startDate);
-			instance2.End.ShouldBe(_endDate);
-
+			instance2.Start.ShouldBe(_startTime);
+			instance2.End.ShouldBe(_endTime);
 		}
 
 		/// <summary>
@@ -235,7 +218,7 @@ namespace MoreDateTime.Tests
 		public void CanSetAndGet_Start()
 		{
 			// Arrange
-			var testValue = DateTime.UtcNow;
+			var testValue = DateTime.UtcNow.ToTimeOnly();
 
 			// Act
 			this._testClass.Start = testValue;
@@ -251,7 +234,7 @@ namespace MoreDateTime.Tests
 		public void CanSetAndGet_End()
 		{
 			// Arrange
-			var testValue = DateTime.UtcNow;
+			var testValue = DateTime.UtcNow.ToTimeOnly();
 
 			// Act
 			this._testClass.End = testValue;
@@ -266,7 +249,7 @@ namespace MoreDateTime.Tests
 		[TestMethod]
 		public void CannotCall_ExtendWithInvalidDirection()
 		{
-			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Extend(TimeSpan.FromSeconds(60), (RangeDirection) 99));
+			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Extend(TimeSpan.FromSeconds(60), (RangeDirection)99));
 		}
 
 		/// <summary>
@@ -275,7 +258,7 @@ namespace MoreDateTime.Tests
 		[TestMethod]
 		public void CannotCall_ReduceWithInvalidDirection()
 		{
-			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromSeconds(60), (RangeDirection) 99));
+			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromSeconds(60), (RangeDirection)99));
 		}
 
 		/// <summary>
@@ -284,7 +267,7 @@ namespace MoreDateTime.Tests
 		[TestMethod]
 		public void CannotCall_ReduceWithTimeSpanLessThanDistance()
 		{
-			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromDays(400), RangeDirection.Both));
+			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromHours(20), RangeDirection.Both));
 		}
 	}
 }

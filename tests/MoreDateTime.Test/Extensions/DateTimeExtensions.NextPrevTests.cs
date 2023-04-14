@@ -424,7 +424,7 @@ namespace MoreDateTime.Tests.Extensions
 			var result = _startDate.PreviousWeek();
 
 			// Assert
-			result.ShouldBe(new DateTime(2020, 5, 15-7));
+			result.ShouldBe(new DateTime(2020, 5, 15 - 7));
 		}
 
 		/// <summary>
@@ -437,7 +437,71 @@ namespace MoreDateTime.Tests.Extensions
 			var result = _startDate.PreviousWeekend();
 
 			// Assert
-			result.ShouldBe(new DateTime(2020, 5, 10));	 // sunday
+			result.ShouldBe(new DateTime(2020, 5, 10));  // sunday
+		}
+
+		/// <summary>
+		/// Checks that the EndOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EndOfWeek_Europe()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("de-DE");
+
+			// Act
+			var result = _startDate.EndOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(2));	 // Sunday
+		}
+
+		/// <summary>
+		/// Checks that the StartOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_StartOfWeek_Europe()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("de-DE");
+
+			// Act
+			var result = _startDate.StartOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(-4)); // Monday
+		}
+		
+		/// <summary>
+		/// Checks that the EndOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EndOfWeek_US()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("en-US");
+
+			// Act
+			var result = _startDate.EndOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(1));	 // saturday
+		}
+
+		/// <summary>
+		/// Checks that the StartOfWeek method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_StartOfWeek_US()
+		{
+			// Arrange
+			var cultureInfo = CultureInfo.GetCultureInfo("en-US");
+
+			// Act
+			var result = _startDate.StartOfWeek(cultureInfo);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(-5)); // sunday
 		}
 	}
 }

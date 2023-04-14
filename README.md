@@ -6,6 +6,8 @@
 
 This library is built from the ground up to be a simple, easy to use, and intuitive date and time library for .NET, that simplifies common tasks and provides a consistent API for working with dates and times, throughout the DateTime, DateOnly and TimeOnly .NET objects. It adds many operations that one expects to find in a date and time library, but are missing from the .NET standard library.
 
+It is however not intended to be a replacement for the standard .NET library, but rather an extension to it. It is built upon the existing .NET standard library and does not replace any of the existing functionality. It is also not intended to be a replacement for the [NodaTime](https://nodatime.org/) library, but it can be used in conjunction.
+
 For example: `NextWeek()` to advance a DateTime or DateOnly to the same weekday in the next week, `NextYear()` to add a year to a DateTime or DateOlnly object (yes, of course you can use the existing `.AddYears(1)` method, but it does not look as clear), `NextWorkday()` to advance the DateTime or DateOnly object to the next working day on the given `Calendar`.
 
 Or things like `IsWeekend()` which of course you can also do with `myDate.DayOfWeek == DayOfWeek.Saturday || myDate.DayOfWeek == DayOfWeek.Sunday`, but it just aint as nice to read. Then we also have `IsWorkday()` which is the opposite of `IsWeekend()` and also `IsHoliday()` which checks if the given date is a holiday on the given calendar.
