@@ -11,23 +11,24 @@ namespace MoreDateTime.Tests
 	using Shouldly;
 
 	/// <summary>
-	/// The date time range tests.
+	/// Unit tests for the type <see cref="DateOnlyRange"/>.
 	/// </summary>
 	[TestClass]
-	public class DateTimeRangeTests
+	public class DateOnlyRangeTests
 	{
-		private readonly DateTime _startDate = new DateTime(2000, 05, 15);
-		private readonly DateTime _endDate = new DateTime(2001, 02, 20);
+		private DateOnlyRange _testClass;
+		private readonly DateOnly _startDate = new DateOnly(2020, 05, 15); // Friday
 
-		private DateTimeRange _testClass;
+		private readonly DateOnly _midDate = new DateOnly(2021, 02, 20);   // Saturday
+		private readonly DateOnly _endDate = new DateOnly(2021, 05, 14);   // Friday
 
 		/// <summary>
 		/// Creates the date time range.
 		/// </summary>
-		/// <returns>A DateTimeRange.</returns>
-		private DateTimeRange CreateDateTimeRange()
+		/// <returns>A DateOnlyRange.</returns>
+		private DateOnlyRange CreateDateTimeRange()
 		{
-			return new DateTimeRange(_startDate, _endDate);
+			return new DateOnlyRange(_startDate, _endDate);
 		}
 
 		/// <summary>
@@ -46,7 +47,7 @@ namespace MoreDateTime.Tests
 		public void CanConstruct()
 		{
 			// Act
-			var instance = new DateTimeRange(this._startDate, this._endDate);
+			var instance = new DateOnlyRange(this._startDate, this._endDate);
 
 			// Assert
 			instance.ShouldNotBeNull();
@@ -62,7 +63,7 @@ namespace MoreDateTime.Tests
 			var result = this._testClass.Distance();
 
 			// Assert
-			result.ShouldBe(_testClass.End - _testClass.Start);
+			result.ShouldBe(_testClass.End.ToDateTime() - _testClass.Start.ToDateTime());
 		}
 
 		/// <summary>
@@ -72,7 +73,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Offset()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 
 			// Act
 			var result = this._testClass.Offset(timeSpan);
@@ -89,7 +90,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Extend_FromStart()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 			var direction = RangeDirection.Start;
 
 			// Act
@@ -107,7 +108,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Extend_FromEnd()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 			var direction = RangeDirection.End;
 
 			// Act
@@ -125,7 +126,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Extend_FromBoth()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 			var direction = RangeDirection.Both;
 
 			// Act
@@ -143,7 +144,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Reduce_FromStart()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 			var direction = RangeDirection.Start;
 
 			// Act
@@ -161,7 +162,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Reduce_FromEnd()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 			var direction = RangeDirection.End;
 
 			// Act
@@ -179,7 +180,7 @@ namespace MoreDateTime.Tests
 		public void CanCall_Reduce_FromBoth()
 		{
 			// Arrange
-			var timeSpan = TimeSpan.FromSeconds(60);
+			var timeSpan = TimeSpan.FromDays(60);
 			var direction = RangeDirection.Both;
 
 			// Act
@@ -197,7 +198,7 @@ namespace MoreDateTime.Tests
 		public void CanSetAndGet_Start()
 		{
 			// Arrange
-			var testValue = DateTime.UtcNow;
+			var testValue = DateTime.UtcNow.ToDateOnly();
 
 			// Act
 			this._testClass.Start = testValue;
@@ -213,7 +214,7 @@ namespace MoreDateTime.Tests
 		public void CanSetAndGet_End()
 		{
 			// Arrange
-			var testValue = DateTime.UtcNow;
+			var testValue = DateTime.UtcNow.ToDateOnly();
 
 			// Act
 			this._testClass.End = testValue;

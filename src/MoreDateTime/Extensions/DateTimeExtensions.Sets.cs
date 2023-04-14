@@ -16,11 +16,16 @@ namespace MoreDateTime.Extensions
 	public static partial class DateTimeExtensions
 	{
 		// Todo: EveryX
-
-		/*
-		public static IEnumerable<DateTime> EveryNDays(this DateTime from, DateTime to)
+		public static DateTimeRange Union(this DateTimeRange a, DateTimeRange b)
 		{
+			DateTimeRange ab = new(a);
+
+			// calculate the union of the two ranges
+			ab.Start = a.Start < b.Start ? a.Start : b.Start;
+			ab.End = a.End > b.End ? a.End : b.End;
+
+
+			return ab;
 		}
-		*/
 	}
 }

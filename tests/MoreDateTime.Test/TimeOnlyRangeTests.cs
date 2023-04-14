@@ -11,23 +11,23 @@ namespace MoreDateTime.Tests
 	using Shouldly;
 
 	/// <summary>
-	/// The date time range tests.
+	/// Unit tests for the type <see cref="TimeOnlyRange"/>.
 	/// </summary>
 	[TestClass]
-	public class DateTimeRangeTests
+	public class TimeOnlyRangeTests
 	{
-		private readonly DateTime _startDate = new DateTime(2000, 05, 15);
-		private readonly DateTime _endDate = new DateTime(2001, 02, 20);
-
-		private DateTimeRange _testClass;
+		private TimeOnlyRange _testClass;
+		private static readonly TimeOnly _startTime = new TimeOnly(1, 2, 3, 4);
+		private static readonly TimeOnly _midTime = new TimeOnly(5, 6, 7, 8);
+		private static readonly TimeOnly _endTime = new TimeOnly(10, 11, 12, 987);
 
 		/// <summary>
 		/// Creates the date time range.
 		/// </summary>
-		/// <returns>A DateTimeRange.</returns>
-		private DateTimeRange CreateDateTimeRange()
+		/// <returns>A TimeOnlyRange.</returns>
+		private TimeOnlyRange CreateDateTimeRange()
 		{
-			return new DateTimeRange(_startDate, _endDate);
+			return new TimeOnlyRange(_startTime, _startTime);
 		}
 
 		/// <summary>
@@ -46,7 +46,7 @@ namespace MoreDateTime.Tests
 		public void CanConstruct()
 		{
 			// Act
-			var instance = new DateTimeRange(this._startDate, this._endDate);
+			var instance = new TimeOnlyRange(_startTime, _startTime);
 
 			// Assert
 			instance.ShouldNotBeNull();
@@ -186,8 +186,8 @@ namespace MoreDateTime.Tests
 			var result = _testClass.Reduce(timeSpan, direction);
 
 			// Assert
-			result.Start.ShouldBe(_testClass.Start.Add(timeSpan / 2));
-			result.End.ShouldBe(_testClass.End.Sub(timeSpan / 2));
+			result.Start.ShouldBe(_testClass.Start.Sub(timeSpan / 2));
+			result.End.ShouldBe(_testClass.End.Add(timeSpan / 2));
 		}
 
 		/// <summary>
@@ -197,7 +197,7 @@ namespace MoreDateTime.Tests
 		public void CanSetAndGet_Start()
 		{
 			// Arrange
-			var testValue = DateTime.UtcNow;
+			var testValue = DateTime.UtcNow.ToTimeOnly();
 
 			// Act
 			this._testClass.Start = testValue;
@@ -213,7 +213,7 @@ namespace MoreDateTime.Tests
 		public void CanSetAndGet_End()
 		{
 			// Arrange
-			var testValue = DateTime.UtcNow;
+			var testValue = DateTime.UtcNow.ToTimeOnly();
 
 			// Act
 			this._testClass.End = testValue;
