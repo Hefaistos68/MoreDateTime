@@ -33,5 +33,5 @@ jobs:
         dotnet test --configuration Release --no-restore --no-build --verbosity normal
     - name: Push Github package
       run: |
-        dotnet nuget add source --username Hefaistos68 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Hefaistos68/index.json"
-        dotnet nuget push src/MoreDateTime/bin/Release/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }}  --source "github"
+        dotnet nuget add source --username Hefaistos68 --password ${{ secrets.GH_PACLAGE_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Hefaistos68/index.json"
+        dotnet nuget push src/MoreDateTime/bin/Release/*.nupkg --api-key ${{ secrets.GH_PACKAGE_TOKEN }}  --source "github"
