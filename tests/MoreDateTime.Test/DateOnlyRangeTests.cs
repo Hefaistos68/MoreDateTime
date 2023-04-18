@@ -336,5 +336,97 @@ namespace MoreDateTime.Tests
 		{
 			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromDays(400), RangeDirection.Both));
 		}
+
+		/// <summary>
+		/// Checks that the IsOrdered method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsOrdered_WithOrdered()
+		{
+			// Act
+			var result = this._testClass.IsOrdered();
+
+			// Assert
+			result.ShouldBeTrue();
+		}
+
+		/// <summary>
+		/// Checks that the IsOrdered method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsOrdered_WithUnordered()
+		{
+			// Act
+			var result = new DateOnlyRange(_endDate, _startDate).IsOrdered();
+
+			// Assert
+			result.ShouldBeFalse();
+		}
+
+		/// <summary>
+		/// Checks that the Order method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_Order()
+		{
+			// Arrange
+			var range = new DateOnlyRange(_endDate, _startDate);
+
+			// Act
+			var result = this._testClass.Order();
+
+			// Assert
+			result.ShouldBeEquivalentTo(new DateOnlyRange(_startDate, _endDate));
+		}
+
+		/// <summary>
+		/// Checks that the Contains method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_ContainsWithDateTime()
+		{
+			// Arrange
+			var value = _endDate.ToDateTime();
+
+			// Act
+			var result1 = this._testClass.Contains(value);
+			var result2 = this._testClass.Contains(value.AddDays(2));
+
+			// Assert
+			result1.ShouldBeTrue();
+			result2.ShouldBeFalse();
+		}
+
+		/// <summary>
+		/// Checks that the Contains method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_ContainsWithDateOnly()
+		{
+			// Arrange
+			var value = _endDate;
+
+			// Act
+			var result1 = this._testClass.Contains(value);
+			var result2 = this._testClass.Contains(value.AddDays(2));
+
+			// Assert
+			result1.ShouldBeTrue();
+			result2.ShouldBeFalse();
+		}
+		/// <summary>
+		/// Checks that the Empty method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_Empty()
+		{
+			// Act
+			var result = this._testClass.Empty();
+
+			// Assert
+			result.Start.ShouldBe(DateOnly.MinValue);
+			result.End.ShouldBe(DateOnly.MinValue);
+		}
+
 	}
 }

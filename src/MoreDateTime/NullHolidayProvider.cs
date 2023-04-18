@@ -10,13 +10,13 @@ namespace MoreDateTime
 	public class NullHolidayProvider : IHolidayProvider
 	{
 		/// <inheritdoc/>
-		public bool IsPublicHoliday(DateTime date, CultureInfo cultureInfo)
+		public bool IsPublicHoliday(DateTime date, CultureInfo? cultureInfo)
 		{
 			return false;
 		}
 
 		/// <inheritdoc/>
-		public bool IsPublicHoliday(DateOnly date, CultureInfo cultureInfo)
+		public bool IsPublicHoliday(DateOnly date, CultureInfo? cultureInfo)
 		{
 			return false;
 		}

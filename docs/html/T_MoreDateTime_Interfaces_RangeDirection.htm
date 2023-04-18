@@ -12,13 +12,14 @@
     <script src="../scripts/clipboard.min.js"></script>
     <script src="../scripts/highlight.min.js"></script>
     <script src="../scripts/presentationStyle.js"></script>
-    <title>IDateTimeRange Methods</title>
-    <meta name="Title" content="Methods" />
-    <meta name="Help.Id" content="Methods.T:MoreDateTime.Interfaces.IDateTimeRange" />
+    <title>RangeDirection Enumeration</title>
+    <meta name="Title" content="RangeDirection" />
+    <meta name="Help.Id" content="T:MoreDateTime.Interfaces.RangeDirection" />
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="MoreDateTime.Interfaces" />
-    <meta name="guid" content="Methods_T_MoreDateTime_Interfaces_IDateTimeRange" />
-    <meta name="tocFile" content="../toc/IDCCA.xml" />
+    <meta name="guid" content="T_MoreDateTime_Interfaces_RangeDirection" />
+    <meta name="Description" content="The range direction enum, indicates in which direction to move the ranges values" />
+    <meta name="tocFile" content="../toc/IDCA.xml" />
   </head>
   <body>
     <div class="fixedLayout">
@@ -41,7 +42,9 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
-                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="vb">VB Usage</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="cpp">C++</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="asp">ASP.NET</a>
                   </div>
                 </div>
               </div>
@@ -83,19 +86,42 @@
             </nav>
           </div>
           <div id="TopicContent" class="column content is-7">
-            <h1>IDate<wbr />Time<wbr />Range Methods</h1>
+            <h1>Range<wbr />Direction Enumeration</h1>
+            <div class="summary">
+            The range direction enum, indicates in which direction to move the ranges values
+            </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
-              </span>Methods</h2>
+              </span>Definition</h2>
+            <div id="IDBSection">
+              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="identifier">RangeDirection</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB Usage</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Dim</span> <span class="parameter">instance</span> <span class="keyword">As</span> <span class="identifier">RangeDirection</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="cpp"><div class="codeHeader"><span class="codeHeaderTitle">C++</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cpp"><span class="keyword">public</span> <span class="keyword">enum class</span> <span class="identifier">RangeDirection</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="asp"><div class="codeHeader"><span class="codeHeaderTitle">ASP.NET</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-plaintext">No code example is currently available or this language may not be supported.</code></pre></div></div></div>
+            <h2 class="quickLinkHeader">
+              <span class="icon toggleSection" tabindex="0">
+                <i class="fa fa-angle-down"></i>
+              </span>Members</h2>
             <div id="IDADASection">
-              <table id="MethodList" class="table is-hoverable">
+              <table id="enumMemberList" class="table is-hoverable">
                 <tr>
+                  <td>Both</td>
+                  <td>0</td>
                   <td>
-                    <a href="M_MoreDateTime_Interfaces_IDateTimeRange_Distance.htm">Distance</a>
-                  </td>
+            Move start and end
+            </td>
+                </tr>
+                <tr>
+                  <td>Start</td>
+                  <td>1</td>
                   <td>
-            Gets the distance between the <a href="P_MoreDateTime_Interfaces_IDateTimeRange_Start.htm">Start</a> and the <a href="P_MoreDateTime_Interfaces_IDateTimeRange_End.htm">End</a></td>
+            Move start only
+            </td>
+                </tr>
+                <tr>
+                  <td>End</td>
+                  <td>2</td>
+                  <td>
+            Move end only
+            </td>
                 </tr>
               </table>
             </div>
@@ -105,9 +131,6 @@
               </span>See Also</h2>
             <div id="seeAlsoSection">
               <h4>Reference</h4>
-              <div>
-                <a href="T_MoreDateTime_Interfaces_IDateTimeRange.htm">IDateTimeRange Interface</a>
-              </div>
               <div>
                 <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces Namespace</a>
               </div>
@@ -120,7 +143,10 @@
               </p>
               <ul id="InThisArticleMenu" class="menu-list">
                 <li>
-                  <a class="quickLink">Methods</a>
+                  <a class="quickLink">Definition</a>
+                </li>
+                <li>
+                  <a class="quickLink">Members</a>
                 </li>
                 <li>
                   <a class="quickLink">See Also</a>
@@ -152,6 +178,7 @@ $(".toggleSection" ).click(function () {
 $(".toggleSection").keypress(function () {
     SectionExpandCollapseCheckKey(this, event)
 });
+hljs.highlightAll();
 });</script>
   </body>
 </html>

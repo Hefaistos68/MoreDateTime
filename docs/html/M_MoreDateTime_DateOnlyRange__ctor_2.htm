@@ -12,14 +12,14 @@
     <script src="../scripts/clipboard.min.js"></script>
     <script src="../scripts/highlight.min.js"></script>
     <script src="../scripts/presentationStyle.js"></script>
-    <title>IDateTimeRange.Start Property</title>
-    <meta name="Title" content="Start" />
-    <meta name="Help.Id" content="P:MoreDateTime.Interfaces.IDateTimeRange.Start" />
+    <title>DateOnlyRange(DateTime, DateTime) Constructor</title>
+    <meta name="Title" content="DateOnlyRange(DateTime, DateTime)" />
+    <meta name="Help.Id" content="M:MoreDateTime.DateOnlyRange.#ctor(System.DateTime,System.DateTime)" />
     <meta name="Help.ContentType" content="Reference" />
-    <meta name="container" content="MoreDateTime.Interfaces" />
-    <meta name="guid" content="P_MoreDateTime_Interfaces_IDateTimeRange_Start" />
-    <meta name="Description" content="Gets or sets the start date" />
-    <meta name="tocFile" content="../toc/IDACCA.xml" />
+    <meta name="container" content="MoreDateTime" />
+    <meta name="guid" content="M_MoreDateTime_DateOnlyRange__ctor_2" />
+    <meta name="Description" content="Initializes a new instance of the class." />
+    <meta name="tocFile" content="../toc/IDAAAA.xml" />
   </head>
   <body>
     <div class="fixedLayout">
@@ -42,7 +42,9 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
-                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="vb">VB Usage</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="cpp">C++</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="asp">ASP.NET</a>
                   </div>
                 </div>
               </div>
@@ -84,16 +86,27 @@
             </nav>
           </div>
           <div id="TopicContent" class="column content is-7">
-            <h1>IDate<wbr />Time<wbr />Range<span id="LSTBFCEA48A_0" data-languageSpecificText="cpp=::|nu=."></span>Start Property</h1>
+            <h1>Date<wbr />Only<wbr />Range(Date<wbr />Time, Date<wbr />Time) Constructor</h1>
             <div class="summary">
-            Gets or sets the start date
+            Initializes a new instance of the <a href="T_MoreDateTime_DateOnlyRange.htm">DateOnlyRange</a> class.
             </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> <span class="identifier">Start</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</code></pre></div></div><h4>Property Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="identifier">DateOnlyRange</span>(
+	<a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> <span class="parameter">startTime</span>,
+	<a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> <span class="parameter">endTime</span>
+)</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB Usage</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Dim</span> <span class="parameter">startTime</span> <span class="keyword">As</span> <a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a>
+<span class="keyword">Dim</span> <span class="parameter">endTime</span> <span class="keyword">As</span> <a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a>
+
+<span class="keyword">Dim</span> <span class="parameter">instance</span> <span class="keyword">As New</span> <a href="T_MoreDateTime_DateOnlyRange.htm">DateOnlyRange</a>(<span class="parameter">startTime</span>, 
+	<span class="parameter">endTime</span>)</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="cpp"><div class="codeHeader"><span class="codeHeaderTitle">C++</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cpp"><span class="keyword">public</span>:
+<span class="identifier">DateOnlyRange</span>(
+	<a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> <span class="parameter">startTime</span>, 
+	<a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> <span class="parameter">endTime</span>
+)</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="asp"><div class="codeHeader"><span class="codeHeaderTitle">ASP.NET</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-plaintext">No code example is currently available or this language may not be supported.</code></pre></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">startTime</span>  <a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a></dt><dd>The start time.</dd><dt class="has-text-weight-normal"><span class="parameter">endTime</span>  <a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a></dt><dd>The end time.</dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -101,10 +114,13 @@
             <div id="seeAlsoSection">
               <h4>Reference</h4>
               <div>
-                <a href="T_MoreDateTime_Interfaces_IDateTimeRange.htm">IDateTimeRange Interface</a>
+                <a href="T_MoreDateTime_DateOnlyRange.htm">DateOnlyRange Class</a>
               </div>
               <div>
-                <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces Namespace</a>
+                <a href="Overload_MoreDateTime_DateOnlyRange__ctor.htm">DateOnlyRange Overload</a>
+              </div>
+              <div>
+                <a href="N_MoreDateTime.htm">MoreDateTime Namespace</a>
               </div>
             </div>
           </div>

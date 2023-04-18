@@ -12,14 +12,14 @@
     <script src="../scripts/clipboard.min.js"></script>
     <script src="../scripts/highlight.min.js"></script>
     <script src="../scripts/presentationStyle.js"></script>
-    <title>IDateTimeRange.End Property</title>
-    <meta name="Title" content="End" />
-    <meta name="Help.Id" content="P:MoreDateTime.Interfaces.IDateTimeRange.End" />
+    <title>TimeOnlyRange.Offset Method</title>
+    <meta name="Title" content="Offset" />
+    <meta name="Help.Id" content="M:MoreDateTime.TimeOnlyRange.Offset(System.TimeSpan)" />
     <meta name="Help.ContentType" content="Reference" />
-    <meta name="container" content="MoreDateTime.Interfaces" />
-    <meta name="guid" content="P_MoreDateTime_Interfaces_IDateTimeRange_End" />
-    <meta name="Description" content="Gets or sets the end date" />
-    <meta name="tocFile" content="../toc/IDACCA.xml" />
+    <meta name="container" content="MoreDateTime" />
+    <meta name="guid" content="M_MoreDateTime_TimeOnlyRange_Offset" />
+    <meta name="Description" content="Offsets the and by the specified" />
+    <meta name="tocFile" content="../toc/IDCFAA.xml" />
   </head>
   <body>
     <div class="fixedLayout">
@@ -42,7 +42,9 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
-                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="vb">VB Usage</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="cpp">C++</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="asp">ASP.NET</a>
                   </div>
                 </div>
               </div>
@@ -84,16 +86,25 @@
             </nav>
           </div>
           <div id="TopicContent" class="column content is-7">
-            <h1>IDate<wbr />Time<wbr />Range<span id="LST4CA0F31_0" data-languageSpecificText="cpp=::|nu=."></span>End Property</h1>
+            <h1>Time<wbr />Only<wbr />Range<span id="LST651C2787_0" data-languageSpecificText="cpp=::|nu=."></span>Offset Method</h1>
             <div class="summary">
-            Gets or sets the end date
-            </div>
+            Offsets the <a href="P_MoreDateTime_TimeOnlyRange_Start.htm">Start</a> and <a href="P_MoreDateTime_TimeOnlyRange_End.htm">End</a> by the specified <span class="parameter">timeSpan</span></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a> <span class="identifier">End</span> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</code></pre></div></div><h4>Property Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.datetime" target="_blank" rel="noopener noreferrer">DateTime</a></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <a href="T_MoreDateTime_TimeOnlyRange.htm">TimeOnlyRange</a> <span class="identifier">Offset</span>(
+	<a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a> <span class="parameter">timeSpan</span>
+)</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB Usage</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Dim</span> <span class="parameter">instance</span> <span class="keyword">As</span> <a href="T_MoreDateTime_TimeOnlyRange.htm">TimeOnlyRange</a>
+<span class="keyword">Dim</span> <span class="parameter">timeSpan</span> <span class="keyword">As</span> <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a>
+
+<span class="keyword">Dim</span> <span class="parameter">returnValue</span> <span class="keyword">As</span> <a href="T_MoreDateTime_TimeOnlyRange.htm">TimeOnlyRange</a>
+
+<span class="parameter">returnValue</span> = instance.<span class="identifier">Offset</span>(<span class="parameter">timeSpan</span>)</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="cpp"><div class="codeHeader"><span class="codeHeaderTitle">C++</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cpp"><span class="keyword">public</span>:
+<span class="keyword">virtual</span> <a href="T_MoreDateTime_TimeOnlyRange.htm">TimeOnlyRange</a>^ <span class="identifier">Offset</span>(
+	<a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a> <span class="parameter">timeSpan</span>
+) <span class="keyword">sealed</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="asp"><div class="codeHeader"><span class="codeHeaderTitle">ASP.NET</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-plaintext">No code example is currently available or this language may not be supported.</code></pre></div></div><h4 class="quickLinkHeader">Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">timeSpan</span>  <a href="https://learn.microsoft.com/dotnet/api/system.timespan" target="_blank" rel="noopener noreferrer">TimeSpan</a></dt><dd>The time span.</dd></dl><h4 class="quickLinkHeader">Return Value</h4><a href="T_MoreDateTime_TimeOnlyRange.htm">TimeOnlyRange</a></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -101,10 +112,10 @@
             <div id="seeAlsoSection">
               <h4>Reference</h4>
               <div>
-                <a href="T_MoreDateTime_Interfaces_IDateTimeRange.htm">IDateTimeRange Interface</a>
+                <a href="T_MoreDateTime_TimeOnlyRange.htm">TimeOnlyRange Class</a>
               </div>
               <div>
-                <a href="N_MoreDateTime_Interfaces.htm">MoreDateTime.Interfaces Namespace</a>
+                <a href="N_MoreDateTime.htm">MoreDateTime Namespace</a>
               </div>
             </div>
           </div>
@@ -116,6 +127,14 @@
               <ul id="InThisArticleMenu" class="menu-list">
                 <li>
                   <a class="quickLink">Definition</a>
+                  <ul class="menu">
+                    <li>
+                      <a class="quickLink">Parameters</a>
+                    </li>
+                    <li>
+                      <a class="quickLink">Return Value</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <a class="quickLink">See Also</a>

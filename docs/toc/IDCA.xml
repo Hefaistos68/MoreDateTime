@@ -13,39 +13,21 @@
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="T_MoreDateTime_Interfaces_IDateOnlyRange" class="has-submenu" href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">
-        <span data-tocFile="../toc/IDACA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>IDate<wbr />Only<wbr />Range</a>
-      <ul class="toc-menu is-hidden"> </ul>
-    </li>
-    <li>
       <a id="T_MoreDateTime_Interfaces_IDateTimeProvider" class="has-submenu" href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">
-        <span data-tocFile="../toc/IDBCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDACA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>IDate<wbr />Time<wbr />Provider</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="T_MoreDateTime_Interfaces_IDateTimeRange" class="has-submenu" href="T_MoreDateTime_Interfaces_IDateTimeRange.htm">
-        <span data-tocFile="../toc/IDCCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>IDate<wbr />Time<wbr />Range</a>
-      <ul class="toc-menu is-hidden"> </ul>
-    </li>
-    <li>
       <a id="T_MoreDateTime_Interfaces_IHolidayProvider" class="has-submenu" href="T_MoreDateTime_Interfaces_IHolidayProvider.htm">
-        <span data-tocFile="../toc/IDDCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDBCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>IHoliday<wbr />Provider</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="T_MoreDateTime_Interfaces_ITimeOnlyRange" class="has-submenu" href="T_MoreDateTime_Interfaces_ITimeOnlyRange.htm">
-        <span data-tocFile="../toc/IDECA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>ITime<wbr />Only<wbr />Range</a>
-      <ul class="toc-menu is-hidden"> </ul>
+      <a id="T_MoreDateTime_Interfaces_RangeDirection" href="T_MoreDateTime_Interfaces_RangeDirection.htm">Range<wbr />Direction</a>
     </li>
   </tocItems>
 </toc>

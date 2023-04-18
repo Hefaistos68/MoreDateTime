@@ -18,7 +18,7 @@ namespace MoreDateTime.Interfaces
 		/// <param name="date">The date</param>
 		/// <param name="cultureInfo">The culture info.</param>
 		/// <returns>A bool.</returns>
-		bool IsPublicHoliday(DateTime date, CultureInfo cultureInfo);
+		bool IsPublicHoliday(DateTime date, CultureInfo? cultureInfo = null);
 
 		/// <summary>
 		/// Checks whether the given date is a public holiday for the given Calendar in CultureInfo
@@ -26,7 +26,7 @@ namespace MoreDateTime.Interfaces
 		/// <param name="date">The date</param>
 		/// <param name="cultureInfo">The culture info.</param>
 		/// <returns>A bool.</returns>
-		bool IsPublicHoliday(DateOnly date, CultureInfo cultureInfo);
+		bool IsPublicHoliday(DateOnly date, CultureInfo? cultureInfo = null);
 
 		/// <summary>
 		/// Gets the number of known holidays

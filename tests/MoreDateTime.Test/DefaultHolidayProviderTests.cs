@@ -6,6 +6,7 @@ namespace MoreDateTime.Tests
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	using MoreDateTime;
+	using MoreDateTime.Interfaces;
 
 	using Shouldly;
 
@@ -15,15 +16,25 @@ namespace MoreDateTime.Tests
 	[TestClass]
 	public class DefaultHolidayProviderTests
 	{
-		private DefaultHolidayProvider _testClass;
+		private DefaultHolidayProvider _testClass = null!;
 
 		/// <summary>
-		/// Sets up the dependencies required for the tests for <see cref="DefaultHolidayProvider"/>.
+		/// Checks that the IsPublicHoliday method functions correctly.
 		/// </summary>
-		[TestInitialize]
-		public void SetUp()
+		[TestMethod]
+		public void CanCall_IsPublicHolidayWithDateOnlyAndCultureInfo()
 		{
-			this._testClass = new DefaultHolidayProvider();
+			// Arrange
+			var date = new DateOnly(2020, 5, 1);
+			var cultureInfo = CultureInfo.GetCultureInfo("DE");
+
+			// Act
+			var result1 = this._testClass.IsPublicHoliday(date, cultureInfo);
+			var result2 = this._testClass.IsPublicHoliday(new DateOnly(2020, 2, 2), cultureInfo);
+
+			// Assert
+			result1.ShouldBeTrue();
+			result2.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -33,49 +44,17 @@ namespace MoreDateTime.Tests
 		public void CanCall_IsPublicHolidayWithDateTimeAndCultureInfo()
 		{
 			// Arrange
-			var date = DateTime.UtcNow;
-			var cultureInfo = CultureInfo.InvariantCulture;
-
-			// Act
-			var result = this._testClass.IsPublicHoliday(date, cultureInfo);
-
-			// Assert
-			Assert.Fail("Create or modify test");
-		}
-
-		/// <summary>
-		/// Checks that the IsPublicHoliday method throws when the cultureInfo parameter is null.
-		/// </summary>
-		[TestMethod]
-		public void CannotCall_IsPublicHolidayWithDateTimeAndCultureInfo_WithNullCultureInfo()
-		{
-			Should.Throw<ArgumentNullException>(() => this._testClass.IsPublicHoliday(DateTime.UtcNow, default(CultureInfo)));
-		}
-
-		/// <summary>
-		/// Checks that the IsPublicHoliday method functions correctly.
-		/// </summary>
-		[TestMethod]
-		public void CanCall_IsPublicHolidayWithDateOnlyAndCultureInfo()
-		{
+			var date = new DateTime(2020, 5, 1);
 			// Arrange
-			var date = new DateOnly();
-			var cultureInfo = CultureInfo.InvariantCulture;
+			var cultureInfo = CultureInfo.GetCultureInfo("DE");
 
 			// Act
-			var result = this._testClass.IsPublicHoliday(date, cultureInfo);
+			var result1 = this._testClass.IsPublicHoliday(date, cultureInfo);
+			var result2 = this._testClass.IsPublicHoliday(new DateTime(2020, 2, 2), cultureInfo);
 
 			// Assert
-			Assert.Fail("Create or modify test");
-		}
-
-		/// <summary>
-		/// Checks that the IsPublicHoliday method throws when the cultureInfo parameter is null.
-		/// </summary>
-		[TestMethod]
-		public void CannotCall_IsPublicHolidayWithDateOnlyAndCultureInfo_WithNullCultureInfo()
-		{
-			Should.Throw<ArgumentNullException>(() => this._testClass.IsPublicHoliday(new DateOnly(), default(CultureInfo)));
+			result1.ShouldBeTrue();
+			result2.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -85,14 +64,23 @@ namespace MoreDateTime.Tests
 		public void CanCall_NumberOfKnownHolidays()
 		{
 			// Arrange
-			var year = 205745105;
+			var year = 2020;
 			var cultureInfo = CultureInfo.CurrentCulture;
 
 			// Act
-			var result = this._testClass.NumberOfKnownHolidays(year, cultureInfo);
+			var result = ((IHolidayProvider)this._testClass).NumberOfKnownHolidays(year, cultureInfo);
 
 			// Assert
-			Assert.Fail("Create or modify test");
+			result.ShouldBe(4);
+		}
+
+		/// <summary>
+		/// Sets up the dependencies required for the tests for <see cref="DefaultHolidayProvider"/>.
+		/// </summary>
+		[TestInitialize]
+		public void SetUp()
+		{
+			this._testClass = new DefaultHolidayProvider();
 		}
 	}
 }

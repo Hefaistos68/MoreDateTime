@@ -269,5 +269,79 @@ namespace MoreDateTime.Tests
 		{
 			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromHours(20), RangeDirection.Both));
 		}
+		/// <summary>
+		/// Checks that the IsOrdered method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsOrdered_WithOrdered()
+		{
+			// Act
+			var result = this._testClass.IsOrdered();
+
+			// Assert
+			result.ShouldBeTrue();
+		}
+
+		/// <summary>
+		/// Checks that the IsOrdered method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsOrdered_WithUnordered()
+		{
+			// Act
+			var result = new TimeOnlyRange(_endTime, _startTime).IsOrdered();
+
+			// Assert
+			result.ShouldBeFalse();
+		}
+
+		/// <summary>
+		/// Checks that the Order method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_Order()
+		{
+			// Arrange
+			var range = new TimeOnlyRange(_endTime, _startTime);
+
+			// Act
+			var result = this._testClass.Order();
+
+			// Assert
+			result.ShouldBeEquivalentTo(new TimeOnlyRange(_startTime, _endTime));
+		}
+
+		/// <summary>
+		/// Checks that the Contains method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_ContainsWithTimeOnly()
+		{
+			// Arrange
+			var value = _endTime;
+
+			// Act
+			var result1 = this._testClass.Contains(value);
+			var result2 = this._testClass.Contains(value.AddMinutes(2));
+
+			// Assert
+			result1.ShouldBeTrue();
+			result2.ShouldBeFalse();
+		}
+
+		/// <summary>
+		/// Checks that the Empty method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_Empty()
+		{
+			// Act
+			var result = this._testClass.Empty();
+
+			// Assert
+			result.Start.ShouldBe(TimeOnly.MinValue);
+			result.End.ShouldBe(TimeOnly.MinValue);
+		}
+
 	}
 }

@@ -42,7 +42,9 @@
                 <div class="dropdown-menu" role="menu">
                   <div id="LanguageSelections" class="dropdown-content">
                     <a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a>
-                    <a class="dropdown-item languageFilterItem" data-languageId="xaml">XAML</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="vb">VB Usage</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="cpp">C++</a>
+                    <a class="dropdown-item languageFilterItem" data-languageId="asp">ASP.NET</a>
                   </div>
                 </div>
               </div>
@@ -86,23 +88,39 @@
           <div id="TopicContent" class="column content is-7">
             <h1>Date<wbr />Only<wbr />Range Class</h1>
             <div class="summary">
-            Implements the <a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a> interface and provides a time range through its <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a> members
+            Implements the <span class="noLink">IRange</span> interface and provides a time range through its <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a> members
             </div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<br /><strong>XMLNS for XAML:</strong> Not mapped to an xmlns.<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">DateOnlyRange</span> : <a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateOnlyRange</span></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><a href="T_MoreDateTime_Interfaces_IDateOnlyRange.htm">IDateOnlyRange</a></dd></dl></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.1.0<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">DateOnlyRange</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB Usage</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Dim</span> <span class="parameter">instance</span> <span class="keyword">As</span> <span class="identifier">DateOnlyRange</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="cpp"><div class="codeHeader"><span class="codeHeaderTitle">C++</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cpp"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">DateOnlyRange</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="asp"><div class="codeHeader"><span class="codeHeaderTitle">ASP.NET</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-plaintext">No code example is currently available or this language may not be supported.</code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateOnlyRange</span></dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Constructors</h2>
-            <div id="IDBFASection">
+            <div id="IDABEASection">
               <table id="ConstructorList" class="table is-hoverable">
                 <tr>
                   <td>
-                    <a href="M_MoreDateTime_DateOnlyRange__ctor.htm">DateOnlyRange</a>
+                    <a href="M_MoreDateTime_DateOnlyRange__ctor.htm">DateOnlyRange(DateOnlyRange)</a>
+                  </td>
+                  <td>
+            Initializes a copied new instance of the <span class="selflink">DateOnlyRange</span> class.
+            </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateOnlyRange__ctor_1.htm">DateOnlyRange(DateOnly, DateOnly)</a>
+                  </td>
+                  <td>
+            Initializes a new instance of the <span class="selflink">DateOnlyRange</span> class.
+            </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateOnlyRange__ctor_2.htm">DateOnlyRange(DateTime, DateTime)</a>
                   </td>
                   <td>
             Initializes a new instance of the <span class="selflink">DateOnlyRange</span> class.
@@ -114,7 +132,7 @@
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Properties</h2>
-            <div id="IDDFASection">
+            <div id="IDGEASection">
               <table id="PropertyList" class="table is-hoverable">
                 <tr>
                   <td>
@@ -134,13 +152,35 @@
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Methods</h2>
-            <div id="IDCFASection">
+            <div id="IDCEASection">
               <table id="MethodList" class="table is-hoverable">
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_DateOnlyRange_Distance.htm">Distance</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the distance between the <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and the <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateOnlyRange_Extend.htm">Extend</a>
+                  </td>
+                  <td>
+            Extends the <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and/or <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a> by the specified <span class="parameter">timeSpan</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateOnlyRange_Offset.htm">Offset</a>
+                  </td>
+                  <td>
+            Offsets the <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a> by the specified <span class="parameter">timeSpan</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateOnlyRange_Reduce.htm">Reduce</a>
+                  </td>
+                  <td>
+            Reduces the <a href="P_MoreDateTime_DateOnlyRange_Start.htm">Start</a> and/or <a href="P_MoreDateTime_DateOnlyRange_End.htm">End</a> by the specified <span class="parameter">timeSpan</span></td>
                 </tr>
               </table>
             </div>
@@ -148,7 +188,7 @@
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Extension Methods</h2>
-            <div id="IDAFASection">
+            <div id="IDAEASection">
               <table id="ExtensionList" class="table is-hoverable">
                 <tr>
                   <td>

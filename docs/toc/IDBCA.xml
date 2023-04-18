@@ -11,15 +11,15 @@
       <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDate<wbr />Time<wbr />Provider</a>
+      <a href="T_MoreDateTime_Interfaces_IHolidayProvider.htm">IHoliday<wbr />Provider</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="Properties_T_MoreDateTime_Interfaces_IDateTimeProvider" class="has-submenu" href="Properties_T_MoreDateTime_Interfaces_IDateTimeProvider.htm">
+      <a id="Methods_T_MoreDateTime_Interfaces_IHolidayProvider" class="has-submenu" href="Methods_T_MoreDateTime_Interfaces_IHolidayProvider.htm">
         <span data-tocFile="../toc/IDABCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Properties</a>
+        </span>Methods</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
   </tocItems>

@@ -6,6 +6,7 @@ namespace MoreDateTime.Tests
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	using MoreDateTime;
+	using MoreDateTime.Interfaces;
 
 	using Shouldly;
 
@@ -15,7 +16,7 @@ namespace MoreDateTime.Tests
 	[TestClass]
 	public class NagerHolidayProviderTests
 	{
-		private NagerHolidayProvider _testClass;
+		private NagerHolidayProvider _testClass = null!;
 
 		/// <summary>
 		/// Sets up the dependencies required for the tests for <see cref="NagerHolidayProvider"/>.
@@ -33,23 +34,23 @@ namespace MoreDateTime.Tests
 		public void CanCall_IsPublicHolidayWithDateTimeAndCultureInfo()
 		{
 			// Arrange
-			var date = DateTime.UtcNow;
-			var cultureInfo = CultureInfo.CurrentCulture;
+			var date = new DateTime(2020, 5, 1);
+			var cultureInfo = CultureInfo.GetCultureInfo("DE");
 
 			// Act
-			var result = this._testClass.IsPublicHoliday(date, cultureInfo);
-
-			// Assert
-			Assert.Fail("Create or modify test");
-		}
-
-		/// <summary>
-		/// Checks that the IsPublicHoliday method throws when the cultureInfo parameter is null.
-		/// </summary>
-		[TestMethod]
-		public void CannotCall_IsPublicHolidayWithDateTimeAndCultureInfo_WithNullCultureInfo()
-		{
-			Should.Throw<ArgumentNullException>(() => this._testClass.IsPublicHoliday(DateTime.UtcNow, default(CultureInfo)));
+			try
+			{
+				var result1 = this._testClass.IsPublicHoliday(date, cultureInfo);
+				var result2 = this._testClass.IsPublicHoliday(new DateTime(2020, 1, 1), cultureInfo);
+	
+				// Assert
+				result1.ShouldBeTrue();
+				result2.ShouldBeFalse();
+			}
+			catch (Nager.Date.NoLicenseKeyException)
+			{
+				// can not test without license, so skip test	
+			}
 		}
 
 		/// <summary>
@@ -59,23 +60,23 @@ namespace MoreDateTime.Tests
 		public void CanCall_IsPublicHolidayWithDateOnlyAndCultureInfo()
 		{
 			// Arrange
-			var date = new DateOnly();
-			var cultureInfo = CultureInfo.InvariantCulture;
+			var date = new DateTime(2020, 5, 1);
+			var cultureInfo = CultureInfo.GetCultureInfo("DE");
 
 			// Act
-			var result = this._testClass.IsPublicHoliday(date, cultureInfo);
-
-			// Assert
-			Assert.Fail("Create or modify test");
-		}
-
-		/// <summary>
-		/// Checks that the IsPublicHoliday method throws when the cultureInfo parameter is null.
-		/// </summary>
-		[TestMethod]
-		public void CannotCall_IsPublicHolidayWithDateOnlyAndCultureInfo_WithNullCultureInfo()
-		{
-			Should.Throw<ArgumentNullException>(() => this._testClass.IsPublicHoliday(new DateOnly(), default(CultureInfo)));
+			try
+			{
+				var result1 = this._testClass.IsPublicHoliday(date, cultureInfo);
+				var result2 = this._testClass.IsPublicHoliday(new DateOnly(2020, 2, 2), cultureInfo);
+	
+				// Assert
+				result1.ShouldBeFalse();
+				result2.ShouldBeFalse();
+			}
+			catch (Nager.Date.NoLicenseKeyException)
+			{
+				// can not test without license, so skip test
+			}
 		}
 
 		/// <summary>
@@ -85,14 +86,21 @@ namespace MoreDateTime.Tests
 		public void CanCall_NumberOfKnownHolidays()
 		{
 			// Arrange
-			var year = 1005842840;
-			var cultureInfo = CultureInfo.InvariantCulture;
+			var year = 2020;
+			var cultureInfo = CultureInfo.CurrentCulture;
 
 			// Act
-			var result = this._testClass.NumberOfKnownHolidays(year, cultureInfo);
-
-			// Assert
-			Assert.Fail("Create or modify test");
+			try
+			{
+				var result = ((IHolidayProvider)this._testClass).NumberOfKnownHolidays(year, cultureInfo);
+	
+				// Assert
+				result.ShouldBe(0);
+			}
+			catch (Nager.Date.NoLicenseKeyException)
+			{
+				// can not test without license, so skip test
+			}
 		}
 	}
 }
