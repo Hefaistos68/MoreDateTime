@@ -91,10 +91,10 @@
         </member>
         <member name="M:MoreDateTime.DateOnlyRange.IsWithin(MoreDateTime.DateOnlyRange)">
             <summary>
-            Checks if the range is between the given ranges start and end values, including start date and end date, thus completely inside.
+            Verifies if the this range is contained entirely in the given range, including start and end
             </summary>
-            <param name="value">The DateOnly to compare</param>
-            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+            <param name="value">The value to compare with</param>
+            <returns>True if this object is entirely within the target range</returns>
         </member>
         <member name="M:MoreDateTime.DateOnlyRange.Offset(System.TimeSpan)">
             <summary>
@@ -238,10 +238,10 @@
         </member>
         <member name="M:MoreDateTime.DateTimeRange.IsWithin(MoreDateTime.DateTimeRange)">
             <summary>
-            Checks if the range is between the given ranges start and end values, including start date and end date, thus completely inside.
+            Verifies if the this range is contained entirely in the given range, including start and end
             </summary>
-            <param name="value">The DateTime to compare</param>
-            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+            <param name="value">The value to compare with</param>
+            <returns>True if this object is entirely within the target range</returns>
         </member>
         <member name="M:MoreDateTime.DateTimeRange.Offset(System.TimeSpan)">
             <summary>
@@ -2900,6 +2900,13 @@
             <param name="value">The value</param>
             <returns>True, if value is within this range</returns>
         </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.IsWithin(`1)">
+            <summary>
+            Verifies if the this range is contained entirely in the given range, including start and end
+            </summary>
+            <param name="value">The value to compare with</param>
+            <returns>True if this object is entirely within the target range</returns>
+        </member>
         <member name="P:MoreDateTime.Interfaces.IRange`2.IsEmpty">
             <summary>
             Verifies if the range is empty, Start == End == default(T)
@@ -3024,10 +3031,10 @@
         </member>
         <member name="M:MoreDateTime.TimeOnlyRange.IsWithin(MoreDateTime.TimeOnlyRange)">
             <summary>
-            Checks if the range is between the given ranges start and end values, including start time and end time, thus completely inside.
+            Verifies if the this range is contained entirely in the given range, including start and end
             </summary>
-            <param name="value">The TimeOnly to compare</param>
-            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+            <param name="value">The value to compare with</param>
+            <returns>True if this object is entirely within the target range</returns>
         </member>
         <member name="M:MoreDateTime.TimeOnlyRange.Offset(System.TimeSpan)">
             <summary>

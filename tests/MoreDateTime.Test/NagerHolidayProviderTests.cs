@@ -87,7 +87,7 @@ namespace MoreDateTime.Tests
 		{
 			// Arrange
 			var year = 2020;
-			var cultureInfo = CultureInfo.CurrentCulture;
+			var cultureInfo = CultureInfo.GetCultureInfo("DE");
 
 			// Act
 			try
