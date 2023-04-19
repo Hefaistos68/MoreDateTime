@@ -17,15 +17,15 @@
       <a href="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Methods</a>
     </li>
     <li>
-      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">Is<wbr />Same<wbr />Week</a>
+      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear.htm">Is<wbr />Same<wbr />Year</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">Is<wbr />Same<wbr />Week(<wbr />Date<wbr />Only, Date<wbr />Only, Culture<wbr />Info)</a>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear.htm">Is<wbr />Same<wbr />Year(<wbr />Date<wbr />Only, Date<wbr />Only)</a>
     </li>
     <li>
-      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek_1.htm">Is<wbr />Same<wbr />Week(<wbr />Date<wbr />Only, Date<wbr />Time, Culture<wbr />Info)</a>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear_1.htm">Is<wbr />Same<wbr />Year(<wbr />Date<wbr />Only, Date<wbr />Time)</a>
     </li>
   </tocItems>
 </toc>

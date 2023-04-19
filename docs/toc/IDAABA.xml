@@ -40,10 +40,19 @@
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_AddWeeks" href="M_MoreDateTime_Extensions_DateOnlyExtensions_AddWeeks.htm">Add<wbr />Weeks</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Difference" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Difference.htm">Difference</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Distance" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Distance.htm">Distance</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_DoesOverlap" href="M_MoreDateTime_Extensions_DateOnlyExtensions_DoesOverlap.htm">Does<wbr />Overlap</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EndOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EndOfMonth.htm">End<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EndOfWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EndOfWeek.htm">End<wbr />Of<wbr />Week</a>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateDaysUntil" href="M_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateDaysUntil.htm">Enumerate<wbr />Days<wbr />Until</a>
@@ -53,7 +62,7 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateInStepsUntil" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_EnumerateInStepsUntil.htm">
-        <span data-tocFile="../toc/IDLAABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDOAABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Enumerate<wbr />In<wbr />Steps<wbr />Until</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -95,6 +104,9 @@
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstWeekdayOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_FirstWeekdayOfMonth.htm">First<wbr />Weekday<wbr />Of<wbr />Month</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Intersection" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Intersection.htm">Intersection</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsBetween" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsBetween.htm">Is<wbr />Between</a>
     </li>
     <li>
@@ -117,35 +129,35 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay.htm">
-        <span data-tocFile="../toc/ID6AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0DB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Same<wbr />Day</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameMonth" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameMonth.htm">
-        <span data-tocFile="../toc/ID0AB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0EB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Same<wbr />Month</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">
-        <span data-tocFile="../toc/ID0BB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0FB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Same<wbr />Week</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeekday" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeekday.htm">
-        <span data-tocFile="../toc/ID0CB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0GB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Same<wbr />Weekday</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear.htm">
-        <span data-tocFile="../toc/ID0DB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0HB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Same<wbr />Year</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -155,7 +167,7 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin.htm">
-        <span data-tocFile="../toc/ID0FB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0JB0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Within</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -270,13 +282,16 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateOnlyExtensions_Split" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_Split.htm">
-        <span data-tocFile="../toc/ID0KC0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0OC0AABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Split</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_StartOfMonth" href="M_MoreDateTime_Extensions_DateOnlyExtensions_StartOfMonth.htm">Start<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_StartOfWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_StartOfWeek.htm">Start<wbr />Of<wbr />Week</a>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Sub" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Sub.htm">Sub</a>
@@ -304,6 +319,9 @@
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_TruncateToYear.htm">Truncate<wbr />To<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Union" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Union.htm">Union</a>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_Weeknumber" href="M_MoreDateTime_Extensions_DateOnlyExtensions_Weeknumber.htm">Weeknumber</a>

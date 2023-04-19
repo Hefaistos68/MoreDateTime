@@ -17,15 +17,15 @@
       <a href="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Methods</a>
     </li>
     <li>
-      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear.htm">Is<wbr />Same<wbr />Year</a>
+      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay.htm">Is<wbr />Same<wbr />Day</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear.htm">Is<wbr />Same<wbr />Year(<wbr />Date<wbr />Only, Date<wbr />Only)</a>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay.htm">Is<wbr />Same<wbr />Day(<wbr />Date<wbr />Only, Date<wbr />Only)</a>
     </li>
     <li>
-      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameYear_1.htm">Is<wbr />Same<wbr />Year(<wbr />Date<wbr />Only, Date<wbr />Time)</a>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameDay_1.htm">Is<wbr />Same<wbr />Day(<wbr />Date<wbr />Only, Date<wbr />Time)</a>
     </li>
   </tocItems>
 </toc>

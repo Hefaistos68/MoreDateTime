@@ -17,15 +17,15 @@
       <a href="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Methods</a>
     </li>
     <li>
-      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin.htm">Is<wbr />Within</a>
+      <a href="Overload_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">Is<wbr />Same<wbr />Week</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin.htm">Is<wbr />Within(<wbr />Date<wbr />Only, Date<wbr />Only, Date<wbr />Only)</a>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek.htm">Is<wbr />Same<wbr />Week(<wbr />Date<wbr />Only, Date<wbr />Only, Culture<wbr />Info)</a>
     </li>
     <li>
-      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsWithin_1.htm">Is<wbr />Within(<wbr />Date<wbr />Only, Date<wbr />Time, Date<wbr />Time)</a>
+      <a id="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek_1" href="M_MoreDateTime_Extensions_DateOnlyExtensions_IsSameWeek_1.htm">Is<wbr />Same<wbr />Week(<wbr />Date<wbr />Only, Date<wbr />Time, Culture<wbr />Info)</a>
     </li>
   </tocItems>
 </toc>

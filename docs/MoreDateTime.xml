@@ -9,9 +9,20 @@
             Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2" /> interface and provides a time range through its <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and <see cref="P:MoreDateTime.DateOnlyRange.End" /> members
             </summary>
     </member>
+    <member name="M:MoreDateTime.DateOnlyRange.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateOnlyRange" /> class.
+            </summary>
+    </member>
     <member name="M:MoreDateTime.DateOnlyRange.#ctor(MoreDateTime.DateOnlyRange)">
       <summary>
             Initializes a copied new instance of the <see cref="T:MoreDateTime.DateOnlyRange" /> class.
+            </summary>
+      <param name="range">The range to copy</param>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.#ctor(MoreDateTime.DateTimeRange)">
+      <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.DateTimeRange" /> class.
             </summary>
       <param name="range">The range to copy</param>
     </member>
@@ -29,9 +40,28 @@
       <param name="startTime">The start time.</param>
       <param name="endTime">The end time.</param>
     </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Contains(System.DateOnly)">
+      <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+      <param name="value">The value</param>
+      <returns>True, if value is within this range</returns>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Contains(System.DateTime)">
+      <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+      <param name="value">The value</param>
+      <returns>True, if value is within this range</returns>
+    </member>
     <member name="M:MoreDateTime.DateOnlyRange.Distance">
       <summary>
             Gets the distance between the <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and the <see cref="P:MoreDateTime.DateOnlyRange.End" /></summary>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Empty">
+      <summary>
+            Get an empty range
+            </summary>
     </member>
     <member name="P:MoreDateTime.DateOnlyRange.End">
       <summary>
@@ -49,10 +79,35 @@
       <param name="timeSpan">The time span.</param>
       <param name="direction">The direction in which to extend</param>
     </member>
+    <member name="P:MoreDateTime.DateOnlyRange.IsEmpty">
+      <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+      <returns>True, if both start and end are default(T)</returns>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.IsOrdered">
+      <summary>
+            Verifies that the order of the dates is correct, Start &lt; End
+            </summary>
+      <returns>True if Start is less or equal End</returns>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.IsWithin(MoreDateTime.DateOnlyRange)">
+      <summary>
+            Verifies if the this range is contained entirely in the given range, including start and end
+            </summary>
+      <param name="value">The value to compare with</param>
+      <returns>True if this object is entirely within the target range</returns>
+    </member>
     <member name="M:MoreDateTime.DateOnlyRange.Offset(System.TimeSpan)">
       <summary>
             Offsets the <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and <see cref="P:MoreDateTime.DateOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
       <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Order">
+      <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End
+            </summary>
+      <returns>Itself ordered</returns>
     </member>
     <member name="M:MoreDateTime.DateOnlyRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
       <summary>
@@ -154,6 +209,11 @@
             Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2" /> interface and provides a time range through its <see cref="P:MoreDateTime.DateTimeRange.Start" /> and <see cref="P:MoreDateTime.DateTimeRange.End" /> members
             </summary>
     </member>
+    <member name="M:MoreDateTime.DateTimeRange.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeRange" /> class.
+            </summary>
+    </member>
     <member name="M:MoreDateTime.DateTimeRange.#ctor(MoreDateTime.DateTimeRange)">
       <summary>
             Initializes a copied new instance of the <see cref="T:MoreDateTime.DateTimeRange" /> class.
@@ -164,19 +224,38 @@
       <summary>
             Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeRange" /> class.
             </summary>
-      <param name="startTime">The start datetime</param>
-      <param name="endTime">The end datetime</param>
+      <param name="startDateOnly">The start datetime</param>
+      <param name="endDateOnly">The end datetime</param>
     </member>
     <member name="M:MoreDateTime.DateTimeRange.#ctor(System.DateTime,System.DateTime)">
       <summary>
             Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeRange" /> class.
             </summary>
-      <param name="startTime">The start datetime</param>
-      <param name="endTime">The end datetime</param>
+      <param name="startDateTime">The start datetime</param>
+      <param name="endDateTime">The end datetime</param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Contains(System.DateOnly)">
+      <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+      <param name="value">The value</param>
+      <returns>True, if value is within this range</returns>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Contains(System.DateTime)">
+      <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+      <param name="value">The value</param>
+      <returns>True, if value is within this range</returns>
     </member>
     <member name="M:MoreDateTime.DateTimeRange.Distance">
       <summary>
             Gets the distance between the <see cref="P:MoreDateTime.DateTimeRange.Start" /> and the <see cref="P:MoreDateTime.DateTimeRange.End" /></summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Empty">
+      <summary>
+            Get an empty range
+            </summary>
     </member>
     <member name="P:MoreDateTime.DateTimeRange.End">
       <summary>
@@ -194,10 +273,35 @@
       <param name="timeSpan">The time span.</param>
       <param name="direction">The direction in which to extend</param>
     </member>
+    <member name="P:MoreDateTime.DateTimeRange.IsEmpty">
+      <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+      <returns>True, if both start and end are default(T)</returns>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.IsOrdered">
+      <summary>
+            Verifies that the order of the dates is correct, Start &lt; End
+            </summary>
+      <returns>True if Start is less or equal End</returns>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.IsWithin(MoreDateTime.DateTimeRange)">
+      <summary>
+            Verifies if the this range is contained entirely in the given range, including start and end
+            </summary>
+      <param name="value">The value to compare with</param>
+      <returns>True if this object is entirely within the target range</returns>
+    </member>
     <member name="M:MoreDateTime.DateTimeRange.Offset(System.TimeSpan)">
       <summary>
             Offsets the <see cref="P:MoreDateTime.DateTimeRange.Start" /> and <see cref="P:MoreDateTime.DateTimeRange.End" /> by the specified <paramref name="timeSpan" /></summary>
       <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Order">
+      <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End
+            </summary>
+      <returns>Itself ordered</returns>
     </member>
     <member name="M:MoreDateTime.DateTimeRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
       <summary>
@@ -388,6 +492,11 @@
             Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2" /> interface and provides a time range through its <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and <see cref="P:MoreDateTime.TimeOnlyRange.End" /> members
             </summary>
     </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.TimeOnlyRange" /> class.
+            </summary>
+    </member>
     <member name="M:MoreDateTime.TimeOnlyRange.#ctor(MoreDateTime.TimeOnlyRange)">
       <summary>
             Initializes a copied new instance of the <see cref="T:MoreDateTime.TimeOnlyRange" /> class.
@@ -401,9 +510,21 @@
       <param name="startTime">The start TimeOnly</param>
       <param name="endTime">The end TimeOnly</param>
     </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.Contains(System.TimeOnly)">
+      <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+      <param name="value">The value</param>
+      <returns>True, if value is within this range</returns>
+    </member>
     <member name="M:MoreDateTime.TimeOnlyRange.Distance">
       <summary>
             Gets the distance between the <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and the <see cref="P:MoreDateTime.TimeOnlyRange.End" /></summary>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.Empty">
+      <summary>
+            Get an empty range
+            </summary>
     </member>
     <member name="P:MoreDateTime.TimeOnlyRange.End">
       <summary>
@@ -421,10 +542,35 @@
       <param name="timeSpan">The time span.</param>
       <param name="direction">The direction in which to extend</param>
     </member>
+    <member name="P:MoreDateTime.TimeOnlyRange.IsEmpty">
+      <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+      <returns>True, if both start and end are default(T)</returns>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.IsOrdered">
+      <summary>
+            Verifies if start is less or equal end
+            </summary>
+      <returns>True if start is less or equal end</returns>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.IsWithin(MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Verifies if the this range is contained entirely in the given range, including start and end
+            </summary>
+      <param name="value">The value to compare with</param>
+      <returns>True if this object is entirely within the target range</returns>
+    </member>
     <member name="M:MoreDateTime.TimeOnlyRange.Offset(System.TimeSpan)">
       <summary>
             Offsets the <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and <see cref="P:MoreDateTime.TimeOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
       <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.Order">
+      <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End.
+            <note>Does not make much sense for TimeOnlyRange since the time can be spanning 00:00, as in 22:00 - 04:00</note></summary>
+      <returns>Itself ordered</returns>
     </member>
     <member name="M:MoreDateTime.TimeOnlyRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
       <summary>
@@ -506,6 +652,15 @@
     <member name="F:MoreDateTime.Extensions.DateOnlyExtensions.DaysInWeek">
       <summary>You'd never guess it, its the number of days in a week</summary>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Difference(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+      <summary>
+            Calculates the difference of two DateOnlyRanges. If the two ranges do not overlap, the result is 
+            the first DateOnlyRange. Otherwise, the result is the first DateOnlyRange without where both ranges overlap.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A list of DateOnlyRange</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Distance(System.DateOnly,System.DateOnly)">
       <summary>
             Returns the distance as a TimeSpan between two DateOnly objects. The result is always positive
@@ -514,12 +669,28 @@
       <param name="endDate">The endDate object</param>
       <returns>A TimeSpan which expresses the difference between the two dates</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.DoesOverlap(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+      <summary>
+            Verifies if DateOnlyRange a overlapps with DateOnlyRange b.
+            </summary>
+      <param name="a">The DateOnlyRange to verify a possible overlap</param>
+      <param name="b">The DateOnlyrange to verify with</param>
+      <returns>A bool.</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.EndOfMonth(System.DateOnly)">
       <summary>
-            Returns a DateTime object representing the first day of the current month
+            Returns a DateTime object representing the last day of the current month
+            </summary>
+      <param name="me">The DateTime value of which the last day is requested</param>
+      <returns>A DateTime object with the last day of the month, time members set to 0 (00:00:00)</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.EndOfWeek(System.DateOnly,System.Globalization.CultureInfo)">
+      <summary>
+            Returns a DateTime object representing the last day of the current Week
             </summary>
       <param name="me">The DateTime value of which the first day is requested</param>
-      <returns>A DateTime object with the last day of the month, time members set to 0 (00:00:00)</returns>
+      <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+      <returns>A DateTime object with the last day of the Week, time members set to 0 (00:00:00)</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.EnumerateDaysUntil(System.DateOnly,System.DateOnly)">
       <summary>
@@ -647,6 +818,15 @@
       <param name="me">The <see cref="T:System.DateOnly" /> object</param>
       <param name="dayOfweek">The <see cref="T:System.DayOfWeek" /> to find</param>
       <returns>A <see cref="T:System.DateOnly" /> object representing the last given weekday in this month</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Intersection(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+      <summary>
+            Calculates the intersection of two DateOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty DateOnlyRange. Otherwise, the result is the DateOnlyRange that where both ranges overlap.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A DateOnlyRange which is either empty, when there is no overlap, or contains the range where both ranges overlap</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.IsBetween(System.DateOnly,System.DateOnly,System.DateOnly)">
       <summary>
@@ -796,6 +976,14 @@
             </summary>
       <param name="me">The DateOnly object to check</param>
       <returns>True if the given date is Saturday or Sunday</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.IsWithin(System.DateOnly,MoreDateTime.DateOnlyRange)">
+      <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+      <param name="me">The DateTime to compare</param>
+      <param name="range">The date range to check</param>
+      <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.IsWithin(System.DateOnly,System.DateOnly,System.DateOnly)">
       <summary>
@@ -1136,6 +1324,14 @@
       <param name="me">The DateTime value of which the first day is requested</param>
       <returns>A DateTime object with day 1, time members set to 0 (00:00:00)</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.StartOfWeek(System.DateOnly,System.Globalization.CultureInfo)">
+      <summary>
+            Returns a DateTime object representing the first weekday of the given Week
+            </summary>
+      <param name="me">The DateTime value of which the first day is requested</param>
+      <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+      <returns>A DateTime object with first day of the week</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Sub(System.DateOnly,System.TimeSpan)">
       <summary>
             Returns a new DateOnly that subtracts the value of the specified TimeSpan from the value of this instance
@@ -1172,12 +1368,13 @@
       <param name="me">The <see cref="T:System.DateTime" /> object</param>
       <returns>A <see cref="T:System.TimeOnly" /> object representing the Time part of the given DateTime object</returns>
     </member>
-    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.TruncateTo(System.DateOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)">
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.TruncateTo(System.DateOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate,System.Globalization.CultureInfo)">
       <summary>
             Truncates the precision of a DateTime object to the given precision
             </summary>
       <param name="dt">The DateTime object</param>
       <param name="TruncateTo">The precision to truncate to</param>
+      <param name="cultureInfo">The CultureInfo to use for week calculation, can be null to use current culture</param>
       <returns>The Truncated dateTime object</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.TruncateToMonth(System.DateOnly)">
@@ -1201,6 +1398,15 @@
             </summary>
       <param name="dt">The DateOnly object</param>
       <returns>The Truncated DateOnly object</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Union(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+      <summary>
+            Calculates the union of two DateOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty DateOnlyRange. Otherwise, the result is the DateOnlyRange that contains both ranges.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A DateOnlyRange which is either empty, when there is no overlap, or contains the range spanning both ranges</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Weeknumber(System.DateOnly,System.Globalization.CultureInfo)">
       <summary>
@@ -1249,6 +1455,15 @@
       <param name="timeZoneInfo">The source timezone, can be null for current</param>
       <returns>A DateTime.</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Difference(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+      <summary>
+            Calculates the difference of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            the first DateTimeRange. Otherwise, the result is the first DateTimeRange without where both ranges overlap.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A list of DateTimeRange</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Distance(System.DateTime,System.DateTime)">
       <summary>
             Returns the distance as a TimeSpan between two DateTime objects. The result is always a positive value.
@@ -1257,12 +1472,28 @@
       <param name="endDate">The endDate object</param>
       <returns>A TimeSpan which expresses the difference between the two dates</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.DoesOverlap(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+      <summary>
+            Verifies if DateTimeRange a overlapps with DateTimeRange b.
+            </summary>
+      <param name="a">The DateTimeRange to verify a possible overlap</param>
+      <param name="b">The DateTimerange to verify with</param>
+      <returns>A bool.</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)">
       <summary>
             Returns a DateTime object representing the first year of the current year
             </summary>
       <param name="dateTime">The DateTime value of which the first year is requested</param>
       <returns>A DateTime object with the last year of the year, time members set to 0 (00:00:00)</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime,System.Globalization.CultureInfo)">
+      <summary>
+            Returns a DateTime object representing the last day of the current Week
+            </summary>
+      <param name="me">The DateTime value of which the first day is requested</param>
+      <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+      <returns>A DateTime object with the last day of the Week, time members set to 0 (00:00:00)</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.EnumerateDaysUntil(System.DateTime,System.DateTime)">
       <summary>
@@ -1390,6 +1621,15 @@
       <param name="me">The <see cref="T:System.DateOnly" /> object</param>
       <param name="dayOfweek">The <see cref="T:System.DayOfWeek" /> to find</param>
       <returns>A <see cref="T:System.DateTime" /> object representing the first given weekday in this month</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Intersection(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+      <summary>
+            Calculates the intersection of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            an empty DateTimeRange. Otherwise, the result is the DateTimeRange that where both ranges overlap.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A DateTimeRange which is either empty, when there is no overlap, or contains the range where both ranges overlap</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsAfternoon(System.DateTime)">
       <summary>
@@ -1582,6 +1822,22 @@
             </summary>
       <param name="me">The DateTime object to check</param>
       <returns>True if the given date is Saturday or Sunday</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,MoreDateTime.DateOnlyRange)">
+      <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+      <param name="me">The DateTime to compare</param>
+      <param name="range">The date range to check</param>
+      <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,MoreDateTime.DateTimeRange)">
+      <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+      <param name="me">The DateTime to compare</param>
+      <param name="range">The date range to check</param>
+      <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,System.DateOnly,System.DateOnly)">
       <summary>
@@ -2026,6 +2282,14 @@
       <param name="dateTime">The DateTime value of which the first year is requested</param>
       <returns>A DateTime object with year 1, time members set to 0 (00:00:00)</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime,System.Globalization.CultureInfo)">
+      <summary>
+            Returns a DateTime object representing the first weekday of the given Week
+            </summary>
+      <param name="me">The DateTime value of which the first day is requested</param>
+      <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+      <returns>A DateTime object with first day of the week</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Sub(System.DateTime,System.TimeSpan)">
       <summary>
             Returns a new DateTime that subtracts the value of the specified TimeSpan from the value of this instance
@@ -2102,31 +2366,12 @@
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="a">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>a</parameter>
-            <parameter>M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="b">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>b</parameter>
-            <parameter>M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)</parameter>
-          </include>
-        </markup>
-      </param>
+            Calculates the union of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            an empty DateTimeRange. Otherwise, the result is the DateTimeRange that contains both ranges.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A DateTimeRange which is either empty, when there is no overlap, or contains the range spanning both ranges</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Weeknumber(System.DateTime,System.Globalization.CultureInfo)">
       <summary>
@@ -2246,6 +2491,15 @@
       <param name="ticks">The number of ticks to add</param>
       <returns>An <see cref="T:System.TimeOnly" /> whose value is the sum of the time represented by this instance and the time interval represented by value</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Difference(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Calculates the difference of two TimeOnlyRanges. If the two ranges do not overlap, the result is 
+            the first TimeOnlyRange. Otherwise, the result is the first TimeOnlyRange without where both ranges overlap.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A list of TimeOnlyRange</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Distance(System.TimeOnly,System.TimeOnly)">
       <summary>
             Returns the distance as a TimeSpan between two TimeOnly objects. The result is always positive.
@@ -2253,6 +2507,14 @@
       <param name="startTime">The start time object</param>
       <param name="endTime">The end time object</param>
       <returns>A TimeSpan which expresses the difference between the two times</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.DoesOverlap(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Verifies if TimeOnlyRange a overlapps with TimeOnlyRange b.
+            </summary>
+      <param name="a">The TimeOnlyRange to verify a possible overlap</param>
+      <param name="b">The TimeOnlyrange to verify with</param>
+      <returns>A bool.</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.EnumerateInStepsUntil(System.TimeOnly,System.TimeOnly,System.TimeSpan)">
       <summary>
@@ -2273,6 +2535,15 @@
       <param name="distance">The distance expressed as TimeSpan</param>
       <param name="evaluator">An evaluation function called for each moment before returning it. If the evaluator returns false, the value is skipped</param>
       <returns>An IEnumerable of type TimeOnly</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Intersection(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Calculates the intersection of two TimeOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty TimeOnlyRange. Otherwise, the result is the TimeOnlyRange that where both ranges overlap.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A TimeOnlyRange which is either empty, when there is no overlap, or contains the range where both ranges overlap</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.IsAfternoon(System.TimeOnly)">
       <summary>
@@ -2408,6 +2679,14 @@
       <param name="startTime">The start time</param>
       <param name="endTime">The end time</param>
       <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.IsWithin(System.TimeOnly,MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+      <param name="me">The DateTime to compare</param>
+      <param name="range">The date range to check</param>
+      <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
     </member>
     <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.IsWithin(System.TimeOnly,System.TimeOnly,System.TimeOnly)">
       <summary>
@@ -2589,6 +2868,15 @@
             </summary>
       <param name="dt">The TimeOnly object</param>
       <returns>The Truncated TimeOnly object</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Union(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Calculates the union of two TimeOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty TimeOnlyRange. Otherwise, the result is the TimeOnlyRange that contains both ranges.
+            </summary>
+      <param name="a">The first range</param>
+      <param name="b">The second range</param>
+      <returns>A TimeOnlyRange which is either empty, when there is no overlap, or contains the range spanning both ranges</returns>
     </member>
     <member name="T:MoreDateTime.Extensions.TimeSpanExtensions">
       <summary>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeRange.htm">Date<wbr />Time<wbr />Range</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_DateTimeRange.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_DateTimeRange_Contains.htm">Contains</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_DateTimeRange_Contains" href="M_MoreDateTime_DateTimeRange_Contains.htm">Contains(<wbr />Date<wbr />Only)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeRange_Contains_1" href="M_MoreDateTime_DateTimeRange_Contains_1.htm">Contains(<wbr />Date<wbr />Time)</a>
+    </li>
+  </tocItems>
+</toc>
