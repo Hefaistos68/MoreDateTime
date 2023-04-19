@@ -255,7 +255,7 @@ namespace MoreDateTime.Tests.Extensions
 			result.Count().ShouldBe(parts);
 
 			// verify that all parts are the same size
-            var partSize = _startDate.Distance(_endDate) / parts;
+			var partSize = _startDate.Distance(_endDate) / parts;
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -342,6 +342,15 @@ namespace MoreDateTime.Tests.Extensions
 		public void CannotCall_SplitWithStartDateAndDistanceAndParts_WithZeroParts()
 		{
 			Should.Throw<ArgumentOutOfRangeException>(() => _startDate.Split(TimeSpan.FromMinutes(10), 0));
+		}
+
+		/// <summary>
+		/// Checks that the Split method throws when the dates parameter is null.
+		/// </summary>
+		[TestMethod]
+		public void CannotCall_SplitWithDistanceLessThanParts()
+		{
+			Should.Throw<ArgumentOutOfRangeException>(() => _startDate.Split(TimeSpan.FromTicks(10), 12));
 		}
 	}
 }

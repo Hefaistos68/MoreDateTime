@@ -64,6 +64,22 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
+		/// Checks if the given value is between the given start and end values, including start date and end date
+		/// </summary>
+		/// <param name="me">The DateTime to compare</param>
+		/// <param name="range">The date range to check</param>
+		/// <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+		public static bool IsWithin(this DateOnly me, DateOnlyRange range)
+		{
+			if (!range.IsOrdered())
+			{
+				throw new ArgumentException("End must be greater than Start");
+			}
+
+			return range.Contains(me);
+		}
+
+		/// <summary>
 		/// Checks if the given date falls on a Saturday or Sunday
 		/// </summary>
 		/// <param name="me">The DateOnly object to check</param>

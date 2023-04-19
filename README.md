@@ -4,7 +4,11 @@
 # :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime) / [Docs](https://hefaistos68.github.io/MoreDateTime/)
 
 
-This library is built from the ground up to be a simple, easy to use, and intuitive date and time library for .NET, that simplifies common tasks and provides a consistent API for working with dates and times, throughout the DateTime, DateOnly and TimeOnly .NET objects. It adds many operations that one expects to find in a date and time library, but are missing from the .NET standard library.
+This library is built from the ground up to be a simple, easy to use, and intuitive date and time library for .NET, that simplifies common tasks and provides a consistent API for working with dates and times, throughout the DateTime, DateOnly, TimeOnly and TimeSpan .NET objects. It adds many operations that one expects to find in a date and time library, but are missing from the .NET standard library. Currently it features over 300 methods to deal with dates and times and ranges (periods) thereof.
+
+It is however not intended to be a replacement for any part of the standard .NET library, but rather an extension to it. It is built upon the existing .NET standard library and does not replace any of the existing functionality. It is also not intended to be a replacement for the [NodaTime](https://nodatime.org/) library, but it can be used in conjunction.
+
+Conversions between the types or operations with mixed types (use DateTime and DateOnly for example without converting one into the other manually) are possible.
 
 For example: `NextWeek()` to advance a DateTime or DateOnly to the same weekday in the next week, `NextYear()` to add a year to a DateTime or DateOlnly object (yes, of course you can use the existing `.AddYears(1)` method, but it does not look as clear), `NextWorkday()` to advance the DateTime or DateOnly object to the next working day on the given `Calendar`.
 
@@ -62,9 +66,13 @@ Just install the NuGet package and you are ready to go! It's mostly built upon c
 
 ### Dependencies
 
-For Holiday calculations we use the [Nager.Date](https://github.com/nager/nager.date) library, but you need to bring your own license key. Optionally you can use your own provider through the `IHolidayProvider` interface. 
+For Holiday calculations it uses the [Nager.Date](https://github.com/nager/nager.date) library, but you need to bring your own license key. There is also a DefaultHolidayProvider() which knows only the very few international holidays and is the default. Optionally you can use your own provider through the `IHolidayProvider` interface and the `DateTimeProvider.SetHolidayProvider()` method. 
 
-Call `DateTimeExtensions.SetHolidayProvider()` to set your own provider. If you do not set a provider, the `NagerHolidayProvider` will be used, but you need to provide a valid license key.
+### Note
+
+[Documentation](https://hefaistos68.github.io/MoreDateTime/) is mostly complete, although there may be some missing or even wrong descriptions (copy paste errors usually). If you find something missing or wrong, please let me know.
+
+Unit tests cover ~98%, a few edge cases are not covered yet. So there is a high confidence that the code is working correctly.	
 
 ### Examples
 
@@ -79,9 +87,12 @@ PM> install-package MoreDateTime
 <details>
   <summary>Code Examples (click to expand)</summary>
   
+
 ## Examples for .NET (NuGet package)
 
-### Do something simple with a date
+_coming soon_
+
+### Example 1 - tbd
 ```cs
 
  --> code sample here, coming asap

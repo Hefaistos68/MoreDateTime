@@ -70,14 +70,36 @@ namespace MoreDateTime.Extensions
 		}
 
 		/// <summary>
-		/// Returns a DateTime object representing the first day of the current month
+		/// Returns a DateTime object representing the last day of the current month
 		/// </summary>
-		/// <param name="me">The DateTime value of which the first day is requested</param>
+		/// <param name="me">The DateTime value of which the last day is requested</param>
 		/// <returns>A DateTime object with the last day of the month, time members set to 0 (00:00:00)</returns>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static DateOnly EndOfMonth(this DateOnly me)
 		{
 			return me.NextMonth().TruncateToMonth().PreviousDay();
+		}
+
+		/// <summary>
+		/// Returns a DateTime object representing the first weekday of the given Week
+		/// </summary>
+		/// <param name="me">The DateTime value of which the first day is requested</param>
+		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+		/// <returns>A DateTime object with first day of the week</returns>
+		public static DateOnly StartOfWeek(this DateOnly me, CultureInfo? cultureInfo = null)
+		{
+			return me.TruncateToWeek(cultureInfo);
+		}
+
+		/// <summary>
+		/// Returns a DateTime object representing the last day of the current Week
+		/// </summary>
+		/// <param name="me">The DateTime value of which the first day is requested</param>
+		/// <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+		/// <returns>A DateTime object with the last day of the Week, time members set to 0 (00:00:00)</returns>
+		public static DateOnly EndOfWeek(this DateOnly me, CultureInfo? cultureInfo = null)
+		{
+			return me.NextWeek().TruncateToWeek(cultureInfo).PreviousDay();
 		}
 
 		/// <summary>

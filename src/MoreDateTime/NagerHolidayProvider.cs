@@ -11,14 +11,18 @@ namespace MoreDateTime
 	internal class NagerHolidayProvider : IHolidayProvider
 	{
 		/// <inheritdoc/>
-		public bool IsPublicHoliday(DateTime date, CultureInfo cultureInfo)
+		public bool IsPublicHoliday(DateTime date, CultureInfo? cultureInfo = null)
 		{
+			cultureInfo ??= CultureInfo.CurrentCulture;
+
 			return DateSystem.IsPublicHoliday(date, cultureInfo.TwoLetterISOLanguageName);
 		}
 
 		/// <inheritdoc/>
-		public bool IsPublicHoliday(DateOnly date, CultureInfo cultureInfo)
+		public bool IsPublicHoliday(DateOnly date, CultureInfo? cultureInfo = null)
 		{
+			cultureInfo ??= CultureInfo.CurrentCulture;
+
 			return DateSystem.IsPublicHoliday(date.ToDateTime(), cultureInfo.TwoLetterISOLanguageName);
 		}
 

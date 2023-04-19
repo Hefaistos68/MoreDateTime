@@ -22,12 +22,5 @@
         </span>Methods</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
-    <li>
-      <a id="Fields_T_MoreDateTime_Extensions_DateTimeExtensions" class="has-submenu" href="Fields_T_MoreDateTime_Extensions_DateTimeExtensions.htm">
-        <span data-tocFile="../toc/IDBBBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>Fields</a>
-      <ul class="toc-menu is-hidden"> </ul>
-    </li>
   </tocItems>
 </toc>

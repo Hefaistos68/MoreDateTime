@@ -21,5 +21,14 @@
     <li>
       <a id="M_MoreDateTime_DateOnlyRange_Distance" href="M_MoreDateTime_DateOnlyRange_Distance.htm">Distance</a>
     </li>
+    <li>
+      <a id="M_MoreDateTime_DateOnlyRange_Extend" href="M_MoreDateTime_DateOnlyRange_Extend.htm">Extend</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateOnlyRange_Offset" href="M_MoreDateTime_DateOnlyRange_Offset.htm">Offset</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateOnlyRange_Reduce" href="M_MoreDateTime_DateOnlyRange_Reduce.htm">Reduce</a>
+    </li>
   </tocItems>
 </toc>

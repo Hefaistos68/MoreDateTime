@@ -6,7 +6,7 @@
     <members>
         <member name="T:MoreDateTime.DateOnlyRange">
             <summary>
-            Implements the <see cref="T:MoreDateTime.Interfaces.IDateOnlyRange"/> interface and provides a time range through its <see cref="P:MoreDateTime.DateOnlyRange.Start"/> and <see cref="P:MoreDateTime.DateOnlyRange.End"/> members
+            Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2"/> interface and provides a time range through its <see cref="P:MoreDateTime.DateOnlyRange.Start"/> and <see cref="P:MoreDateTime.DateOnlyRange.End"/> members
             </summary>
         </member>
         <member name="M:MoreDateTime.DateOnlyRange.#ctor(System.DateOnly,System.DateOnly)">
@@ -16,14 +16,104 @@
             <param name="startTime">The start DateOnly</param>
             <param name="endTime">The end DateOnly</param>
         </member>
-        <member name="M:MoreDateTime.DateOnlyRange.Distance">
+        <member name="M:MoreDateTime.DateOnlyRange.#ctor(System.DateTime,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateOnlyRange"/> class.
+            </summary>
+            <param name="startTime">The start time.</param>
+            <param name="endTime">The end time.</param>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.#ctor(MoreDateTime.DateOnlyRange)">
+            <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.DateOnlyRange"/> class.
+            </summary>
+            <param name="range">The range to copy</param>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.#ctor(MoreDateTime.DateTimeRange)">
+            <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.DateTimeRange"/> class.
+            </summary>
+            <param name="range">The range to copy</param>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateOnlyRange"/> class.
+            </summary>
+        </member>
+        <member name="P:MoreDateTime.DateOnlyRange.End">
             <inheritdoc/>
+        </member>
+        <member name="P:MoreDateTime.DateOnlyRange.IsEmpty">
+            <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+            <returns>True, if both start and end are default(T)</returns>
         </member>
         <member name="P:MoreDateTime.DateOnlyRange.Start">
             <inheritdoc/>
         </member>
-        <member name="P:MoreDateTime.DateOnlyRange.End">
-            <inheritdoc/>
+        <member name="M:MoreDateTime.DateOnlyRange.Contains(System.DateOnly)">
+            <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+            <param name="value">The value</param>
+            <returns>True, if value is within this range</returns>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Contains(System.DateTime)">
+            <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+            <param name="value">The value</param>
+            <returns>True, if value is within this range</returns>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Distance">
+            <summary>
+            Gets the distance between the <see cref="P:MoreDateTime.DateOnlyRange.Start"/> and the <see cref="P:MoreDateTime.DateOnlyRange.End"/>
+            </summary>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Empty">
+            <summary>
+            Get an empty range
+            </summary>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Extends the <see cref="P:MoreDateTime.DateOnlyRange.Start"/> and/or <see cref="P:MoreDateTime.DateOnlyRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.IsOrdered">
+            <summary>
+            Verifies that the order of the dates is correct, Start &lt; End
+            </summary>
+            <returns>True if Start is less or equal End</returns>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.IsWithin(MoreDateTime.DateOnlyRange)">
+            <summary>
+            Checks if the range is between the given ranges start and end values, including start date and end date, thus completely inside.
+            </summary>
+            <param name="value">The DateOnly to compare</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Offset(System.TimeSpan)">
+            <summary>
+            Offsets the <see cref="P:MoreDateTime.DateOnlyRange.Start"/> and <see cref="P:MoreDateTime.DateOnlyRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Order">
+            <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End
+            </summary>
+            <returns>Itself ordered</returns>
+        </member>
+        <member name="M:MoreDateTime.DateOnlyRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Reduces the <see cref="P:MoreDateTime.DateOnlyRange.Start"/> and/or <see cref="P:MoreDateTime.DateOnlyRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
         </member>
         <member name="T:MoreDateTime.DateTimeProvider">
             <summary>
@@ -69,31 +159,108 @@
         </member>
         <member name="T:MoreDateTime.DateTimeRange">
             <summary>
-            Implements the <see cref="T:MoreDateTime.Interfaces.IDateTimeRange"/> interface and provides a time range through its <see cref="P:MoreDateTime.DateTimeRange.Start"/> and <see cref="P:MoreDateTime.DateTimeRange.End"/> members
+            Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2"/> interface and provides a time range through its <see cref="P:MoreDateTime.DateTimeRange.Start"/> and <see cref="P:MoreDateTime.DateTimeRange.End"/> members
             </summary>
         </member>
         <member name="M:MoreDateTime.DateTimeRange.#ctor(System.DateTime,System.DateTime)">
             <summary>
             Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeRange"/> class.
             </summary>
-            <param name="startTime">The start datetime</param>
-            <param name="endTime">The end datetime</param>
+            <param name="startDateTime">The start datetime</param>
+            <param name="endDateTime">The end datetime</param>
         </member>
         <member name="M:MoreDateTime.DateTimeRange.#ctor(System.DateOnly,System.DateOnly)">
             <summary>
             Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeRange"/> class.
             </summary>
-            <param name="startTime">The start datetime</param>
-            <param name="endTime">The end datetime</param>
+            <param name="startDateOnly">The start datetime</param>
+            <param name="endDateOnly">The end datetime</param>
         </member>
-        <member name="M:MoreDateTime.DateTimeRange.Distance">
+        <member name="M:MoreDateTime.DateTimeRange.#ctor(MoreDateTime.DateTimeRange)">
+            <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.DateTimeRange"/> class.
+            </summary>
+            <param name="range">The range to copy</param>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeRange"/> class.
+            </summary>
+        </member>
+        <member name="P:MoreDateTime.DateTimeRange.End">
             <inheritdoc/>
+        </member>
+        <member name="P:MoreDateTime.DateTimeRange.IsEmpty">
+            <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+            <returns>True, if both start and end are default(T)</returns>
         </member>
         <member name="P:MoreDateTime.DateTimeRange.Start">
             <inheritdoc/>
         </member>
-        <member name="P:MoreDateTime.DateTimeRange.End">
-            <inheritdoc/>
+        <member name="M:MoreDateTime.DateTimeRange.Contains(System.DateOnly)">
+            <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+            <param name="value">The value</param>
+            <returns>True, if value is within this range</returns>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Contains(System.DateTime)">
+            <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+            <param name="value">The value</param>
+            <returns>True, if value is within this range</returns>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Distance">
+            <summary>
+            Gets the distance between the <see cref="P:MoreDateTime.DateTimeRange.Start"/> and the <see cref="P:MoreDateTime.DateTimeRange.End"/>
+            </summary>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Empty">
+            <summary>
+            Get an empty range
+            </summary>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Extends the <see cref="P:MoreDateTime.DateTimeRange.Start"/> and/or <see cref="P:MoreDateTime.DateTimeRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.IsOrdered">
+            <summary>
+            Verifies that the order of the dates is correct, Start &lt; End
+            </summary>
+            <returns>True if Start is less or equal End</returns>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.IsWithin(MoreDateTime.DateTimeRange)">
+            <summary>
+            Checks if the range is between the given ranges start and end values, including start date and end date, thus completely inside.
+            </summary>
+            <param name="value">The DateTime to compare</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Offset(System.TimeSpan)">
+            <summary>
+            Offsets the <see cref="P:MoreDateTime.DateTimeRange.Start"/> and <see cref="P:MoreDateTime.DateTimeRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Order">
+            <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End
+            </summary>
+            <returns>Itself ordered</returns>
+        </member>
+        <member name="M:MoreDateTime.DateTimeRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Reduces the <see cref="P:MoreDateTime.DateTimeRange.Start"/> and/or <see cref="P:MoreDateTime.DateTimeRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
         </member>
         <member name="T:MoreDateTime.DefaultHolidayProvider">
             <summary>
@@ -139,6 +306,9 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <summary>
+            DateOnly related extension methods
+            </summary>
             <inheritdoc/>
         </member>
         <member name="F:MoreDateTime.Extensions.DateOnlyExtensions.DaysInWeek">
@@ -177,10 +347,26 @@
         </member>
         <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.EndOfMonth(System.DateOnly)">
             <summary>
-            Returns a DateTime object representing the first day of the current month
+            Returns a DateTime object representing the last day of the current month
+            </summary>
+            <param name="me">The DateTime value of which the last day is requested</param>
+            <returns>A DateTime object with the last day of the month, time members set to 0 (00:00:00)</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.StartOfWeek(System.DateOnly,System.Globalization.CultureInfo)">
+            <summary>
+            Returns a DateTime object representing the first weekday of the given Week
             </summary>
             <param name="me">The DateTime value of which the first day is requested</param>
-            <returns>A DateTime object with the last day of the month, time members set to 0 (00:00:00)</returns>
+            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+            <returns>A DateTime object with first day of the week</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.EndOfWeek(System.DateOnly,System.Globalization.CultureInfo)">
+            <summary>
+            Returns a DateTime object representing the last day of the current Week
+            </summary>
+            <param name="me">The DateTime value of which the first day is requested</param>
+            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+            <returns>A DateTime object with the last day of the Week, time members set to 0 (00:00:00)</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.ToDateOnly(System.DateTime)">
             <summary>
@@ -511,6 +697,14 @@
             <param name="startDate">The startDate date</param>
             <param name="endDate">The endDate date</param>
             <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.IsWithin(System.DateOnly,MoreDateTime.DateOnlyRange)">
+            <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+            <param name="me">The DateTime to compare</param>
+            <param name="range">The date range to check</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.IsWeekend(System.DateOnly)">
             <summary>
@@ -893,12 +1087,48 @@
             <param name="cultureInfo">The culture info for workdays and holidays, can be null to use current</param>
             <returns>An int.</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.TruncateTo(System.DateOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)">
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Union(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+            <summary>
+            Calculates the union of two DateOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty DateOnlyRange. Otherwise, the result is the DateOnlyRange that contains both ranges.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A DateOnlyRange which is either empty, when there is no overlap, or contains the range spanning both ranges</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Intersection(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+            <summary>
+            Calculates the intersection of two DateOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty DateOnlyRange. Otherwise, the result is the DateOnlyRange that where both ranges overlap.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A DateOnlyRange which is either empty, when there is no overlap, or contains the range where both ranges overlap</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.Difference(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+            <summary>
+            Calculates the difference of two DateOnlyRanges. If the two ranges do not overlap, the result is 
+            the first DateOnlyRange. Otherwise, the result is the first DateOnlyRange without where both ranges overlap.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A list of DateOnlyRange</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.DoesOverlap(MoreDateTime.DateOnlyRange,MoreDateTime.DateOnlyRange)">
+            <summary>
+            Verifies if DateOnlyRange a overlapps with DateOnlyRange b.
+            </summary>
+            <param name="a">The DateOnlyRange to verify a possible overlap</param>
+            <param name="b">The DateOnlyrange to verify with</param>
+            <returns>A bool.</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.TruncateTo(System.DateOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate,System.Globalization.CultureInfo)">
             <summary>
             Truncates the precision of a DateTime object to the given precision
             </summary>
             <param name="dt">The DateTime object</param>
             <param name="TruncateTo">The precision to truncate to</param>
+            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null to use current culture</param>
             <returns>The Truncated dateTime object</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateOnlyExtensions.TruncateToMonth(System.DateOnly)">
@@ -928,15 +1158,15 @@
             DateTime related extension methods
             </summary>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
             <summary>
             DateTime related extension methods
             </summary>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
             <inheritdoc/>>
         </member>
         <member name="T:MoreDateTime.Extensions.DateTimeExtensions.DateTruncate">
@@ -1317,20 +1547,6 @@
             <param name="dayOfweek">The <see cref="T:System.DayOfWeek"/> to find</param>
             <returns>A <see cref="T:System.DateTime"/> object representing the last given weekday in this year</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsMidnight(System.DateTime)">
-            <summary>
-            Tests if the time in the given DateTime object is midnight (0h)
-            </summary>
-            <param name="dt">The first DateTime argument</param>
-            <returns>True if time is 0h ignoring minures and seconds</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsMidday(System.DateTime)">
-            <summary>
-            Tests if the time in the given DateTime object is midday (12h)
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>True if time is 12h ignoring minutes and seconds</returns>
-        </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsAfternoon(System.DateTime)">
             <summary>
             Tests if the time in the given DateTime object is considered afternoon (12:00:00.000 - 18:00:00.000)
@@ -1338,32 +1554,9 @@
             <param name="dt">The first DateTime argument</param>
             <returns>True if time is between 12:00:00.000 and 18:00:00.000</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsNight(System.DateTime)">
-            <summary>
-            Tests if the time in the given DateTime object is between 18:00:00 and 06:00:00
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>True if time is between 18:00:00.000 and 06:00:00.000</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsMorning(System.DateTime)">
-            <summary>
-            Tests if the time in the given DateTime object is midday (12:00:00.000)
-            </summary>
-            <param name="dt">The first DateTime argument</param>
-            <returns>True if time is 00:00:00.000</returns>
-        </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsBetween(System.Int32,System.Int32,System.Int32)">
             <summary>
             Checks if the given value is between the given start and end values, excluding start and end
-            </summary>
-            <param name="me">The integer to compare</param>
-            <param name="start">The start</param>
-            <param name="end">The end</param>
-            <returns>True if the value is greater or equal start and less than or equal end</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Checks if the given value is withn the given start and end values, inluding start and end
             </summary>
             <param name="me">The integer to compare</param>
             <param name="start">The start</param>
@@ -1379,6 +1572,58 @@
             <param name="endDate">The endDate date</param>
             <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
         </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsMidday(System.DateTime)">
+            <summary>
+            Tests if the time in the given DateTime object is midday (12h)
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>True if time is 12h ignoring minutes and seconds</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsMidnight(System.DateTime)">
+            <summary>
+            Tests if the time in the given DateTime object is midnight (0h)
+            </summary>
+            <param name="dt">The first DateTime argument</param>
+            <returns>True if time is 0h ignoring minures and seconds</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsMorning(System.DateTime)">
+            <summary>
+            Tests if the time in the given DateTime object is midday (12:00:00.000)
+            </summary>
+            <param name="dt">The first DateTime argument</param>
+            <returns>True if time is 00:00:00.000</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsNight(System.DateTime)">
+            <summary>
+            Tests if the time in the given DateTime object is between 18:00:00 and 06:00:00
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>True if time is between 18:00:00.000 and 06:00:00.000</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)">
+            <summary>
+            Checks if the given date falls on a Saturday or Sunday
+            </summary>
+            <param name="me">The DateTime object to check</param>
+            <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
+            <returns>True if the given date is Saturday or Sunday</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWeekend(System.DateTime)">
+            <summary>
+            Checks if the given date falls on a Saturday or Sunday
+            </summary>
+            <param name="me">The DateTime object to check</param>
+            <returns>True if the given date is Saturday or Sunday</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks if the given value is withn the given start and end values, inluding start and end
+            </summary>
+            <param name="me">The integer to compare</param>
+            <param name="start">The start</param>
+            <param name="end">The end</param>
+            <returns>True if the value is greater or equal start and less than or equal end</returns>
+        </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,System.DateTime,System.DateTime)">
             <summary>
             Checks if the given value is between the given startDate and endDate values, including startDate and endDate
@@ -1388,6 +1633,22 @@
             <param name="endDate">The endDate date</param>
             <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
         </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,MoreDateTime.DateTimeRange)">
+            <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+            <param name="me">The DateTime to compare</param>
+            <param name="range">The date range to check</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,MoreDateTime.DateOnlyRange)">
+            <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+            <param name="me">The DateTime to compare</param>
+            <param name="range">The date range to check</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+        </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWithin(System.DateTime,System.DateOnly,System.DateOnly)">
             <summary>
             Checks if the given value is between the given startDate and endDate values, including startDate and endDate
@@ -1396,21 +1657,6 @@
             <param name="startDate">The startDate date</param>
             <param name="endDate">The endDate date</param>
             <returns>True if the value is greater or equal startDate and less than or equal endDate</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsWeekend(System.DateTime)">
-            <summary>
-            Checks if the given date falls on a Saturday or Sunday
-            </summary>
-            <param name="me">The DateTime object to check</param>
-            <returns>True if the given date is Saturday or Sunday</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)">
-            <summary>
-            Checks if the given date falls on a Saturday or Sunday
-            </summary>
-            <param name="me">The DateTime object to check</param>
-            <param name="cultureInfo">The CulturInfo to use for calendar calculation, can be null for current culture</param>
-            <returns>True if the given date is Saturday or Sunday</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.IsEqual(System.DateTime,System.DateTime,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate,System.Globalization.CultureInfo)">
             <summary>
@@ -1536,54 +1782,13 @@
             <param name="other">The DateTime argument to compare with</param>
             <returns>True if the dates are on the same year</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextMillisecond(System.DateTime)">
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime,System.Globalization.CultureInfo)">
             <summary>
-            Gets the DateTime value of the next millisecond
+            Returns a DateTime object representing the last day of the current Week
             </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextSecond(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next second
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullSecond(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next full second (10:15:20.350 to 10:15:21.000)
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextMinute(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next minute
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullMinute(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next full minute (10:15:20 to 10:16:00)
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextHour(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next hour
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullHour(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next full hour (10:15 to 11:00, 10:45 to 11:00, etc)
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
+            <param name="me">The DateTime value of which the first day is requested</param>
+            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+            <returns>A DateTime object with the last day of the Week, time members set to 0 (00:00:00)</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextDay(System.DateTime)">
             <summary>
@@ -1595,6 +1800,72 @@
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullDay(System.DateTime)">
             <summary>
             Gets the DateTime value of the next full day (01/01/2010 10:15 to 02/01/2010 00:00, 01/01/2010 10:45 to 02/01/2010 00:00, etc)
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullHour(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next full hour (10:15 to 11:00, 10:45 to 11:00, etc)
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullMinute(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next full minute (10:15:20 to 10:16:00)
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextFullSecond(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next full second (10:15:20.350 to 10:15:21.000)
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextHoliday(System.DateTime,System.Globalization.CultureInfo)">
+            <summary>
+            Gets the DateTime value of the next public holiday according to the given CultureInfo.Calendar<br/>
+            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
+             or if you set a custom holiday provider, it will use that. Otherwise the default implementation will return DateTime.MaxValue
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextHour(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next hour
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextMillisecond(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next millisecond
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextMinute(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next minute
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextMonth(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next month
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object whose value is the same day the next month of the given. If the month has less days then the day may change (e.g. 31 Jan to 28 Feb)</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextSecond(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the next second
             </summary>
             <param name="dt">The DateTime object</param>
             <returns>A DateTime object</returns>
@@ -1623,54 +1894,9 @@
             <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
             <returns>A DateTime object</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextHoliday(System.DateTime,System.Globalization.CultureInfo)">
-            <summary>
-            Gets the DateTime value of the next public holiday according to the given CultureInfo.Calendar<br/>
-            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
-             or if you set a custom holiday provider, it will use that. Otherwise the default implementation will return DateTime.MaxValue
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextMonth(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the next month
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object whose value is the same day the next month of the given. If the month has less days then the day may change (e.g. 31 Jan to 28 Feb)</returns>
-        </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextYear(System.DateTime)">
             <summary>
             Gets the DateTime value of the next year
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousMillisecond(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the previous millisecond
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousSecond(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the previous second
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousMinute(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the previous minute
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousHour(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the previous hour
             </summary>
             <param name="dt">The DateTime object</param>
             <returns>A DateTime object</returns>
@@ -1682,14 +1908,49 @@
             <param name="dt">The DateTime object</param>
             <returns>A DateTime object</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousWorkday(System.DateTime,System.Globalization.CultureInfo)">
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousHoliday(System.DateTime,System.Globalization.CultureInfo)">
             <summary>
-            Gets the DateTime value of the previous working day according to the given CultureInfo.Calendar<br/>
-            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
+            Gets the DateTime value of the previous holiday<br/>
+            If you have a license for the Nager nuget package, this method will calculate the holidays based on the calendar in cultureInfo,
             otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
             </summary>
             <param name="dt">The DateTime object</param>
             <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousHour(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the previous hour
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousMillisecond(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the previous millisecond
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousMinute(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the previous minute
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousMonth(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the month before
+            </summary>
+            <param name="dt">The DateTime object</param>
+            <returns>A DateTime object whose value is the same day the month before the given. If the month has less days then the day may change (e.g. 31 March to 28 Feb)</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousSecond(System.DateTime)">
+            <summary>
+            Gets the DateTime value of the previous second
+            </summary>
+            <param name="dt">The DateTime object</param>
             <returns>A DateTime object</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousWeek(System.DateTime)">
@@ -1706,22 +1967,15 @@
             <param name="dt">The DateTime object</param>
             <returns>A DateTime object representing the previous weekend (always Sunday)</returns>
         </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousHoliday(System.DateTime,System.Globalization.CultureInfo)">
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousWorkday(System.DateTime,System.Globalization.CultureInfo)">
             <summary>
-            Gets the DateTime value of the previous holiday<br/>
-            If you have a license for the Nager nuget package, this method will calculate the holidays based on the calendar in cultureInfo,
+            Gets the DateTime value of the previous working day according to the given CultureInfo.Calendar<br/>
+            If you have a license for the Nager nuget package, this method will calculate the working days based on the calendar in cultureInfo,
             otherwise it will simply skip weekends, or if you set a custom holiday provider, it will use that.
             </summary>
             <param name="dt">The DateTime object</param>
             <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
             <returns>A DateTime object</returns>
-        </member>
-        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousMonth(System.DateTime)">
-            <summary>
-            Gets the DateTime value of the month before
-            </summary>
-            <param name="dt">The DateTime object</param>
-            <returns>A DateTime object whose value is the same day the month before the given. If the month has less days then the day may change (e.g. 31 March to 28 Feb)</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.PreviousYear(System.DateTime)">
             <summary>
@@ -1729,6 +1983,14 @@
             </summary>
             <param name="dt">The DateTime object</param>
             <returns>A DateTime object</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime,System.Globalization.CultureInfo)">
+            <summary>
+            Returns a DateTime object representing the first weekday of the given Week
+            </summary>
+            <param name="me">The DateTime value of which the first day is requested</param>
+            <param name="cultureInfo">The CultureInfo to use for week calculation, can be null for current culture</param>
+            <returns>A DateTime object with first day of the week</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NumberOfDaysUntil(System.DateTime,System.DateTime,System.Globalization.CultureInfo)">
             <summary>
@@ -1866,6 +2128,41 @@
             <param name="cultureInfo">The culture info for workdays and holidays, can be null to use current</param>
             <returns>An int.</returns>
         </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+            <summary>
+            Calculates the union of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            an empty DateTimeRange. Otherwise, the result is the DateTimeRange that contains both ranges.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A DateTimeRange which is either empty, when there is no overlap, or contains the range spanning both ranges</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Intersection(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+            <summary>
+            Calculates the intersection of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            an empty DateTimeRange. Otherwise, the result is the DateTimeRange that where both ranges overlap.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A DateTimeRange which is either empty, when there is no overlap, or contains the range where both ranges overlap</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Difference(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+            <summary>
+            Calculates the difference of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            the first DateTimeRange. Otherwise, the result is the first DateTimeRange without where both ranges overlap.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A list of DateTimeRange</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.DateTimeExtensions.DoesOverlap(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+            <summary>
+            Verifies if DateTimeRange a overlapps with DateTimeRange b.
+            </summary>
+            <param name="a">The DateTimeRange to verify a possible overlap</param>
+            <param name="b">The DateTimerange to verify with</param>
+            <returns>A bool.</returns>
+        </member>
         <member name="M:MoreDateTime.Extensions.DateTimeExtensions.TruncateTo(System.DateTime,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate,System.Globalization.CultureInfo)">
             <summary>
             Truncates the precision of a DateTime object to the given precision
@@ -1936,6 +2233,9 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <summary>
+            TimeOnly related extension methods
+            </summary>
             <inheritdoc/>
         </member>
         <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.AddMilliseconds(System.TimeOnly,System.Int32)">
@@ -2101,6 +2401,14 @@
             <param name="startTime">The start time</param>
             <param name="endTime">The end time</param>
             <returns>True if the value is greater or equal startTime and less than or equal endTime</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.IsWithin(System.TimeOnly,MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Checks if the given value is between the given start and end values, including start date and end date
+            </summary>
+            <param name="me">The DateTime to compare</param>
+            <param name="range">The date range to check</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
         </member>
         <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.IsEqual(System.TimeOnly,System.TimeOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate,System.Globalization.CultureInfo)">
             <summary>
@@ -2286,6 +2594,41 @@
             <param name="u">The TimeUnit to count</param>
             <returns>An int.</returns>
         </member>
+        <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Union(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Calculates the union of two TimeOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty TimeOnlyRange. Otherwise, the result is the TimeOnlyRange that contains both ranges.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A TimeOnlyRange which is either empty, when there is no overlap, or contains the range spanning both ranges</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Intersection(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Calculates the intersection of two TimeOnlyRanges. If the two ranges do not overlap, the result is 
+            an empty TimeOnlyRange. Otherwise, the result is the TimeOnlyRange that where both ranges overlap.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A TimeOnlyRange which is either empty, when there is no overlap, or contains the range where both ranges overlap</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.Difference(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Calculates the difference of two TimeOnlyRanges. If the two ranges do not overlap, the result is 
+            the first TimeOnlyRange. Otherwise, the result is the first TimeOnlyRange without where both ranges overlap.
+            </summary>
+            <param name="a">The first range</param>
+            <param name="b">The second range</param>
+            <returns>A list of TimeOnlyRange</returns>
+        </member>
+        <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.DoesOverlap(MoreDateTime.TimeOnlyRange,MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Verifies if TimeOnlyRange a overlapps with TimeOnlyRange b.
+            </summary>
+            <param name="a">The TimeOnlyRange to verify a possible overlap</param>
+            <param name="b">The TimeOnlyrange to verify with</param>
+            <returns>A bool.</returns>
+        </member>
         <member name="M:MoreDateTime.Extensions.TimeOnlyExtensions.TruncateTo(System.TimeOnly,MoreDateTime.Extensions.DateTimeExtensions.DateTruncate)">
             <summary>
             Truncates the precision of a TimeOnly object to the given precision
@@ -2443,26 +2786,6 @@
             <param name="dt">The TimeSpan object</param>
             <returns>The Truncated TimeSpan object</returns>
         </member>
-        <member name="T:MoreDateTime.Interfaces.IDateOnlyRange">
-            <summary>
-            A Date/Time range provider, with an start and an end date
-            </summary>
-        </member>
-        <member name="P:MoreDateTime.Interfaces.IDateOnlyRange.Start">
-            <summary>
-            Gets or sets the start date
-            </summary>
-        </member>
-        <member name="P:MoreDateTime.Interfaces.IDateOnlyRange.End">
-            <summary>
-            Gets or sets the end date
-            </summary>
-        </member>
-        <member name="M:MoreDateTime.Interfaces.IDateOnlyRange.Distance">
-            <summary>
-            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.IDateOnlyRange.Start"/> and the <see cref="P:MoreDateTime.Interfaces.IDateOnlyRange.End"/>
-            </summary>
-        </member>
         <member name="T:MoreDateTime.Interfaces.IDateTimeProvider">
             <summary>
             The interface for providing DateTime information
@@ -2486,26 +2809,6 @@
         <member name="P:MoreDateTime.Interfaces.IDateTimeProvider.UtcToday">
             <summary>
             Gets the date part of the current UTC DateTime with the time set to 00:00:00 (or the mock value if set)
-            </summary>
-        </member>
-        <member name="T:MoreDateTime.Interfaces.IDateTimeRange">
-            <summary>
-            A Date/Time range provider, with an start and an end date
-            </summary>
-        </member>
-        <member name="P:MoreDateTime.Interfaces.IDateTimeRange.Start">
-            <summary>
-            Gets or sets the start date
-            </summary>
-        </member>
-        <member name="P:MoreDateTime.Interfaces.IDateTimeRange.End">
-            <summary>
-            Gets or sets the end date
-            </summary>
-        </member>
-        <member name="M:MoreDateTime.Interfaces.IDateTimeRange.Distance">
-            <summary>
-            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.IDateTimeRange.Start"/> and the <see cref="P:MoreDateTime.Interfaces.IDateTimeRange.End"/>
             </summary>
         </member>
         <member name="T:MoreDateTime.Interfaces.IHolidayProvider">
@@ -2536,24 +2839,96 @@
             <param name="year">The year for which the number of holidays is requested</param>
             <param name="cultureInfo">The </param>
         </member>
-        <member name="T:MoreDateTime.Interfaces.ITimeOnlyRange">
+        <member name="T:MoreDateTime.Interfaces.IRange`2">
             <summary>
-            A Date/Time range provider, with an start and an end date
+            An interface for ranges of dates and times
+            </summary>
+            <typeparam name="T">The base type to handle</typeparam>
+            <typeparam name="Treturn">A self reference as a return type</typeparam>
+        </member>
+        <member name="P:MoreDateTime.Interfaces.IRange`2.Start">
+            <summary>
+            Gets or sets the start <typeparamref name="T"/>
             </summary>
         </member>
-        <member name="P:MoreDateTime.Interfaces.ITimeOnlyRange.Start">
+        <member name="P:MoreDateTime.Interfaces.IRange`2.End">
             <summary>
-            Gets or sets the start time
+            Gets or sets the end <typeparamref name="T"/>
             </summary>
         </member>
-        <member name="P:MoreDateTime.Interfaces.ITimeOnlyRange.End">
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Distance">
             <summary>
-            Gets or sets the end time
+            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.IRange`2.Start"/> and the <see cref="P:MoreDateTime.Interfaces.IRange`2.End"/>
             </summary>
         </member>
-        <member name="M:MoreDateTime.Interfaces.ITimeOnlyRange.Distance">
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Offset(System.TimeSpan)">
             <summary>
-            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.ITimeOnlyRange.Start"/> and the <see cref="P:MoreDateTime.Interfaces.ITimeOnlyRange.End"/>
+            Offsets the <see cref="P:MoreDateTime.Interfaces.IRange`2.Start"/> and <see cref="P:MoreDateTime.Interfaces.IRange`2.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+        </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Extends the <see cref="P:MoreDateTime.Interfaces.IRange`2.Start"/> and/or <see cref="P:MoreDateTime.Interfaces.IRange`2.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
+        </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Reduces the <see cref="P:MoreDateTime.Interfaces.IRange`2.Start"/> and/or <see cref="P:MoreDateTime.Interfaces.IRange`2.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
+        </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.IsOrdered">
+            <summary>
+            Verifies that the order of the dates is correct, Start &lt; End
+            </summary>
+            <returns>True if Start is less or equal End</returns>
+        </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Order">
+            <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End
+            </summary>
+            <returns>Itself ordered</returns>
+        </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Contains(`0)">
+            <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+            <param name="value">The value</param>
+            <returns>True, if value is within this range</returns>
+        </member>
+        <member name="P:MoreDateTime.Interfaces.IRange`2.IsEmpty">
+            <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+            <returns>True, if both start and end are default(T)</returns>
+        </member>
+        <member name="M:MoreDateTime.Interfaces.IRange`2.Empty">
+            <summary>
+            Get an empty range
+            </summary>
+        </member>
+        <member name="T:MoreDateTime.Interfaces.RangeDirection">
+            <summary>
+            The range direction enum, indicates in which direction to move the ranges values
+            </summary>
+        </member>
+        <member name="F:MoreDateTime.Interfaces.RangeDirection.Both">
+            <summary>
+            Move start and end
+            </summary>
+        </member>
+        <member name="F:MoreDateTime.Interfaces.RangeDirection.Start">
+            <summary>
+            Move start only
+            </summary>
+        </member>
+        <member name="F:MoreDateTime.Interfaces.RangeDirection.End">
+            <summary>
+            Move end only
             </summary>
         </member>
         <member name="T:MoreDateTime.NagerHolidayProvider">
@@ -2584,7 +2959,7 @@
         </member>
         <member name="T:MoreDateTime.TimeOnlyRange">
             <summary>
-            Implements the <see cref="T:MoreDateTime.Interfaces.ITimeOnlyRange"/> interface and provides a time range through its <see cref="P:MoreDateTime.TimeOnlyRange.Start"/> and <see cref="P:MoreDateTime.TimeOnlyRange.End"/> members
+            Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2"/> interface and provides a time range through its <see cref="P:MoreDateTime.TimeOnlyRange.Start"/> and <see cref="P:MoreDateTime.TimeOnlyRange.End"/> members
             </summary>
         </member>
         <member name="M:MoreDateTime.TimeOnlyRange.#ctor(System.TimeOnly,System.TimeOnly)">
@@ -2594,14 +2969,85 @@
             <param name="startTime">The start TimeOnly</param>
             <param name="endTime">The end TimeOnly</param>
         </member>
-        <member name="M:MoreDateTime.TimeOnlyRange.Distance">
+        <member name="M:MoreDateTime.TimeOnlyRange.#ctor(MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.TimeOnlyRange"/> class.
+            </summary>
+            <param name="range">The range to copy</param>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.TimeOnlyRange"/> class.
+            </summary>
+        </member>
+        <member name="P:MoreDateTime.TimeOnlyRange.End">
             <inheritdoc/>
+        </member>
+        <member name="P:MoreDateTime.TimeOnlyRange.IsEmpty">
+            <summary>
+            Verifies if the range is empty, Start == End == default(T)
+            </summary>
+            <returns>True, if both start and end are default(T)</returns>
         </member>
         <member name="P:MoreDateTime.TimeOnlyRange.Start">
             <inheritdoc/>
         </member>
-        <member name="P:MoreDateTime.TimeOnlyRange.End">
-            <inheritdoc/>
+        <member name="M:MoreDateTime.TimeOnlyRange.Contains(System.TimeOnly)">
+            <summary>
+            Verifies if the given value is contained in this range, including start and end
+            </summary>
+            <param name="value">The value</param>
+            <returns>True, if value is within this range</returns>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.Distance">
+            <summary>
+            Gets the distance between the <see cref="P:MoreDateTime.TimeOnlyRange.Start"/> and the <see cref="P:MoreDateTime.TimeOnlyRange.End"/>
+            </summary>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.Empty">
+            <summary>
+            Get an empty range
+            </summary>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Extends the <see cref="P:MoreDateTime.TimeOnlyRange.Start"/> and/or <see cref="P:MoreDateTime.TimeOnlyRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.IsOrdered">
+            <summary>
+            Verifies if start is less or equal end
+            </summary>
+            <returns>True if start is less or equal end</returns>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.IsWithin(MoreDateTime.TimeOnlyRange)">
+            <summary>
+            Checks if the range is between the given ranges start and end values, including start time and end time, thus completely inside.
+            </summary>
+            <param name="value">The TimeOnly to compare</param>
+            <returns>True if the value is greater or equal range.Start and less than or equal range.End</returns>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.Offset(System.TimeSpan)">
+            <summary>
+            Offsets the <see cref="P:MoreDateTime.TimeOnlyRange.Start"/> and <see cref="P:MoreDateTime.TimeOnlyRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.Order">
+            <summary>
+            Orders the range, so that Start is guaranteed to be less or equal End.
+            <note>Does not make much sense for TimeOnlyRange since the time can be spanning 00:00, as in 22:00 - 04:00</note>
+            </summary>
+            <returns>Itself ordered</returns>
+        </member>
+        <member name="M:MoreDateTime.TimeOnlyRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+            <summary>
+            Reduces the <see cref="P:MoreDateTime.TimeOnlyRange.Start"/> and/or <see cref="P:MoreDateTime.TimeOnlyRange.End"/> by the specified <paramref name="timeSpan"/>
+            </summary>
+            <param name="timeSpan">The time span.</param>
+            <param name="direction">The direction in which to extend</param>
         </member>
     </members>
 </doc>

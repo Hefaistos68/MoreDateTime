@@ -11,24 +11,22 @@
       <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDate<wbr />Time<wbr />Provider</a>
+      <a href="T_MoreDateTime_Interfaces_IHolidayProvider.htm">IHoliday<wbr />Provider</a>
     </li>
     <li>
-      <a href="Properties_T_MoreDateTime_Interfaces_IDateTimeProvider.htm">Properties</a>
+      <a href="Methods_T_MoreDateTime_Interfaces_IHolidayProvider.htm">Methods</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_Now" href="P_MoreDateTime_Interfaces_IDateTimeProvider_Now.htm">Now</a>
+      <a id="Overload_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday" class="has-submenu" href="Overload_MoreDateTime_Interfaces_IHolidayProvider_IsPublicHoliday.htm">
+        <span data-tocFile="../toc/IDAABCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Is<wbr />Public<wbr />Holiday</a>
+      <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_Today" href="P_MoreDateTime_Interfaces_IDateTimeProvider_Today.htm">Today</a>
-    </li>
-    <li>
-      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcNow" href="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcNow.htm">Utc<wbr />Now</a>
-    </li>
-    <li>
-      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcToday" href="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcToday.htm">Utc<wbr />Today</a>
+      <a id="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays" href="M_MoreDateTime_Interfaces_IHolidayProvider_NumberOfKnownHolidays.htm">Number<wbr />Of<wbr />Known<wbr />Holidays</a>
     </li>
   </tocItems>
 </toc>

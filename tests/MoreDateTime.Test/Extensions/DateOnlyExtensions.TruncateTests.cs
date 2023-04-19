@@ -22,6 +22,22 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the TruncateTo method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_TruncateTo_WithUnsupportedKind()
+		{
+			// Arrange
+			var dt = _startDate;
+
+			// Act
+			var result = dt.TruncateTo(DateTimeExtensions.DateTruncate.Hour);
+
+			// Assert
+			result.ShouldBe(_startDate);
+		}
+
+		/// <summary>
 		/// Checks that the TruncateToMonth method functions correctly.
 		/// </summary>
 		[TestMethod]

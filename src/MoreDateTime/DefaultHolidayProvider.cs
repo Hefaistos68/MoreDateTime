@@ -55,13 +55,13 @@ namespace MoreDateTime
 		};
 
 		/// <inheritdoc/>
-		public bool IsPublicHoliday(DateTime date, CultureInfo cultureInfo)
+		public bool IsPublicHoliday(DateTime date, CultureInfo? cultureInfo)
 		{
 			return _commonHolidays.Contains(new MonthDay(date));
 		}
 
 		/// <inheritdoc/>
-		public bool IsPublicHoliday(DateOnly date, CultureInfo cultureInfo)
+		public bool IsPublicHoliday(DateOnly date, CultureInfo? cultureInfo)
 		{
 			return _commonHolidays.Contains(new MonthDay(date));
 		}
@@ -69,7 +69,7 @@ namespace MoreDateTime
 		/// <inheritdoc/>
 		public int NumberOfKnownHolidays(int year, CultureInfo? cultureInfo = null)
 		{
-			return   _commonHolidays.Count;
+			return _commonHolidays.Count;
 		}
 	}
 }

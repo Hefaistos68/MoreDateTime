@@ -170,6 +170,7 @@ namespace MoreDateTime.Tests.Extensions
 			result3.ShouldBeTrue();
 			result4.ShouldBeFalse();
 		}
+
 		/// <summary>
 		/// Checks that the IsWithin method functions correctly.
 		/// </summary>
@@ -181,6 +182,40 @@ namespace MoreDateTime.Tests.Extensions
 			// Act
 			var result1 = _midTime.IsWithin(_startTime, _endTime);
 			var result2 = _midTime.IsWithin(_startTime, _midTime.PreviousMinute());
+
+			// Assert
+			result1.ShouldBeTrue();
+			result2.ShouldBeFalse();
+		}
+
+		/// <summary>
+		/// Checks that the IsWithin method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin_WithMidnight()
+		{
+			// Arrange
+
+			// Act
+			var result1 = _zeroTime.IsWithin(_startTime, _endTime);
+			var result2 = _zeroTime.IsWithin(_endTime, _startTime);
+
+			// Assert
+			result1.ShouldBeFalse();
+			result2.ShouldBeTrue();
+		}
+
+		/// <summary>
+		/// Checks that the IsWithin method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin_DateTimeWithTimeOnly()
+		{
+			// Arrange
+
+			// Act
+			var result1 = _startDateTime.IsWithin(_startTime, _endTime);
+			var result2 = _startDateTime.IsWithin(_zeroTime, _startTime);
 
 			// Assert
 			result1.ShouldBeTrue();

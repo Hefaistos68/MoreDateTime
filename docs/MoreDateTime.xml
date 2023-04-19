@@ -6,8 +6,14 @@
   <members>
     <member name="T:MoreDateTime.DateOnlyRange">
       <summary>
-            Implements the <see cref="T:MoreDateTime.Interfaces.IDateOnlyRange" /> interface and provides a time range through its <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and <see cref="P:MoreDateTime.DateOnlyRange.End" /> members
+            Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2" /> interface and provides a time range through its <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and <see cref="P:MoreDateTime.DateOnlyRange.End" /> members
             </summary>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.#ctor(MoreDateTime.DateOnlyRange)">
+      <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.DateOnlyRange" /> class.
+            </summary>
+      <param name="range">The range to copy</param>
     </member>
     <member name="M:MoreDateTime.DateOnlyRange.#ctor(System.DateOnly,System.DateOnly)">
       <summary>
@@ -16,15 +22,16 @@
       <param name="startTime">The start DateOnly</param>
       <param name="endTime">The end DateOnly</param>
     </member>
+    <member name="M:MoreDateTime.DateOnlyRange.#ctor(System.DateTime,System.DateTime)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateOnlyRange" /> class.
+            </summary>
+      <param name="startTime">The start time.</param>
+      <param name="endTime">The end time.</param>
+    </member>
     <member name="M:MoreDateTime.DateOnlyRange.Distance">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.DateOnlyRange.Distance</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the distance between the <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and the <see cref="P:MoreDateTime.DateOnlyRange.End" /></summary>
     </member>
     <member name="P:MoreDateTime.DateOnlyRange.End">
       <summary>
@@ -35,6 +42,23 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+      <summary>
+            Extends the <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and/or <see cref="P:MoreDateTime.DateOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+      <param name="direction">The direction in which to extend</param>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Offset(System.TimeSpan)">
+      <summary>
+            Offsets the <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and <see cref="P:MoreDateTime.DateOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:MoreDateTime.DateOnlyRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+      <summary>
+            Reduces the <see cref="P:MoreDateTime.DateOnlyRange.Start" /> and/or <see cref="P:MoreDateTime.DateOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+      <param name="direction">The direction in which to extend</param>
     </member>
     <member name="P:MoreDateTime.DateOnlyRange.Start">
       <summary>
@@ -127,8 +151,14 @@
     </member>
     <member name="T:MoreDateTime.DateTimeRange">
       <summary>
-            Implements the <see cref="T:MoreDateTime.Interfaces.IDateTimeRange" /> interface and provides a time range through its <see cref="P:MoreDateTime.DateTimeRange.Start" /> and <see cref="P:MoreDateTime.DateTimeRange.End" /> members
+            Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2" /> interface and provides a time range through its <see cref="P:MoreDateTime.DateTimeRange.Start" /> and <see cref="P:MoreDateTime.DateTimeRange.End" /> members
             </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.#ctor(MoreDateTime.DateTimeRange)">
+      <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.DateTimeRange" /> class.
+            </summary>
+      <param name="range">The range to copy</param>
     </member>
     <member name="M:MoreDateTime.DateTimeRange.#ctor(System.DateOnly,System.DateOnly)">
       <summary>
@@ -146,13 +176,7 @@
     </member>
     <member name="M:MoreDateTime.DateTimeRange.Distance">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.DateTimeRange.Distance</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the distance between the <see cref="P:MoreDateTime.DateTimeRange.Start" /> and the <see cref="P:MoreDateTime.DateTimeRange.End" /></summary>
     </member>
     <member name="P:MoreDateTime.DateTimeRange.End">
       <summary>
@@ -163,6 +187,23 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+      <summary>
+            Extends the <see cref="P:MoreDateTime.DateTimeRange.Start" /> and/or <see cref="P:MoreDateTime.DateTimeRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+      <param name="direction">The direction in which to extend</param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Offset(System.TimeSpan)">
+      <summary>
+            Offsets the <see cref="P:MoreDateTime.DateTimeRange.Start" /> and <see cref="P:MoreDateTime.DateTimeRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+      <summary>
+            Reduces the <see cref="P:MoreDateTime.DateTimeRange.Start" /> and/or <see cref="P:MoreDateTime.DateTimeRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+      <param name="direction">The direction in which to extend</param>
     </member>
     <member name="P:MoreDateTime.DateTimeRange.Start">
       <summary>
@@ -344,8 +385,14 @@
     </member>
     <member name="T:MoreDateTime.TimeOnlyRange">
       <summary>
-            Implements the <see cref="T:MoreDateTime.Interfaces.ITimeOnlyRange" /> interface and provides a time range through its <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and <see cref="P:MoreDateTime.TimeOnlyRange.End" /> members
+            Implements the <see cref="T:MoreDateTime.Interfaces.IRange`2" /> interface and provides a time range through its <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and <see cref="P:MoreDateTime.TimeOnlyRange.End" /> members
             </summary>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.#ctor(MoreDateTime.TimeOnlyRange)">
+      <summary>
+            Initializes a copied new instance of the <see cref="T:MoreDateTime.TimeOnlyRange" /> class.
+            </summary>
+      <param name="range">The range to copy</param>
     </member>
     <member name="M:MoreDateTime.TimeOnlyRange.#ctor(System.TimeOnly,System.TimeOnly)">
       <summary>
@@ -356,13 +403,7 @@
     </member>
     <member name="M:MoreDateTime.TimeOnlyRange.Distance">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.TimeOnlyRange.Distance</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the distance between the <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and the <see cref="P:MoreDateTime.TimeOnlyRange.End" /></summary>
     </member>
     <member name="P:MoreDateTime.TimeOnlyRange.End">
       <summary>
@@ -373,6 +414,23 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.Extend(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+      <summary>
+            Extends the <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and/or <see cref="P:MoreDateTime.TimeOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+      <param name="direction">The direction in which to extend</param>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.Offset(System.TimeSpan)">
+      <summary>
+            Offsets the <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and <see cref="P:MoreDateTime.TimeOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+    </member>
+    <member name="M:MoreDateTime.TimeOnlyRange.Reduce(System.TimeSpan,MoreDateTime.Interfaces.RangeDirection)">
+      <summary>
+            Reduces the <see cref="P:MoreDateTime.TimeOnlyRange.Start" /> and/or <see cref="P:MoreDateTime.TimeOnlyRange.End" /> by the specified <paramref name="timeSpan" /></summary>
+      <param name="timeSpan">The time span.</param>
+      <param name="direction">The direction in which to extend</param>
     </member>
     <member name="P:MoreDateTime.TimeOnlyRange.Start">
       <summary>
@@ -1609,46 +1667,6 @@
       <param name="dayOfweek">The <see cref="T:System.DayOfWeek" /> to find</param>
       <returns>A <see cref="T:System.DateTime" /> object representing the last given weekday in this year</returns>
     </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerDay">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerDay</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerHour">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerHour</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerMinute">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerMinute</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerSecond">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.MillisPerSecond</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.NextDay(System.DateTime)">
       <summary>
             Gets the DateTime value of the next day
@@ -2016,56 +2034,6 @@
       <param name="timeSpan">A positive time interval</param>
       <returns>An object whose value is the sum of the date and time represented by this instance minus the time interval represented by value</returns>
     </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerDay">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerDay</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerHour">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerHour</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerMillisecond">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerMillisecond</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerMinute">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerMinute</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerSecond">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>F:MoreDateTime.Extensions.DateTimeExtensions.TicksPerSecond</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.ToSqlString(System.DateTime)">
       <summary>
             Converts a DateTime value to an SQL appropriate format (yyyy-MM-ddThh:mm:ss.ffffff+00:00), independent of the current locale
@@ -2131,6 +2099,34 @@
             </summary>
       <param name="dt">The DateTime object</param>
       <returns>The Truncated dateTime object</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="a">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>a</parameter>
+            <parameter>M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="b">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>b</parameter>
+            <parameter>M:MoreDateTime.Extensions.DateTimeExtensions.Union(MoreDateTime.DateTimeRange,MoreDateTime.DateTimeRange)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.Weeknumber(System.DateTime,System.Globalization.CultureInfo)">
       <summary>
@@ -2722,25 +2718,6 @@
     <member name="F:MoreDateTime.Extensions.TimeSpanExtensions.TimeSpanTruncate.Seconds">
       <summary>Precision Second, all below is set to 0</summary>
     </member>
-    <member name="T:MoreDateTime.Interfaces.IDateOnlyRange">
-      <summary>
-            A Date/Time range provider, with an start and an end date
-            </summary>
-    </member>
-    <member name="M:MoreDateTime.Interfaces.IDateOnlyRange.Distance">
-      <summary>
-            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.IDateOnlyRange.Start" /> and the <see cref="P:MoreDateTime.Interfaces.IDateOnlyRange.End" /></summary>
-    </member>
-    <member name="P:MoreDateTime.Interfaces.IDateOnlyRange.End">
-      <summary>
-            Gets or sets the end date
-            </summary>
-    </member>
-    <member name="P:MoreDateTime.Interfaces.IDateOnlyRange.Start">
-      <summary>
-            Gets or sets the start date
-            </summary>
-    </member>
     <member name="T:MoreDateTime.Interfaces.IDateTimeProvider">
       <summary>
             The interface for providing DateTime information
@@ -2764,25 +2741,6 @@
     <member name="P:MoreDateTime.Interfaces.IDateTimeProvider.UtcToday">
       <summary>
             Gets the date part of the current UTC DateTime with the time set to 00:00:00 (or the mock value if set)
-            </summary>
-    </member>
-    <member name="T:MoreDateTime.Interfaces.IDateTimeRange">
-      <summary>
-            A Date/Time range provider, with an start and an end date
-            </summary>
-    </member>
-    <member name="M:MoreDateTime.Interfaces.IDateTimeRange.Distance">
-      <summary>
-            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.IDateTimeRange.Start" /> and the <see cref="P:MoreDateTime.Interfaces.IDateTimeRange.End" /></summary>
-    </member>
-    <member name="P:MoreDateTime.Interfaces.IDateTimeRange.End">
-      <summary>
-            Gets or sets the end date
-            </summary>
-    </member>
-    <member name="P:MoreDateTime.Interfaces.IDateTimeRange.Start">
-      <summary>
-            Gets or sets the start date
             </summary>
     </member>
     <member name="T:MoreDateTime.Interfaces.IHolidayProvider">
@@ -2813,23 +2771,24 @@
       <param name="year">The year for which the number of holidays is requested</param>
       <param name="cultureInfo">The </param>
     </member>
-    <member name="T:MoreDateTime.Interfaces.ITimeOnlyRange">
+    <member name="T:MoreDateTime.Interfaces.RangeDirection">
       <summary>
-            A Date/Time range provider, with an start and an end date
+            The range direction enum, indicates in which direction to move the ranges values
             </summary>
     </member>
-    <member name="M:MoreDateTime.Interfaces.ITimeOnlyRange.Distance">
+    <member name="F:MoreDateTime.Interfaces.RangeDirection.Both">
       <summary>
-            Gets the distance between the <see cref="P:MoreDateTime.Interfaces.ITimeOnlyRange.Start" /> and the <see cref="P:MoreDateTime.Interfaces.ITimeOnlyRange.End" /></summary>
-    </member>
-    <member name="P:MoreDateTime.Interfaces.ITimeOnlyRange.End">
-      <summary>
-            Gets or sets the end time
+            Move start and end
             </summary>
     </member>
-    <member name="P:MoreDateTime.Interfaces.ITimeOnlyRange.Start">
+    <member name="F:MoreDateTime.Interfaces.RangeDirection.Start">
       <summary>
-            Gets or sets the start time
+            Move start only
+            </summary>
+    </member>
+    <member name="F:MoreDateTime.Interfaces.RangeDirection.End">
+      <summary>
+            Move end only
             </summary>
     </member>
   </members>
