@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">Date<wbr />Time<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_Extensions_DateTimeExtensions.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_Extensions_DateTimeExtensions_IsWithin.htm">Is<wbr />Within</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin" href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin.htm">Is<wbr />Within(<wbr />Date<wbr />Time, Date<wbr />Only<wbr />Range)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_1" href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_1.htm">Is<wbr />Within(<wbr />Date<wbr />Time, Date<wbr />Time<wbr />Range)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_2" href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_2.htm">Is<wbr />Within(<wbr />Date<wbr />Time, Date<wbr />Only, Date<wbr />Only)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_3" href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_3.htm">Is<wbr />Within(<wbr />Date<wbr />Time, Date<wbr />Time, Date<wbr />Time)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_4" href="M_MoreDateTime_Extensions_DateTimeExtensions_IsWithin_4.htm">Is<wbr />Within(<wbr />Int<wbr />32, Int<wbr />32, Int<wbr />32)</a>
+    </li>
+  </tocItems>
+</toc>

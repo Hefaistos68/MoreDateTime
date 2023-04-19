@@ -19,13 +19,28 @@
   </breadcrumbs>
   <tocItems>
     <li>
+      <a id="M_MoreDateTime_TimeOnlyRange_Contains" href="M_MoreDateTime_TimeOnlyRange_Contains.htm">Contains</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_TimeOnlyRange_Distance" href="M_MoreDateTime_TimeOnlyRange_Distance.htm">Distance</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_TimeOnlyRange_Empty" href="M_MoreDateTime_TimeOnlyRange_Empty.htm">Empty</a>
     </li>
     <li>
       <a id="M_MoreDateTime_TimeOnlyRange_Extend" href="M_MoreDateTime_TimeOnlyRange_Extend.htm">Extend</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_TimeOnlyRange_IsOrdered" href="M_MoreDateTime_TimeOnlyRange_IsOrdered.htm">Is<wbr />Ordered</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_TimeOnlyRange_IsWithin" href="M_MoreDateTime_TimeOnlyRange_IsWithin.htm">Is<wbr />Within</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_TimeOnlyRange_Offset" href="M_MoreDateTime_TimeOnlyRange_Offset.htm">Offset</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_TimeOnlyRange_Order" href="M_MoreDateTime_TimeOnlyRange_Order.htm">Order</a>
     </li>
     <li>
       <a id="M_MoreDateTime_TimeOnlyRange_Reduce" href="M_MoreDateTime_TimeOnlyRange_Reduce.htm">Reduce</a>

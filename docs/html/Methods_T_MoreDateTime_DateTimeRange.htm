@@ -90,14 +90,38 @@
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Methods</h2>
-            <div id="IDCDASection">
+            <div id="IDGDASection">
               <table id="MethodList" class="table is-hoverable">
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateTimeRange_Contains.htm">Contains(DateOnly)</a>
+                  </td>
+                  <td>
+            Verifies if the given value is contained in this range, including start and end
+            </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateTimeRange_Contains_1.htm">Contains(DateTime)</a>
+                  </td>
+                  <td>
+            Verifies if the given value is contained in this range, including start and end
+            </td>
+                </tr>
                 <tr>
                   <td>
                     <a href="M_MoreDateTime_DateTimeRange_Distance.htm">Distance</a>
                   </td>
                   <td>
             Gets the distance between the <a href="P_MoreDateTime_DateTimeRange_Start.htm">Start</a> and the <a href="P_MoreDateTime_DateTimeRange_End.htm">End</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateTimeRange_Empty.htm">Empty</a>
+                  </td>
+                  <td>
+            Get an empty range
+            </td>
                 </tr>
                 <tr>
                   <td>
@@ -108,10 +132,34 @@
                 </tr>
                 <tr>
                   <td>
+                    <a href="M_MoreDateTime_DateTimeRange_IsOrdered.htm">IsOrdered</a>
+                  </td>
+                  <td>
+            Verifies that the order of the dates is correct, Start &lt; End
+            </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateTimeRange_IsWithin.htm">IsWithin</a>
+                  </td>
+                  <td>
+            Verifies if the this range is contained entirely in the given range, including start and end
+            </td>
+                </tr>
+                <tr>
+                  <td>
                     <a href="M_MoreDateTime_DateTimeRange_Offset.htm">Offset</a>
                   </td>
                   <td>
             Offsets the <a href="P_MoreDateTime_DateTimeRange_Start.htm">Start</a> and <a href="P_MoreDateTime_DateTimeRange_End.htm">End</a> by the specified <span class="parameter">timeSpan</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_DateTimeRange_Order.htm">Order</a>
+                  </td>
+                  <td>
+            Orders the range, so that Start is guaranteed to be less or equal End
+            </td>
                 </tr>
                 <tr>
                   <td>
@@ -130,6 +178,32 @@
               <table id="ExtensionList" class="table is-hoverable">
                 <tr>
                   <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Difference.htm">Difference</a>
+                  </td>
+                  <td>
+            Calculates the difference of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            the first DateTimeRange. Otherwise, the result is the first DateTimeRange without where both ranges overlap.
+            <br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">DateTimeExtensions</a>)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_DoesOverlap.htm">DoesOverlap</a>
+                  </td>
+                  <td>
+            Verifies if DateTimeRange a overlapps with DateTimeRange b.
+            <br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">DateTimeExtensions</a>)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Intersection.htm">Intersection</a>
+                  </td>
+                  <td>
+            Calculates the intersection of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            an empty DateTimeRange. Otherwise, the result is the DateTimeRange that where both ranges overlap.
+            <br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">DateTimeExtensions</a>)</td>
+                </tr>
+                <tr>
+                  <td>
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Split.htm">Split</a>
                   </td>
                   <td>
@@ -141,7 +215,9 @@
                     <a href="M_MoreDateTime_Extensions_DateTimeExtensions_Union.htm">Union</a>
                   </td>
                   <td>
-                    <br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">DateTimeExtensions</a>)</td>
+            Calculates the union of two DateTimeRanges. If the two ranges do not overlap, the result is 
+            an empty DateTimeRange. Otherwise, the result is the DateTimeRange that contains both ranges.
+            <br />(Defined by <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">DateTimeExtensions</a>)</td>
                 </tr>
               </table>
             </div>

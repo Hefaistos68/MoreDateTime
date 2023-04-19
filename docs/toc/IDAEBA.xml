@@ -28,14 +28,23 @@
       <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_AddTicks" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_AddTicks.htm">Add<wbr />Ticks</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_Difference" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_Difference.htm">Difference</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_Distance" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_Distance.htm">Distance</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_DoesOverlap" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_DoesOverlap.htm">Does<wbr />Overlap</a>
+    </li>
+    <li>
       <a id="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil" class="has-submenu" href="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_EnumerateInStepsUntil.htm">
-        <span data-tocFile="../toc/IDEAEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDGAEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Enumerate<wbr />In<wbr />Steps<wbr />Until</a>
       <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_Intersection" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_Intersection.htm">Intersection</a>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_IsAfternoon" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_IsAfternoon.htm">Is<wbr />Afternoon</a>
@@ -87,7 +96,7 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_IsWithin" class="has-submenu" href="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_IsWithin.htm">
-        <span data-tocFile="../toc/IDVAEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDYAEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Within</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -139,7 +148,7 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_Split" class="has-submenu" href="Overload_MoreDateTime_Extensions_TimeOnlyExtensions_Split.htm">
-        <span data-tocFile="../toc/ID0FB0AEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0IB0AEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Split</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -158,6 +167,9 @@
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_TruncateToSecond" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_TruncateToSecond.htm">Truncate<wbr />To<wbr />Second</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_TimeOnlyExtensions_Union" href="M_MoreDateTime_Extensions_TimeOnlyExtensions_Union.htm">Union</a>
     </li>
   </tocItems>
 </toc>

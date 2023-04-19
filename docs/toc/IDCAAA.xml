@@ -19,13 +19,32 @@
   </breadcrumbs>
   <tocItems>
     <li>
+      <a id="Overload_MoreDateTime_DateOnlyRange_Contains" class="has-submenu" href="Overload_MoreDateTime_DateOnlyRange_Contains.htm">
+        <span data-tocFile="../toc/IDACAAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Contains</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
       <a id="M_MoreDateTime_DateOnlyRange_Distance" href="M_MoreDateTime_DateOnlyRange_Distance.htm">Distance</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateOnlyRange_Empty" href="M_MoreDateTime_DateOnlyRange_Empty.htm">Empty</a>
     </li>
     <li>
       <a id="M_MoreDateTime_DateOnlyRange_Extend" href="M_MoreDateTime_DateOnlyRange_Extend.htm">Extend</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_DateOnlyRange_IsOrdered" href="M_MoreDateTime_DateOnlyRange_IsOrdered.htm">Is<wbr />Ordered</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateOnlyRange_IsWithin" href="M_MoreDateTime_DateOnlyRange_IsWithin.htm">Is<wbr />Within</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_DateOnlyRange_Offset" href="M_MoreDateTime_DateOnlyRange_Offset.htm">Offset</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateOnlyRange_Order" href="M_MoreDateTime_DateOnlyRange_Order.htm">Order</a>
     </li>
     <li>
       <a id="M_MoreDateTime_DateOnlyRange_Reduce" href="M_MoreDateTime_DateOnlyRange_Reduce.htm">Reduce</a>

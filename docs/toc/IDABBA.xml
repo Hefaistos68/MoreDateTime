@@ -28,10 +28,19 @@
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcTime" href="M_MoreDateTime_Extensions_DateTimeExtensions_AsUtcTime.htm">As<wbr />Utc<wbr />Time</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Difference" href="M_MoreDateTime_Extensions_DateTimeExtensions_Difference.htm">Difference</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Distance" href="M_MoreDateTime_Extensions_DateTimeExtensions_Distance.htm">Distance</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_DoesOverlap" href="M_MoreDateTime_Extensions_DateTimeExtensions_DoesOverlap.htm">Does<wbr />Overlap</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfMonth" href="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfMonth.htm">End<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfWeek" href="M_MoreDateTime_Extensions_DateTimeExtensions_EndOfWeek.htm">End<wbr />Of<wbr />Week</a>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateDaysUntil" href="M_MoreDateTime_Extensions_DateTimeExtensions_EnumerateDaysUntil.htm">Enumerate<wbr />Days<wbr />Until</a>
@@ -41,7 +50,7 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateTimeExtensions_EnumerateInStepsUntil.htm">
-        <span data-tocFile="../toc/IDHABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDKABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Enumerate<wbr />In<wbr />Steps<wbr />Until</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -83,11 +92,14 @@
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWeekdayOfMonth" href="M_MoreDateTime_Extensions_DateTimeExtensions_FirstWeekdayOfMonth.htm">First<wbr />Weekday<wbr />Of<wbr />Month</a>
     </li>
     <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Intersection" href="M_MoreDateTime_Extensions_DateTimeExtensions_Intersection.htm">Intersection</a>
+    </li>
+    <li>
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_IsAfternoon" href="M_MoreDateTime_Extensions_DateTimeExtensions_IsAfternoon.htm">Is<wbr />Afternoon</a>
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateTimeExtensions_IsBetween" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateTimeExtensions_IsBetween.htm">
-        <span data-tocFile="../toc/IDVABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDZABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Between</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -157,7 +169,7 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateTimeExtensions_IsWithin" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateTimeExtensions_IsWithin.htm">
-        <span data-tocFile="../toc/ID0LB0ABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0PB0ABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Is<wbr />Within</a>
       <ul class="toc-menu is-hidden"> </ul>
@@ -311,13 +323,16 @@
     </li>
     <li>
       <a id="Overload_MoreDateTime_Extensions_DateTimeExtensions_Split" class="has-submenu" href="Overload_MoreDateTime_Extensions_DateTimeExtensions_Split.htm">
-        <span data-tocFile="../toc/ID04C0ABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/ID0BD0ABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Split</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfMonth" href="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfMonth.htm">Start<wbr />Of<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfWeek" href="M_MoreDateTime_Extensions_DateTimeExtensions_StartOfWeek.htm">Start<wbr />Of<wbr />Week</a>
     </li>
     <li>
       <a id="M_MoreDateTime_Extensions_DateTimeExtensions_Sub" href="M_MoreDateTime_Extensions_DateTimeExtensions_Sub.htm">Sub</a>

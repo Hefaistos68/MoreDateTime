@@ -19,13 +19,16 @@
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_DateTimeRange__ctor" href="M_MoreDateTime_DateTimeRange__ctor.htm">Date<wbr />Time<wbr />Range(<wbr />Date<wbr />Time<wbr />Range)</a>
+      <a id="M_MoreDateTime_DateTimeRange__ctor" href="M_MoreDateTime_DateTimeRange__ctor.htm">Date<wbr />Time<wbr />Range</a>
     </li>
     <li>
-      <a id="M_MoreDateTime_DateTimeRange__ctor_1" href="M_MoreDateTime_DateTimeRange__ctor_1.htm">Date<wbr />Time<wbr />Range(<wbr />Date<wbr />Only, Date<wbr />Only)</a>
+      <a id="M_MoreDateTime_DateTimeRange__ctor_1" href="M_MoreDateTime_DateTimeRange__ctor_1.htm">Date<wbr />Time<wbr />Range(<wbr />Date<wbr />Time<wbr />Range)</a>
     </li>
     <li>
-      <a id="M_MoreDateTime_DateTimeRange__ctor_2" href="M_MoreDateTime_DateTimeRange__ctor_2.htm">Date<wbr />Time<wbr />Range(<wbr />Date<wbr />Time, Date<wbr />Time)</a>
+      <a id="M_MoreDateTime_DateTimeRange__ctor_2" href="M_MoreDateTime_DateTimeRange__ctor_2.htm">Date<wbr />Time<wbr />Range(<wbr />Date<wbr />Only, Date<wbr />Only)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeRange__ctor_3" href="M_MoreDateTime_DateTimeRange__ctor_3.htm">Date<wbr />Time<wbr />Range(<wbr />Date<wbr />Time, Date<wbr />Time)</a>
     </li>
   </tocItems>
 </toc>
