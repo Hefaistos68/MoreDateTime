@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_UnspecifiedExtendedDateTime.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_UnspecifiedExtendedDateTime.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Day" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Day.htm">Day</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Hour" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Hour.htm">Hour</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_IsOpen" href="P_MoreDateTime_UnspecifiedExtendedDateTime_IsOpen.htm">Is<wbr />Open</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_IsUnknown" href="P_MoreDateTime_UnspecifiedExtendedDateTime_IsUnknown.htm">Is<wbr />Unknown</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Minute" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Minute.htm">Minute</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Month" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Month.htm">Month</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Season" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Season.htm">Season</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Second" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Second.htm">Second</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_TimeZoneOffset" href="P_MoreDateTime_UnspecifiedExtendedDateTime_TimeZoneOffset.htm">Time<wbr />Zone<wbr />Offset</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_UnspecifiedExtendedDateTime_Year" href="P_MoreDateTime_UnspecifiedExtendedDateTime_Year.htm">Year</a>
+    </li>
+  </tocItems>
+</toc>

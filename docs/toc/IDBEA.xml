@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime_Internal.htm">More<wbr />Date<wbr />Time.<wbr />Internal Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Internal_Converters_Json.htm">More<wbr />Date<wbr />Time.<wbr />Internal.<wbr />Converters.<wbr />Json</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeCollectionJsonConverter" class="has-submenu" href="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeCollectionJsonConverter.htm">
+        <span data-tocFile="../toc/IDABEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Extended<wbr />Date<wbr />Time<wbr />Collection<wbr />Json<wbr />Converter</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter" class="has-submenu" href="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter.htm">
+        <span data-tocFile="../toc/IDBBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Extended<wbr />Date<wbr />Time<wbr />Interval<wbr />Json<wbr />Converter</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeJsonConverter" class="has-submenu" href="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeJsonConverter.htm">
+        <span data-tocFile="../toc/IDCBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Extended<wbr />Date<wbr />Time<wbr />Json<wbr />Converter</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimePossibilityCollectionJsonConverter" class="has-submenu" href="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimePossibilityCollectionJsonConverter.htm">
+        <span data-tocFile="../toc/IDDBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Extended<wbr />Date<wbr />Time<wbr />Possibility<wbr />Collection<wbr />Json<wbr />Converter</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeRangeJsonConverter" class="has-submenu" href="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeRangeJsonConverter.htm">
+        <span data-tocFile="../toc/IDEBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Extended<wbr />Date<wbr />Time<wbr />Range<wbr />Json<wbr />Converter</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_Converters_Json_UnspecifiedExtendedDateTimeJsonConverter" class="has-submenu" href="T_MoreDateTime_Internal_Converters_Json_UnspecifiedExtendedDateTimeJsonConverter.htm">
+        <span data-tocFile="../toc/IDFBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Unspecified<wbr />Extended<wbr />Date<wbr />Time<wbr />Json<wbr />Converter</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

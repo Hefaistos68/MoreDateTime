@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimeCalculator.htm">Extended<wbr />Date<wbr />Time<wbr />Calculator</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_ExtendedDateTimeCalculator.htm">Methods</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_AddMonths" href="M_MoreDateTime_ExtendedDateTimeCalculator_AddMonths.htm">Add<wbr />Months</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_CenturyOfYear" href="M_MoreDateTime_ExtendedDateTimeCalculator_CenturyOfYear.htm">Century<wbr />Of<wbr />Year</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth" class="has-submenu" href="Overload_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth.htm">
+        <span data-tocFile="../toc/IDCAKAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Days<wbr />In<wbr />Month</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_DaysInYear" href="M_MoreDateTime_ExtendedDateTimeCalculator_DaysInYear.htm">Days<wbr />In<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_DaysToMonth" href="M_MoreDateTime_ExtendedDateTimeCalculator_DaysToMonth.htm">Days<wbr />To<wbr />Month</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_IsLeapYear" href="M_MoreDateTime_ExtendedDateTimeCalculator_IsLeapYear.htm">Is<wbr />Leap<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_YearOfCentury" href="M_MoreDateTime_ExtendedDateTimeCalculator_YearOfCentury.htm">Year<wbr />Of<wbr />Century</a>
+    </li>
+  </tocItems>
+</toc>

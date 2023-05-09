@@ -11,18 +11,43 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_NullHolidayProvider.htm">Null<wbr />Holiday<wbr />Provider</a>
+      <a href="T_MoreDateTime_DateTimeValue.htm">Date<wbr />Time<wbr />Value</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_NullHolidayProvider__ctor" href="M_MoreDateTime_NullHolidayProvider__ctor.htm">Constructor</a>
+      <a id="Overload_MoreDateTime_DateTimeValue__ctor" class="has-submenu" href="Overload_MoreDateTime_DateTimeValue__ctor.htm">
+        <span data-tocFile="../toc/IDAEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Constructors</a>
+      <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="Methods_T_MoreDateTime_NullHolidayProvider" class="has-submenu" href="Methods_T_MoreDateTime_NullHolidayProvider.htm">
+      <a id="Properties_T_MoreDateTime_DateTimeValue" class="has-submenu" href="Properties_T_MoreDateTime_DateTimeValue.htm">
         <span data-tocFile="../toc/IDBEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
+        </span>Properties</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Methods_T_MoreDateTime_DateTimeValue" class="has-submenu" href="Methods_T_MoreDateTime_DateTimeValue.htm">
+        <span data-tocFile="../toc/IDCEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
         </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Operators_T_MoreDateTime_DateTimeValue" class="has-submenu" href="Operators_T_MoreDateTime_DateTimeValue.htm">
+        <span data-tocFile="../toc/IDDEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Operators</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Fields_T_MoreDateTime_DateTimeValue" class="has-submenu" href="Fields_T_MoreDateTime_DateTimeValue.htm">
+        <span data-tocFile="../toc/IDEEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Fields</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
   </tocItems>

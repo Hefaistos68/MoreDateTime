@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime_Internal.htm">More<wbr />Date<wbr />Time.<wbr />Internal Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Internal_Converters_Json.htm">More<wbr />Date<wbr />Time.<wbr />Internal.<wbr />Converters.<wbr />Json</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter.htm">Extended<wbr />Date<wbr />Time<wbr />Interval<wbr />Json<wbr />Converter</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter__ctor" href="M_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter__ctor.htm">Constructor</a>
+    </li>
+    <li>
+      <a id="Methods_T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter" class="has-submenu" href="Methods_T_MoreDateTime_Internal_Converters_Json_ExtendedDateTimeIntervalJsonConverter.htm">
+        <span data-tocFile="../toc/IDBBBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

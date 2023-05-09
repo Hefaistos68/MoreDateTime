@@ -8,18 +8,25 @@
       <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
     </li>
     <li>
-      <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDate<wbr />Time<wbr />Provider</a>
+      <a href="T_MoreDateTime_Extensions_DateOnlyExtensions.htm">Date<wbr />Only<wbr />Extensions</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="Properties_T_MoreDateTime_Interfaces_IDateTimeProvider" class="has-submenu" href="Properties_T_MoreDateTime_Interfaces_IDateTimeProvider.htm">
+      <a id="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions" class="has-submenu" href="Methods_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">
         <span data-tocFile="../toc/IDAACA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Properties</a>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Fields_T_MoreDateTime_Extensions_DateOnlyExtensions" class="has-submenu" href="Fields_T_MoreDateTime_Extensions_DateOnlyExtensions.htm">
+        <span data-tocFile="../toc/IDBACA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Fields</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
   </tocItems>

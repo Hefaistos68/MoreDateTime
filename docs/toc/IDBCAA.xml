@@ -11,21 +11,27 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_DateTimeRange.htm">Date<wbr />Time<wbr />Range</a>
+      <a href="T_MoreDateTime_DateTimeProvider.htm">Date<wbr />Time<wbr />Provider</a>
     </li>
     <li>
-      <a href="Properties_T_MoreDateTime_DateTimeRange.htm">Properties</a>
+      <a href="Properties_T_MoreDateTime_DateTimeProvider.htm">Properties</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="P_MoreDateTime_DateTimeRange_End" href="P_MoreDateTime_DateTimeRange_End.htm">End</a>
+      <a id="P_MoreDateTime_DateTimeProvider_Current" href="P_MoreDateTime_DateTimeProvider_Current.htm">Current</a>
     </li>
     <li>
-      <a id="P_MoreDateTime_DateTimeRange_IsEmpty" href="P_MoreDateTime_DateTimeRange_IsEmpty.htm">Is<wbr />Empty</a>
+      <a id="P_MoreDateTime_DateTimeProvider_Now" href="P_MoreDateTime_DateTimeProvider_Now.htm">Now</a>
     </li>
     <li>
-      <a id="P_MoreDateTime_DateTimeRange_Start" href="P_MoreDateTime_DateTimeRange_Start.htm">Start</a>
+      <a id="P_MoreDateTime_DateTimeProvider_Today" href="P_MoreDateTime_DateTimeProvider_Today.htm">Today</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_UtcNow" href="P_MoreDateTime_DateTimeProvider_UtcNow.htm">Utc<wbr />Now</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeProvider_UtcToday" href="P_MoreDateTime_DateTimeProvider_UtcToday.htm">Utc<wbr />Today</a>
     </li>
   </tocItems>
 </toc>

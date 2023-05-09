@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTime.htm">Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Fields_T_MoreDateTime_ExtendedDateTime.htm">Fields</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="F_MoreDateTime_ExtendedDateTime_MaxValue" href="F_MoreDateTime_ExtendedDateTime_MaxValue.htm">Max<wbr />Value</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_ExtendedDateTime_MinValue" href="F_MoreDateTime_ExtendedDateTime_MinValue.htm">Min<wbr />Value</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_ExtendedDateTime_Open" href="F_MoreDateTime_ExtendedDateTime_Open.htm">Open</a>
+    </li>
+    <li>
+      <a id="F_MoreDateTime_ExtendedDateTime_Unknown" href="F_MoreDateTime_ExtendedDateTime_Unknown.htm">Unknown</a>
+    </li>
+  </tocItems>
+</toc>

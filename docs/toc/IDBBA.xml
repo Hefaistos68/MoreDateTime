@@ -8,19 +8,18 @@
       <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
     </li>
     <li>
-      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+      <a href="N_MoreDateTime_Exceptions.htm">More<wbr />Date<wbr />Time.<wbr />Exceptions</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">Date<wbr />Time<wbr />Extensions</a>
+      <a href="T_MoreDateTime_Exceptions_InvalidDateException.htm">Invalid<wbr />Date<wbr />Exception</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="Methods_T_MoreDateTime_Extensions_DateTimeExtensions" class="has-submenu" href="Methods_T_MoreDateTime_Extensions_DateTimeExtensions.htm">
-        <span data-tocFile="../toc/IDABBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>Methods</a>
-      <ul class="toc-menu is-hidden"> </ul>
+      <a id="M_MoreDateTime_Exceptions_InvalidDateException__ctor" href="M_MoreDateTime_Exceptions_InvalidDateException__ctor.htm">Constructor</a>
+    </li>
+    <li>
+      <a id="Properties_T_MoreDateTime_Exceptions_InvalidDateException" href="Properties_T_MoreDateTime_Exceptions_InvalidDateException.htm">Properties</a>
     </li>
   </tocItems>
 </toc>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeValueTestExtensions.htm">Date<wbr />Time<wbr />Value<wbr />Test<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_DateTimeValueTestExtensions.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_DateTimeValueTestExtensions_ShouldBe.htm">Should<wbr />Be</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValueTestExtensions_ShouldBe" href="M_MoreDateTime_DateTimeValueTestExtensions_ShouldBe.htm">Should<wbr />Be(<wbr />Date<wbr />Time<wbr />Value, Season)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValueTestExtensions_ShouldBe_1" href="M_MoreDateTime_DateTimeValueTestExtensions_ShouldBe_1.htm">Should<wbr />Be(<wbr />Date<wbr />Time<wbr />Value, Int<wbr />32)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValueTestExtensions_ShouldBe_2" href="M_MoreDateTime_DateTimeValueTestExtensions_ShouldBe_2.htm">Should<wbr />Be(<wbr />Date<wbr />Time<wbr />Value, String)</a>
+    </li>
+  </tocItems>
+</toc>

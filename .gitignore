@@ -335,3 +335,4 @@ ASALocalRun/
 
 # History Extension for VS
 .vshistory/
+/src/MoreDateTime/docs.xml

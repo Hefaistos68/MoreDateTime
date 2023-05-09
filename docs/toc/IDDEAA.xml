@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeValue.htm">Date<wbr />Time<wbr />Value</a>
+    </li>
+    <li>
+      <a href="Operators_T_MoreDateTime_DateTimeValue.htm">Operators</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue_op_Explicit" href="M_MoreDateTime_DateTimeValue_op_Explicit.htm">Explicit Conversion (String to Date<wbr />Time<wbr />Value)</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_DateTimeValue_op_Implicit" class="has-submenu" href="Overload_MoreDateTime_DateTimeValue_op_Implicit.htm">
+        <span data-tocFile="../toc/IDBDEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Implicit</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

@@ -11,16 +11,27 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_DefaultHolidayProvider.htm">Default<wbr />Holiday<wbr />Provider</a>
+      <a href="T_MoreDateTime_DateTimeRange.htm">Date<wbr />Time<wbr />Range</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_DefaultHolidayProvider__ctor" href="M_MoreDateTime_DefaultHolidayProvider__ctor.htm">Constructor</a>
+      <a id="Overload_MoreDateTime_DateTimeRange__ctor" class="has-submenu" href="Overload_MoreDateTime_DateTimeRange__ctor.htm">
+        <span data-tocFile="../toc/IDADAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Constructors</a>
+      <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="Methods_T_MoreDateTime_DefaultHolidayProvider" class="has-submenu" href="Methods_T_MoreDateTime_DefaultHolidayProvider.htm">
+      <a id="Properties_T_MoreDateTime_DateTimeRange" class="has-submenu" href="Properties_T_MoreDateTime_DateTimeRange.htm">
         <span data-tocFile="../toc/IDBDAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Properties</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Methods_T_MoreDateTime_DateTimeRange" class="has-submenu" href="Methods_T_MoreDateTime_DateTimeRange.htm">
+        <span data-tocFile="../toc/IDCDAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Methods</a>
       <ul class="toc-menu is-hidden"> </ul>

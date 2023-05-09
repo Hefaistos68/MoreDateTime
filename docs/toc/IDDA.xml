@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_IDateTimeProvider" class="has-submenu" href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">
+        <span data-tocFile="../toc/IDADA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>IDate<wbr />Time<wbr />Provider</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_IExtendedDateTimeCollectionChild" class="has-submenu" href="T_MoreDateTime_Interfaces_IExtendedDateTimeCollectionChild.htm">
+        <span data-tocFile="../toc/IDBDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>IExtended<wbr />Date<wbr />Time<wbr />Collection<wbr />Child</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_IExtendedDateTimeExtremityProvider" class="has-submenu" href="T_MoreDateTime_Interfaces_IExtendedDateTimeExtremityProvider.htm">
+        <span data-tocFile="../toc/IDCDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>IExtended<wbr />Date<wbr />Time<wbr />Extremity<wbr />Provider</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_IExtendedDateTimeIndependentType" class="has-submenu" href="T_MoreDateTime_Interfaces_IExtendedDateTimeIndependentType.htm">
+        <span data-tocFile="../toc/IDDDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>IExtended<wbr />Date<wbr />Time<wbr />Independent<wbr />Type</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_IHolidayProvider" class="has-submenu" href="T_MoreDateTime_Interfaces_IHolidayProvider.htm">
+        <span data-tocFile="../toc/IDEDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>IHoliday<wbr />Provider</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType" class="has-submenu" href="T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType.htm">
+        <span data-tocFile="../toc/IDFDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>ISingle<wbr />Extended<wbr />Date<wbr />Time<wbr />Type</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Interfaces_RangeDirection" href="T_MoreDateTime_Interfaces_RangeDirection.htm">Range<wbr />Direction</a>
+    </li>
+  </tocItems>
+</toc>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTime.htm">Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_ExtendedDateTime.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_ExtendedDateTime_CompareTo.htm">Compare<wbr />To</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_CompareTo" href="M_MoreDateTime_ExtendedDateTime_CompareTo.htm">Compare<wbr />To(<wbr />Extended<wbr />Date<wbr />Time)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_CompareTo_1" href="M_MoreDateTime_ExtendedDateTime_CompareTo_1.htm">Compare<wbr />To(<wbr />Object)</a>
+    </li>
+  </tocItems>
+</toc>

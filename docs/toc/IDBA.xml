@@ -8,49 +8,37 @@
       <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
     </li>
     <li>
-      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+      <a href="N_MoreDateTime_Exceptions.htm">More<wbr />Date<wbr />Time.<wbr />Exceptions</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="T_MoreDateTime_Extensions_DateOnlyExtensions" class="has-submenu" href="T_MoreDateTime_Extensions_DateOnlyExtensions.htm">
+      <a id="T_MoreDateTime_Exceptions_ConversionException" class="has-submenu" href="T_MoreDateTime_Exceptions_ConversionException.htm">
         <span data-tocFile="../toc/IDABA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Date<wbr />Only<wbr />Extensions</a>
+        </span>Conversion<wbr />Exception</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="T_MoreDateTime_Extensions_DateTimeExtensions" class="has-submenu" href="T_MoreDateTime_Extensions_DateTimeExtensions.htm">
+      <a id="T_MoreDateTime_Exceptions_InvalidDateException" class="has-submenu" href="T_MoreDateTime_Exceptions_InvalidDateException.htm">
         <span data-tocFile="../toc/IDBBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Date<wbr />Time<wbr />Extensions</a>
+        </span>Invalid<wbr />Date<wbr />Exception</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="T_MoreDateTime_Extensions_DateTimeExtensions_DateTruncate" href="T_MoreDateTime_Extensions_DateTimeExtensions_DateTruncate.htm">Date<wbr />Time<wbr />Extensions.<wbr />Date<wbr />Truncate</a>
-    </li>
-    <li>
-      <a id="T_MoreDateTime_Extensions_DateTimeExtensions_TimeUnit" href="T_MoreDateTime_Extensions_DateTimeExtensions_TimeUnit.htm">Date<wbr />Time<wbr />Extensions.<wbr />Time<wbr />Unit</a>
-    </li>
-    <li>
-      <a id="T_MoreDateTime_Extensions_TimeOnlyExtensions" class="has-submenu" href="T_MoreDateTime_Extensions_TimeOnlyExtensions.htm">
-        <span data-tocFile="../toc/IDEBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+      <a id="T_MoreDateTime_Exceptions_InvalidTimeException" class="has-submenu" href="T_MoreDateTime_Exceptions_InvalidTimeException.htm">
+        <span data-tocFile="../toc/IDCBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Time<wbr />Only<wbr />Extensions</a>
+        </span>Invalid<wbr />Time<wbr />Exception</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="T_MoreDateTime_Extensions_TimeSpanExtensions" class="has-submenu" href="T_MoreDateTime_Extensions_TimeSpanExtensions.htm">
-        <span data-tocFile="../toc/IDFBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+      <a id="T_MoreDateTime_Exceptions_ParseException" class="has-submenu" href="T_MoreDateTime_Exceptions_ParseException.htm">
+        <span data-tocFile="../toc/IDDBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Time<wbr />Span<wbr />Extensions</a>
+        </span>Parse<wbr />Exception</a>
       <ul class="toc-menu is-hidden"> </ul>
-    </li>
-    <li>
-      <a id="T_MoreDateTime_Extensions_TimeSpanExtensions_RoundingUnit" href="T_MoreDateTime_Extensions_TimeSpanExtensions_RoundingUnit.htm">Time<wbr />Span<wbr />Extensions.<wbr />Rounding<wbr />Unit</a>
-    </li>
-    <li>
-      <a id="T_MoreDateTime_Extensions_TimeSpanExtensions_TimeSpanTruncate" href="T_MoreDateTime_Extensions_TimeSpanExtensions_TimeSpanTruncate.htm">Time<wbr />Span<wbr />Extensions.<wbr />Time<wbr />Span<wbr />Truncate</a>
     </li>
   </tocItems>
 </toc>

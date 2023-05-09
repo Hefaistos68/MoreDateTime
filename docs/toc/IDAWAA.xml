@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_UnspecifiedExtendedDateTime.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_UnspecifiedExtendedDateTime__ctor.htm">Constructors</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor_1" href="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor_1.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time(<wbr />String)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor" href="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time(<wbr />Serialization<wbr />Info, Streaming<wbr />Context)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor_2" href="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor_2.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time(<wbr />String, String)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor_3" href="M_MoreDateTime_UnspecifiedExtendedDateTime__ctor_3.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time(<wbr />String, String, String)</a>
+    </li>
+  </tocItems>
+</toc>

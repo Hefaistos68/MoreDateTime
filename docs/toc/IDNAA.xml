@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimeFormatParser.htm">Extended<wbr />Date<wbr />Time<wbr />Format<wbr />Parser</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="Methods_T_MoreDateTime_ExtendedDateTimeFormatParser" class="has-submenu" href="Methods_T_MoreDateTime_ExtendedDateTimeFormatParser.htm">
+        <span data-tocFile="../toc/IDANAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

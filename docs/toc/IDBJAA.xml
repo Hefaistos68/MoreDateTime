@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTime.htm">Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_ExtendedDateTime.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Comparer" href="P_MoreDateTime_ExtendedDateTime_Comparer.htm">Comparer</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Day" href="P_MoreDateTime_ExtendedDateTime_Day.htm">Day</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_DayOfWeek" href="P_MoreDateTime_ExtendedDateTime_DayOfWeek.htm">Day<wbr />Of<wbr />Week</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Hour" href="P_MoreDateTime_ExtendedDateTime_Hour.htm">Hour</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsEmpty" href="P_MoreDateTime_ExtendedDateTime_IsEmpty.htm">Is<wbr />Empty</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsExplicit" href="P_MoreDateTime_ExtendedDateTime_IsExplicit.htm">Is<wbr />Explicit</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsLongYear" href="P_MoreDateTime_ExtendedDateTime_IsLongYear.htm">Is<wbr />Long<wbr />Year</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsOpen" href="P_MoreDateTime_ExtendedDateTime_IsOpen.htm">Is<wbr />Open</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsOpenLeft" href="P_MoreDateTime_ExtendedDateTime_IsOpenLeft.htm">Is<wbr />Open<wbr />Left</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsOpenRight" href="P_MoreDateTime_ExtendedDateTime_IsOpenRight.htm">Is<wbr />Open<wbr />Right</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_IsUnknown" href="P_MoreDateTime_ExtendedDateTime_IsUnknown.htm">Is<wbr />Unknown</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Minute" href="P_MoreDateTime_ExtendedDateTime_Minute.htm">Minute</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Month" href="P_MoreDateTime_ExtendedDateTime_Month.htm">Month</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Now" href="P_MoreDateTime_ExtendedDateTime_Now.htm">Now</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Precision" href="P_MoreDateTime_ExtendedDateTime_Precision.htm">Precision</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Season" href="P_MoreDateTime_ExtendedDateTime_Season.htm">Season</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Second" href="P_MoreDateTime_ExtendedDateTime_Second.htm">Second</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_TimeZoneOffset" href="P_MoreDateTime_ExtendedDateTime_TimeZoneOffset.htm">Time<wbr />Zone<wbr />Offset</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_UtcOffset" href="P_MoreDateTime_ExtendedDateTime_UtcOffset.htm">Utc<wbr />Offset</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_Year" href="P_MoreDateTime_ExtendedDateTime_Year.htm">Year</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_YearExponent" href="P_MoreDateTime_ExtendedDateTime_YearExponent.htm">Year<wbr />Exponent</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTime_YearPrecision" href="P_MoreDateTime_ExtendedDateTime_YearPrecision.htm">Year<wbr />Precision</a>
+    </li>
+  </tocItems>
+</toc>

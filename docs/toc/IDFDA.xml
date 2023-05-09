@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType.htm">ISingle<wbr />Extended<wbr />Date<wbr />Time<wbr />Type</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="Properties_T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType" class="has-submenu" href="Properties_T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType.htm">
+        <span data-tocFile="../toc/IDAFDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Properties</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Methods_T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType" href="Methods_T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType.htm">Methods</a>
+    </li>
+  </tocItems>
+</toc>

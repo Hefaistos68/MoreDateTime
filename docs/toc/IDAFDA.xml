@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType.htm">ISingle<wbr />Extended<wbr />Date<wbr />Time<wbr />Type</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_Interfaces_ISingleExtendedDateTimeType.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Day" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Day.htm">Day</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Hour" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Hour.htm">Hour</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_IsOpen" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_IsOpen.htm">Is<wbr />Open</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_IsUnknown" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_IsUnknown.htm">Is<wbr />Unknown</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Minute" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Minute.htm">Minute</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Month" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Month.htm">Month</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Season" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Season.htm">Season</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Second" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Second.htm">Second</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_TimeZoneOffset" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_TimeZoneOffset.htm">Time<wbr />Zone<wbr />Offset</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Year" href="P_MoreDateTime_Interfaces_ISingleExtendedDateTimeType_Year.htm">Year</a>
+    </li>
+  </tocItems>
+</toc>
