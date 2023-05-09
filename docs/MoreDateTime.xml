@@ -125,6 +125,18 @@
         </markup>
       </summary>
     </member>
+    <member name="T:MoreDateTime.DateTimeOffsetExtensions">
+      <summary>
+            The date time offset extensions.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeOffsetExtensions.ToExtendedDateTime(System.DateTimeOffset)">
+      <summary>
+            Tos the extended date time.
+            </summary>
+      <param name="dateTimeOffset">The dateTimeOffset to convert into an ExtendedDateTime object</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
     <member name="T:MoreDateTime.DateTimeProvider">
       <summary>
             A date and time provider, that can be used to simulate a certain date or time<br />
@@ -153,13 +165,8 @@
     </member>
     <member name="P:MoreDateTime.DateTimeProvider.Now">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>P:MoreDateTime.DateTimeProvider.Now</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the current DateTime (or the mock value if set)
+            </summary>
     </member>
     <member name="M:MoreDateTime.DateTimeProvider.SetMockDateTime(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
       <summary>
@@ -176,33 +183,18 @@
     </member>
     <member name="P:MoreDateTime.DateTimeProvider.Today">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>P:MoreDateTime.DateTimeProvider.Today</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the date part of the current DateTime with the time set to 00:00:00 (or the mock value if set)
+            </summary>
     </member>
     <member name="P:MoreDateTime.DateTimeProvider.UtcNow">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>P:MoreDateTime.DateTimeProvider.UtcNow</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the current UTC DateTime (or the mock value if set)
+            </summary>
     </member>
     <member name="P:MoreDateTime.DateTimeProvider.UtcToday">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>P:MoreDateTime.DateTimeProvider.UtcToday</parameter>
-          </include>
-        </markup>
-      </summary>
+            Gets the date part of the current UTC DateTime with the time set to 00:00:00 (or the mock value if set)
+            </summary>
     </member>
     <member name="T:MoreDateTime.DateTimeRange">
       <summary>
@@ -319,6 +311,228 @@
         </markup>
       </summary>
     </member>
+    <member name="T:MoreDateTime.DateTimeValue">
+      <summary>
+            The date time value class, which can be a string or an integer, with flags.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeValue" /> class.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.#ctor(System.Int32,MoreDateTime.DateTimeValue.ValueFlags)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeValue" /> class.
+            </summary>
+      <param name="value">The value.</param>
+      <param name="flags">The flags.</param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.#ctor(System.String,MoreDateTime.DateTimeValue.ValueFlags)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.DateTimeValue" /> class.
+            </summary>
+      <param name="value">The value.</param>
+      <param name="flags">The flags.</param>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.Empty">
+      <summary>
+            An object representing an empty value.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.InsignificantDigits">
+      <summary>
+            Gets or sets the insignificant digits, the number of digits in the number minus the significant digits.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsApproximate">
+      <summary>
+            Gets or sets a value indicating whether is approximate.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsExact">
+      <summary>
+            Gets or sets a value indicating whether is exact.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsLong">
+      <summary>
+            Gets or sets a value indicating whether is exact.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsNone">
+      <summary>
+            Gets or sets a value indicating whether is exact.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsRegularYear">
+      <summary>
+            Gets a value indicating whether the year is between -9999 and 9999.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsUncertain">
+      <summary>
+            Gets or sets a value indicating whether is uncertain.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsUnknown">
+      <summary>
+            Gets or sets a value indicating whether is unknown.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.IsUnspecified">
+      <summary>
+            Gets or sets a value indicating whether is unspecified.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.op_Explicit(System.String)~MoreDateTime.DateTimeValue">
+      <summary>
+            Explicit conversion from string to DateTimeValue
+            </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:MoreDateTime.DateTimeValue.op_Explicit(System.String)~MoreDateTime.DateTimeValue</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.op_Implicit(MoreDateTime.DateTimeValue)~System.Int32">
+      <summary>
+            explicit conversion from DateTimeValue to integer
+            </summary>
+      <param name="dtv">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dtv</parameter>
+            <parameter>M:MoreDateTime.DateTimeValue.op_Implicit(MoreDateTime.DateTimeValue)~System.Int32</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.op_Implicit(MoreDateTime.DateTimeValue)~System.String">
+      <summary>
+            Implicit conversion from DateTimeValue to string
+            </summary>
+      <param name="dtv">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>dtv</parameter>
+            <parameter>M:MoreDateTime.DateTimeValue.op_Implicit(MoreDateTime.DateTimeValue)~System.String</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.op_Implicit(System.Int32)~MoreDateTime.DateTimeValue">
+      <summary>
+            implicit conversion from integer to DateTimeValue
+            </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:MoreDateTime.DateTimeValue.op_Implicit(System.Int32)~MoreDateTime.DateTimeValue</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.PrefixQualifier">
+      <summary>
+            Gets or sets a value indicating whether the qualifier should be prefixed (or suffixed if false)
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.QualifierFlags">
+      <summary>
+            Gets the flags associated with Qualifiers
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.DateTimeValue.SignificantDigits">
+      <summary>
+            Gets or sets the significant digits.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.ToNumberString">
+      <summary>
+            Formats the integer value as a string with leading zeros according to the significant digits.
+            </summary>
+      <returns>A string.</returns>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValue.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:MoreDateTime.DateTimeValue.ValueFlags">
+      <summary>
+            The value flags, specifying whether the day is approximate, uncertain, unspecified, unknown, or exact.
+            it also can be a mix of most flags, and be Long to indicate its a value above the normal range (used for years).
+            </summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.None">
+      <summary>Value was not define at all</summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.Uncertain">
+      <summary>Value is uncertain (?)</summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.Approximate">
+      <summary>Value is approximate (~)</summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.Unknown">
+      <summary>Value is unknown</summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.Unspecified">
+      <summary>Value is unspecified</summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.Exact">
+      <summary>Value is exact</summary>
+    </member>
+    <member name="F:MoreDateTime.DateTimeValue.ValueFlags.Long">
+      <summary>Value is a year value above 9999 or below -9999 (or specified with E)</summary>
+    </member>
+    <member name="T:MoreDateTime.DateTimeValueTestExtensions">
+      <summary>
+            The date time value unit test extensions for Shouldly
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValueTestExtensions.ShouldBe(MoreDateTime.DateTimeValue,MoreDateTime.Season)">
+      <summary>
+            compares the value to the expected value
+            </summary>
+      <param name="dtv">The dtv.</param>
+      <param name="value">The value.</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValueTestExtensions.ShouldBe(MoreDateTime.DateTimeValue,System.Int32)">
+      <summary>
+            compares the value to the expected value
+            </summary>
+      <param name="dtv">The dtv.</param>
+      <param name="value">The value.</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="M:MoreDateTime.DateTimeValueTestExtensions.ShouldBe(MoreDateTime.DateTimeValue,System.String)">
+      <summary>
+            compares the value to the expected value
+            </summary>
+      <param name="dtv">The dtv.</param>
+      <param name="value">The value.</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="T:MoreDateTime.DayExceedsDaysInMonthStrategy">
+      <summary>
+            Strategy for excess days in a month
+            </summary>
+    </member>
+    <member name="F:MoreDateTime.DayExceedsDaysInMonthStrategy.RoundDown">
+      <summary>Days will be rounded down to the next possible day (e.g. 31 to 30)</summary>
+    </member>
+    <member name="F:MoreDateTime.DayExceedsDaysInMonthStrategy.Overflow">
+      <summary>Days will overflow into the next month (e.g. 31 to 01)</summary>
+    </member>
     <member name="T:MoreDateTime.DefaultHolidayProvider">
       <summary>
             The default holiday provider, has only 4 common holidays, 01 Jan, 01 May, 25 Dec and 26 Dec
@@ -335,87 +549,1113 @@
     </member>
     <member name="M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="date">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>date</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="cultureInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>cultureInfo</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </summary>
+      <param name="date">The date</param>
+      <param name="cultureInfo">The culture info.</param>
+      <returns>A bool.</returns>
     </member>
     <member name="M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="date">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>date</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="cultureInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>cultureInfo</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </summary>
+      <param name="date">The date</param>
+      <param name="cultureInfo">The culture info.</param>
+      <returns>A bool.</returns>
     </member>
     <member name="M:MoreDateTime.DefaultHolidayProvider.NumberOfKnownHolidays(System.Int32,System.Globalization.CultureInfo)">
+      <summary>
+            Gets the number of known holidays
+            </summary>
+      <param name="year">The year for which the number of holidays is requested</param>
+      <param name="cultureInfo">The </param>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTime">
+      <summary>
+            The extended date time according to ISO 8601-2:2019 ExtendedDateTimeFormat Profile
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTime" /> class.
+            </summary>
+      <param name="year">The year.</param>
+      <param name="month">The month.</param>
+      <param name="day">The day.</param>
+      <param name="hour">The hour.</param>
+      <param name="minute">The minute.</param>
+      <param name="second">The second.</param>
+      <param name="utcHourOffset">The utc hour offset.</param>
+      <param name="utcMinuteOffset">The utc minute offset.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Nullable{System.TimeSpan})">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTime" /> class.
+            </summary>
+      <param name="year">The year.</param>
+      <param name="month">The month.</param>
+      <param name="day">The day.</param>
+      <param name="hour">The hour.</param>
+      <param name="minute">The minute.</param>
+      <param name="second">The second.</param>
+      <param name="utcOffset">The utc offset.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTime" /> class.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTime" /> class from a ExtendedDateTimeFormat string
+            </summary>
+      <param name="info">The ExtendedDateTimeFormat string</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.AddMonths(System.Int32,MoreDateTime.DayExceedsDaysInMonthStrategy)">
+      <summary>
+            Adds months
+            </summary>
+      <param name="count">The number of months to add</param>
+      <param name="dayExceedsDaysInMonthStrategy">How days exceeding days in months should be handled</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.AddYears(System.Int32)">
+      <summary>
+            Adds years
+            </summary>
+      <param name="count">The number of years</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.Clone">
+      <summary>
+            Clones the object
+            </summary>
+      <returns>An object.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Comparer">
+      <summary>
+            Gets the comparer.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.CompareTo(MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Compares to another ExtendedDateTime object
+            </summary>
+      <param name="other">The other.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.CompareTo(System.Object)">
+      <summary>
+            Compares the to.
+            </summary>
+      <param name="obj">The obj.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Day">
+      <summary>
+            Gets the day.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.DayOfWeek">
+      <summary>
+            Gets the day of week.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.Earliest">
+      <summary>
+            Gets the earliest possible date time
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.Equals(MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Compares with an ExtendedDateTime for equality
+            </summary>
+      <param name="other">The other object</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.Equals(System.Object)">
+      <summary>
+            Compares with an object for equality
+            </summary>
+      <param name="obj">The object</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.FromLongYear(System.Int32)">
+      <summary>
+            Creates a ExtendedDateTime with long year.
+            </summary>
+      <param name="year">The year</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.FromScientificNotation(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+      <summary>
+            Creates a ExtendedDateTime from a scientific notation.
+            </summary>
+      <param name="significand">The significand</param>
+      <param name="exponent">The exponent</param>
+      <param name="precision">The precision</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.GetHashCode">
+      <summary>
+            Gets the hash code.
+            </summary>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Gets the object data.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.GetSchema">
+      <summary>
+            Gets the schema.
+            </summary>
+      <returns>A XmlSchema.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Hour">
+      <summary>
+            Gets the hour.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsEmpty">
+      <summary>
+            Gets a value indicating whether all the members are unknown.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsExplicit">
+      <summary>
+            Gets a value indicating whether this value is explicit (with unit specifier)
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsLongYear">
+      <summary>
+            Gets or sets a value indicating whether the year is long
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsOpen">
+      <summary>
+            Gets a value indicating whether this value is open (means unlimited to either up or down)
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsOpenLeft">
+      <summary>
+            Gets a value indicating whether this value is open (means unlimited to either up or down)
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsOpenRight">
+      <summary>
+            Gets a value indicating whether this value is open (means unlimited to either up or down)
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.IsUnknown">
+      <summary>
+            Gets a value indicating whether this value unknown, similar to IsOpen
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.Latest">
+      <summary>
+            Gets the latest possible date time
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="F:MoreDateTime.ExtendedDateTime.MaxValue">
       <summary>
         <markup>
           <include item="SMCMissingTag">
             <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.NumberOfKnownHolidays(System.Int32,System.Globalization.CultureInfo)</parameter>
+            <parameter>F:MoreDateTime.ExtendedDateTime.MaxValue</parameter>
           </include>
         </markup>
       </summary>
-      <param name="year">
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Minute">
+      <summary>
+            Gets the minute.
+            </summary>
+    </member>
+    <member name="F:MoreDateTime.ExtendedDateTime.MinValue">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:MoreDateTime.ExtendedDateTime.MinValue</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Month">
+      <summary>
+            Gets the month.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Now">
+      <summary>
+            Gets the now.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_Addition(MoreDateTime.ExtendedDateTime,System.TimeSpan)">
+      <summary>
+            Addition operator for adding TimeSpan
+            </summary>
+      <param name="e">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>year</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.NumberOfKnownHolidays(System.Int32,System.Globalization.CultureInfo)</parameter>
+            <parameter>e</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Addition(MoreDateTime.ExtendedDateTime,System.TimeSpan)</parameter>
           </include>
         </markup>
       </param>
-      <param name="cultureInfo">
+      <param name="t">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>cultureInfo</parameter>
-            <parameter>M:MoreDateTime.DefaultHolidayProvider.NumberOfKnownHolidays(System.Int32,System.Globalization.CultureInfo)</parameter>
+            <parameter>t</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Addition(MoreDateTime.ExtendedDateTime,System.TimeSpan)</parameter>
           </include>
         </markup>
       </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_Equality(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Equal operator
+            </summary>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Equality(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Equality(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_GreaterThan(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Greater operator
+            </summary>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_GreaterThan(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_GreaterThan(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_GreaterThanOrEqual(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Greater or equal operator
+            </summary>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_GreaterThanOrEqual(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_GreaterThanOrEqual(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_Inequality(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Comparison operator
+            </summary>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Inequality(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Inequality(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_LessThan(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Less operator
+            </summary>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_LessThan(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_LessThan(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_LessThanOrEqual(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Less or equal operator
+            </summary>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_LessThanOrEqual(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_LessThanOrEqual(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_Subtraction(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Subtraction operator
+            </summary>
+      <param name="e2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e2</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Subtraction(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e1</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Subtraction(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.op_Subtraction(MoreDateTime.ExtendedDateTime,System.TimeSpan)">
+      <summary>
+            Subtraction operator for TimeSpan
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Subtraction(MoreDateTime.ExtendedDateTime,System.TimeSpan)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="t">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>t</parameter>
+            <parameter>M:MoreDateTime.ExtendedDateTime.op_Subtraction(MoreDateTime.ExtendedDateTime,System.TimeSpan)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+    <member name="F:MoreDateTime.ExtendedDateTime.Open">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:MoreDateTime.ExtendedDateTime.Open</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.Parse(System.String)">
+      <summary>
+            Parses a string in EDT format
+            </summary>
+      <param name="extendedDateTimeString">The extended date time string.</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Precision">
+      <summary>
+            Gets or sets the precision.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Parses from an XmlReader
+            </summary>
+      <param name="reader">The reader.</param>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Season">
+      <summary>
+            Gets the season.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Second">
+      <summary>
+            Gets the second.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.SubtractMonths(System.Int32)">
+      <summary>
+            Subtracts months
+            </summary>
+      <param name="count">The number of months</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.SubtractYears(System.Int32)">
+      <summary>
+            Subtracts years
+            </summary>
+      <param name="count">The number of years</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.TimeZoneOffset">
+      <summary>
+            Gets the time zone offset.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.ToRoundedPrecision(MoreDateTime.ExtendedDateTimePrecision,System.Boolean)">
+      <summary>
+            Rounds to the given precision
+            </summary>
+      <param name="precision">The precision</param>
+      <param name="roundUp">If true, round up.</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="F:MoreDateTime.ExtendedDateTime.Unknown">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:MoreDateTime.ExtendedDateTime.Unknown</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.UtcOffset">
+      <summary>
+            Gets the utc offset.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTime.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Writes a string representation to a XmlWriter
+            </summary>
+      <param name="writer">The writer.</param>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.Year">
+      <summary>
+            Gets the year.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.YearExponent">
+      <summary>
+            Gets the year exponent.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTime.YearPrecision">
+      <summary>
+            Gets the year precision, the significant digits of the year.
+            </summary>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimeCalculator">
+      <summary>
+            The extended date time calculator.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.AddMonths(MoreDateTime.ExtendedDateTime,System.Int32,MoreDateTime.DayExceedsDaysInMonthStrategy)">
+      <summary>
+            Adds the months.
+            </summary>
+      <param name="e">The e.</param>
+      <param name="monthsToAdd">The months to add.</param>
+      <param name="dayExceedsDaysInMonthStrategy">The day exceeds days in month strategy.</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.CenturyOfYear(System.Int32)">
+      <summary>
+            Number of Centuries of the year
+            </summary>
+      <param name="year">The year.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.DaysInMonth(System.Int32)">
+      <summary>
+            Number of Days in the month
+            </summary>
+      <param name="month">The month.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.DaysInMonth(System.Int32,System.Int32)">
+      <summary>
+            Number of Days in the month
+            </summary>
+      <param name="year">The year.</param>
+      <param name="month">The month.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.DaysInYear(System.Int32)">
+      <summary>
+            Number of days in the year
+            </summary>
+      <param name="year">The year.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.DaysToMonth(System.Int32,System.Int32)">
+      <summary>
+            Number of days since day 1 of the year until the given month
+            </summary>
+      <param name="year">The year.</param>
+      <param name="month">The month.</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.IsLeapYear(System.Int32)">
+      <summary>
+            Tests if the given year is a leap year
+            </summary>
+      <param name="year">The year</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCalculator.YearOfCentury(System.Int32)">
+      <summary>
+            Number of years since the beginning of the years century
+            </summary>
+      <param name="year">The year</param>
+      <returns>An int.</returns>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimeCollection">
+      <summary>
+            The extended date time collection.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimeCollection" /> class.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimeCollection" /> class.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.Earliest">
+      <summary>
+            Earliests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Gets the object data.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.GetSchema">
+      <summary>
+            Gets the schema.
+            </summary>
+      <returns>A XmlSchema.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeCollection.IsBracketedSet">
+      <summary>
+            Gets or sets a value indicating whether this is a bracketed set. i.e. Should contain [ and ]
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.Latest">
+      <summary>
+            Latests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.Parse(System.String)">
+      <summary>
+            Parses the.
+            </summary>
+      <param name="extendedDateTimeCollectionString">The extended date time collection string.</param>
+      <returns>An ExtendedDateTimeCollection.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Reads the xml.
+            </summary>
+      <param name="reader">The reader.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeCollection.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Writes the xml.
+            </summary>
+      <param name="writer">The writer.</param>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimeComparer">
+      <summary>
+            The extended date time comparer.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeComparer.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.ExtendedDateTimeComparer</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeComparer.Compare(MoreDateTime.ExtendedDateTime,MoreDateTime.ExtendedDateTime)">
+      <summary>
+            Compares the two ExtendedDateTimes
+            </summary>
+      <param name="x">The first</param>
+      <param name="y">The second</param>
+      <returns>-1 when first is less or null, +1 when first is greater or second is null</returns>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimeFormatParser">
+      <summary>
+            The extended date time format parser.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeFormatParser.Parse(System.String)">
+      <summary>
+            Parses a EDT formatted string<br />
+            "-"	a minus sign represented by the character "-" to indicate a negative value<br />
+            
+            "E"	the exponent designator, represented by the character "E", preceding the component
+            	which represents the exponential part of a time scale component value<br />
+            
+            "S"	the significant digit designator, represented by the character "S", preceding the component 
+            	which represents the number of significant digits of the time scale component value<br />
+            	
+            "X"	the unspecified digit, used within a date with unspecified part, represented by the character "X", 
+            	indicating that the time scale component value of the specific digit it replaces is unspecified
+            	
+            "?"	qualification modifier, represented by the character "?", indicating that the time scale component value it applies to is uncertain<br />
+            
+            "~" qualification modifier, represented by the character indicating that the time scale component value it applies to is approximate<br />
+            
+            "%"	qualification modifier, represented by the character indicating that the time scale	component value it applies to is both uncertain and approximate<br />
+            
+            ".."x	indicating "on or after" value x if applied as a suffix to a time scale component<br />
+            
+            x".."	indicating "between x and y" (inclusive) when applied between two time scale components<br /></summary>
+      <param name="EDTFtedString">The EDT format string.</param>
+      <returns>An IExtendedDateTimeIndependentType.</returns>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimeInterval">
+      <summary>
+            The extended date time interval.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.#ctor(MoreDateTime.Interfaces.ISingleExtendedDateTimeType,MoreDateTime.Interfaces.ISingleExtendedDateTimeType)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimeInterval" /> class.
+            </summary>
+      <param name="start">The start.</param>
+      <param name="end">The end.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimeInterval" /> class.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.Earliest">
+      <summary>
+            Earliests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeInterval.End">
+      <summary>
+            Gets or sets the end.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Gets the object data.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.GetSchema">
+      <summary>
+            Gets the schema.
+            </summary>
+      <returns>A XmlSchema.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeInterval.IsDottedInterval">
+      <summary>
+            Gets a value indicating whether this pair is dotted interval (both start and end are valid and separated by ..)
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.Latest">
+      <summary>
+            Latests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.Parse(System.String)">
+      <summary>
+            Parses the.
+            </summary>
+      <param name="extendedDateTimeIntervalString">The extended date time interval string.</param>
+      <returns>An ExtendedDateTimeInterval.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Reads the xml.
+            </summary>
+      <param name="reader">The reader.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.Span">
+      <summary>
+            Spans the.
+            </summary>
+      <returns>A TimeSpan.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeInterval.Start">
+      <summary>
+            Gets or sets the start.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.ToString">
+      <summary>
+            Tos the string.
+            </summary>
+      <returns>A string.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeInterval.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Writes the xml.
+            </summary>
+      <param name="writer">The writer.</param>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimePossibilityCollection">
+      <summary>
+            The extended date time possibility collection.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimePossibilityCollection" /> class.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimePossibilityCollection" /> class.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Day">
+      <summary>
+            Gets the day.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.Earliest">
+      <summary>
+            Earliests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Gets the object data.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.GetSchema">
+      <summary>
+            Gets the schema.
+            </summary>
+      <returns>A XmlSchema.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.GetSpan">
+      <summary>
+            Gets the span.
+            </summary>
+      <returns>A TimeSpan.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Hour">
+      <summary>
+            Gets the hour.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.IsOpen">
+      <summary>
+            Returns whether this instance is open, means it has defined start or end
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.IsUnknown">
+      <summary>
+            Returns whether this instance is unknown, has not been defined at all, as in "/2000" where the left part is unknown
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.Latest">
+      <summary>
+            Latests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Minute">
+      <summary>
+            Gets the minute.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Month">
+      <summary>
+            Gets the month.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.Parse(System.String)">
+      <summary>
+            Parses the.
+            </summary>
+      <param name="possibilityCollectionString">The possibility collection string.</param>
+      <returns>An ExtendedDateTimePossibilityCollection.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Reads the xml.
+            </summary>
+      <param name="reader">The reader.</param>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Season">
+      <summary>
+            Gets the Season
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Second">
+      <summary>
+            Gets the second.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.TimeZoneOffset">
+      <summary>
+            Gets the time zone offset.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.ToString">
+      <summary>
+            Tos the string.
+            </summary>
+      <returns>A string.</returns>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimePossibilityCollection.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Writes the xml.
+            </summary>
+      <param name="writer">The writer.</param>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimePossibilityCollection.Year">
+      <summary>
+            Gets the year.
+            </summary>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimePrecision">
+      <summary>
+            The extended date time precision, specifies the precision of the date time object, the higher the precision the more accurate the date time object is.<br />
+            For example: a precision of Day means there are no time components, a precision of Hour means there are no minutes or seconds, etc.
+            </summary>
+    </member>
+    <member name="T:MoreDateTime.ExtendedDateTimeRange">
+      <summary>
+            The extended date time range.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeRange.#ctor(MoreDateTime.Interfaces.ISingleExtendedDateTimeType,MoreDateTime.Interfaces.ISingleExtendedDateTimeType)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.ExtendedDateTimeRange" /> class.
+            </summary>
+      <param name="start">The start.</param>
+      <param name="end">The end.</param>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeRange.Earliest">
+      <summary>
+            Earliests the.
+            </summary>
+      <returns>An ExtendedDateTime</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeRange.End">
+      <summary>
+            Gets or sets the end.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeRange.HasEnd">
+      <summary>
+            Gets a value indicating whether End has a valid value
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeRange.HasStart">
+      <summary>
+            Gets a value indicating whether Start has a valid value
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeRange.IsOpen">
+      <summary>
+            Gets or sets a value indicating whether is open. (indicated with "..")
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeRange.IsRange">
+      <summary>
+            Gets a value indicating whether this pair is a range (both start and end are valid)
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeRange.Latest">
+      <summary>
+            Latests the.
+            </summary>
+      <returns>An ExtendedDateTime</returns>
+    </member>
+    <member name="P:MoreDateTime.ExtendedDateTimeRange.Start">
+      <summary>
+            Gets or sets the start.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.ExtendedDateTimeRange.ToString">
+      <summary>
+            Tos the string.
+            </summary>
+      <returns>A string.</returns>
+    </member>
+    <member name="T:MoreDateTime.ExtendedTimeSpan">
+      <summary>
+            An timespan class adapted for the ExtendedDateTime class
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.Days">
+      <summary>
+            Gets the days.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.Hours">
+      <summary>
+            Gets the hours.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.Minutes">
+      <summary>
+            Gets the minutes.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.Months">
+      <summary>
+            Gets the months.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.Seconds">
+      <summary>
+            Gets the seconds.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TimeSpan">
+      <summary>
+            Gets the time span.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TotalDays">
+      <summary>
+            Gets the total days.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TotalHours">
+      <summary>
+            Gets the total hours.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TotalMinutes">
+      <summary>
+            Gets the total minutes.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TotalMonths">
+      <summary>
+            Gets the total months.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TotalSeconds">
+      <summary>
+            Gets the total seconds.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.TotalYears">
+      <summary>
+            Gets the total years.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.ExtendedTimeSpan.Years">
+      <summary>
+            Gets the years.
+            </summary>
     </member>
     <member name="T:MoreDateTime.NullHolidayProvider">
       <summary>
@@ -433,59 +1673,24 @@
     </member>
     <member name="M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="date">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>date</parameter>
-            <parameter>M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="cultureInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>cultureInfo</parameter>
-            <parameter>M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateOnly,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </summary>
+      <param name="date">The date</param>
+      <param name="cultureInfo">The culture info.</param>
+      <returns>A bool.</returns>
     </member>
     <member name="M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)">
       <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="date">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>date</parameter>
-            <parameter>M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="cultureInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>cultureInfo</parameter>
-            <parameter>M:MoreDateTime.NullHolidayProvider.IsPublicHoliday(System.DateTime,System.Globalization.CultureInfo)</parameter>
-          </include>
-        </markup>
-      </param>
+            Checks whether the given date is a public holiday for the given Calendar in CultureInfo
+            </summary>
+      <param name="date">The date</param>
+      <param name="cultureInfo">The culture info.</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="T:MoreDateTime.Season">
+      <summary>
+            The season.
+            </summary>
     </member>
     <member name="T:MoreDateTime.TimeOnlyRange">
       <summary>
@@ -587,6 +1792,197 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="T:MoreDateTime.UnspecifiedExtendedDateTime">
+      <summary>
+            The unspecified extended date time.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.UnspecifiedExtendedDateTime" /> class.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.UnspecifiedExtendedDateTime" /> class.
+            </summary>
+      <param name="year">The year.</param>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.UnspecifiedExtendedDateTime" /> class.
+            </summary>
+      <param name="year">The year.</param>
+      <param name="month">The month.</param>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.#ctor(System.String,System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.UnspecifiedExtendedDateTime" /> class.
+            </summary>
+      <param name="year">The year.</param>
+      <param name="month">The month.</param>
+      <param name="day">The day.</param>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Day">
+      <summary>
+            Gets the day.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.Earliest">
+      <summary>
+            Earliests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            Gets the object data.
+            </summary>
+      <param name="info">The info.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.GetSchema">
+      <summary>
+            Gets the schema.
+            </summary>
+      <returns>A XmlSchema.</returns>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Hour">
+      <summary>
+            Gets the hour.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.IsOpen">
+      <summary>
+            Returns whether this instance is open, means it has defined start or end
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.IsUnknown">
+      <summary>
+            Returns whether this instance is unknown, has not been defined at all, as in "/2000" where the left part is unknown
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.Latest">
+      <summary>
+            Latests the.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Minute">
+      <summary>
+            Gets the minute.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Month">
+      <summary>
+            Gets the month.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.Parse(System.String)">
+      <summary>
+            Parses the.
+            </summary>
+      <param name="unspecifiedExtendedDateTimeString">The unspecified extended date time string.</param>
+      <returns>An UnspecifiedExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Reads the xml.
+            </summary>
+      <param name="reader">The reader.</param>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Season">
+      <summary>
+            Gets the Season
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Second">
+      <summary>
+            Gets the second.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.TimeZoneOffset">
+      <summary>
+            Gets the time zone offset.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.ToPossibilityCollection">
+      <summary>
+            Tos the possibility collection.
+            </summary>
+      <returns>An ExtendedDateTimePossibilityCollection.</returns>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.ToString">
+      <summary>
+            Tos the string.
+            </summary>
+      <returns>A string.</returns>
+    </member>
+    <member name="M:MoreDateTime.UnspecifiedExtendedDateTime.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+            Writes the xml.
+            </summary>
+      <param name="writer">The writer.</param>
+    </member>
+    <member name="P:MoreDateTime.UnspecifiedExtendedDateTime.Year">
+      <summary>
+            Gets the year.
+            </summary>
+    </member>
+    <member name="T:MoreDateTime.Exceptions.ConversionException">
+      <summary>
+            The conversion exception.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Exceptions.ConversionException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.Exceptions.ConversionException" /> class.
+            </summary>
+      <param name="message">The source.</param>
+    </member>
+    <member name="T:MoreDateTime.Exceptions.InvalidDateException">
+      <summary>
+            The invalid date exception.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Exceptions.InvalidDateException.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.Exceptions.InvalidDateException" /> class.
+            </summary>
+      <param name="message">The message.</param>
+      <param name="invalidString">The invalid string.</param>
+    </member>
+    <member name="T:MoreDateTime.Exceptions.InvalidTimeException">
+      <summary>
+            The invalid time exception.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Exceptions.InvalidTimeException.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.Exceptions.InvalidTimeException" /> class.
+            </summary>
+      <param name="message">The message.</param>
+      <param name="invalidString">The invalid string.</param>
+    </member>
+    <member name="T:MoreDateTime.Exceptions.ParseException">
+      <summary>
+            The parse exception.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Exceptions.ParseException.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:MoreDateTime.Exceptions.ParseException" /> class.
+            </summary>
+      <param name="message">The error message</param>
+      <param name="invalidString">The invalid string.</param>
+    </member>
+    <member name="P:MoreDateTime.Exceptions.ParseException.InvalidString">
+      <summary>
+            Gets the invalid string.
+            </summary>
     </member>
     <member name="T:MoreDateTime.Extensions.DateOnlyExtensions">
       <summary>
@@ -1426,7 +2822,7 @@
     </member>
     <member name="T:MoreDateTime.Extensions.DateTimeExtensions">
       <summary>
-            DateTime related extension methods
+            The date time extensions.
             </summary>
     </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.AddWeeks(System.DateTime,System.Double)">
@@ -2298,6 +3694,20 @@
       <param name="timeSpan">A positive time interval</param>
       <returns>An object whose value is the sum of the date and time represented by this instance minus the time interval represented by value</returns>
     </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.ToExtendedDateTime(System.DateOnly)">
+      <summary>
+            Converts a DateTime to a ExtendedDateTime
+            </summary>
+      <param name="d">The d.</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.Extensions.DateTimeExtensions.ToExtendedDateTime(System.DateTime)">
+      <summary>
+            Converts a DateTime to a ExtendedDateTime
+            </summary>
+      <param name="d">The d.</param>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
     <member name="M:MoreDateTime.Extensions.DateTimeExtensions.ToSqlString(System.DateTime)">
       <summary>
             Converts a DateTime value to an SQL appropriate format (yyyy-MM-ddThh:mm:ss.ffffff+00:00), independent of the current locale
@@ -3031,6 +4441,33 @@
             Gets the date part of the current UTC DateTime with the time set to 00:00:00 (or the mock value if set)
             </summary>
     </member>
+    <member name="T:MoreDateTime.Interfaces.IExtendedDateTimeCollectionChild">
+      <summary>
+            The extended date time collection child interface
+            </summary>
+    </member>
+    <member name="T:MoreDateTime.Interfaces.IExtendedDateTimeExtremityProvider">
+      <summary>
+            The extended date time extremity provider, provides methods to get the earliest and latest possible date times
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Interfaces.IExtendedDateTimeExtremityProvider.Earliest">
+      <summary>
+            Gets the earliest possible date time.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="M:MoreDateTime.Interfaces.IExtendedDateTimeExtremityProvider.Latest">
+      <summary>
+            Gets the latest possible date time.
+            </summary>
+      <returns>An ExtendedDateTime.</returns>
+    </member>
+    <member name="T:MoreDateTime.Interfaces.IExtendedDateTimeIndependentType">
+      <summary>
+            The extended date time independent type interface
+            </summary>
+    </member>
     <member name="T:MoreDateTime.Interfaces.IHolidayProvider">
       <summary>
             An interface to provide access to holiday information
@@ -3059,6 +4496,61 @@
       <param name="year">The year for which the number of holidays is requested</param>
       <param name="cultureInfo">The </param>
     </member>
+    <member name="T:MoreDateTime.Interfaces.ISingleExtendedDateTimeType">
+      <summary>
+            The single extended date time type.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Day">
+      <summary>
+            Gets the day.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Hour">
+      <summary>
+            Gets the hour.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.IsOpen">
+      <summary>
+            Returns whether this instance is open, means it has defined start or end
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.IsUnknown">
+      <summary>
+            Returns whether this instance is unknown, has not been defined at all, as in "/2000" where the left part is unknown
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Minute">
+      <summary>
+            Gets the minute.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Month">
+      <summary>
+            Gets the month.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Season">
+      <summary>
+            Gets the Season
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Second">
+      <summary>
+            Gets the second.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.TimeZoneOffset">
+      <summary>
+            Gets the time zone offset.
+            </summary>
+    </member>
+    <member name="P:MoreDateTime.Interfaces.ISingleExtendedDateTimeType.Year">
+      <summary>
+            Gets the year.
+            </summary>
+    </member>
     <member name="T:MoreDateTime.Interfaces.RangeDirection">
       <summary>
             The range direction enum, indicates in which direction to move the ranges values
@@ -3078,6 +4570,263 @@
       <summary>
             Move end only
             </summary>
+    </member>
+    <member name="T:MoreDateTime.Internal.Constants">
+      <summary>
+            The constants for character comparisons in EDT formatted strings
+            </summary>
+    </member>
+    <member name="T:MoreDateTime.Internal.StringBuilderExtensions">
+      <summary>
+            The string builder extensions.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringBuilderExtensions.AppendIfNotNullOrEmpty(System.Text.StringBuilder,System.String)">
+      <summary>
+            Appends the string if it is not null or empty to the StringBuilder
+            </summary>
+      <param name="me">The StringBuilder</param>
+      <param name="value">The values</param>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringBuilderExtensions.AppendIfTrue(System.Text.StringBuilder,System.Boolean,System.Char[])">
+      <summary>
+            Appends the string if it is not null or empty to the StringBuilder
+            </summary>
+      <param name="me">The StringBuilder</param>
+      <param name="bValue">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>bValue</parameter>
+            <parameter>M:MoreDateTime.Internal.StringBuilderExtensions.AppendIfTrue(System.Text.StringBuilder,System.Boolean,System.Char[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="values">The values</param>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringBuilderExtensions.AppendIfTrue(System.Text.StringBuilder,System.Boolean,System.String[])">
+      <summary>
+            Appends the string if it is not null or empty to the StringBuilder
+            </summary>
+      <param name="me">The StringBuilder</param>
+      <param name="bValue">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>bValue</parameter>
+            <parameter>M:MoreDateTime.Internal.StringBuilderExtensions.AppendIfTrue(System.Text.StringBuilder,System.Boolean,System.String[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value">The values</param>
+    </member>
+    <member name="T:MoreDateTime.Internal.StringExtensions">
+      <summary>
+            The string extensions.
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringExtensions.ContainsAny(System.String,System.Char[])">
+      <summary>
+            Verifies if the string contains any of the values.
+            </summary>
+      <param name="value">The values to verify</param>
+      <param name="values">The values to be contained</param>
+      <returns>True if <see paramref="values" /> contains one of the values</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringExtensions.ContainsAny(System.String,System.String[])">
+      <summary>
+            Verifies if the string contains any of the values.
+            </summary>
+      <param name="value">The values to verify</param>
+      <param name="values">The values to be contained</param>
+      <returns>True if <see paramref="values" /> contains one of the values</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringExtensions.IsAnyOf(System.Char,System.Char[])">
+      <summary>
+            Verifies if the char is any of the values.
+            </summary>
+      <param name="value">The values.</param>
+      <param name="values">The values.</param>
+      <returns>A bool.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringExtensions.Shrink(System.String,System.Int32)">
+      <summary>
+            Shrinks the given string by the number of characters on both sides
+            </summary>
+      <param name="value">The value.</param>
+      <param name="charsToShrink">The chars to shrink.</param>
+      <returns>A string.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.StringExtensions.Shrink(System.String,System.Int32,System.Int32)">
+      <summary>
+            Shrinks the given string by the number of characters specified for start and end
+            </summary>
+      <param name="value">The value.</param>
+      <param name="charsToShrinkFront">The chars to shrink at the beginning</param>
+      <param name="charsToShrinkEnd">The chars to shrink at the end</param>
+      <returns>A string.</returns>
+    </member>
+    <member name="T:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeCollectionJsonConverter">
+      <summary>
+            The extended date time collection converter for JSON
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeCollectionJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.Internal.Converters.Json.ExtendedDateTimeCollectionJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeCollectionJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+      <summary>Reads and converts the JSON to type <typeparamref name="T" />.</summary>
+      <param name="reader">The reader.</param>
+      <param name="typeToConvert">The type to convert.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+      <returns>The converted value.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeCollectionJsonConverter.Write(System.Text.Json.Utf8JsonWriter,MoreDateTime.ExtendedDateTimeCollection,System.Text.Json.JsonSerializerOptions)">
+      <summary>Writes a specified value as JSON.</summary>
+      <param name="writer">The writer to write to.</param>
+      <param name="value">The value to convert to JSON.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+    </member>
+    <member name="T:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeIntervalJsonConverter">
+      <summary>
+            The extended date time converter for JSON
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeIntervalJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.Internal.Converters.Json.ExtendedDateTimeIntervalJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeIntervalJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+      <summary>Reads and converts the JSON to type <typeparamref name="T" />.</summary>
+      <param name="reader">The reader.</param>
+      <param name="typeToConvert">The type to convert.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+      <returns>The converted value.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeIntervalJsonConverter.Write(System.Text.Json.Utf8JsonWriter,MoreDateTime.ExtendedDateTimeInterval,System.Text.Json.JsonSerializerOptions)">
+      <summary>Writes a specified value as JSON.</summary>
+      <param name="writer">The writer to write to.</param>
+      <param name="value">The value to convert to JSON.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+    </member>
+    <member name="T:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeJsonConverter">
+      <summary>
+            The extended date time converter for JSON
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.Internal.Converters.Json.ExtendedDateTimeJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+      <summary>Reads and converts the JSON to type <typeparamref name="T" />.</summary>
+      <param name="reader">The reader.</param>
+      <param name="typeToConvert">The type to convert.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+      <returns>The converted value.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeJsonConverter.Write(System.Text.Json.Utf8JsonWriter,MoreDateTime.ExtendedDateTime,System.Text.Json.JsonSerializerOptions)">
+      <summary>Writes a specified value as JSON.</summary>
+      <param name="writer">The writer to write to.</param>
+      <param name="value">The value to convert to JSON.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+    </member>
+    <member name="T:MoreDateTime.Internal.Converters.Json.ExtendedDateTimePossibilityCollectionJsonConverter">
+      <summary>
+            The extended date time converter for JSON
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimePossibilityCollectionJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.Internal.Converters.Json.ExtendedDateTimePossibilityCollectionJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimePossibilityCollectionJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+      <summary>Reads and converts the JSON to type <typeparamref name="T" />.</summary>
+      <param name="reader">The reader.</param>
+      <param name="typeToConvert">The type to convert.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+      <returns>The converted value.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimePossibilityCollectionJsonConverter.Write(System.Text.Json.Utf8JsonWriter,MoreDateTime.ExtendedDateTimePossibilityCollection,System.Text.Json.JsonSerializerOptions)">
+      <summary>Writes a specified value as JSON.</summary>
+      <param name="writer">The writer to write to.</param>
+      <param name="value">The value to convert to JSON.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+    </member>
+    <member name="T:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeRangeJsonConverter">
+      <summary>
+            The extended date time converter for JSON
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeRangeJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.Internal.Converters.Json.ExtendedDateTimeRangeJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeRangeJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+      <summary>Reads and converts the JSON to type <typeparamref name="T" />.</summary>
+      <param name="reader">The reader.</param>
+      <param name="typeToConvert">The type to convert.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+      <returns>The converted value.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.ExtendedDateTimeRangeJsonConverter.Write(System.Text.Json.Utf8JsonWriter,MoreDateTime.ExtendedDateTimeRange,System.Text.Json.JsonSerializerOptions)">
+      <summary>Writes a specified value as JSON.</summary>
+      <param name="writer">The writer to write to.</param>
+      <param name="value">The value to convert to JSON.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+    </member>
+    <member name="T:MoreDateTime.Internal.Converters.Json.UnspecifiedExtendedDateTimeJsonConverter">
+      <summary>
+            The extended date time converter for JSON
+            </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.UnspecifiedExtendedDateTimeJsonConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>MoreDateTime.Internal.Converters.Json.UnspecifiedExtendedDateTimeJsonConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.UnspecifiedExtendedDateTimeJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+      <summary>Reads and converts the JSON to type <typeparamref name="T" />.</summary>
+      <param name="reader">The reader.</param>
+      <param name="typeToConvert">The type to convert.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
+      <returns>The converted value.</returns>
+    </member>
+    <member name="M:MoreDateTime.Internal.Converters.Json.UnspecifiedExtendedDateTimeJsonConverter.Write(System.Text.Json.Utf8JsonWriter,MoreDateTime.UnspecifiedExtendedDateTime,System.Text.Json.JsonSerializerOptions)">
+      <summary>Writes a specified value as JSON.</summary>
+      <param name="writer">The writer to write to.</param>
+      <param name="value">The value to convert to JSON.</param>
+      <param name="options">An object that specifies serialization options to use.</param>
     </member>
   </members>
 </doc>

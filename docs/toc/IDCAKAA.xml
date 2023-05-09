@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimeCalculator.htm">Extended<wbr />Date<wbr />Time<wbr />Calculator</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_ExtendedDateTimeCalculator.htm">Methods</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth.htm">Days<wbr />In<wbr />Month</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth" href="M_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth.htm">Days<wbr />In<wbr />Month(<wbr />Int<wbr />32)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth_1" href="M_MoreDateTime_ExtendedDateTimeCalculator_DaysInMonth_1.htm">Days<wbr />In<wbr />Month(<wbr />Int<wbr />32, Int<wbr />32)</a>
+    </li>
+  </tocItems>
+</toc>

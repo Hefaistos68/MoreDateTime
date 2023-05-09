@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime_Internal.htm">More<wbr />Date<wbr />Time.<wbr />Internal Namespaces</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="N_MoreDateTime_Internal" class="has-submenu" href="N_MoreDateTime_Internal.htm">
+        <span data-tocFile="../toc/IDAEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>More<wbr />Date<wbr />Time.<wbr />Internal</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="N_MoreDateTime_Internal_Converters_Json" class="has-submenu" href="N_MoreDateTime_Internal_Converters_Json.htm">
+        <span data-tocFile="../toc/IDBEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>More<wbr />Date<wbr />Time.<wbr />Internal.<wbr />Converters.<wbr />Json</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

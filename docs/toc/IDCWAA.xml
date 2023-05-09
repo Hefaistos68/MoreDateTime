@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_UnspecifiedExtendedDateTime.htm">Unspecified<wbr />Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_UnspecifiedExtendedDateTime.htm">Methods</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_Earliest" href="M_MoreDateTime_UnspecifiedExtendedDateTime_Earliest.htm">Earliest</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_GetObjectData" href="M_MoreDateTime_UnspecifiedExtendedDateTime_GetObjectData.htm">Get<wbr />Object<wbr />Data</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_GetSchema" href="M_MoreDateTime_UnspecifiedExtendedDateTime_GetSchema.htm">Get<wbr />Schema</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_Latest" href="M_MoreDateTime_UnspecifiedExtendedDateTime_Latest.htm">Latest</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_Parse" href="M_MoreDateTime_UnspecifiedExtendedDateTime_Parse.htm">Parse</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_ReadXml" href="M_MoreDateTime_UnspecifiedExtendedDateTime_ReadXml.htm">Read<wbr />Xml</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_ToPossibilityCollection" href="M_MoreDateTime_UnspecifiedExtendedDateTime_ToPossibilityCollection.htm">To<wbr />Possibility<wbr />Collection</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_ToString" href="M_MoreDateTime_UnspecifiedExtendedDateTime_ToString.htm">To<wbr />String</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_UnspecifiedExtendedDateTime_WriteXml" href="M_MoreDateTime_UnspecifiedExtendedDateTime_WriteXml.htm">Write<wbr />Xml</a>
+    </li>
+  </tocItems>
+</toc>

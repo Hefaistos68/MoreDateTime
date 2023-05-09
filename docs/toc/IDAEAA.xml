@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeValue.htm">Date<wbr />Time<wbr />Value</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_DateTimeValue__ctor.htm">Constructors</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue__ctor" href="M_MoreDateTime_DateTimeValue__ctor.htm">Date<wbr />Time<wbr />Value</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue__ctor_1" href="M_MoreDateTime_DateTimeValue__ctor_1.htm">Date<wbr />Time<wbr />Value(<wbr />Int<wbr />32, Date<wbr />Time<wbr />Value.<wbr />Value<wbr />Flags)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue__ctor_2" href="M_MoreDateTime_DateTimeValue__ctor_2.htm">Date<wbr />Time<wbr />Value(<wbr />String, Date<wbr />Time<wbr />Value.<wbr />Value<wbr />Flags)</a>
+    </li>
+  </tocItems>
+</toc>

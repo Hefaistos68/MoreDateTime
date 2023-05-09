@@ -11,22 +11,21 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_DefaultHolidayProvider.htm">Default<wbr />Holiday<wbr />Provider</a>
+      <a href="T_MoreDateTime_DateTimeRange.htm">Date<wbr />Time<wbr />Range</a>
     </li>
     <li>
-      <a href="Methods_T_MoreDateTime_DefaultHolidayProvider.htm">Methods</a>
+      <a href="Properties_T_MoreDateTime_DateTimeRange.htm">Properties</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="Overload_MoreDateTime_DefaultHolidayProvider_IsPublicHoliday" class="has-submenu" href="Overload_MoreDateTime_DefaultHolidayProvider_IsPublicHoliday.htm">
-        <span data-tocFile="../toc/IDABDAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>Is<wbr />Public<wbr />Holiday</a>
-      <ul class="toc-menu is-hidden"> </ul>
+      <a id="P_MoreDateTime_DateTimeRange_End" href="P_MoreDateTime_DateTimeRange_End.htm">End</a>
     </li>
     <li>
-      <a id="M_MoreDateTime_DefaultHolidayProvider_NumberOfKnownHolidays" href="M_MoreDateTime_DefaultHolidayProvider_NumberOfKnownHolidays.htm">Number<wbr />Of<wbr />Known<wbr />Holidays</a>
+      <a id="P_MoreDateTime_DateTimeRange_IsEmpty" href="P_MoreDateTime_DateTimeRange_IsEmpty.htm">Is<wbr />Empty</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeRange_Start" href="P_MoreDateTime_DateTimeRange_Start.htm">Start</a>
     </li>
   </tocItems>
 </toc>

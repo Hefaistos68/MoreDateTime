@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime_Internal.htm">More<wbr />Date<wbr />Time.<wbr />Internal Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Internal.htm">More<wbr />Date<wbr />Time.<wbr />Internal</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="T_MoreDateTime_Internal_Constants" href="T_MoreDateTime_Internal_Constants.htm">Constants</a>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_StringBuilderExtensions" class="has-submenu" href="T_MoreDateTime_Internal_StringBuilderExtensions.htm">
+        <span data-tocFile="../toc/IDBAEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>String<wbr />Builder<wbr />Extensions</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="T_MoreDateTime_Internal_StringExtensions" class="has-submenu" href="T_MoreDateTime_Internal_StringExtensions.htm">
+        <span data-tocFile="../toc/IDCAEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>String<wbr />Extensions</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_DateTimeValue.htm">Date<wbr />Time<wbr />Value</a>
+    </li>
+    <li>
+      <a href="Operators_T_MoreDateTime_DateTimeValue.htm">Operators</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_DateTimeValue_op_Implicit.htm">Implicit</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue_op_Implicit" href="M_MoreDateTime_DateTimeValue_op_Implicit.htm">Implicit Conversion (Date<wbr />Time<wbr />Value to Int<wbr />32)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue_op_Implicit_1" href="M_MoreDateTime_DateTimeValue_op_Implicit_1.htm">Implicit Conversion (Date<wbr />Time<wbr />Value to String)</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_DateTimeValue_op_Implicit_2" href="M_MoreDateTime_DateTimeValue_op_Implicit_2.htm">Implicit Conversion (Int<wbr />32 to Date<wbr />Time<wbr />Value)</a>
+    </li>
+  </tocItems>
+</toc>

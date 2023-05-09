@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimeCollection.htm">Extended<wbr />Date<wbr />Time<wbr />Collection</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="Overload_MoreDateTime_ExtendedDateTimeCollection__ctor" class="has-submenu" href="Overload_MoreDateTime_ExtendedDateTimeCollection__ctor.htm">
+        <span data-tocFile="../toc/IDALAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Constructors</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Properties_T_MoreDateTime_ExtendedDateTimeCollection" class="has-submenu" href="Properties_T_MoreDateTime_ExtendedDateTimeCollection.htm">
+        <span data-tocFile="../toc/IDBLAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Properties</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="Methods_T_MoreDateTime_ExtendedDateTimeCollection" class="has-submenu" href="Methods_T_MoreDateTime_ExtendedDateTimeCollection.htm">
+        <span data-tocFile="../toc/IDCLAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

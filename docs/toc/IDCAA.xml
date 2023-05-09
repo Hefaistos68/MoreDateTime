@@ -11,26 +11,22 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_DateTimeRange.htm">Date<wbr />Time<wbr />Range</a>
+      <a href="T_MoreDateTime_DateTimeProvider.htm">Date<wbr />Time<wbr />Provider</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="Overload_MoreDateTime_DateTimeRange__ctor" class="has-submenu" href="Overload_MoreDateTime_DateTimeRange__ctor.htm">
-        <span data-tocFile="../toc/IDACAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>Constructors</a>
-      <ul class="toc-menu is-hidden"> </ul>
+      <a id="M_MoreDateTime_DateTimeProvider__ctor" href="M_MoreDateTime_DateTimeProvider__ctor.htm">Constructor</a>
     </li>
     <li>
-      <a id="Properties_T_MoreDateTime_DateTimeRange" class="has-submenu" href="Properties_T_MoreDateTime_DateTimeRange.htm">
+      <a id="Properties_T_MoreDateTime_DateTimeProvider" class="has-submenu" href="Properties_T_MoreDateTime_DateTimeProvider.htm">
         <span data-tocFile="../toc/IDBCAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Properties</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="Methods_T_MoreDateTime_DateTimeRange" class="has-submenu" href="Methods_T_MoreDateTime_DateTimeRange.htm">
+      <a id="Methods_T_MoreDateTime_DateTimeProvider" class="has-submenu" href="Methods_T_MoreDateTime_DateTimeProvider.htm">
         <span data-tocFile="../toc/IDCCAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Methods</a>

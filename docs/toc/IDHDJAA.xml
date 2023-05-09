@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTime.htm">Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Operators_T_MoreDateTime_ExtendedDateTime.htm">Operators</a>
+    </li>
+    <li>
+      <a href="Overload_MoreDateTime_ExtendedDateTime_op_Subtraction.htm">Subtraction</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_Subtraction" href="M_MoreDateTime_ExtendedDateTime_op_Subtraction.htm">Subtraction(<wbr />Extended<wbr />Date<wbr />Time, Extended<wbr />Date<wbr />Time) Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_Subtraction_1" href="M_MoreDateTime_ExtendedDateTime_op_Subtraction_1.htm">Subtraction(<wbr />Extended<wbr />Date<wbr />Time, Time<wbr />Span) Operator</a>
+    </li>
+  </tocItems>
+</toc>

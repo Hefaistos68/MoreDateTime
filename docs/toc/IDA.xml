@@ -17,17 +17,31 @@
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
-      <a id="N_MoreDateTime_Extensions" class="has-submenu" href="N_MoreDateTime_Extensions.htm">
+      <a id="N_MoreDateTime_Exceptions" class="has-submenu" href="N_MoreDateTime_Exceptions.htm">
         <span data-tocFile="../toc/IDBA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>More<wbr />Date<wbr />Time.<wbr />Exceptions</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="N_MoreDateTime_Extensions" class="has-submenu" href="N_MoreDateTime_Extensions.htm">
+        <span data-tocFile="../toc/IDCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>More<wbr />Date<wbr />Time.<wbr />Extensions</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
     <li>
       <a id="N_MoreDateTime_Interfaces" class="has-submenu" href="N_MoreDateTime_Interfaces.htm">
-        <span data-tocFile="../toc/IDCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+        <span data-tocFile="../toc/IDDA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="G_MoreDateTime_Internal" class="has-submenu" href="G_MoreDateTime_Internal.htm">
+        <span data-tocFile="../toc/IDEA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>More<wbr />Date<wbr />Time.<wbr />Internal Namespaces</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
   </tocItems>

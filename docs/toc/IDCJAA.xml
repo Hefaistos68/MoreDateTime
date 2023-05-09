@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTime.htm">Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_ExtendedDateTime.htm">Methods</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_AddMonths" href="M_MoreDateTime_ExtendedDateTime_AddMonths.htm">Add<wbr />Months</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_AddYears" href="M_MoreDateTime_ExtendedDateTime_AddYears.htm">Add<wbr />Years</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_Clone" href="M_MoreDateTime_ExtendedDateTime_Clone.htm">Clone</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_ExtendedDateTime_CompareTo" class="has-submenu" href="Overload_MoreDateTime_ExtendedDateTime_CompareTo.htm">
+        <span data-tocFile="../toc/IDDCJAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Compare<wbr />To</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_Earliest" href="M_MoreDateTime_ExtendedDateTime_Earliest.htm">Earliest</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_ExtendedDateTime_Equals" class="has-submenu" href="Overload_MoreDateTime_ExtendedDateTime_Equals.htm">
+        <span data-tocFile="../toc/IDFCJAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Equals</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_FromLongYear" href="M_MoreDateTime_ExtendedDateTime_FromLongYear.htm">From<wbr />Long<wbr />Year</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_FromScientificNotation" href="M_MoreDateTime_ExtendedDateTime_FromScientificNotation.htm">From<wbr />Scientific<wbr />Notation</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_GetHashCode" href="M_MoreDateTime_ExtendedDateTime_GetHashCode.htm">Get<wbr />Hash<wbr />Code</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_GetObjectData" href="M_MoreDateTime_ExtendedDateTime_GetObjectData.htm">Get<wbr />Object<wbr />Data</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_GetSchema" href="M_MoreDateTime_ExtendedDateTime_GetSchema.htm">Get<wbr />Schema</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_Latest" href="M_MoreDateTime_ExtendedDateTime_Latest.htm">Latest</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_Parse" href="M_MoreDateTime_ExtendedDateTime_Parse.htm">Parse</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_ReadXml" href="M_MoreDateTime_ExtendedDateTime_ReadXml.htm">Read<wbr />Xml</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_SubtractMonths" href="M_MoreDateTime_ExtendedDateTime_SubtractMonths.htm">Subtract<wbr />Months</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_SubtractYears" href="M_MoreDateTime_ExtendedDateTime_SubtractYears.htm">Subtract<wbr />Years</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_ToRoundedPrecision" href="M_MoreDateTime_ExtendedDateTime_ToRoundedPrecision.htm">To<wbr />Rounded<wbr />Precision</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_ToString" href="M_MoreDateTime_ExtendedDateTime_ToString.htm">To<wbr />String</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_WriteXml" href="M_MoreDateTime_ExtendedDateTime_WriteXml.htm">Write<wbr />Xml</a>
+    </li>
+  </tocItems>
+</toc>

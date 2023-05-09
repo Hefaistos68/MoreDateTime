@@ -97,7 +97,7 @@
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.2.0<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">DateTimeProvider</span> : <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDateTimeProvider</a></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB Usage</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Dim</span> <span class="parameter">instance</span> <span class="keyword">As</span> <span class="identifier">DateTimeProvider</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="cpp"><div class="codeHeader"><span class="codeHeaderTitle">C++</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cpp"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">DateTimeProvider</span> : <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDateTimeProvider</a></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="asp"><div class="codeHeader"><span class="codeHeaderTitle">ASP.NET</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-plaintext">No code example is currently available or this language may not be supported.</code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateTimeProvider</span></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDateTimeProvider</a></dd></dl></div>
+              <strong>Namespace:</strong> <a href="N_MoreDateTime.htm">MoreDateTime</a><br /><strong>Assembly:</strong> MoreDateTime (in MoreDateTime.dll) Version: 1.3.0<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">DateTimeProvider</span> : <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDateTimeProvider</a></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB Usage</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Dim</span> <span class="parameter">instance</span> <span class="keyword">As</span> <span class="identifier">DateTimeProvider</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="cpp"><div class="codeHeader"><span class="codeHeaderTitle">C++</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cpp"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">DateTimeProvider</span> : <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDateTimeProvider</a></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="asp"><div class="codeHeader"><span class="codeHeaderTitle">ASP.NET</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-plaintext">No code example is currently available or this language may not be supported.</code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">DateTimeProvider</span></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDateTimeProvider</a></dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -132,25 +132,33 @@
                   <td>
                     <a href="P_MoreDateTime_DateTimeProvider_Now.htm">Now</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the current DateTime (or the mock value if set)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="P_MoreDateTime_DateTimeProvider_Today.htm">Today</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the date part of the current DateTime with the time set to 00:00:00 (or the mock value if set)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="P_MoreDateTime_DateTimeProvider_UtcNow.htm">UtcNow</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the current UTC DateTime (or the mock value if set)
+            </td>
                 </tr>
                 <tr>
                   <td>
                     <a href="P_MoreDateTime_DateTimeProvider_UtcToday.htm">UtcToday</a>
                   </td>
-                  <td> </td>
+                  <td>
+            Gets the date part of the current UTC DateTime with the time set to 00:00:00 (or the mock value if set)
+            </td>
                 </tr>
               </table>
             </div>

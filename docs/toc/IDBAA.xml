@@ -11,23 +11,13 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_DateTimeProvider.htm">Date<wbr />Time<wbr />Provider</a>
+      <a href="T_MoreDateTime_DateTimeOffsetExtensions.htm">Date<wbr />Time<wbr />Offset<wbr />Extensions</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="M_MoreDateTime_DateTimeProvider__ctor" href="M_MoreDateTime_DateTimeProvider__ctor.htm">Constructor</a>
-    </li>
-    <li>
-      <a id="Properties_T_MoreDateTime_DateTimeProvider" class="has-submenu" href="Properties_T_MoreDateTime_DateTimeProvider.htm">
-        <span data-tocFile="../toc/IDBBAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>Properties</a>
-      <ul class="toc-menu is-hidden"> </ul>
-    </li>
-    <li>
-      <a id="Methods_T_MoreDateTime_DateTimeProvider" class="has-submenu" href="Methods_T_MoreDateTime_DateTimeProvider.htm">
-        <span data-tocFile="../toc/IDCBAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+      <a id="Methods_T_MoreDateTime_DateTimeOffsetExtensions" class="has-submenu" href="Methods_T_MoreDateTime_DateTimeOffsetExtensions.htm">
+        <span data-tocFile="../toc/IDABAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
         </span>Methods</a>
       <ul class="toc-menu is-hidden"> </ul>

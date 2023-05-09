@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimePossibilityCollection.htm">Extended<wbr />Date<wbr />Time<wbr />Possibility<wbr />Collection</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_ExtendedDateTimePossibilityCollection.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Day" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Day.htm">Day</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Hour" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Hour.htm">Hour</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_IsOpen" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_IsOpen.htm">Is<wbr />Open</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_IsUnknown" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_IsUnknown.htm">Is<wbr />Unknown</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Minute" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Minute.htm">Minute</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Month" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Month.htm">Month</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Season" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Season.htm">Season</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Second" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Second.htm">Second</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_TimeZoneOffset" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_TimeZoneOffset.htm">Time<wbr />Zone<wbr />Offset</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Year" href="P_MoreDateTime_ExtendedDateTimePossibilityCollection_Year.htm">Year</a>
+    </li>
+  </tocItems>
+</toc>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Interfaces.htm">More<wbr />Date<wbr />Time.<wbr />Interfaces</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Interfaces_IDateTimeProvider.htm">IDate<wbr />Time<wbr />Provider</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_Interfaces_IDateTimeProvider.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_Now" href="P_MoreDateTime_Interfaces_IDateTimeProvider_Now.htm">Now</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_Today" href="P_MoreDateTime_Interfaces_IDateTimeProvider_Today.htm">Today</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcNow" href="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcNow.htm">Utc<wbr />Now</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcToday" href="P_MoreDateTime_Interfaces_IDateTimeProvider_UtcToday.htm">Utc<wbr />Today</a>
+    </li>
+  </tocItems>
+</toc>

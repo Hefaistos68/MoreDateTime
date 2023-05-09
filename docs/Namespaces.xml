@@ -7,21 +7,54 @@
     <member name="N:MoreDateTime">
       <summary>Contains all provider interfaces, the date and time range classes and minor helpers</summary>
     </member>
+    <member name="N:MoreDateTime.Exceptions">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>N:MoreDateTime.Exceptions</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="N:MoreDateTime.Extensions">
       <summary>All extension methods are in this namespace, namely the DateTimeExtensions, DateOnlyExtensions, TimeOnlyExtensions and the TimeSpanExtensions</summary>
     </member>
     <member name="N:MoreDateTime.Interfaces">
       <summary>Contains the interfaces for ranges and providers</summary>
     </member>
-    <member name="G:MoreDateTime">
+    <member name="N:MoreDateTime.Internal">
       <summary>
         <markup>
           <include item="SMCMissingTag">
             <parameter>summary</parameter>
-            <parameter>G:MoreDateTime</parameter>
+            <parameter>N:MoreDateTime.Internal</parameter>
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="N:MoreDateTime.Internal.Converters.Json">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>N:MoreDateTime.Internal.Converters.Json</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="G:MoreDateTime.Internal">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>G:MoreDateTime.Internal</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="G:MoreDateTime">
+      <summary>The top level namespace containing all members of this library.</summary>
     </member>
   </members>
 </doc>

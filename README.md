@@ -3,7 +3,28 @@
 
 # :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime) / [Docs](https://hefaistos68.github.io/MoreDateTime/)
 
+## :star: News v1.3 :star: ##
+Just included now: ISO 8601-2 2019 Extended Date Time Format Profile (EDTF) support.
 
+You can use the new `ExtendedDateTime` class just as you would use the .NET `DateTime` class, with most of the conversions between `ExtendedDateTime`, `DateTime` and `DateOnly` supported. 
+All formats specified in the standard are supported. The implementation is based on the [EDTF.NET](https://github.com/nharren/ExtendedDateTimeFormat) implementation which was based on the draft of the ISO standard.
+
+Example:
+```
+ var someWhenInThe60s = new ExtendedDateTime("1960S2");
+ var longAgo = new ExtendedDateTime("Y-3388E2S3"); // yes, thats some year between 338000 and 338999, estimated to be 338800
+ var fourYearsIn1670 = new ExtendedDateTime("1670..1673");
+ var someDayInSpring = new ExtendedDateTime("2021-21");
+ var aRange = new ExtendedDateTime("..1983-12-31,1984-10-10..1984-11-01,1984-11-05.."); // somewhen before 1983 and between 1984-10-10 and 1984-11-01 and after 1984-11-05
+```
+
+You see, there are many possibilities to specify dates and date ranges. 
+
+Documentation is lacking a bit still, but this will be remedied soon. Some minor code cleanups are to be done still too.
+
+PS: I would love to include full ISO 8601-2 2019 support, but thats a big chunk to bite off, maybe some day. Volunteers are welcome though.
+
+### Description 
 This library is built from the ground up to be a simple, easy to use, and intuitive date and time library for .NET, that simplifies common tasks and provides a consistent API for working with dates and times, throughout the DateTime, DateOnly, TimeOnly and TimeSpan .NET objects. It adds many operations that one expects to find in a date and time library, but are missing from the .NET standard library. Currently it features over 300 methods to deal with dates and times and ranges (periods) thereof.
 
 It is however not intended to be a replacement for any part of the standard .NET library, but rather an extension to it. It is built upon the existing .NET standard library and does not replace any of the existing functionality. It is also not intended to be a replacement for the [NodaTime](https://nodatime.org/) library, but it can be used in conjunction.

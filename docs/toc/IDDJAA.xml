@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTime.htm">Extended<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="Operators_T_MoreDateTime_ExtendedDateTime.htm">Operators</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_Addition" href="M_MoreDateTime_ExtendedDateTime_op_Addition.htm">Addition Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_Equality" href="M_MoreDateTime_ExtendedDateTime_op_Equality.htm">Equality Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_GreaterThan" href="M_MoreDateTime_ExtendedDateTime_op_GreaterThan.htm">Greater<wbr />Than Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_GreaterThanOrEqual" href="M_MoreDateTime_ExtendedDateTime_op_GreaterThanOrEqual.htm">Greater<wbr />Than<wbr />Or<wbr />Equal Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_Inequality" href="M_MoreDateTime_ExtendedDateTime_op_Inequality.htm">Inequality Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_LessThan" href="M_MoreDateTime_ExtendedDateTime_op_LessThan.htm">Less<wbr />Than Operator</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTime_op_LessThanOrEqual" href="M_MoreDateTime_ExtendedDateTime_op_LessThanOrEqual.htm">Less<wbr />Than<wbr />Or<wbr />Equal Operator</a>
+    </li>
+    <li>
+      <a id="Overload_MoreDateTime_ExtendedDateTime_op_Subtraction" class="has-submenu" href="Overload_MoreDateTime_ExtendedDateTime_op_Subtraction.htm">
+        <span data-tocFile="../toc/IDHDJAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Subtraction</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

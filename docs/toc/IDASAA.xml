@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedTimeSpan.htm">Extended<wbr />Time<wbr />Span</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_ExtendedTimeSpan.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_Days" href="P_MoreDateTime_ExtendedTimeSpan_Days.htm">Days</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_Hours" href="P_MoreDateTime_ExtendedTimeSpan_Hours.htm">Hours</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_Minutes" href="P_MoreDateTime_ExtendedTimeSpan_Minutes.htm">Minutes</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_Months" href="P_MoreDateTime_ExtendedTimeSpan_Months.htm">Months</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_Seconds" href="P_MoreDateTime_ExtendedTimeSpan_Seconds.htm">Seconds</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TimeSpan" href="P_MoreDateTime_ExtendedTimeSpan_TimeSpan.htm">Time<wbr />Span</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TotalDays" href="P_MoreDateTime_ExtendedTimeSpan_TotalDays.htm">Total<wbr />Days</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TotalHours" href="P_MoreDateTime_ExtendedTimeSpan_TotalHours.htm">Total<wbr />Hours</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TotalMinutes" href="P_MoreDateTime_ExtendedTimeSpan_TotalMinutes.htm">Total<wbr />Minutes</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TotalMonths" href="P_MoreDateTime_ExtendedTimeSpan_TotalMonths.htm">Total<wbr />Months</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TotalSeconds" href="P_MoreDateTime_ExtendedTimeSpan_TotalSeconds.htm">Total<wbr />Seconds</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_TotalYears" href="P_MoreDateTime_ExtendedTimeSpan_TotalYears.htm">Total<wbr />Years</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedTimeSpan_Years" href="P_MoreDateTime_ExtendedTimeSpan_Years.htm">Years</a>
+    </li>
+  </tocItems>
+</toc>

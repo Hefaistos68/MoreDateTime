@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimeRange.htm">Extended<wbr />Date<wbr />Time<wbr />Range</a>
+    </li>
+    <li>
+      <a href="Properties_T_MoreDateTime_ExtendedDateTimeRange.htm">Properties</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimeRange_End" href="P_MoreDateTime_ExtendedDateTimeRange_End.htm">End</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimeRange_HasEnd" href="P_MoreDateTime_ExtendedDateTimeRange_HasEnd.htm">Has<wbr />End</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimeRange_HasStart" href="P_MoreDateTime_ExtendedDateTimeRange_HasStart.htm">Has<wbr />Start</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimeRange_IsOpen" href="P_MoreDateTime_ExtendedDateTimeRange_IsOpen.htm">Is<wbr />Open</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimeRange_IsRange" href="P_MoreDateTime_ExtendedDateTimeRange_IsRange.htm">Is<wbr />Range</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_ExtendedDateTimeRange_Start" href="P_MoreDateTime_ExtendedDateTimeRange_Start.htm">Start</a>
+    </li>
+  </tocItems>
+</toc>

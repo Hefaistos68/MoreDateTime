@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime_Extensions.htm">More<wbr />Date<wbr />Time.<wbr />Extensions</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_Extensions_TimeSpanExtensions.htm">Time<wbr />Span<wbr />Extensions</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="Methods_T_MoreDateTime_Extensions_TimeSpanExtensions" class="has-submenu" href="Methods_T_MoreDateTime_Extensions_TimeSpanExtensions.htm">
+        <span data-tocFile="../toc/IDAFCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+  </tocItems>
+</toc>

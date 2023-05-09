@@ -11,19 +11,48 @@
       <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
     </li>
     <li>
-      <a href="T_MoreDateTime_NullHolidayProvider.htm">Null<wbr />Holiday<wbr />Provider</a>
+      <a href="T_MoreDateTime_DateTimeValue.htm">Date<wbr />Time<wbr />Value</a>
     </li>
     <li>
-      <a href="Methods_T_MoreDateTime_NullHolidayProvider.htm">Methods</a>
+      <a href="Properties_T_MoreDateTime_DateTimeValue.htm">Properties</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="Overload_MoreDateTime_NullHolidayProvider_IsPublicHoliday" class="has-submenu" href="Overload_MoreDateTime_NullHolidayProvider_IsPublicHoliday.htm">
-        <span data-tocFile="../toc/IDABEAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
-          <i class="fa fa-angle-right"> </i>
-        </span>Is<wbr />Public<wbr />Holiday</a>
-      <ul class="toc-menu is-hidden"> </ul>
+      <a id="P_MoreDateTime_DateTimeValue_InsignificantDigits" href="P_MoreDateTime_DateTimeValue_InsignificantDigits.htm">Insignificant<wbr />Digits</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsApproximate" href="P_MoreDateTime_DateTimeValue_IsApproximate.htm">Is<wbr />Approximate</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsExact" href="P_MoreDateTime_DateTimeValue_IsExact.htm">Is<wbr />Exact</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsLong" href="P_MoreDateTime_DateTimeValue_IsLong.htm">Is<wbr />Long</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsNone" href="P_MoreDateTime_DateTimeValue_IsNone.htm">Is<wbr />None</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsRegularYear" href="P_MoreDateTime_DateTimeValue_IsRegularYear.htm">Is<wbr />Regular<wbr />Year</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsUncertain" href="P_MoreDateTime_DateTimeValue_IsUncertain.htm">Is<wbr />Uncertain</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsUnknown" href="P_MoreDateTime_DateTimeValue_IsUnknown.htm">Is<wbr />Unknown</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_IsUnspecified" href="P_MoreDateTime_DateTimeValue_IsUnspecified.htm">Is<wbr />Unspecified</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_PrefixQualifier" href="P_MoreDateTime_DateTimeValue_PrefixQualifier.htm">Prefix<wbr />Qualifier</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_QualifierFlags" href="P_MoreDateTime_DateTimeValue_QualifierFlags.htm">Qualifier<wbr />Flags</a>
+    </li>
+    <li>
+      <a id="P_MoreDateTime_DateTimeValue_SignificantDigits" href="P_MoreDateTime_DateTimeValue_SignificantDigits.htm">Significant<wbr />Digits</a>
     </li>
   </tocItems>
 </toc>

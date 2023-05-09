@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <breadcrumbs>
+    <li>
+      <a href="G_MoreDateTime.htm">Docs</a>
+    </li>
+    <li>
+      <a href="G_MoreDateTime.htm">More<wbr />Date<wbr />Time Namespaces</a>
+    </li>
+    <li>
+      <a href="N_MoreDateTime.htm">More<wbr />Date<wbr />Time</a>
+    </li>
+    <li>
+      <a href="T_MoreDateTime_ExtendedDateTimePossibilityCollection.htm">Extended<wbr />Date<wbr />Time<wbr />Possibility<wbr />Collection</a>
+    </li>
+    <li>
+      <a href="Methods_T_MoreDateTime_ExtendedDateTimePossibilityCollection.htm">Methods</a>
+    </li>
+  </breadcrumbs>
+  <tocItems>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_Earliest" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_Earliest.htm">Earliest</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_GetObjectData" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_GetObjectData.htm">Get<wbr />Object<wbr />Data</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_GetSchema" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_GetSchema.htm">Get<wbr />Schema</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_GetSpan" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_GetSpan.htm">Get<wbr />Span</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_Latest" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_Latest.htm">Latest</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_Parse" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_Parse.htm">Parse</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_ReadXml" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_ReadXml.htm">Read<wbr />Xml</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_ToString" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_ToString.htm">To<wbr />String</a>
+    </li>
+    <li>
+      <a id="M_MoreDateTime_ExtendedDateTimePossibilityCollection_WriteXml" href="M_MoreDateTime_ExtendedDateTimePossibilityCollection_WriteXml.htm">Write<wbr />Xml</a>
+    </li>
+  </tocItems>
+</toc>
