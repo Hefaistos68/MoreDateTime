@@ -4,7 +4,7 @@
 # :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime) / [Docs](https://hefaistos68.github.io/MoreDateTime/)
 
 ## :star: News v1.3 :star: ##
-Just included now: ISO 8601-2 2019 Extended Date Time Format Profile (EDTF) support.
+Just included now: ISO 8601-2 2019 Extended Date Time Format Profile ([EDTF](http://www.loc.gov/standards/datetime/)) support.
 
 You can use the new `ExtendedDateTime` class just as you would use the .NET `DateTime` class, with most of the conversions between `ExtendedDateTime`, `DateTime` and `DateOnly` supported. 
 All formats specified in the standard are supported. The implementation is based on the [EDTF.NET](https://github.com/nharren/ExtendedDateTimeFormat) implementation which was based on the draft of the ISO standard.
