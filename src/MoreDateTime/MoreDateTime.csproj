@@ -27,7 +27,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Nager.Date" Version="1.45.0" />
+    <PackageReference Include="Nager.Date" Version="1.46.0" />
   </ItemGroup>
 
 	<ItemGroup>
