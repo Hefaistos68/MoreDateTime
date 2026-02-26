@@ -19,10 +19,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET 6.0
+    - name: Setup .NET 10.0
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 10.0.x
     - name: Change LicenseKey
       if: github.event_name != 'pull_request'
       working-directory: ./tests
