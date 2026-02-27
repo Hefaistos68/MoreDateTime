@@ -7,6 +7,8 @@ on:
     - 'src/**'
     - '.github/workflows/**'
     branches: [ main ]
+    tags:
+    - 'v*'
   pull_request:
     paths:
     - 'src/**'
@@ -45,9 +47,10 @@ jobs:
       if: github.event_name != 'pull_request'
       run: |
         cd $GITHUB_WORKSPACE/out
-        dotnet nuget push *.nupkg --source https://www.nuget.org/api/v2/package --api-key ${{secrets.NUGET_TOKEN}} --skip-duplicate --no-symbols
+        dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_TOKEN}} --skip-duplicate --no-symbols
     - name: Push Github package
       if: github.event_name != 'pull_request'
       run: |
         cd $GITHUB_WORKSPACE/out
         dotnet nuget add source --username Hefaistos68 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Hefaistos68/index.json"
+        dotnet nuget push *.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github" --skip-duplicate --no-symbols

@@ -31,7 +31,15 @@ jobs:
       working-directory: .
       run: |
         dotnet test --configuration Release --no-restore --no-build --verbosity normal
+    - name: Build project and generate NuGet package
+      run: |
+        dotnet pack --configuration Release --output $GITHUB_WORKSPACE/out src/MoreDateTime/MoreDateTime.csproj
+    - name: Push NuGet package
+      run: |
+        cd $GITHUB_WORKSPACE/out
+        dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_TOKEN}} --skip-duplicate --no-symbols
     - name: Push Github package
       run: |
-        dotnet nuget add source --username Hefaistos68 --password ${{ secrets.GH_PACLAGE_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Hefaistos68/index.json"
-        dotnet nuget push src/MoreDateTime/bin/Release/*.nupkg --api-key ${{ secrets.GH_PACKAGE_TOKEN }}  --source "github"
+        dotnet nuget add source --username Hefaistos68 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Hefaistos68/index.json"
+        cd $GITHUB_WORKSPACE/out
+        dotnet nuget push *.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github" --skip-duplicate --no-symbols
