@@ -1,15 +1,15 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using Nuke.Common;
 using Nuke.Common.Git;
 using Nuke.Common.Tools.GitVersion;
-using static Nuke.Common.Tools.DotNet.DotNetTasks;
-using static Nuke.Common.IO.FileSystemTasks;
-using static Nuke.Common.IO.PathConstruction;
-using static Nuke.Common.EnvironmentInfo;
-using System.IO;
+using Nuke.Common.IO;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.CI.AppVeyor;
+using static Nuke.Common.Tools.DotNet.DotNetTasks;
+using static Nuke.Common.IO.PathConstruction;
+using static Nuke.Common.EnvironmentInfo;
 
 class Build : NukeBuild
 {
@@ -30,15 +30,15 @@ class Build : NukeBuild
 
     public string RevisionString => IsTagged ? null : $"rev{Revision:D4}";
 
-    public string ArtifactsDirectory => RootDirectory / "artifacts";
+    public AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
 
-    public string OutputDirectory => RootDirectory / ".output";
+    public AbsolutePath OutputDirectory => RootDirectory / ".output";
 
     Target Clean => _ => _
             .Executes(() =>
             {
-                EnsureCleanDirectory(OutputDirectory);
-                EnsureCleanDirectory(ArtifactsDirectory);
+                CleanDirectory(OutputDirectory);
+                CleanDirectory(ArtifactsDirectory);
             });
 
     Target Restore => _ => _
@@ -73,4 +73,14 @@ class Build : NukeBuild
             DotNetTest(s => s
                 .SetProjectFile(RootDirectory / "tests" / "MoreDateTime.Tests"));
         });
+
+    private static void CleanDirectory(AbsolutePath path)
+    {
+        if (Directory.Exists(path))
+        {
+            Directory.Delete(path, true);
+        }
+
+        Directory.CreateDirectory(path);
+    }
 }
