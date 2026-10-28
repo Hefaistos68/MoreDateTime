@@ -78,9 +78,9 @@ namespace MoreDateTime.Tests.Extensions
 			var other = _startDate.AddDays(-3);
 
 			// Act
-			var result = dt.IsEqualDownToWeek(other);
-			var falseResult = dt.IsEqualDownToWeek(_startDate.AddDays(7));
-			var falseYearResult = dt.IsEqualDownToWeek(_startDate.AddYears(1));
+			var result = dt.IsEqualDownToWeek(other, _cultureInfo);
+			var falseResult = dt.IsEqualDownToWeek(_startDate.AddDays(7), _cultureInfo);
+			var falseYearResult = dt.IsEqualDownToWeek(_startDate.AddYears(1), _cultureInfo);
 
 			// Assert
 			result.ShouldBeTrue();
