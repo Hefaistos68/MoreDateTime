@@ -3,6 +3,10 @@
 
 # :date: MoreDateTime - [Github](https://github.com/Hefaistos68/MoreDateTime) / [Docs](https://hefaistos68.github.io/MoreDateTime/)
 
+## :star: News v2.0 :star: ##
+
+After a few years absence now updated to .NET 10. And fixed a conditional bug in two unit tests.
+
 ## :star: News v1.3 :star: ##
 Just included now: ISO 8601-2 2019 Extended Date Time Format Profile ([EDTF](http://www.loc.gov/standards/datetime/)) support.
 
