@@ -173,13 +173,17 @@ namespace MoreDateTime.Tests.Extensions
 		{
 			// Arrange
 			var dt = _startDate;
+			var beforeChristmas = new DateTime(2020, 12, 24);
 
 			// Act
 			var result = dt.NextWorkday();
+			var afterChristmas = beforeChristmas.NextWorkday(_cultureInfo);
 
 			// Assert
 			result.DayOfWeek.ShouldBe(DayOfWeek.Monday);
+			afterChristmas.ShouldBe(new DateTime(2020, 12, 28));
 		}
+
 		/// <summary>
 		/// Checks that the NextYear method functions correctly.
 		/// </summary>
@@ -231,6 +235,24 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Assert
 			result.ShouldBe(firstHoliday);
+		}
+
+		/// <summary>
+		/// Checks that NextHoliday and PreviousHoliday return DateTime.MaxValue when NullHolidayProvider is active.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_NextAndPreviousHoliday_WithNullHolidayProvider()
+		{
+			// Arrange
+			DateTimeExtensions.SetHolidayProvider(new NullHolidayProvider());
+
+			// Act
+			var next = _startDate.NextHoliday();
+			var prev = _startDate.PreviousHoliday();
+
+			// Assert
+			next.ShouldBe(DateTime.MaxValue);
+			prev.ShouldBe(DateTime.MaxValue);
 		}
 
 		/// <summary>
@@ -321,15 +343,17 @@ namespace MoreDateTime.Tests.Extensions
 		{
 			// Arrange
 			var dt = _startDate;
+			var afterNewYear = new DateTime(2021, 01, 04);
 
 			// Act
 			var result = dt.PreviousWorkday();
+			var beforeWeekendAndHoliday = afterNewYear.PreviousWorkday(_cultureInfo);
 
 			// Assert
 			result.DayOfWeek.ShouldBe(DayOfWeek.Thursday);
-
-			// Todo: should also test with holidays
+			beforeWeekendAndHoliday.ShouldBe(new DateTime(2020, 12, 31));
 		}
+
 		/// <summary>
 		/// Checks that the PreviousYear method functions correctly.
 		/// </summary>
@@ -345,6 +369,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.Year.ShouldBe(2019);
 		}
+
 		/// <summary>
 		/// Checks that the NextFullSecond method functions correctly.
 		/// </summary>
@@ -408,10 +433,15 @@ namespace MoreDateTime.Tests.Extensions
 		public void CanCall_NextWeekend()
 		{
 			// Arrange
+			var saturday = new DateTime(2020, 5, 16);
+
+			// Act
 			var result = _startDate.NextWeekend();
+			var fromWeekendResult = saturday.NextWeekend();
 
 			// Assert
 			result.ShouldBe(new DateTime(2020, 5, 16));
+			fromWeekendResult.ShouldBe(new DateTime(2020, 5, 23));
 		}
 
 		/// <summary>
@@ -434,10 +464,15 @@ namespace MoreDateTime.Tests.Extensions
 		public void CanCall_PreviousWeekend()
 		{
 			// Arrange
+			var saturday = new DateTime(2020, 5, 16);
+
+			// Act
 			var result = _startDate.PreviousWeekend();
+			var fromWeekendResult = saturday.PreviousWeekend();
 
 			// Assert
 			result.ShouldBe(new DateTime(2020, 5, 10));  // sunday
+			fromWeekendResult.ShouldBe(new DateTime(2020, 5, 10));
 		}
 
 		/// <summary>
@@ -451,9 +486,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _startDate.EndOfWeek(cultureInfo);
+			var defaultResult = _startDate.EndOfWeek();
 
 			// Assert
 			result.ShouldBe(_startDate.AddDays(2));	 // Sunday
+			defaultResult.ShouldNotBe(default);
 		}
 
 		/// <summary>
@@ -467,9 +504,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _startDate.StartOfWeek(cultureInfo);
+			var defaultResult = _startDate.StartOfWeek();
 
 			// Assert
 			result.ShouldBe(_startDate.AddDays(-4)); // Monday
+			defaultResult.ShouldNotBe(default);
 		}
 		
 		/// <summary>

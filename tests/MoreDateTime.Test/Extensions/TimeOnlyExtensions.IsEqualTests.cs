@@ -42,9 +42,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToHour(other);
+			var falseResult = dt.IsEqualDownToHour(_startTime.AddHours(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -59,9 +61,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToMinute(other);
+			var falseResult = dt.IsEqualDownToMinute(_startTime.AddMinutes(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -76,9 +80,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToSecond(other);
+			var falseResult = dt.IsEqualDownToSecond(_startTime.AddSeconds(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 	}
 }

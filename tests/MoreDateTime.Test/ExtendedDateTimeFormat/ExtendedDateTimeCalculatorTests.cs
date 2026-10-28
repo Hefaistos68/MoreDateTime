@@ -1,11 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using MoreDateTime;
-
-using Shouldly;
-
 namespace ExtendedDateTimeFormat.Tests
 {
+	using System;
+
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+	using MoreDateTime;
+
+	using Shouldly;
+
 	/// <summary>
 	/// The extended date time calculator tests.
 	/// </summary>
@@ -53,6 +55,49 @@ namespace ExtendedDateTimeFormat.Tests
 		}
 
 		/// <summary>
+		/// Verifies that SubtractMonths and SubtractYears calculate the correct values.
+		/// </summary>
+		[TestMethod]
+		public void CalculatesCorrectSubtractMonthsAndYears()
+		{
+			var firstDate = new ExtendedDateTime("2020-05-15");
+			var jan31 = new ExtendedDateTime("2020-01-31");
+
+			var minusMonths = firstDate.SubtractMonths(3);
+			var minusYears = firstDate.SubtractYears(5);
+			var overflowMonth = jan31.AddMonths(1, DayExceedsDaysInMonthStrategy.Overflow);
+
+			minusMonths.ToString().ShouldBe("2020-02-15");
+			minusYears.ToString().ShouldBe("2015-05-15");
+			overflowMonth.ToString().ShouldBe("2020-03-31");
+		}
+
+		/// <summary>
+		/// Verifies that adding and subtracting TimeSpan and rounding precision calculate the correct values.
+		/// </summary>
+		[TestMethod]
+		public void CalculatesCorrectTimeSpanOperationsAndRounding()
+		{
+			var edt = new ExtendedDateTime("2020-05-15T10:20:30Z");
+
+			var added = edt + TimeSpan.FromHours(2);
+			var subtracted = edt - TimeSpan.FromHours(2);
+			var roundedYearDown = edt.ToRoundedPrecision(ExtendedDateTimePrecision.Year, false);
+			var roundedMonthDown = edt.ToRoundedPrecision(ExtendedDateTimePrecision.Month, false);
+			var roundedDayDown = edt.ToRoundedPrecision(ExtendedDateTimePrecision.Day, false);
+			var roundedHourDown = edt.ToRoundedPrecision(ExtendedDateTimePrecision.Hour, false);
+			var roundedMinuteDown = edt.ToRoundedPrecision(ExtendedDateTimePrecision.Minute, false);
+
+			added.Hour.ShouldBe(12);
+			subtracted.Hour.ShouldBe(8);
+			roundedYearDown.Precision.ShouldBe(ExtendedDateTimePrecision.Year);
+			roundedMonthDown.Precision.ShouldBe(ExtendedDateTimePrecision.Month);
+			roundedDayDown.Precision.ShouldBe(ExtendedDateTimePrecision.Day);
+			roundedHourDown.Precision.ShouldBe(ExtendedDateTimePrecision.Hour);
+			roundedMinuteDown.Precision.ShouldBe(ExtendedDateTimePrecision.Minute);
+		}
+
+		/// <summary>
 		/// Verifies that timespan substraction calculates the correct values
 		/// </summary>
 		/// <param name="d">The d.</param>
@@ -65,7 +110,7 @@ namespace ExtendedDateTimeFormat.Tests
 		[DataRow(1096, 0, 0, 0, "2015", "2012")]       // 366 for 2012 (leap year) + 365 for 2013 + 365 for 2014 = 1096 days
 		[DataRow(0, 0, 0, 0, "2012-01", "2012-01")]
 		[DataRow(31, 0, 0, 0, "2012-02", "2012-01")]
-		[DataRow(365, 0, 0, 0, "2013-03", "2012-03")]      // 31 days for 3/2012 + 30 days for 4/2012 + 31 days for 5/2012 + 30 days for 6/2012 + 31 days for 7/2012 + 31 days for 8/2012 + 30 days for 9/2012 + 31 days for 10/2012 + 30 days for 11/2012 + 31 days for 12/2012 + 31 days for 1/2013 + 28 days for 2/2013 = 365 days
+		[DataRow(365, 0, 0, 0, "2013-03", "2012-03")]      // 31 days for 3/2012 + 30 days for 4/2012 + 31 days for 5/2012 + 30 days for 6/2012 + 31 days for 7/2012 + 31 days in August + 30 days in September + 31 days in October + 30 days in November + 31 days for 12/2012 + 31 days for 1/2013 + 28 days for 2/2013 = 365 days
 		[DataRow(0, 0, 0, 0, "2012-02-02", "2012-02-02")]
 		[DataRow(292, 0, 0, 0, "2012-11-20", "2012-02-02")]      // 28 days remaining in of February + 31 days in March + 30 days in April + 31 days in May + 30 days in June + 31 days in July + 31 days in August + 30 days in September + 31 days in October + 19 days passed into November = 292 days
 		[DataRow(0, 0, 0, 0, "2012-03-03T03Z", "2012-03-03T03Z")]

@@ -1,5 +1,7 @@
 namespace MoreDateTime.Tests.Extensions
 {
+	using System;
+
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 	using MoreDateTime.Extensions;
@@ -93,6 +95,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.ShouldBe(_holidaysInStartDateToEndDateNull);
 		}
+
 		/// <summary>
 		/// Checks that the NumberOfHoursUntil method functions correctly.
 		/// </summary>
@@ -205,12 +208,16 @@ namespace MoreDateTime.Tests.Extensions
 		public void CanCall_NumberOfWeekendsUntil()
 		{
 			// Arrange
+			var monday = new DateTime(2020, 05, 11);
+			var friday = new DateTime(2020, 05, 15);
 
 			// Act
 			var result = _startDate.NumberOfWeekendsUntil(_endDate, _cultureInfo);
+			var noWeekendResult = monday.NumberOfWeekendsUntil(friday, _cultureInfo);
 
 			// Assert
 			result.ShouldBe(53.0d);
+			noWeekendResult.ShouldBe(0.0d);
 		}
 
 		/// <summary>

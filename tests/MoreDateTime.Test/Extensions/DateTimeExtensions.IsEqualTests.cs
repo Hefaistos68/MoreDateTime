@@ -22,9 +22,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqual(other, truncateTo);
+			var invalidResult = dt.IsEqual(other, (DateTimeExtensions.DateTruncate)99);
 
 			// Assert
 			result.ShouldBeTrue();
+			invalidResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -39,9 +41,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToDay(other);
+			var falseResult = dt.IsEqualDownToDay(dt.AddDays(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -56,9 +60,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToHour(other);
+			var falseResult = dt.IsEqualDownToHour(_startDate.AddHours(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -73,9 +79,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToMinute(other);
+			var falseResult = dt.IsEqualDownToMinute(_startDate.AddMinutes(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -90,9 +98,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToMonth(other);
+			var falseResult = dt.IsEqualDownToMonth(_startDate.AddMonths(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -107,9 +117,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToSecond(other);
+			var falseResult = dt.IsEqualDownToSecond(_startDate.AddSeconds(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -124,9 +136,13 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToWeek(other);
+			var falseWeekResult = dt.IsEqualDownToWeek(_startDate.AddDays(7));
+			var falseYearResult = dt.IsEqualDownToWeek(_startDate.AddYears(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseWeekResult.ShouldBeFalse();
+			falseYearResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -141,9 +157,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsEqualDownToYear(other);
+			var falseResult = dt.IsEqualDownToYear(_startDate.AddYears(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 	}
 }

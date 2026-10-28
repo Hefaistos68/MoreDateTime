@@ -1,0 +1,42 @@
+name: Publish NuGet Package
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 10.0
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test --configuration Release --no-restore --no-build --verbosity normal
+
+    - name: Pack NuGet package
+      run: dotnet pack src/MoreDateTime/MoreDateTime.csproj --configuration Release --no-build --output ./out
+
+    - name: NuGet Login (Trusted Publishing)
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: Hefaistos68
+
+    - name: Push to NuGet.org
+      run: dotnet nuget push ./out/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

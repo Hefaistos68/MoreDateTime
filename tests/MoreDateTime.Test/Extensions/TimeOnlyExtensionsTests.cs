@@ -60,6 +60,22 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the AddTicks method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_AddTicks()
+		{
+			// Arrange
+			var ticks = TimeSpan.FromMinutes(5).Ticks;
+
+			// Act
+			var result = _startTime.AddTicks(ticks);
+
+			// Assert
+			result.ShouldBe(_startTime.AddMinutes(5));
+		}
+
+		/// <summary>
 		/// Checks that the Distance method functions correctly.
 		/// </summary>
 		[TestMethod]
@@ -69,9 +85,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _startTime.Distance(_endTime);
+			var reverseResult = _endTime.Distance(_startTime);
 
 			// Assert
 			result.ShouldBe(_endTime - _startTime);
+			reverseResult.ShouldBe(_endTime - _startTime);
 		}
 
 		/// <summary>
@@ -110,6 +128,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// verify that all parts are the same size
 			var partSize = _startTime.Distance(_endTime) / parts;
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -134,6 +153,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// verify that all parts are the same size
 			var partSize = _startTime.Distance(_endTime) / parts;
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -156,6 +176,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			// verify that all parts are the same size
 			var partSize = _startTime.Distance(_endTime) / parts;
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);

@@ -31,6 +31,8 @@ namespace MoreDateTime.Tests.Extensions
 			var a = new DateOnlyRange(_startDate1, _endDate1);
 			var b = new DateOnlyRange(_startDate2, _endDate2);
 			var c = new DateOnlyRange(_startDate3, _endDate3);
+			var outer = new DateOnlyRange(_startDate1, _endDate2);
+			var inner = new DateOnlyRange(_startDate2, _endDate1);
 
 			// Act
 			var result1 = a.Union(b);
@@ -39,6 +41,8 @@ namespace MoreDateTime.Tests.Extensions
 			var result4 = b.Union(c);
 			var result5 = c.Union(a);
 			var result6 = c.Union(b);
+			var result7 = outer.Union(inner);
+			var result8 = inner.Union(outer);
 
 			// Assert
 			result1.ShouldBeEquivalentTo(result3);
@@ -46,6 +50,8 @@ namespace MoreDateTime.Tests.Extensions
 			result4.IsEmpty.ShouldBeTrue();
 			result5.IsEmpty.ShouldBeTrue();
 			result6.IsEmpty.ShouldBeTrue();
+			result7.ShouldBeEquivalentTo(outer);
+			result8.ShouldBeEquivalentTo(outer);
 		}
 
 		/// <summary>
@@ -76,6 +82,8 @@ namespace MoreDateTime.Tests.Extensions
 			var a = new DateOnlyRange(_startDate1, _endDate1);
 			var b = new DateOnlyRange(_startDate2, _endDate2);
 			var c = new DateOnlyRange(_startDate3, _endDate3);
+			var outer = new DateOnlyRange(_startDate1, _endDate2);
+			var inner = new DateOnlyRange(_startDate2, _endDate1);
 
 			// Act
 			var result1 = a.Intersection(b);
@@ -84,6 +92,8 @@ namespace MoreDateTime.Tests.Extensions
 			var result4 = b.Intersection(c);
 			var result5 = c.Intersection(a);
 			var result6 = c.Intersection(b);
+			var result7 = outer.Intersection(inner);
+			var result8 = inner.Intersection(outer);
 
 			// Assert
 			result1.ShouldBeEquivalentTo(result3);
@@ -91,6 +101,8 @@ namespace MoreDateTime.Tests.Extensions
 			result4.IsEmpty.ShouldBeTrue();
 			result5.IsEmpty.ShouldBeTrue();
 			result6.IsEmpty.ShouldBeTrue();
+			result7.ShouldBeEquivalentTo(inner);
+			result8.ShouldBeEquivalentTo(inner);
 		}
 
 		/// <summary>
@@ -121,6 +133,8 @@ namespace MoreDateTime.Tests.Extensions
 			var a = new DateOnlyRange(_startDate1, _endDate1);
 			var b = new DateOnlyRange(_startDate2, _endDate2);
 			var c = new DateOnlyRange(_startDate3, _endDate3);
+			var outer = new DateOnlyRange(_startDate1, _endDate2);
+			var inner = new DateOnlyRange(_startDate2, _endDate1);
 
 			// Act
 			var result1 = a.Difference(b);
@@ -129,6 +143,8 @@ namespace MoreDateTime.Tests.Extensions
 			var result4 = b.Difference(c);
 			var result5 = c.Difference(a);
 			var result6 = c.Difference(b);
+			var result7 = outer.Difference(inner);
+			var result8 = inner.Difference(outer);
 
 			// Assert
 			result1.First().Start.ShouldBe(_startDate1);
@@ -143,6 +159,11 @@ namespace MoreDateTime.Tests.Extensions
 			result4.Count().ShouldBe(0);
 			result5.Count().ShouldBe(0);
 			result6.Count().ShouldBe(0);
+
+			result7.Count.ShouldBe(2);
+			result7[0].ShouldBeEquivalentTo(new DateOnlyRange(_startDate1, _startDate2));
+			result7[1].ShouldBeEquivalentTo(new DateOnlyRange(_endDate1, _endDate2));
+			result8.Count.ShouldBe(0);
 		}
 
 		/// <summary>
