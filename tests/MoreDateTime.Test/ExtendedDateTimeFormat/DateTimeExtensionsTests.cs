@@ -67,5 +67,31 @@ namespace ExtendedDateTimeFormat.Tests
 			result.Day.ShouldBe(d.Day);
 			result.DayOfWeek.ShouldBe(d.DayOfWeek);
 		}
+
+		/// <summary>
+		/// Checks that the ToExtendedDateTime method for DateTimeOffset functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_ToExtendedDateTimeWithDateTimeOffset()
+		{
+			// Arrange
+			var dtoUtc = new DateTimeOffset(2020, 05, 15, 10, 20, 30, TimeSpan.Zero);
+			var dtoOffset = new DateTimeOffset(2020, 05, 15, 10, 20, 30, new TimeSpan(2, 30, 0));
+
+			// Act
+			var resultUtc = dtoUtc.ToExtendedDateTime();
+			var resultOffset = dtoOffset.ToExtendedDateTime();
+			var now = ExtendedDateTime.Now;
+
+			// Assert
+			resultUtc.Year.ShouldBe(2020);
+			resultUtc.Month.ShouldBe(5);
+			resultUtc.Day.ShouldBe(15);
+			resultUtc.Hour.ShouldBe(10);
+			resultUtc.Minute.ShouldBe(20);
+			resultUtc.Second.ShouldBe(30);
+			resultOffset.UtcOffset.ShouldBe(new TimeSpan(2, 30, 0));
+			now.ShouldNotBeNull();
+		}
 	}
 }

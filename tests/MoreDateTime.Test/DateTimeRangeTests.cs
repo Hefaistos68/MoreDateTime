@@ -17,11 +17,6 @@ namespace MoreDateTime.Tests
         private readonly DateTime _endDate = new DateTime(2001, 02, 20, 9, 30, 59);
 
         private DateTimeRange _testClass = null!;
-        private DateTime _startDateTime;
-        private DateTime _endDateTime;
-        private DateOnly _startDateOnly;
-        private DateOnly _endDateOnly;
-        private DateTimeRange _range;
 
         /// <summary>
         /// Creates the date time range.
@@ -38,12 +33,23 @@ namespace MoreDateTime.Tests
         [TestInitialize]
         public void SetUp()
         {
-            _range = new DateTimeRange();
-            _endDateOnly = new DateOnly();
-            _startDateOnly = new DateOnly();
-            _endDateTime = DateTime.UtcNow;
-            _startDateTime = DateTime.UtcNow;
             _testClass = CreateDateTimeRange();
+        }
+
+        /// <summary>
+        /// Checks that default instance construction works.
+        /// </summary>
+        [TestMethod]
+        public void CanConstruct_Default()
+        {
+            // Act
+            var instance = new DateTimeRange();
+
+            // Assert
+            instance.ShouldNotBeNull();
+            instance.Start.ShouldBe(default);
+            instance.End.ShouldBe(default);
+            instance.IsEmpty.ShouldBeTrue();
         }
 
         /// <summary>
@@ -292,6 +298,7 @@ namespace MoreDateTime.Tests
         public void CannotCall_ReduceWithTimeSpanLessThanDistance()
         {
             Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromDays(400), RangeDirection.Both));
+            Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(this._testClass.Distance(), RangeDirection.Both));
         }
 
         /// <summary>
@@ -330,10 +337,12 @@ namespace MoreDateTime.Tests
             var range = new DateTimeRange(_endDate, _startDate);
 
             // Act
-            var result = this._testClass.Order();
+            var orderedFromOrdered = this._testClass.Order();
+            var orderedFromUnordered = range.Order();
 
             // Assert
-            result.ShouldBeEquivalentTo(new DateTimeRange(_startDate, _endDate));
+            orderedFromOrdered.ShouldBeEquivalentTo(new DateTimeRange(_startDate, _endDate));
+            orderedFromUnordered.ShouldBeEquivalentTo(new DateTimeRange(_startDate, _endDate));
         }
 
         /// <summary>
@@ -348,10 +357,12 @@ namespace MoreDateTime.Tests
             // Act
             var result1 = this._testClass.Contains(value);
             var result2 = this._testClass.Contains(value.AddDays(2));
+            var result3 = this._testClass.Contains(_startDate.AddDays(-1));
 
             // Assert
             result1.ShouldBeTrue();
             result2.ShouldBeFalse();
+            result3.ShouldBeFalse();
         }
 
         /// <summary>
@@ -366,11 +377,14 @@ namespace MoreDateTime.Tests
             // Act
             var result1 = this._testClass.Contains(value);
             var result2 = this._testClass.Contains(value.AddDays(2));
+            var result3 = this._testClass.Contains(_startDate.ToDateOnly().AddDays(-1));
 
             // Assert
             result1.ShouldBeTrue();
             result2.ShouldBeFalse();
+            result3.ShouldBeFalse();
         }
+
         /// <summary>
         /// Checks that the Empty method functions correctly.
         /// </summary>
@@ -383,6 +397,28 @@ namespace MoreDateTime.Tests
             // Assert
             result.Start.ShouldBe(DateTime.MinValue);
             result.End.ShouldBe(DateTime.MinValue);
+            result.IsEmpty.ShouldBeTrue();
+            this._testClass.IsEmpty.ShouldBeFalse();
+            new DateTimeRange(default, _endDate).IsEmpty.ShouldBeFalse();
+            new DateTimeRange(_startDate, default).IsEmpty.ShouldBeFalse();
+        }
+
+        /// <summary>
+        /// Checks that the IsWithin method functions correctly.
+        /// </summary>
+        [TestMethod]
+        public void CanCall_IsWithin()
+        {
+            // Arrange
+            var inner = new DateTimeRange(_startDate.AddDays(1), _endDate.AddDays(-1));
+            var outer = new DateTimeRange(_startDate.AddDays(-1), _endDate.AddDays(1));
+            var partialEnd = new DateTimeRange(_startDate.AddDays(5), _endDate.AddDays(1));
+
+            // Act & Assert
+            inner.IsWithin(this._testClass).ShouldBeTrue();
+            this._testClass.IsWithin(this._testClass).ShouldBeTrue();
+            outer.IsWithin(this._testClass).ShouldBeFalse();
+            partialEnd.IsWithin(this._testClass).ShouldBeFalse();
         }
 	}
 }

@@ -40,6 +40,22 @@ namespace MoreDateTime.Tests
 		}
 
 		/// <summary>
+		/// Checks that default instance construction works.
+		/// </summary>
+		[TestMethod]
+		public void CanConstruct_Default()
+		{
+			// Act
+			var instance = new TimeOnlyRange();
+
+			// Assert
+			instance.ShouldNotBeNull();
+			instance.Start.ShouldBe(default);
+			instance.End.ShouldBe(default);
+			instance.IsEmpty.ShouldBeTrue();
+		}
+
+		/// <summary>
 		/// Checks that instance construction works.
 		/// </summary>
 		[TestMethod]
@@ -268,7 +284,9 @@ namespace MoreDateTime.Tests
 		public void CannotCall_ReduceWithTimeSpanLessThanDistance()
 		{
 			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(TimeSpan.FromHours(20), RangeDirection.Both));
+			Should.Throw<ArgumentOutOfRangeException>(() => this._testClass.Reduce(this._testClass.Distance(), RangeDirection.Both));
 		}
+
 		/// <summary>
 		/// Checks that the IsOrdered method functions correctly.
 		/// </summary>
@@ -305,10 +323,12 @@ namespace MoreDateTime.Tests
 			var range = new TimeOnlyRange(_endTime, _startTime);
 
 			// Act
-			var result = this._testClass.Order();
+			var orderedFromOrdered = this._testClass.Order();
+			var orderedFromUnordered = range.Order();
 
 			// Assert
-			result.ShouldBeEquivalentTo(new TimeOnlyRange(_startTime, _endTime));
+			orderedFromOrdered.ShouldBeEquivalentTo(new TimeOnlyRange(_startTime, _endTime));
+			orderedFromUnordered.ShouldBeEquivalentTo(new TimeOnlyRange(_startTime, _endTime));
 		}
 
 		/// <summary>
@@ -319,14 +339,23 @@ namespace MoreDateTime.Tests
 		{
 			// Arrange
 			var value = _endTime;
+			var unordered = new TimeOnlyRange(_endTime, _startTime);
 
 			// Act
 			var result1 = this._testClass.Contains(value);
 			var result2 = this._testClass.Contains(value.AddMinutes(2));
+			var result3 = this._testClass.Contains(_startTime.AddMinutes(-2));
+			var result4 = unordered.Contains(_midTime);
+			var result5 = unordered.Contains(_startTime.AddMinutes(-2));
+			var result6 = unordered.Contains(_endTime.AddMinutes(2));
 
 			// Assert
 			result1.ShouldBeTrue();
 			result2.ShouldBeFalse();
+			result3.ShouldBeFalse();
+			result4.ShouldBeTrue();
+			result5.ShouldBeFalse();
+			result6.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -341,7 +370,28 @@ namespace MoreDateTime.Tests
 			// Assert
 			result.Start.ShouldBe(TimeOnly.MinValue);
 			result.End.ShouldBe(TimeOnly.MinValue);
+			result.IsEmpty.ShouldBeTrue();
+			this._testClass.IsEmpty.ShouldBeFalse();
+			new TimeOnlyRange(default, _endTime).IsEmpty.ShouldBeFalse();
+			new TimeOnlyRange(_startTime, default).IsEmpty.ShouldBeFalse();
 		}
 
+		/// <summary>
+		/// Checks that the IsWithin method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin()
+		{
+			// Arrange
+			var inner = new TimeOnlyRange(_startTime.AddMinutes(1), _endTime.AddMinutes(-1));
+			var outer = new TimeOnlyRange(_startTime.AddMinutes(-1), _endTime.AddMinutes(1));
+			var partialEnd = new TimeOnlyRange(_midTime, _endTime.AddMinutes(1));
+
+			// Act & Assert
+			inner.IsWithin(this._testClass).ShouldBeTrue();
+			this._testClass.IsWithin(this._testClass).ShouldBeTrue();
+			outer.IsWithin(this._testClass).ShouldBeFalse();
+			partialEnd.IsWithin(this._testClass).ShouldBeFalse();
+		}
 	}
 }

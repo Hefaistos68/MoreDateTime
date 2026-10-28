@@ -27,6 +27,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.Count().ShouldBe(10 + 1);
 			var prev = result.First();
+
 			foreach (var d in result.Skip(1))
 			{
 				d.ShouldBe(prev.NextDay());
@@ -50,6 +51,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.Count().ShouldBe(10 + 1);
 			var prev = result.First();
+
 			foreach (var d in result.Skip(1))
 			{
 				d.ShouldBe(prev.PreviousDay());
@@ -65,6 +67,7 @@ namespace MoreDateTime.Tests.Extensions
 		{
 			// Arrange
 			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
+
 			// Act
 			var result = _startDate.EnumerateHolidaysUntil(_endDate, _cultureInfo);
 
@@ -80,11 +83,30 @@ namespace MoreDateTime.Tests.Extensions
 		{
 			// Arrange
 			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
+
 			// Act
 			var result = _endDate.EnumerateHolidaysUntil(_startDate, _cultureInfo);
 
 			// Assert
 			result.Count().ShouldBe((int)_holidaysInStartDateToEndDateDefault);
+		}
+
+		/// <summary>
+		/// Checks that EnumerateHolidaysUntil returns empty when NullHolidayProvider is active.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_EnumerateHolidaysUntil_WithNullHolidayProvider()
+		{
+			// Arrange
+			DateTimeExtensions.SetHolidayProvider(new NullHolidayProvider());
+
+			// Act
+			var forwardResult = _startDate.EnumerateHolidaysUntil(_endDate, _cultureInfo);
+			var backwardResult = _endDate.EnumerateHolidaysUntil(_startDate, _cultureInfo);
+
+			// Assert
+			forwardResult.Count().ShouldBe(0);
+			backwardResult.Count().ShouldBe(0);
 		}
 
 		/// <summary>
@@ -108,6 +130,7 @@ namespace MoreDateTime.Tests.Extensions
 			result.Count().ShouldBe((int)l);
 
 			var prev = result.First();
+
 			foreach (var d in result.Skip(1))
 			{
 				d.ShouldBe(prev.Add(distance));
@@ -191,6 +214,7 @@ namespace MoreDateTime.Tests.Extensions
 				return arg.DayOfWeek != DayOfWeek.Monday;
 			}
 		}
+
 		/// <summary>
 		/// Checks that the ToDateRanges method functions correctly.
 		/// </summary>
@@ -216,6 +240,7 @@ namespace MoreDateTime.Tests.Extensions
 				return arg.DayOfWeek != DayOfWeek.Monday;
 			}
 		}
+
 		/// <summary>
 		/// Checks that the EnumerateInStepsUntil method functions correctly.
 		/// </summary>

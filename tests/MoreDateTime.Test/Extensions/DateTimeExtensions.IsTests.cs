@@ -97,6 +97,30 @@ namespace MoreDateTime.Tests.Extensions
 		}
 
 		/// <summary>
+		/// Checks that the IsWithin method with DateTimeRange and DateOnlyRange functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin_Ranges()
+		{
+			// Arrange
+			var orderedDateTimeRange = new DateTimeRange(_startDate, _endDate);
+			var unorderedDateTimeRange = new DateTimeRange(_endDate, _startDate);
+			var orderedDateOnlyRange = new DateOnlyRange(_startDateOnly, _endDateOnly);
+			var unorderedDateOnlyRange = new DateOnlyRange(_endDateOnly, _startDateOnly);
+
+			// Act & Assert
+			_midDate.IsWithin(orderedDateTimeRange).ShouldBeTrue();
+			_startDate.AddDays(-1).IsWithin(orderedDateTimeRange).ShouldBeFalse();
+			_endDate.AddDays(1).IsWithin(orderedDateTimeRange).ShouldBeFalse();
+			Should.Throw<ArgumentException>(() => _midDate.IsWithin(unorderedDateTimeRange));
+
+			_midDate.IsWithin(orderedDateOnlyRange).ShouldBeTrue();
+			_startDate.AddDays(-1).IsWithin(orderedDateOnlyRange).ShouldBeFalse();
+			_endDate.AddDays(1).IsWithin(orderedDateOnlyRange).ShouldBeFalse();
+			Should.Throw<ArgumentException>(() => _midDate.IsWithin(unorderedDateOnlyRange));
+		}
+
+		/// <summary>
 		/// Checks that the IsMidday method functions correctly.
 		/// </summary>
 		[TestMethod]

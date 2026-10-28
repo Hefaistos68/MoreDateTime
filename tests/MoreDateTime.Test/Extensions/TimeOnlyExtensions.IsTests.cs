@@ -129,6 +129,7 @@ namespace MoreDateTime.Tests.Extensions
 			dt2.IsNight().ShouldBeTrue();
 			dt3.IsNight().ShouldBeFalse();
 		}
+
 		/// <summary>
 		/// Checks that the IsFullHour method functions correctly.
 		/// </summary>
@@ -150,6 +151,7 @@ namespace MoreDateTime.Tests.Extensions
 			result4.ShouldBeFalse();
 
 		}
+
 		/// <summary>
 		/// Checks that the IsFullMinute method functions correctly.
 		/// </summary>
@@ -178,6 +180,8 @@ namespace MoreDateTime.Tests.Extensions
 		public void CanCall_IsWithin_WithTimeOnly()
 		{
 			// Arrange
+			var orderedRange = new TimeOnlyRange(_startTime, _endTime);
+			var unorderedRange = new TimeOnlyRange(_endTime, _startTime);
 
 			// Act
 			var result1 = _midTime.IsWithin(_startTime, _endTime);
@@ -186,6 +190,9 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result1.ShouldBeTrue();
 			result2.ShouldBeFalse();
+			_midTime.IsWithin(orderedRange).ShouldBeTrue();
+			_zeroTime.IsWithin(orderedRange).ShouldBeFalse();
+			Should.Throw<ArgumentException>(() => _midTime.IsWithin(unorderedRange));
 		}
 
 		/// <summary>
@@ -199,10 +206,14 @@ namespace MoreDateTime.Tests.Extensions
 			// Act
 			var result1 = _zeroTime.IsWithin(_startTime, _endTime);
 			var result2 = _zeroTime.IsWithin(_endTime, _startTime);
+			var result3 = _endTime.AddHours(1).IsWithin(_endTime, _startTime);
+			var result4 = _midTime.IsWithin(_endTime, _startTime);
 
 			// Assert
 			result1.ShouldBeFalse();
 			result2.ShouldBeTrue();
+			result3.ShouldBeTrue();
+			result4.ShouldBeTrue();
 		}
 
 		/// <summary>

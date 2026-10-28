@@ -13,10 +13,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 --------------------------------------------------------
 
 
-## [Unreleased 1.X.X] - yyyy-mm-dd
+## [2.0.0] - 2026-10-28
  
 ### Added
+- Additional unit tests and edge case coverage
+- GitHub Action for NuGet.org trusted publishing
+
 ### Changed
-### Deprecated
+- Updated target framework to .NET 10 (`net10.0`)
+
 ### Removed
-### Fixed
+- Removed `IDateTimeProvider` and `DateTimeProvider` (superseded natively by `System.TimeProvider` in .NET 8+)

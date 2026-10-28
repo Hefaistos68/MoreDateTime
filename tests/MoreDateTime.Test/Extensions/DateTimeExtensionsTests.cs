@@ -32,7 +32,6 @@ namespace MoreDateTime.Tests.Extensions
 		private readonly DateTime _startDateFirstDay = new DateTime(2020, 05, 01);  // Friday
 		private readonly DateTime _startDateLastDay = new DateTime(2020, 05, 31);       // Sunday
 
-		private readonly DayOfWeek _startDateDayOfWeek = DayOfWeek.Friday;
 		private readonly int _startDateWeekNumber = 20;
 		private readonly int _totalDaysInStartDateToEndDate = 365;
 
@@ -79,9 +78,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = time.AsUtcDate(_cultureInfo, _timeZoneTest);
+			var defaultResult = time.AsUtcDate(null, null);
 
 			// Assert
 			result.Date.ShouldBe(_startDate.PreviousDay());
+			defaultResult.Kind.ShouldBe(DateTimeKind.Unspecified);
 		}
 
 		/// <summary>
@@ -95,9 +96,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = time.AsUtcTime(_cultureInfo, _timeZoneTest);
+			var defaultResult = time.AsUtcTime(null, null);
 
 			// Assert
 			result.TimeOfDay.ShouldBe(_startDate.AddHours(23).TimeOfDay);
+			defaultResult.Kind.ShouldBe(DateTimeKind.Utc);
 		}
 
 		/// <summary>
@@ -162,9 +165,28 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.Weeknumber(cultureInfo);
+			var resultDefault = dt.Weeknumber();
+			var weekOfYear = dt.WeekOfYear(cultureInfo);
+			var weekOfYearDefault = dt.WeekOfYear();
 
 			// Assert
 			result.ShouldBe(_startDateWeekNumber);
+			resultDefault.ShouldBe(_startDateWeekNumber);
+			weekOfYear.ShouldBe(_startDateWeekNumber);
+			weekOfYearDefault.ShouldBe(_startDateWeekNumber);
+		}
+
+		/// <summary>
+		/// Checks that the AddWeeks method functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_AddWeeks()
+		{
+			// Act
+			var result = _startDate.AddWeeks(2);
+
+			// Assert
+			result.ShouldBe(_startDate.AddDays(14));
 		}
 
 		/// <summary>
@@ -213,9 +235,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _startDate.Distance(_endDate);
+			var reverseResult = _endDate.Distance(_startDate);
 
 			// Assert
 			result.ShouldBe(_endDate - _startDate);
+			reverseResult.ShouldBe(_endDate - _startDate);
 		}
 
 		/// <summary>
@@ -256,6 +280,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// verify that all parts are the same size
 			var partSize = _startDate.Distance(_endDate) / parts;
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -280,6 +305,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// verify that all parts are the same size
 			var partSize = _startDate.Distance(_endDate) / parts;
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -302,6 +328,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			// verify that all parts are the same size
 			var partSize = _startDate.Distance(_endDate) / parts;
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);

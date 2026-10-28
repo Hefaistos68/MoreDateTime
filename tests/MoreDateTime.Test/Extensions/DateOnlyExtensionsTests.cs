@@ -26,8 +26,6 @@ namespace MoreDateTime.Tests.Extensions
 		private readonly DateOnly _startDateFirstDay = new DateOnly(2020, 05, 01);  // Friday
 		private readonly DateOnly _startDateLastDay = new DateOnly(2020, 05, 31);       // Sunday
 
-		private readonly DayOfWeek _startDateDayOfWeek = DayOfWeek.Friday;
-		private readonly int _startDateWeekNumber = 20;
 		private readonly int _totalDaysInStartDateToEndDate = 365;
 
 		private readonly DateOnly _startDateFirstMonday    = new DateOnly(2020, 05, 04);
@@ -63,6 +61,7 @@ namespace MoreDateTime.Tests.Extensions
 			DateSystem.LicenseKey = "Thank you for supporting open source projects";
 			DateTimeExtensions.SetHolidayProvider(new DefaultHolidayProvider());
 		}
+
 		/// <summary>
 		/// Checks that the StartOfMonth method functions correctly.
 		/// </summary>
@@ -124,9 +123,15 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.Weeknumber(cultureInfo);
+			var resultDefault = dt.Weeknumber();
+			var weekOfYear = dt.WeekOfYear(cultureInfo);
+			var weekOfYearDefault = dt.WeekOfYear();
 
 			// Assert
 			result.ShouldBe(20);
+			resultDefault.ShouldBe(20);
+			weekOfYear.ShouldBe(20);
+			weekOfYearDefault.ShouldBe(20);
 		}
 
 		/// <summary>
@@ -139,9 +144,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _startDate.Distance(_endDate);
+			var reverseResult = _endDate.Distance(_startDate);
 
 			// Assert
 			result.ShouldBe(_endDate.ToDateTime() - _startDate.ToDateTime());
+			reverseResult.ShouldBe(_endDate.ToDateTime() - _startDate.ToDateTime());
 		}
 
 		/// <summary>
@@ -182,6 +189,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// verify that all parts are the same size
 			var partSize = (_startDate.Distance(_endDate) / parts).TruncateToDay();
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -206,6 +214,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// verify that all parts are the same size
 			var partSize = (_startDate.Distance(_endDate) / parts).TruncateToDay();
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -228,6 +237,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			// verify that all parts are the same size
 			var partSize = (_startDate.Distance(_endDate) / parts).TruncateToDay();
+
 			foreach (var part in result)
 			{
 				part.Distance().ShouldBe(partSize);
@@ -296,6 +306,7 @@ namespace MoreDateTime.Tests.Extensions
 			result1.ShouldBe(_startDate);
 			result2.ShouldBe(_startDate.AddDays(5));
 		}
+
 		/// <summary>
 		/// Checks that the AddWeeks method functions correctly.
 		/// </summary>
@@ -310,6 +321,7 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result.ShouldBe(_startDate.AddDays(14));
 		}
+
 		/// <summary>
 		/// Checks that the AddMilliseconds method functions correctly.
 		/// </summary>
@@ -326,6 +338,70 @@ namespace MoreDateTime.Tests.Extensions
 			// Assert
 			result1.ShouldBe(_startDate);
 			result2.ShouldBe(_startDate.AddDays(5));
+		}
+
+		/// <summary>
+		/// Checks that the Add, AddHours, AddMinutes, and AddSeconds methods function correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_AddTimeUnits()
+		{
+			// Act & Assert
+			_startDate.Add(TimeSpan.FromHours(12)).ShouldBe(_startDate);
+			_startDate.Add(TimeSpan.FromDays(3)).ShouldBe(_startDate.AddDays(3));
+			_startDate.AddHours(12).ShouldBe(_startDate);
+			_startDate.AddHours(48).ShouldBe(_startDate.AddDays(2));
+			_startDate.AddMinutes(30).ShouldBe(_startDate);
+			_startDate.AddMinutes(24 * 60 * 2).ShouldBe(_startDate.AddDays(2));
+			_startDate.AddSeconds(30).ShouldBe(_startDate);
+			_startDate.AddSeconds(24 * 60 * 60 * 2).ShouldBe(_startDate.AddDays(2));
+		}
+
+		/// <summary>
+		/// Checks that the ToDateTime method with DateTimeKind functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_ToDateTime_WithKind()
+		{
+			// Act
+			var utcResult = _startDate.ToDateTime(DateTimeKind.Utc);
+			var localResult = _startDate.ToDateTime(DateTimeKind.Local);
+
+			// Assert
+			utcResult.Kind.ShouldBe(DateTimeKind.Unspecified);
+			utcResult.Date.ShouldBe(_startDate.ToDateTime().Date);
+			localResult.Kind.ShouldBe(DateTimeKind.Unspecified);
+		}
+
+		/// <summary>
+		/// Checks that the IsWithin method with DateOnlyRange functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsWithin_DateOnlyRange()
+		{
+			// Arrange
+			var orderedRange = new DateOnlyRange(_startDate, _endDate);
+			var unorderedRange = new DateOnlyRange(_endDate, _startDate);
+
+			// Act & Assert
+			_midDate.IsWithin(orderedRange).ShouldBeTrue();
+			_startDate.AddDays(-1).IsWithin(orderedRange).ShouldBeFalse();
+			_endDate.AddDays(1).IsWithin(orderedRange).ShouldBeFalse();
+			Should.Throw<ArgumentException>(() => _midDate.IsWithin(unorderedRange));
+		}
+
+		/// <summary>
+		/// Checks that the IsPublicHoliday method with null CultureInfo functions correctly.
+		/// </summary>
+		[TestMethod]
+		public void CanCall_IsPublicHoliday_WithNullCulture()
+		{
+			// Arrange
+			var christmas = new DateOnly(2020, 12, 25);
+
+			// Act & Assert
+			christmas.IsPublicHoliday().ShouldBeTrue();
+			_startDate.IsPublicHoliday().ShouldBeFalse();
 		}
 	}
 }

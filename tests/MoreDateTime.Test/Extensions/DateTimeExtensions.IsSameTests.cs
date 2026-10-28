@@ -21,9 +21,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsSameDay(other);
+			var falseResult = dt.IsSameDay(_startDate.AddDays(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -38,9 +40,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsSameHour(other);
+			var falseResult = dt.IsSameHour(_startDate.AddHours(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -55,9 +59,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsSameMinute(other);
+			var falseResult = dt.IsSameMinute(_startDate.AddMinutes(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -72,9 +78,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsSameMonth(other);
+			var falseResult = dt.IsSameMonth(_startDate.AddMonths(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -89,9 +97,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsSameSecond(other);
+			var falseResult = dt.IsSameSecond(_startDate.AddSeconds(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -126,9 +136,11 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = dt.IsSameYear(other);
+			var falseResult = dt.IsSameYear(_startDate.AddYears(1));
 
 			// Assert
 			result.ShouldBeTrue();
+			falseResult.ShouldBeFalse();
 		}
 	}
 }

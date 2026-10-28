@@ -79,7 +79,7 @@ void Get10MinuteSpans(DateTime startDate)
 }
 ```
 
-You got your own `IDateTimeProvider` through which you can inject your own date and time and supports mocking directly. Instead of `DateTime.Utcnow` you can use `DateTimeProvider.Current.UtcNow` and always get the date and time you expect.
+
 
 ## How to use it?
 
@@ -87,7 +87,7 @@ Just install the NuGet package and you are ready to go! It's mostly built upon c
 
 ### Dependencies
 
-For Holiday calculations it uses the [Nager.Date](https://github.com/nager/nager.date) library, but you need to bring your own license key. There is also a DefaultHolidayProvider() which knows only the very few international holidays and is the default. Optionally you can use your own provider through the `IHolidayProvider` interface and the `DateTimeProvider.SetHolidayProvider()` method. 
+For Holiday calculations it uses the [Nager.Date](https://github.com/nager/nager.date) library, but you need to bring your own license key. There is also a DefaultHolidayProvider() which knows only the very few international holidays and is the default. Optionally you can use your own provider through the `IHolidayProvider` interface and the `DateTimeExtensions.SetHolidayProvider()` method. 
 
 ### Note
 

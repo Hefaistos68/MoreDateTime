@@ -15,6 +15,7 @@ namespace MoreDateTime.Tests.Extensions
 	public class TimeSpanExtensionsTests
 	{
 		private readonly TimeSpan _timeSpan = new TimeSpan(1, 2, 3, 4, 5);
+		private readonly TimeSpan _timeSpanRoundUp = new TimeSpan(1, 14, 35, 35, 600);
 
 		/// <summary>
 		/// Checks that the IsNegative method functions correctly.
@@ -28,10 +29,12 @@ namespace MoreDateTime.Tests.Extensions
 			// Act
 			var result1 = ts.IsNegative();
 			var result2 = (-ts).IsNegative();
+			var zeroResult = TimeSpan.Zero.IsNegative();
 
 			// Assert
 			result1.ShouldBeFalse();
 			result2.ShouldBeTrue();
+			zeroResult.ShouldBeFalse();
 		}
 
 		/// <summary>
@@ -46,10 +49,12 @@ namespace MoreDateTime.Tests.Extensions
 			// Act
 			var result1 = ts.IsPositive();
 			var result2 = (-ts).IsPositive();
+			var zeroResult = TimeSpan.Zero.IsPositive();
 
 			// Assert
 			result1.ShouldBeTrue();
 			result2.ShouldBeFalse();
+			zeroResult.ShouldBeTrue();
 		}
 
 		/// <summary>
@@ -80,6 +85,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _timeSpan.RoundToDay();
+			var roundedUp = _timeSpanRoundUp.RoundToDay();
 
 			// Assert
 			result.Days.ShouldBe(_timeSpan.Days);
@@ -87,6 +93,7 @@ namespace MoreDateTime.Tests.Extensions
 			result.TotalMinutes.ShouldBe((_timeSpan.Days * 24) * 60);
 			result.TotalSeconds.ShouldBe(((_timeSpan.Days * 24) * 60) * 60);
 			result.TotalMilliseconds.ShouldBe((((_timeSpan.Days * 24) * 60) * 60) * 1000);
+			roundedUp.Days.ShouldBe(2);
 		}
 
 		/// <summary>
@@ -99,6 +106,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _timeSpan.RoundToHour();
+			var roundedUp = _timeSpanRoundUp.RoundToHour();
 
 			// Assert
 			result.Days.ShouldBe(_timeSpan.Days);
@@ -106,6 +114,7 @@ namespace MoreDateTime.Tests.Extensions
 			result.TotalMinutes.ShouldBe(((_timeSpan.Days * 24) + _timeSpan.Hours) * 60);
 			result.TotalSeconds.ShouldBe((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) * 60);
 			result.TotalMilliseconds.ShouldBe(((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) * 60) * 1000);
+			roundedUp.Hours.ShouldBe(15);
 		}
 
 		/// <summary>
@@ -118,6 +127,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _timeSpan.RoundToMinute();
+			var roundedUp = _timeSpanRoundUp.RoundToMinute();
 
 			// Assert
 			result.Days.ShouldBe(_timeSpan.Days);
@@ -125,6 +135,7 @@ namespace MoreDateTime.Tests.Extensions
 			result.TotalMinutes.ShouldBe((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) + _timeSpan.Minutes);
 			result.TotalSeconds.ShouldBe(((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) + _timeSpan.Minutes) * 60);
 			result.TotalMilliseconds.ShouldBe((((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) + _timeSpan.Minutes) * 60) * 1000);
+			roundedUp.Minutes.ShouldBe(36);
 		}
 
 		/// <summary>
@@ -137,6 +148,7 @@ namespace MoreDateTime.Tests.Extensions
 
 			// Act
 			var result = _timeSpan.RoundToSecond();
+			var roundedUp = _timeSpanRoundUp.RoundToSecond();
 
 			// Assert
 			result.Days.ShouldBe(_timeSpan.Days);
@@ -144,6 +156,7 @@ namespace MoreDateTime.Tests.Extensions
 			result.Minutes.ShouldBe(_timeSpan.Minutes);
 			result.TotalSeconds.ShouldBe((((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) + _timeSpan.Minutes) * 60) + _timeSpan.Seconds);
 			result.TotalMilliseconds.ShouldBe(((((((_timeSpan.Days * 24) + _timeSpan.Hours) * 60) + _timeSpan.Minutes) * 60) + _timeSpan.Seconds) * 1000);
+			roundedUp.Seconds.ShouldBe(36);
 		}
 
 		/// <summary>
@@ -152,7 +165,14 @@ namespace MoreDateTime.Tests.Extensions
 		[TestMethod]
 		public void CanCall_TruncateTo()
 		{
-			// implicitly tested by the other truncate tests
+			// Arrange
+			var ts = new TimeSpan(16, 5, 4, 3, 2);
+
+			// Act
+			var weeks = ts.TruncateTo(TimeSpanExtensions.TimeSpanTruncate.Weeks);
+
+			// Assert
+			weeks.Days.ShouldBe(16);
 		}
 
 		/// <summary>
